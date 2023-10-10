@@ -3,7 +3,9 @@
    <p align="justify">In this study, we employed two unique generative models: the Generative Adversarial Network (GAN) and diffusion models. Each model uses a distinct approach in their respective functionalities. The GAN model operates on a game between a Generator and a Discriminator, while diffusion models add Gaussian noise into data and then recover it via denoising processes. Although the functionalities differ, the outcomes from both generative models display a notable diversity compared to their initial inputs. Our objective involves taking varied inputs to assess the accuracy of classifiers, utilizing SINVAD—a test case generation technique that navigates through a plausible image space while ensuring adherence to plausibility via a Variational Auto-encoder (VAE). In our test scenario, we produce images using test generators for both conditional and unconditional cases, aiming to scrutinize classifier behavior under these circumstances. Subsequently, these images are input into the SINVAD algorithm to evaluate predictions. We have engineered a latent-based SINVAD, evolving from its old version that operated on images, to instead arbitrarily select a latent vector from the space. Moreover, our fitness function scrutinizes the internal computations of the latent variables, instead of assigning a higher vector value through comparison to the original.</p>
 ##Experimental Detail: 
   Below pictorial representation below depicts the experimental Setup. All models are implemented on three types of datasets. 
-                              ![Screenshot from 2023-10-10 22-36-35](https://github.com/Maryammaryam877/SINVAD_Latent_Based_Testing/assets/129972846/2cbdb147-8ea9-47b3-9377-eaaa4235c50b)
+  
+  ![image](https://github.com/Maryammaryam877/SINVAD_Latent_Based_Testing/issues/1#issue-1936279035)
+  
 ##Datasets:
   MNIST, SVHN, CIFAR10
   
