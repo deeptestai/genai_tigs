@@ -5,9 +5,8 @@
   Below tabular representation below depicts the experimental Setup. All models are implemented on three types of datasets. 
 ###Datasets:
   MNIST, SVHN, CIFAR10
-                    
-                    **Table 1**: Models and its checkpoints
   
+**Table 1**: Models and its checkpoints 
 |    TYPE            |         Models                     | Checkpoints/Safetensors |
 |--------------------|------------------------------------|-------------------------|
 | Generative Models  | Traditional GAN  (Unconditional)   |    [Link](#)            |
