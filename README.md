@@ -5,15 +5,15 @@
   Below tabular representation below depicts the experimental Setup. All models are implemented on three types of datasets. 
 ###Datasets:
   MNIST, SVHN, CIFAR10
+                    
+                    **Table 1**: Models and its checkpoints
   
-<center>
 |    TYPE            |         Models                     | Checkpoints/Safetensors |
 |--------------------|------------------------------------|-------------------------|
-| Generative Models  | Traditional GAN  (Unconditional)   |    Link                 |
-|                    | Conditional GAN  (Condition)       |    Link                 |
-|                    | Variational Autoencoder (VAE)      |    Link                 |
-| Diffusion Models   | DDPM       (Unconditional)         |    Link                 |    
-|                    | Lora       (Conditional)           |    Link                 |
-</center>
-            <center>Table 1: Models and its checkpoints </center>
+| Generative Models  | Traditional GAN  (Unconditional)   |    [Link](#)            |
+|                    | Conditional GAN  (Condition)       |    [Link](#)            |
+|                    | Variational Autoencoder (VAE)      |    [Link](#)            |
+| Diffusion Models   | DDPM       (Unconditional)         |    [Link](#)            |
+|                    | Lora       (Conditional)           |    [Link](#)            |
+
 
