@@ -93,8 +93,8 @@ for i in range(num_samples):
         fitness = calculate_fitness(perturb_logits, original_label)
         fitness_scores.append(fitness)
         # Perform selection
-        selected_indices = sorted(range(len(fitness_scores)), key=lambda i: fitness_scores[i], reverse=True
-            )[-best_left:]
+        #selected_indices = sorted(range(len(fitness_scores)), key=lambda i: fitness_scores[i], reverse=True
+        #   )[-best_left:]
         now_best = np.min(fitness_scores)
         print("now_best " + str(now_best) + " average_best " + str(np.mean(fitness_scores)))
         if now_best < 0:
