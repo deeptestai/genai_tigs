@@ -21,8 +21,8 @@
 |                    | Lora       (Conditional)           |    [Link](#)            |
 
 ### Download vae ckpt for all four types of datasets:
-    This link provides a download for a singular zip file that contains four distinct sub-folders: mnist_vae, cifar10_vae, svhn_vae, and imagenet_vae. Each of these folders includes checkpoint files for their respective datasets [View and Download .ckpt Files](https://drive.google.com/uc?export=download&id=1MNyzsNZWE5QzoX_xIbIlm-IV6lNri3W3).
+<p align="justify">This link provides a download for a singular zip file that contains four distinct sub-folders: mnist_vae, cifar10_vae, svhn_vae, and imagenet_vae. Each of these folders includes checkpoint files for their respective datasets [View and Download .ckpt Files](https://drive.google.com/uc?export=download&id=1MNyzsNZWE5QzoX_xIbIlm-IV6lNri3W3).</p>
 ### Download classifier ckpt for all three types of datasets:
-    This link provides a download for a singular zip file that contains three distinct sub-folders: mnist_classifier, cifar10_classifier, and svhn_classifier. Each of these folders includes checkpoint files for their respective datasets [View and Download .ckpt Files](https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns). Moreover, I prefer to use a pre-trained ckpt of imagenet classifier [see link here](https://learnopencv.com/pytorch-for-beginners-image-classification-using-pre-trained-models/).
+<p align="justify">This link provides a download for a singular zip file that contains three distinct sub-folders: mnist_classifier, cifar10_classifier, and svhn_classifier. Each of these folders includes checkpoint files for their respective datasets [View and Download .ckpt Files](https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns). Moreover, I prefer to use a pre-trained ckpt of imagenet classifier [see link here](https://learnopencv.com/pytorch-for-beginners-image-classification-using-pre-trained-models/).</p>
 
 
