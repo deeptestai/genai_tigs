@@ -21,7 +21,7 @@
 |                    |                                 | Imagenet1K_dcgan |    Link[4]                |
 |                    |                                 |                  |                           |
 |                    |                                 | MNIST_cgan       |     Link[5]               |
-|                    | Conditional GAN  (Condition)    | SVHN_cgan        |     Link[6]               |
+| Generative Models  | Conditional GAN  (Condition)    | SVHN_cgan        |     Link[6]               |
 |                    |                                 | CIFAR10_cgan     |     Link[7]               |
 |                    |                                 | Imagenet1K_cgan  |     Link[8]               |
 |                    |  Variational Autoencoder (VAE)  | Four datasets    |[VAE models single Link][9]|
@@ -33,8 +33,8 @@
 |                    |                                 |Imagenet1K_ddpm   |   alongwith checkpoints   |
 |                    |                                 |                  |                           |
 |                    |                                 |                  |                           |
-|                    | SD_Lora_finetune(Conditional)   |MNIST_lora        |    Hugging face Account   |
-|                    |                                 |SVHN_lora         |  Complete Model script    |
+|Diffusers_Generative| SD_Lora_finetune(Conditional)   |MNIST_lora        |    Hugging face Account   |
+|    Models          |                                 |SVHN_lora         |  Complete Model script    |
 |                    |                                 |CIFAR10_lora      |  alongwith checkpoints    |
 |                    |                                 |Imagenet 1k       |                           |
 
