@@ -47,13 +47,13 @@ vae = ConvVAE(c_num=3, h_dim=4000, z_dim=1024).to(device)
 classifier = VGGNet().to(device)
 vae.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/experiments/cifar10_experiments/cifar10_sd/uncoditional_sd/cifar10_vae/weights/cifar10_convend.pth",
+        "./cifar10_vae/weights/cifar10_convend.pth",
         map_location=device,
     )
 )
 classifier.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/experiments/cifar10_experiments/cifar10_sd/uncoditional_sd/cifar10_VGGNETclassifier/CIFAR10_cifar10_train.pynet.pth",
+        "./cifar10_VGGNETclassifier/CIFAR10_cifar10_train.pynet.pth",
         map_location=device,
     )
 )
