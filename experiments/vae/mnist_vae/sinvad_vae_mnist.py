@@ -22,7 +22,7 @@ vae = VAE(img_size=28 * 28, h_dim=1600, z_dim=400).to(device)
 classifier = MnistClassifier(img_size=img_size).to(device)
 vae.load_state_dict(
     torch.load(
-        "./vae/models/MNIST_EnD.pth",
+        "./vae/weights/MNIST_EnD.pth",
         map_location=device,
     )
 )
