@@ -13,7 +13,7 @@ def save_images(imgs, folder_path, base_filename):
 
 
 base_model_id = "runwayml/stable-diffusion-v1-5"
-lora_model_id = "/home/maryam/stable-diffusion-webui/models/Lora/Mnist_Lora_sdv1.5.safetensors"
+lora_model_id = "./models/Lora/Mnist_Lora_sdv1.5.safetensors"
 
 pipeline = StableDiffusionPipeline.from_pretrained(
     base_model_id, torch_dtype=torch.float16, safety_checker=None
@@ -33,7 +33,7 @@ images = pipeline(
 ).images
 
 # Specify folder path and base filename for saving images
-save_folder_path = "/home/maryam/generated_images_mnist1"
+save_folder_path = "./generated_images_mnist1"
 base_filename = "mnist2"
 
 # Save images to the specified folder
