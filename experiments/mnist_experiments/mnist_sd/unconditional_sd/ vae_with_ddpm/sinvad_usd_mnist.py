@@ -46,7 +46,7 @@ transform = transforms.Compose(
 )
 
 dataset = datasets.ImageFolder(
-    root="/home/maryam/Documents/SEDL/SINVAD/experiments/mnist_experiments/mnist_sd/unconditional_sd/ddpm_mnist_generated_images",
+    root="./mnist_ddpm_gen_img",
     transform=transform,
 )
 
@@ -198,7 +198,7 @@ for img_idx in trange(imgs_to_samp):
 
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
-np.save(os.path.join(result_dir, 'bound_imgs_mnist_usd.npy'), all_imgs)
+np.save(os.path.join(result_dir, 'output_vae_ddpm_img.npy'), all_imgs)
 
 # Save the image info
 with open(os.path.join(result_dir, 'image_info.txt'), 'w') as f:
