@@ -28,7 +28,7 @@ vae.load_state_dict(
 vae.eval()
 classifier.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/sa/models/MNIST_conv_classifier.pth",
+        "./sa/models/MNIST_conv_classifier.pth",
         map_location=device,
     )
 )
@@ -46,7 +46,7 @@ transform = transforms.Compose(
 )
 
 dataset = datasets.ImageFolder(
-    root="/home/maryam/Documents/SEDL/SINVAD/experiments/mnist_experiments/mnist_sd/conditional_sd/mnist_diffusers_gen_img",
+    root="./mnist_lora_gen_img",
     transform=transform,
 )
 
@@ -198,7 +198,7 @@ for img_idx in trange(imgs_to_samp):
 
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
-np.save(os.path.join(result_dir, 'bound_imgs_mnist_cdcgan.npy'), all_imgs)
+np.save(os.path.join(result_dir, 'output_mnist_vae_lora.npy'), all_imgs)
 
 # Save the image info
 with open(os.path.join(result_dir, 'image_info.txt'), 'w') as f:
