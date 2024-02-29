@@ -8,7 +8,7 @@ import torchvision
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from tqdm import trange
-from experiments.svhn_experiments.vae.svhn_vae.vae.model import ConvVAE
+from experiments.svhn_experiments.svhn_vae.vae.model import ConvVAE
 from experiments.svhn_experiments.svhn_classifier.model import VGGNet
 
 #run = wandb.init(project="Sinvad_latent_beased_SVHN")
@@ -31,13 +31,13 @@ vae = ConvVAE(img_size=(32, 32), c_num=3, h_dim=4000, z_dim=800).to(device)
 classifier = VGGNet().to(device)
 vae.load_state_dict(
     torch.load(
-        "./vae/svhn_convend.pth",
+        "/home/maryam/Documents/SEDL/SINVAD/experiments/svhn_experiments/svhn_vae/vae/svhn_convend.pth",
         map_location=device,
     )
 )
 classifier.load_state_dict(
     torch.load(
-        "./svhn_classifier/model/SVHN_vggnet.pth",
+        "/home/maryam/Documents/SEDL/SINVAD/experiments/svhn_experiments/svhn_classifier/model/SVHN_vggnet.pth",
         map_location=device,
     )
 )
@@ -46,6 +46,11 @@ vae.eval()
 classifier.eval()
 result_dir = "./result_svhn_vae"
 os.makedirs(result_dir, exist_ok=True)
+
+test_dataset = torchvision.datasets.SVHN(root='./data', split="test", transform=transforms.ToTensor(), download=True)
+test_data_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=1, shuffle=True)
+print("Data loader ready...")
+
 
 
 def calculate_fitness(logit, label):
@@ -65,21 +70,27 @@ def calculate_fitness(logit, label):
 
 image_info = []
 predictions = []
+num_samples = 1
 gen_num = 500
 pop_size = 25
 best_left = 10
-num_samples= 100
+imgs_to_samp = 100
 perturbation_size = 0.1 # Default perturbation size
 initial_perturbation_size = 0.7 # Initial perturbation size
 
 all_img_lst = []
-latent_space = torch.randn(num_samples, 800, 1, 1).to(device)
 ### multi-image sample loop ###
-for i in range(num_samples):
-    # Generate the non-perturbed image
-    original_lv = latent_space[i].view(1,-1)
-    original_image = vae.decode(original_lv)
-    original_image = original_image.view(-1, 3, 32, 32)
+for img_idx in trange(imgs_to_samp):
+    for i, (x, x_class) in enumerate(test_data_loader):
+        samp_img = x[0:1]
+        samp_class = x_class[0].item()
+
+
+    img_enc, _ = vae.encode(samp_img.to(device))
+
+    # img_enc, _ = vae.encode(samp_img.view(-1, image_size).to(device))
+    original_lv = img_enc
+    original_image = vae.decode(original_lv).view(-1, 3, 32, 32)
     original_logit = classifier(original_image).squeeze().detach().cpu().numpy()
     original_label = original_logit.argmax().item()
     # Calculate fitness for the original image
@@ -184,9 +195,9 @@ for i in range(num_samples):
     #    }
     #)
 
-    save_image(final_bound_img_tensor, os.path.join(result_dir, f'image_{i}_X{original_label}_Y{prediction}.png'))
+    save_image(final_bound_img_tensor, os.path.join(result_dir, f'image_{img_idx}_X{original_label}_Y{prediction}.png'))
     # Store the image info
-    image_info.append((i, original_label, prediction))
+    image_info.append((img_idx, original_label, prediction))
 
 # Save all generated images as a numpy array
 all_imgs = np.vstack(all_img_lst)
@@ -208,4 +219,3 @@ for img_info in image_info:
 misclassification_percentage = (misclassified_count / len(image_info)) * 100
 
 print(f"Misclassification Percentage: {misclassification_percentage:.2f}%")
-
