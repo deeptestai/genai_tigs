@@ -22,14 +22,14 @@ vae = VAE(img_size=28 * 28, h_dim=1600, z_dim=400).to(device)
 classifier = MnistClassifier(img_size=img_size).to(device)
 vae.load_state_dict(
     torch.load(
-        "./vae/weights/MNIST_EnD.pth",
+        "./vae/models/MNIST_EnD.pth",
         map_location=device,
     )
 )
 vae.eval()
 classifier.load_state_dict(
     torch.load(
-        "./vae/models/MNIST_conv_classifier.pth",
+        "/home/maryam/Documents/SEDL/SINVAD/sa/models/MNIST_conv_classifier.pth",
         map_location=device,
     )
 )
@@ -37,6 +37,11 @@ classifier.eval()
 result_dir = "./result_vae_mnist" # Directory to save the images
 os.makedirs(result_dir, exist_ok=True)
 print("models loaded...")
+# Transforms: Convert image to tensor and normalize it
+test_dataset = torchvision.datasets.MNIST(root='./data', train=False, transform=transforms.ToTensor(), download=True)
+test_data_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=1, shuffle=True)
+print("Data loader ready...")
+
 
 def calculate_fitness(logit, label):
     expected_logit = logit[label]
@@ -57,18 +62,22 @@ def calculate_fitness(logit, label):
 gen_num = 500
 pop_size = 25
 best_left = 10
-num_samples = 100
+imgs_to_samp = 100
 perturbation_size = 0.1  # Default perturbation size
 initial_perturbation_size = 0.7  # Initial perturbation size
 predictions = []
 all_img_lst = []
 image_info = []
-latent_space = torch.randn(num_samples, 400, 1, 1).to(device)
-for i in range(num_samples):
-    # Generate the non-perturbed image
-    original_lv = latent_space[i].view(1, -1)
-    original_image = vae.decode(original_lv)
-    original_image = original_image.view(-1, 1, 28, 28)  # Reshape to [1, 1, 28, 28]
+
+
+for img_idx in trange(imgs_to_samp):
+    ### Sample image ###
+    for i, (x, x_class) in enumerate(test_data_loader):
+        samp_img = x[0:1]
+        samp_class = x_class[0].item()
+    img_enc, _ = vae.encode(samp_img.view(-1, img_size).to(device))
+    original_lv = img_enc
+    original_image = vae.decode(original_lv).view(-1, 1, 28, 28)
     original_logit = classifier(original_image).squeeze().detach().cpu().numpy()
     original_label = original_logit.argmax().item()
     # Calculate fitness for the original image
@@ -132,13 +141,13 @@ for i in range(num_samples):
             )  # crossover
 
             # mutation
-            diffs = (k_gene != original_lv).float()
+            diffs = (k_gene != img_enc).float()
             k_gene += (
                 perturbation_size * torch.randn(k_gene.size()).to(device) * diffs
             )  # random adding noise only to diff places
             # random matching to img_enc
             interp_mask = binom_sampler.sample().to(device)
-            k_gene = interp_mask * original_lv + (1 - interp_mask) * k_gene
+            k_gene = interp_mask * img_enc + (1 - interp_mask) * k_gene
 
             k_pop.append(k_gene)
         now_pop = parent_pop + k_pop
@@ -169,11 +178,11 @@ for i in range(num_samples):
    # )
     # Save the image as PNG
     image = Image.fromarray((final_bound_img[0] * 255).astype(np.uint8), mode='L')
-    image_path = os.path.join(result_dir, f'image_{i}_X{original_label}_Y{prediction}.png')
+    image_path = os.path.join(result_dir, f'image_{img_idx}_X{original_label}_Y{prediction}.png')
     image.save(image_path)
 
     # Store the image info
-    image_info.append((i, original_label, prediction))
+    image_info.append((img_idx, original_label, prediction))
 
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
