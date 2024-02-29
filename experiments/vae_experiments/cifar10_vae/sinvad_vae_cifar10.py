@@ -47,7 +47,7 @@ vae = ConvVAE(c_num=3, h_dim=4000, z_dim=1024).to(device)
 classifier = VGGNet().to(device)
 vae.load_state_dict(
     torch.load(
-        "./cifar10_vae/weights/cifar10_convend.pth",
+        "./weights/cifar10_convend.pth",
         map_location=device,
     )
 )
@@ -88,16 +88,22 @@ predictions = []
 gen_num = 500
 pop_size = 25
 best_left = 10
-num_samples = 100
+imgs_to_samp = 100
 perturbation_size = 0.1  # Default perturbation size
 initial_perturbation_size = 0.7 # Initial perturbation size
-latent_space = torch.randn(num_samples, 1024, 1, 1).to(device)
+
 all_img_lst = []
-for i in range(num_samples):
-    # Generate the non-perturbed image
-    original_lv = latent_space[i].view(1,-1)
-    original_image = vae.decode(original_lv)
-    original_image = original_image.view(-1, 3, 32, 32)
+### multi-image sample loop ###
+for img_idx in trange(imgs_to_samp):
+    for i, (x, x_class) in enumerate(test_data_loader):
+        samp_img = x[0:1]
+        samp_class = x_class[0].item()
+
+    img_enc, _ = vae.encode(samp_img.to(device))
+
+    # img_enc, _ = vae.encode(samp_img.view(-1, image_size).to(device))
+    original_lv = img_enc
+    original_image = vae.decode(original_lv).view(-1, 3, 32, 32)
     original_logit = classifier(original_image).squeeze().detach().cpu().numpy()
     original_label = original_logit.argmax().item()
     # Calculate fitness for the original image
@@ -181,9 +187,9 @@ for i in range(num_samples):
     final_bound_img_tensor = torch.from_numpy(final_bound_img).float().to(device)
     prediction = torch.argmax(classifier(final_bound_img_tensor)).item()
     predictions.append(prediction)
-    save_image(final_bound_img_tensor, os.path.join(result_dir, f'image_{i}_X{original_label}_Y{prediction}.png'))
+    save_image(final_bound_img_tensor, os.path.join(result_dir, f'image_{img_idx}_X{original_label}_Y{prediction}.png'))
     # Store the image info
-    image_info.append((i, original_label, prediction))
+    image_info.append((img_idx, original_label, prediction))
 
 # Save all generated images as a numpy array
 all_imgs = np.vstack(all_img_lst)
@@ -205,5 +211,4 @@ for img_info in image_info:
 misclassification_percentage = (misclassified_count / len(image_info)) * 100
 
 print(f"Misclassification Percentage: {misclassification_percentage:.2f}%")
-
 
