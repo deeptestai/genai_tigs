@@ -1,6 +1,5 @@
 import os
 from diffusers import StableDiffusionPipeline
-#from StableDiffusionParallPipeline.libs.StableDiffusionParallelPipeline import StableDiffusionParallelPipeline
 from diffusers.schedulers import KDPM2DiscreteScheduler
 #from libs.benchmark import benchmark
 import numpy as np
@@ -77,10 +76,6 @@ pipe.scheduler = KDPM2DiscreteScheduler.from_config(pipe.scheduler.config)
 pipe.unet.to(device)
 pipe.vae.to(device)
 pipe.text_encoder.to(device)
-# get the conditional text embeddings based on the prompt
-#text_input = pipe.tokenizer(prompt, padding="max_length", max_length=pipe.tokenizer.model_max_length, truncation=True, return_tensors="pt")
-#cond_embeddings = pipe.text_encoder(text_input.input_ids.to(device))[0].to(device)
-#max_length = cond_embeddings.shape[
 seed = 1024
 desired_label_index = 963  # Index for the desired label 'X963'
 for n in range(num_samples):
@@ -88,9 +83,6 @@ for n in range(num_samples):
     original_lv = torch.randn((1, pipe.unet.config.in_channels, height // 8, width // 8),  device=device)
     with autocast("cuda"):
          init_img = pipe(prompt, num_inference_steps= num_inference_steps, latents=original_lv, width=width, height=height)["images"][0]
-        # init_img_path = os.path.join(proj_path, f'_origin_{n}.png')
-        # init_img.save(init_img_path)
-        # print(f"Original image {n} saved at {init_img_path}")
     tensor_image = transform(init_img)
     tensor_image = tensor_image.unsqueeze(0).to(device)
     original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
@@ -125,10 +117,7 @@ for n in range(num_samples):
         # all_img_lst.append(perturb_img)
         torch.cuda.empty_cache()
 
-       # model_image_pil = Image.fromarray(np.uint8(last_image))
-       # resized_image2 = model_image_pil.resize((28, 28), Image.Resampling.LANCZOS)
         tensor_image2 =torch.stack([transform(image) for image in perturb_img])
-        # tensor_image2 = transform(last_image)
         tensor_image2 = tensor_image2.to(device)
         all_logits = classifier(tensor_image2).detach().cpu().numpy()
         perturb_label1 = np.argmax(all_logits).item()
