@@ -1,7 +1,6 @@
 import os
 from diffusers import StableDiffusionPipeline
 from diffusers.schedulers import KDPM2DiscreteScheduler
-#from libs.benchmark import benchmark
 import numpy as np
 import torch
 import wandb
@@ -70,8 +69,6 @@ weights_path = "./fine_tune_imgnet-000005.safetensors"
 pipe = StableDiffusionPipeline.from_pretrained(
 base_model_id, safety_checker=None).to(device)
 pipe.load_lora_weights(weights_path)
-#pipe.unet.load_attn_procs(weights_path)
-#pipe = StableDiffusionPipeline.from_pretrained(weights_path, scheduler=lms, use_auth_token=False)
 pipe.scheduler = KDPM2DiscreteScheduler.from_config(pipe.scheduler.config)
 pipe.unet.to(device)
 pipe.vae.to(device)
