@@ -1,5 +1,6 @@
 import torch
-import wandb
+
+# import wandb
 import torchvision.transforms as transforms
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,9 +8,9 @@ from PIL import Image
 import os
 
 from sa.model import MnistClassifier
-from mnist_dcgan.dcgan import Generator
+from dcgan.dcgan import Generator
 
-run = wandb.init(project="Sinvad_fitness_beased")
+# run = wandb.init(project="Sinvad_fitness_beased")
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 img_size = 28 * 28 * 1
@@ -18,16 +19,21 @@ G = Generator(ngpu=1, nz=100, nc=1).to(device)  # Modify the Generator architect
 classifier = MnistClassifier(img_size=img_size).to(device)
 
 # Load the weights of the models
-G.load_state_dict(
-    torch.load("./mnist_dcgan/weights/netG_epoch_99.pth", map_location=device)
-)
+G.load_state_dict(torch.load("./dcgan/weights/netG_epoch_99.pth", map_location=device))
 classifier.load_state_dict(
-    torch.load("./sa/models/MNIST_conv_classifier.pth", map_location=device)
+    torch.load(
+        "/home/maryam/Documents/SEDL/SINVAD/sa/models/MNIST_conv_classifier.pth",
+        map_location=device,
+    )
 )
 # Set models to evaluation mode
 G.eval()
 classifier.eval()
-result_dir = "./result_mn"
+result_dir = "./result_dcgan_mnist"  # Directory to save the images
+# Subdirectory for original images
+original_images_dir = os.path.join(result_dir, "original_images")
+os.makedirs(result_dir, exist_ok=True)
+os.makedirs(original_images_dir, exist_ok=True)
 
 
 def calculate_fitness(logit, label):
@@ -44,15 +50,15 @@ def calculate_fitness(logit, label):
     fitness = expected_logit - new_logit
     return fitness
 
+
 image_info = []
 predictions = []
-num_samples = 10
+num_samples = 1
 gen_num = 500
 pop_size = 25
 best_left = 10
-perturbation_size = 0.01  # Default perturbation size
-initial_perturbation_size = 0.07  # Initial perturbation size
-# mutation_perturbation_size = 0.1  # Mutation perturbation size
+perturbation_size = 0.05  # Default perturbation size
+initial_perturbation_size = 0.01  # Initial perturbation size
 # Generate a random latent vector
 latent_space = torch.randn(num_samples, 100, 1, 1).to(device)
 all_img_lst = []
@@ -62,8 +68,18 @@ for i in range(num_samples):
     original_image = G(original_latent)
     original_logit = classifier(original_image).squeeze().detach().cpu().numpy()
     original_label = np.argmax(original_logit).item()
-    # Calculate fitness for the original image
-    fitness_original = calculate_fitness(original_logit, original_label)
+    # Convert the tensor to a PIL Image
+    original_image_pil = transforms.ToPILImage()(original_image.squeeze().cpu())
+
+    # Define the path for saving the original image
+    # You can include additional identifiers in the filename if needed, such as a timestamp or iteration number
+    original_image_path = os.path.join(
+        original_images_dir, f"original_image_{i}_X{original_label}.png"
+    )
+
+    # Save the original image
+    original_image_pil.save(original_image_path)
+
     ### Initialize optimization ###
     init_pop = [
         original_latent.unsqueeze(0)
@@ -80,8 +96,6 @@ for i in range(num_samples):
     for g_idx in range(gen_num):
         indivs_lV = torch.cat(now_pop, dim=0).view(-1, 100, 1, 1)
         Gen_imgs = G(indivs_lV)
-        Gen_imgs1 = Gen_imgs.detach().numpy()
-        all_img_lst.append(Gen_imgs1)
         all_logits = classifier(Gen_imgs).squeeze().detach().cpu().numpy()
         fitness_scores = [
             calculate_fitness(all_logits[k_idx], original_label)
@@ -96,7 +110,7 @@ for i in range(num_samples):
         parent_pop = [now_pop[i] for i in selected_indices]
         # Perform crossover and mutation
         print("now_best " + str(now_best) + "now_best " + str(np.mean(fitness_scores)))
-        wandb.log({"ft_scores": now_best})
+        # wandb.log({"ft_scores": now_best})
         if now_best < 0:
             break
         elif now_best == prev_best:
@@ -129,29 +143,41 @@ for i in range(num_samples):
         now_pop = parent_pop + k_pop
         prev_best = now_best
 
-    mod_best = parent_pop[-1].squeeze(0)
-    final_bound_img = G(mod_best).detach().numpy()
-    all_img_lst.append(final_bound_img)
-    # Convert the image to a PyTorch tensor
-    final_bound_img = final_bound_img.reshape(1, 28, 28)
-    final_bound_img_tensor = torch.from_numpy(final_bound_img).float()
-    prediction = torch.argmax(classifier(final_bound_img_tensor)).item()
+    mod_best = parent_pop[-1].view(-1, 100, 1, 1)
+    final_bound_img = G(mod_best)
+    # Convert the tensor to a PIL Image
+    transform = transforms.ToPILImage()
+    perturbed_img_pil = transform(final_bound_img[0].detach().cpu())
+    all_img_lst.append(perturbed_img_pil)
+    prediction = torch.argmax(classifier(final_bound_img)).item()
     predictions.append(prediction)
 
-    # Save the image as PNG
-    image = Image.fromarray((final_bound_img[0] * 255).astype(np.uint8), mode="L")
-    wandb_image = wandb.Image(image)
-
-    # Log the image along with other relevant information
-    wandb.log(
-        {
-            "Generated Image": wandb_image,
-            "Expected Label X": original_label,
-            "Predicted Label Y": predictions,
-            "Fitness Score": now_best,
-        }
+    image_path = os.path.join(
+        result_dir, f"image_{i}_iteration_{g_idx}_X{original_label}_Y{prediction}.png"
     )
+    perturbed_img_pil.save(image_path)
 
+    # Store the image info
+    image_info.append((i, g_idx, original_label, prediction))
 
-all_imgs = np.vstack(final_bound_img)
-np.save("boundGAN_imgs_MNISTorg1.npy", all_imgs)
+# Save the images as a numpy array
+all_imgs = np.vstack(all_img_lst)
+np.save(os.path.join(result_dir, "bound_imgs_mnist_dcgan.npy"), all_imgs)
+
+# Save the image info
+with open(os.path.join(result_dir, "image_info.txt"), "w") as f:
+    f.write("Image Index, Expected Label X, Predicted Label Y\n")
+    for img_info in image_info:
+        f.write(f"{img_info[0]}, {img_info[1]}, {img_info[2]}, {img_info[3]}\n")
+misclassified_count = 0
+
+# Iterate over the image info list
+for img_info in image_info:
+    expected_label = img_info[2]
+    predicted_label = img_info[3]
+    if predicted_label != expected_label:
+        misclassified_count += 1
+
+misclassification_percentage = (misclassified_count / len(image_info)) * 100
+
+print(f"Misclassification Percentage: {misclassification_percentage:.2f}%")
