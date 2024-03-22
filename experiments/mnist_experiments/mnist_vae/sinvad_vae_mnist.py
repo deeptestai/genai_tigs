@@ -1,5 +1,6 @@
 import torch
-#import wandb
+
+# import wandb
 from PIL import Image
 from torchvision import transforms
 import numpy as np
@@ -11,7 +12,7 @@ import os
 from sa.model import MnistClassifier
 from vae.model import VAE
 
-#run = wandb.init(project="sinvad_fitness_sd_mnist")
+# run = wandb.init(project="sinvad_fitness_sd_mnist")
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 img_size = 28 * 28 * 1
@@ -20,26 +21,28 @@ torch.no_grad()  # since nothing is trained here
 ### Prep (e.g. Load Models) ###
 vae = VAE(img_size=28 * 28, h_dim=1600, z_dim=400).to(device)
 classifier = MnistClassifier(img_size=img_size).to(device)
-vae.load_state_dict(
-    torch.load(
-        "./vae/models/MNIST_EnD.pth",
-        map_location=device,
-    )
-)
+vae.load_state_dict(torch.load("./vae/models/MNIST_EnD.pth", map_location=device,))
 vae.eval()
 classifier.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/sa/models/MNIST_conv_classifier.pth",
+        "./sa/models/MNIST_conv_classifier.pth",
         map_location=device,
     )
 )
 classifier.eval()
-result_dir = "./result_vae_mnist" # Directory to save the images
+result_dir = "./result_vae_mnist"  # Directory to save the images
+# Subdirectory for original images
+original_images_dir = os.path.join(result_dir, "original_images")
 os.makedirs(result_dir, exist_ok=True)
+os.makedirs(original_images_dir, exist_ok=True)
 print("models loaded...")
 # Transforms: Convert image to tensor and normalize it
-test_dataset = torchvision.datasets.MNIST(root='./data', train=False, transform=transforms.ToTensor(), download=True)
-test_data_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=1, shuffle=True)
+test_dataset = torchvision.datasets.MNIST(
+    root="./data", train=False, transform=transforms.ToTensor(), download=True
+)
+test_data_loader = torch.utils.data.DataLoader(
+    dataset=test_dataset, batch_size=1, shuffle=True
+)
 print("Data loader ready...")
 
 
@@ -62,13 +65,12 @@ def calculate_fitness(logit, label):
 gen_num = 500
 pop_size = 25
 best_left = 10
-imgs_to_samp = 100
-perturbation_size = 0.1  # Default perturbation size
-initial_perturbation_size = 0.7  # Initial perturbation size
+imgs_to_samp = 5
+perturbation_size = 0.02  # Default perturbation size
+initial_perturbation_size = 0.01  # Initial perturbation size
 predictions = []
 all_img_lst = []
 image_info = []
-
 
 for img_idx in trange(imgs_to_samp):
     ### Sample image ###
@@ -80,8 +82,16 @@ for img_idx in trange(imgs_to_samp):
     original_image = vae.decode(original_lv).view(-1, 1, 28, 28)
     original_logit = classifier(original_image).squeeze().detach().cpu().numpy()
     original_label = original_logit.argmax().item()
-    # Calculate fitness for the original image
-    fitness_original = calculate_fitness(original_logit, original_label)
+    # Convert the tensor to a PIL Image
+    original_image_pil = transforms.ToPILImage()(original_image.squeeze().cpu())
+
+    # Define the path for saving the original image
+    original_image_path = os.path.join(
+        original_images_dir, f"original_image_{img_idx}_X{original_label}.png"
+    )
+
+    # Save the original image
+    original_image_pil.save(original_image_path)
 
     ### Initialize optimization ###
     init_pop = [
@@ -123,7 +133,7 @@ for img_idx in trange(imgs_to_samp):
             + str(np.mean(fitness_scores))
         )
         # Log fitness scores
-        #wandb.log({"Fitness Score": now_best, "Sample Index": i, "Iteration": g_idx})
+        # wandb.log({"Fitness Score": now_best, "Sample Index": i, "Iteration": g_idx})
         if now_best < 0:
             break
         elif now_best == prev_best:
@@ -154,55 +164,40 @@ for img_idx in trange(imgs_to_samp):
         prev_best = now_best
 
     mod_best = parent_pop[-1].clone()
-    final_bound_img = vae.decode(parent_pop[-1]).detach().cpu().numpy()
-    all_img_lst.append(final_bound_img)
-    # Convert the image to a PyTorch tensor
-    final_bound_img = final_bound_img.reshape(1, 28, 28)
-    final_bound_img_tensor = torch.from_numpy(final_bound_img).float().to(device)
-    #final_bound_img_tensor = final_bound_img_tensor.view(1, 1, 28, 28)
-    prediction = torch.argmax(classifier(final_bound_img_tensor)).item()
+    final_bound_img = vae.decode(parent_pop[-1]).view(-1, 1, 28, 28)
+    # Convert the tensor to a PIL Image
+    transform = transforms.ToPILImage()
+    perturbed_img_pil = transform(final_bound_img[0].detach().cpu())
+    all_img_lst.append(perturbed_img_pil)
+    prediction = torch.argmax(classifier(final_bound_img)).item()
     predictions.append(prediction)
-
-    # Save the image as PNG
-    #final_bound_img_2d = final_bound_img.reshape(1, 28, 28)
-    #image = Image.fromarray((final_bound_img_2d[0] * 255).astype(np.uint8), mode="L")
-    #wandb_image = wandb.Image(image)
-
-    # Log the image along with other relevant information
-    #wandb.log(
-    #    {
-    #        "Generated Image": wandb_image,
-    #       "Expected Label X": original_label,
-    #        "Predicted Label Y": predictions,  # "Fitness Score": now_best,
-    #   }
-   # )
-    # Save the image as PNG
-    image = Image.fromarray((final_bound_img[0] * 255).astype(np.uint8), mode='L')
-    image_path = os.path.join(result_dir, f'image_{img_idx}_X{original_label}_Y{prediction}.png')
-    image.save(image_path)
+    image_path = os.path.join(
+        result_dir,
+        f"image_{img_idx}_iteration{g_idx}_X{original_label}_Y{prediction}.png",
+    )
+    perturbed_img_pil.save(image_path)
 
     # Store the image info
-    image_info.append((img_idx, original_label, prediction))
+    image_info.append((img_idx, g_idx, original_label, prediction))
 
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
-np.save(os.path.join(result_dir, 'bound_imgs_mnist_vae.npy'), all_imgs)
+np.save(os.path.join(result_dir, "bound_imgs_mnist_vae.npy"), all_imgs)
 
 # Save the image info
-with open(os.path.join(result_dir, 'image_info.txt'), 'w') as f:
+with open(os.path.join(result_dir, "image_info.txt"), "w") as f:
     f.write("Image Index, Expected Label X, Predicted Label Y\n")
     for img_info in image_info:
-        f.write(f"{img_info[0]}, {img_info[1]}, {img_info[2]}\n")
+        f.write(f"{img_info[0]}, {img_info[1]}, {img_info[2]},{img_info[3]}\n")
 misclassified_count = 0
 
 # Iterate over the image info list
 for img_info in image_info:
-    expected_label = img_info[1]
-    predicted_label = img_info[2]
+    expected_label = img_info[2]
+    predicted_label = img_info[3]
     if predicted_label != expected_label:
         misclassified_count += 1
 
 misclassification_percentage = (misclassified_count / len(image_info)) * 100
 
 print(f"Misclassification Percentage: {misclassification_percentage:.2f}%")
-
