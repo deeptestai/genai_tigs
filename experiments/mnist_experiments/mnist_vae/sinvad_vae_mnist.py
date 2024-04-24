@@ -180,7 +180,7 @@ for img_idx in trange(imgs_to_samp):
             k_pop.append(k_gene)
         now_pop = parent_pop + k_pop
         prev_best = now_best
-
+        now_pop = [torch.clamp(tensor, min=min_val, max=max_val) for tensor in now_pop]
     mod_best_image_tensor = best_image_tensor.to(device)
     mod_best_image_np = best_image_tensor.cpu().detach().numpy()
 
