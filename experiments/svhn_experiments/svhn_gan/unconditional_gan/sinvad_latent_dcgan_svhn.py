@@ -10,16 +10,6 @@ from dcgan.svhngan import Generator
 from classifier.model import VGGNet
 
 #run = wandb.init(project="Sinvad_latent_based_svhnDCGAN")
-def save_image(tensor, filename):
-    """
-    Save a tensor as an image
-    """
-    img = vutils.make_grid(tensor, normalize=True)  # Normalize ensures [0,1] range
-    img = img.mul(255).add_(0.5).clamp_(0, 255).permute(1, 2, 0)
-    # Now, transfer the tensor to CPU and convert it to numpy array for saving
-    img = img.to('cpu', torch.uint8).numpy()  # Convert tensor to numpy array in [0,255] range
-    img = Image.fromarray(img)
-    img.save(filename)
 
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
