@@ -8,21 +8,10 @@ import torchvision
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from tqdm import trange
-from experiments.svhn_experiments.svhn_vae.vae.model import ConvVAE
-from experiments.svhn_experiments.svhn_classifier.model import VGGNet
+from vae.svhn_vae.svhn_vae.model import ConvVAE
+from unconditional_gan.classifier.model import VGGNet
 
 #run = wandb.init(project="Sinvad_latent_beased_SVHN")
-def save_image(tensor, filename):
-    """
-    Save a tensor as an image
-    """
-    img = vutils.make_grid(tensor, normalize=True)  # Normalize ensures [0,1] range
-    img = img.mul(255).add_(0.5).clamp_(0, 255).permute(1, 2, 0)
-    # Now, transfer the tensor to CPU and convert it to numpy array for saving
-    img = img.to('cpu', torch.uint8).numpy()  # Convert tensor to numpy array in [0,255] range
-    img = Image.fromarray(img)
-    img.save(filename)
-
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 image_size = 32 * 32 * 3
@@ -31,22 +20,28 @@ vae = ConvVAE(img_size=(32, 32), c_num=3, h_dim=4000, z_dim=800).to(device)
 classifier = VGGNet().to(device)
 vae.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/experiments/svhn_experiments/svhn_vae/vae/svhn_convend.pth",
+        "./vae/svhn_vae/svhn_vae/svhn_convend.pth",
         map_location=device,
     )
 )
 classifier.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/experiments/svhn_experiments/svhn_classifier/model/SVHN_vggnet.pth",
+        "./unconditional_gan/classifier/SVHN_vggnet.pth",
         map_location=device,
     )
 )
 # Set models to evaluation mode
 vae.eval()
 classifier.eval()
-result_dir = "./result_svhn_vae"
+result_dir = "./result_vae_svhn"  # Directory to save the images
+# Subdirectory for original images
+original_images_dir = os.path.join(result_dir, "original_images")
 os.makedirs(result_dir, exist_ok=True)
-
+os.makedirs(original_images_dir, exist_ok=True)
+img_pil_dir = os.path.join(original_images_dir, "original_images")
+os.makedirs(img_pil_dir, exist_ok=True)
+prtb_img_dir = os.path.join(result_dir, "perturb_images")
+os.makedirs(prtb_img_dir, exist_ok=True)
 test_dataset = torchvision.datasets.SVHN(root='./data', split="test", transform=transforms.ToTensor(), download=True)
 test_data_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=1, shuffle=True)
 print("Data loader ready...")
@@ -70,13 +65,15 @@ def calculate_fitness(logit, label):
 
 image_info = []
 predictions = []
-num_samples = 1
-gen_num = 500
+num_samples = 100
+gen_num = 250
 pop_size = 25
 best_left = 10
+min_val=-5.26724052429199
+max_val=4.72675895690918
 imgs_to_samp = 100
-perturbation_size = 0.1 # Default perturbation size
-initial_perturbation_size = 0.7 # Initial perturbation size
+perturbation_size = 0.00999399948120117 # Default perturbation size
+initial_perturbation_size = 0.0199879989624023  # Initial perturbation size
 
 all_img_lst = []
 ### multi-image sample loop ###
@@ -93,20 +90,28 @@ for img_idx in trange(imgs_to_samp):
     original_image = vae.decode(original_lv).view(-1, 3, 32, 32)
     original_logit = classifier(original_image).squeeze().detach().cpu().numpy()
     original_label = original_logit.argmax().item()
-    # Calculate fitness for the original image
-    fitness_original = calculate_fitness(original_logit, original_label)
-    all_img_lst = []
+    # Convert the tensor to a NumPy array
+    original_image_np = original_image.squeeze().detach().cpu().numpy()
+
+    # Define the filename that includes the label
+    filename = f"original_image_{img_idx}_X_{original_label}.npy"
+
+    # Define the full path for saving the file
+    file_path = os.path.join(original_images_dir, filename)
+
+    # Save the image data as a NumPy file
+    np.save(file_path, original_image_np)
 
     ### Initialize optimization ###
     init_pop = [
         original_lv + initial_perturbation_size * torch.randn(1, 800).to(device)
         for _ in range(pop_size)
     ]
-    binom_sampler = torch.distributions.binomial.Binomial(
-        probs=0.5 * torch.ones(original_lv.size())
-    )
     now_pop = init_pop
     prev_best = np.inf
+    best_fitness_score = np.inf
+    best_image_tensor = None
+    best_image_index = -1
     ### GA ###
     for g_idx in range(gen_num):
         indivs = torch.cat(now_pop, dim=0)
@@ -117,16 +122,25 @@ for img_idx in trange(imgs_to_samp):
             calculate_fitness(all_logits[k_idx], original_label)
             for k_idx in range(pop_size)
         ]
+        # Finding the minimum fitness score in this generation
+        current_min_index = np.argmin(fitness_scores)
+        current_min_fitness = fitness_scores[current_min_index]
+
+        # Update global minimum if the current score is lower
+        if current_min_fitness < best_fitness_score:
+            best_fitness_score = current_min_fitness
+            best_image_tensor = dec_imgs[current_min_index].cpu().detach()
+            best_image_index = current_min_index
 
         # Perform selection
-        best_idxs = sorted(
+        selected_indices = sorted(
             range(len(fitness_scores)),
-            key=lambda i_x: fitness_scores[i_x],
+            key=lambda i: fitness_scores[i],
             reverse=True,
         )[-best_left:]
         # Consider the lowest fitness score
         now_best = np.min(fitness_scores)
-        parent_pop = [now_pop[idx] for idx in best_idxs]
+        parent_pop = [now_pop[idx] for idx in selected_indices]
 
         # Perform crossover and mutation
         print(
@@ -156,66 +170,36 @@ for img_idx in trange(imgs_to_samp):
             # Mutation
             diffs = (k_gene != original_lv).float()
             k_gene += (
-                perturbation_size * torch.randn(k_gene.size()) * diffs
+                perturbation_size * torch.randn(k_gene.size()).to(device) * diffs
             )  # random adding noise only to diff places
-            # random matching to latent_images[i]
-            interp_mask = binom_sampler.sample()
-            k_gene = interp_mask * original_lv + (1 - interp_mask) * k_gene
+           
             k_pop.append(k_gene)
 
         # Current population is obtained combining the parent pop and its offspring
         now_pop = parent_pop + k_pop
         prev_best = now_best
+        now_pop = [torch.clamp(tensor, min=min_val, max=max_val) for tensor in now_pop]
 
-    mod_best = parent_pop[-1].clone()
-    final_bound_img = vae.decode(parent_pop[-1]).detach().numpy()
-    all_img_lst.append(final_bound_img)
-    # Convert the image to a PyTorch tensor
-    final_bound_img_tensor = torch.from_numpy(final_bound_img).float().to(device)
-    prediction = torch.argmax(classifier(final_bound_img_tensor)).item()
-    predictions.append(prediction)
+    # Assuming best_image_tensor is tensor that needs to be processed
+    mod_best_image_tensor = best_image_tensor.to(device)  # Move tensor to the appropriate device if not already
+    mod_best_image_np = best_image_tensor.cpu().detach().numpy()  # Convert tensor to numpy array after moving to CPU
 
+    # Assuming classifier is already defined and appropriate for the tensor as is
+    final_bound_logits = classifier(mod_best_image_tensor.unsqueeze(0))  # Ensure tensor is in correct shape for classifier
+    predicted_best_label = torch.argmax(final_bound_logits, dim=1).item()
 
-    # Transpose the dimensions to (32, 32, 3)
-   # transposed_img_data = final_bound_img[0].transpose(1, 2, 0)
+    # Define the path for saving the numpy file with detailed filename
+    image_path_np = os.path.join(
+        result_dir,
+        f"image_{img_idx}_iteration{g_idx}_X{original_label}_Y{predicted_best_label}.npy"
+    )
 
-    # Scale the image data from [0, 1] to [0, 255]
-    #scaled_img_data = (transposed_img_data * 255).astype(np.uint8)
+    # Save the numpy array to a file
+    np.save(image_path_np, mod_best_image_np)
 
-    # Create the PIL Image
-    #image = Image.fromarray(scaled_img_data, mode="RGB")
-    #wandb_image = wandb.Image(image)
+    all_img_lst.append(mod_best_image_np)
 
-    # Log the image along with other relevant information
-    #wandb.log(
-    #   {
-    #        "Generated Image": wandb_image,
-    #       "Expected Label X": original_label,
-    #        "Predicted Label Y": predictions,
-    #    }
-    #)
-
-    save_image(final_bound_img_tensor, os.path.join(result_dir, f'image_{img_idx}_X{original_label}_Y{prediction}.png'))
-    # Store the image info
-    image_info.append((img_idx, original_label, prediction))
 
 # Save all generated images as a numpy array
 all_imgs = np.vstack(all_img_lst)
-np.save("generated_images_vae_svhn.npy", all_imgs)
-# Save the image info
-with open(os.path.join(result_dir, 'image_info.txt'), 'w') as f:
-    f.write("Image Index, Expected Label X, Predicted Label Y\n")
-    for img_info in image_info:
-        f.write(f"{img_info[0]}, {img_info[1]}, {img_info[2]}\n")
-misclassified_count = 0
-
-# Iterate over the image info list
-for img_info in image_info:
-    expected_label = img_info[1]
-    predicted_label = img_info[2]
-    if predicted_label != expected_label:
-        misclassified_count += 1
-
-misclassification_percentage = (misclassified_count / len(image_info)) * 100
-
-print(f"Misclassification Percentage: {misclassification_percentage:.2f}%")
+np.save(os.path.join(result_dir, "bound_imgs_svhn_vae.npy"), all_imgs)
