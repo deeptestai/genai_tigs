@@ -22,7 +22,7 @@ num_epochs =2650
 batch_size = 128
 learning_rate = 2e-4
 
-# SVHN dataset
+# cifar10 dataset
 dataset = torchvision.datasets.CIFAR10(root='../data',
                                       train=True,
                                      transform=transforms.ToTensor(),
