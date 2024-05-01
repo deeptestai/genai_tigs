@@ -1,9 +1,14 @@
 import os
+import random
+import cv2
+import re
 from diffusers import StableDiffusionPipeline
-from diffusers.schedulers import DDIMScheduler
+from diffusers.schedulers import DDIMScheduler                                
+from tgate import TgateSDDeepCacheLoader
 import numpy as np
 import wandb
 import torch
+from tgate import TgateSDDeepCacheLoader
 from torch import autocast
 from PIL import Image
 from torchvision import transforms
@@ -11,11 +16,37 @@ from collections import Counter
 from mnist_classifier.model import MnistClassifier
 run =wandb.init(project="sinvadtestfitness_mnist")
 img_size = 28 * 28
-def disableNSFWFilter(pipe):
-    """Disables the trigger happy nsfw filter. tread carefully"""
-    def dummy(images, **kwargs):
-        return images, [False] * len(images)
-    pipe.safety_checker = dummy
+def process_image(image):
+    """
+    Convert a 3-channel RGB PIL Image to grayscale, resize it to 28x28 pixels,
+    and convert it to a PyTorch tensor.
+
+    Parameters:
+    - image (PIL.Image): The input RGB image.
+
+    Returns:
+    - tensor (torch.Tensor): The processed image as a PyTorch tensor.
+    """
+    if not isinstance(image, Image.Image):
+        raise TypeError("The provided image needs to be a PIL Image.")
+
+    # Convert PIL Image to numpy array (RGB)
+    img_np = np.array(image)
+
+    # Convert the image from RGB to grayscale
+    gray_image = cv2.cvtColor(img_np, cv2.COLOR_RGB2GRAY)
+
+    # Resize the image to 28x28 pixels
+    resized_image = cv2.resize(gray_image, (28, 28))
+
+    # Convert the numpy array back to PIL Image (to use torchvision transforms)
+    img_pil = Image.fromarray(resized_image)
+
+    # Convert PIL Image to PyTorch Tensor
+    transform = transforms.ToTensor()
+    tensor = transform(img_pil)
+
+    return tensor
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":16:8"
 generator = torch.Generator(device = 'cuda')
@@ -43,89 +74,93 @@ classifier.load_state_dict(
    )
 )
 classifier.eval()
-transform = transforms.Compose(
-    [
-        transforms.Resize((28, 28)),
-        transforms.Grayscale(num_output_channels=1),  # This converts to grayscale
-        transforms.ToTensor(),
-        transforms.Normalize((0.5,),(0.5,)),
-    ]
-)
 
-prompt = "A photo of three3 Number3" # prompt to dream about
+prompts =[ "A photo of Z0ero Number0","A photo of one1 Number1","A photo of two2 Number2 ","A photo of three3 Number3","A photo of Four4 Number4","A photo of Five5 Number5","A photo of Six6 Number6","A photo of Seven7 Number7 ","A photo of Eight8 Number8","A photo of Nine9 Number9"]  # prompt to dream about
 proj_name = "test"
-num_inference_steps = 20
+num_inference_steps = 15
 width = 512
 height = 512
-init_perturbation = 0.002
+init_perturbation = 0.00216688718795776
 best_left = 10
-perturbation_size = 0.001
-frame_index = 0
-gen_steps = 500
+perturbation_size = 0.00108344359397888
+max_val =5.42081117630005
+min_val = -5.41362476348877
+gen_steps = 250
 pop_size = 25
 fitness_scores = []
 predicted_labels = []
 all_img_lst = []
-num_samples = 10
-desired_label_index = 3
+num_samples = 100
+image_info = []
 proj_path = "./evolution_mnist_sdsinvadkpp/"+proj_name+"_"
 os.makedirs(proj_path, exist_ok=True)
-os.makedirs(proj_path+'/Newresultjump', exist_ok=True)
-
+os.makedirs(proj_path+'/Newresult', exist_ok=True)
+os.makedirs(os.path.join(proj_path, 'generated_images'), exist_ok=True)
 
 print('Creating init image')
+#lms = LMSDiscreteScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear")
 base_model_id = "runwayml/stable-diffusion-v1-5"
 weights_path = "./Mnist_Lora_sdv1.5-000005.safetensors"
 
 pipe = StableDiffusionPipeline.from_pretrained(
-base_model_id, safety_checker=None).to(device)
+base_model_id,variant="fp16", torch_dtype=torch.float16, safety_checker=None).to(device)
 pipe.load_lora_weights(weights_path)
-pipe.scheduler = DDIMScheduler.from_config(pipe.scheduler.config)
-#disableNSFWFilter(pipe)
-#tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-large-patch14")
+pipe.scheduler = DDIMScheduler.from_config(pipe.scheduler.config , rescale_betas_zero_snr=True)
 pipe.unet.to(device)
 pipe.vae.to(device)
 pipe.text_encoder.to(device)
-seed = 1024
+seed = 0
 for n in range(num_samples):
-    generator = generator.manual_seed(seed)
-    original_lv = torch.randn((1, pipe.unet.config.in_channels, height // 8, width // 8), device = device)
-    with autocast("cuda"):
-         init_img = pipe(prompt, num_inference_steps= num_inference_steps, latents=original_lv,)["images"][0]
-    tensor_image = transform(init_img)
-    tensor_image = tensor_image.unsqueeze(0).to(device)
-    original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
-    original_label = np.argmax(original_logit).item()
-    if original_label != desired_label_index:
-        # If label doesn't match, skip the rest of the loop and continue with the next sample
-        continue
-    init_img_path = os.path.join(proj_path, f"matched_image_{n}_{original_label}.png")
-    init_img.save(init_img_path)
-    print(f"Saved image with matching label {original_label} at: {init_img_path}")
+    seedSelect = seed+n
+    generator = generator.manual_seed(seedSelect)
+    original_lv = torch.randn((1, pipe.unet.config.in_channels, height // 8, width // 8), device = device).to(torch.float16)
+    label_matched = False  # Flag to track when the correct label is matched
+    attempt_count = 0  # To prevent infinite loops
+    while not label_matched and attempt_count < 50:
+         randprompt = random.choice(prompts)
+         expected_label = int(re.search(r"Number(\d+)", randprompt).group(1))  # Extract the number following 'HouseNo'
+         with torch.inference_mode():
+              init_img = pipe (prompt = randprompt,guidance_scale=1.4, num_inference_steps= num_inference_steps,latents=original_lv)["images"][0]
+         tensor_image = process_image(init_img)
+         tensor_image = tensor_image.unsqueeze(0).to(device)
+         original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
+         original_label = np.argmax(original_logit).item()
+         # Check if the predicted label matches the expected label from the promp
+         if original_label == expected_label:
+           # Save the image only if the label matches
+            init_img_path = os.path.join(proj_path, f'image_{n}_X{original_label}_prompt_{expected_label}')
+            init_img.save(init_img_path)
+            print(f"Image {n} with matching label saved at {init_img_path}")
+            label_matched = True
+         else:
+            print(f"Attempt {attempt_count + 1}: Label mismatch for image {n}: expected {expected_label}, got {original_label}")
+            attempt_count += 1
+    if not label_matched:
+            print(f"No matching prompt found after 10 attempts for image {n}.")    
 
     init_pop = [
-        original_lv + init_perturbation * torch.randn((4, height // 8, width // 8), device = device)
+        original_lv + init_perturbation * torch.randn((4, height // 8, width // 8), device = device).to(torch.float16)
         for _ in range(pop_size)
     ]
-   
-    binom_sampler = torch.distributions.binomial.Binomial(
-        probs=0.5 * torch.ones(original_lv.size(), device=device)
-    )
 
+    best_fitness_score = float('inf')
+    best_image_tensor = None
+    best_image_index = -1
     now_pop = init_pop
     prev_best = np.inf
     for i in range(gen_steps):
 
-        indivs_lv = torch.cat(now_pop, dim=0).view(-1, 4, height // 8, width // 8)
+        indivs_lv = torch.cat(now_pop, dim=0).view(-1, 4, height // 8, width // 8).to(torch.float16)
         print(indivs_lv.shape)
-        with torch.inference_mode(), torch.autocast("cuda"):
-            perturb_img = pipe([prompt]*(pop_size),guidance_scale = 0.5, 
-                num_inference_steps=num_inference_steps,generator = generator,
+        with torch.inference_mode():
+            perturb_img = pipe ([randprompt]*(pop_size),guidance_scale = 1.4, generator= generator, 
+                num_inference_steps=num_inference_steps,
                 latents=indivs_lv,
             )["images"]
-           # all_img_lst.append(perturb_img)
+           #all_img_lst.append(perturb_img)
         torch.cuda.empty_cache()
-        tensor_image2 =torch.stack([transform(image) for image in perturb_img])
+        tensor_image2 =torch.stack([process_image(image) for image in perturb_img])
+        # tensor_image2 = transform(last_image)
         tensor_image2 = tensor_image2.to(device)
         all_logits = classifier(tensor_image2).detach().cpu().numpy()
         perturb_label1 = np.argmax(all_logits).item()
@@ -137,6 +172,15 @@ for n in range(num_samples):
             for k_idx in range(pop_size)
         ]
         print("print fitness",len(fitness_scores))
+        # Find the minimum fitness score in the current generation
+        current_min_index = np.argmin(fitness_scores)
+        current_min_fitness = fitness_scores[current_min_index]
+    
+        # Update best tracking variables if the current minimum is less than the tracked best
+        if current_min_fitness < best_fitness_score:
+           best_fitness_score = current_min_fitness
+           best_image_tensor  = tensor_image2[current_min_index]  # Ensure a deep copy
+           best_image_index = current_min_index
         # Perform selection
         selected_indices = sorted(range(len(fitness_scores)), key=lambda i: fitness_scores[i], reverse=True,
            )[-best_left:]
@@ -167,45 +211,31 @@ for n in range(num_samples):
             k_gene += (
                    perturbation_size * torch.randn(k_gene.size(), device = k_gene.device) * diffs
             )  # random adding noise only to diff places
-            interp_mask = binom_sampler.sample()
-            k_gene = interp_mask * original_lv + (1 - interp_mask) * k_gene
+
             k_pop.append(k_gene)
-            print("Size of k_pop:", len(k_pop))
 
         # Combine parent_pop and k_pop for the next generation
         now_pop = parent_pop + k_pop
         prev_best = now_best
-        
-    mod_best = parent_pop[-1].view(1, 4, height // 8, width // 8)
-    
-    with torch.inference_mode():
+        # Apply a final clamp across all now_pop before next iteration starts
+        now_pop = [torch.clamp(tensor, min=min_val, max=max_val) for tensor in now_pop]
 
-       last_image_list = pipe(prompt,guidance_scale = 0, num_inference_steps= num_inference_steps, latents=mod_best)["images"]
     # After the loop, save the last image if it exists
-    if last_image_list:
-       last_image = last_image_list[0]
-       tensor_image = transform(last_image)
+    if best_image_tensor is not None:
+       tensor_image = best_image_tensor.to(device)
        tensor_image = tensor_image.unsqueeze(0).to(device)
+       tensor_image_np= tensor_image.squeeze().detach().cpu().numpy()
        perturb_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
        perturb_label = np.argmax(perturb_logit).item()
        predicted_labels.append(perturb_label)
-
-    if last_image is not None:
-       image_filename = f'image_{n}_iteration{i}_X{original_label}_Y{perturb_label}.png'
-       last_image_path = os.path.join(proj_path, 'Newresultjump', image_filename)
-       last_image.save(last_image_path)
-       print(f"Last image saved at {last_image_path}")
-    else:
-       print("Error: No image was generated")
-
-
-# After all images are processed (i.e., outside your main loop):
-misclassified_count = sum(1 for predicted_label in predicted_labels if predicted_label != original_label)
-total_images = len(predicted_labels)
-misclassification_percentage = (misclassified_count / total_images) * 100
-
-# Print or log the misclassification percentage
-print(f"Misclassification Percentage: {misclassification_percentage}%")
-
-# wandb to log metrics
-wandb.log({"Misclassification Percentage": misclassification_percentage})
+       all_img_lst.append(tensor_image_np)
+       # Save the image as a numpy array
+       image_filename = f'image_{n}_iteration{i}_X{original_label}_Y{perturb_label}'
+       # Save the image as a numpy array
+       np.save(os.path.join(proj_path,'generated_images', image_filename), tensor_image_np)
+    else: 
+       print("image is none")
+    
+# Save the images as a numpy array
+all_imgs = np.vstack(all_img_lst)
+np.save(os.path.join(proj_path, "bound_imgs_mnist_sd.npy"), all_imgs)
