@@ -7,7 +7,7 @@
 
  ## Configurations:
  ### VAE Configuration:
-  <p align="justify"> **VAE:** VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints](URL) and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
+  <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints](URL) and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
 
  Run the script by using a command.
  To train the VAE from scratch, run the following command:
@@ -26,7 +26,7 @@ python sinvad_vae_mnist.py --checkpoint_path /path/to/checkpoint
 
 Replace/path/to/checkpoint with the path to your file.
 ### GAN Configuration:
- <p align="justify"> ** GAN: ** Similarly, each dataset-name_experiments folder contains the gan folder as a subfolder. This folder contains one cdcgan folder and one sinvad_gai_dataset-name.py file. One can download the checkpoints from the weight directory under the cdcgan folder. After downloading it, run the script sinvad_gan_dataset-name.py.</p>
+ <p align="justify"> Similarly, each dataset-name_experiments folder contains the gan folder as a subfolder. This folder contains one cdcgan folder and one sinvad_gai_dataset-name.py file. One can download the checkpoints from the weight directory under the cdcgan folder. After downloading it, run the script sinvad_gan_dataset-name.py.</p>
 
  To run the SINVAD CDCGAN for a specific dataset, use the following command:
 
@@ -40,6 +40,45 @@ Similarly, after downloading or training the gan model, run the sinvad script fo
 python sinvad_cdcgan_master.py --dataset mnist
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
+
+**Stable Diffusion**
+Fine-tune stable diffusion using the khoya-ss platform and four different datasets. For a detailed description, please [click here](URL).
+
+Download the fine-tuned model weights from [this link](URL). 
+
+To run the test generator for Stable diffusion. You are required to install the following setup steps:
+### Creating a Virtual Environment with Conda
+
+First, please make sure you have Conda installed. If not, you can download and install it from [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
+
+1. **Create a Conda virtual environment**:
+   Open a terminal or Anaconda Prompt and run the following command to create a new Conda virtual environment:
+   
+   ```bash
+   conda create --name stable_diffusion_env python=3.10
+   '''
+   
+2. **Installing desired packages**
+     The requirements setup is already provided; run requirement-sd.txt using pip.
+   
+   ```bash
+     pip install requirement-sd.txt
+   '''
+
+3. **Running Stable Diffusion**
+     ```bash
+     python3 sinvad_lora_mnist.py
+   '''
+    Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset 
+    name.
+     
+4. **Additional Notes**: keep upgrading diffusers and transformers to avoid any errors.
+
+
+    
+
+
+
 
   
 ### Repository Structure:
