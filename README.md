@@ -5,8 +5,8 @@
 
  <p align="justify"> This research aims to evaluate the accuracy of various classifiers on datasets such as Mnist, Svhn, cifar10, and an Imagenet dataset. For this purpose, we utilized different generative models to introduce misbehavior-inducing images. Subsequently, we assessed the classifiers' ability to provide accurate predictions based on these images.</p>
 
- ## Configurations:
- ### VAE Configuration:
+ ## RUN Script:
+ ### VAE:
   <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints](URL) and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
 
  Run the script by using a command.
@@ -25,7 +25,7 @@ python sinvad_vae_mnist.py --checkpoint_path /path/to/checkpoint
 ```
 
 Replace/path/to/checkpoint with the path to your file.
-### GAN Configuration:
+### GAN:
  <p align="justify"> Similarly, each dataset-name_experiments folder contains the gan folder as a subfolder. This folder contains one cdcgan folder and one sinvad_gai_dataset-name.py file. One can download the checkpoints from the weight directory under the cdcgan folder. After downloading it, run the script sinvad_gan_dataset-name.py.</p>
 
  To run the SINVAD CDCGAN for a specific dataset, use the following command:
@@ -41,7 +41,7 @@ python sinvad_cdcgan_master.py --dataset mnist
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
-**Stable Diffusion**
+### stable diffusion configuration and Run script:
 Fine-tune stable diffusion using the khoya-ss platform and four different datasets. For a detailed description, please [click here](URL).
 
 Download the fine-tuned model weights from [this link](URL). 
