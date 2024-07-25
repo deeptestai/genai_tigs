@@ -13,11 +13,12 @@
  To train the VAE from scratch, run the following command:
 
 ```bash
-python train_master.py --dataset mnist
+python train_master.py --dataset mnist ```
 
 Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
 
 After downloading the checkpoints, run the following command to collect misbehavior-inducing inputs, run the command:
+
 ```bash
 python sinvad_vae_mnist.py --checkpoint_path /path/to/checkpoint   
 
