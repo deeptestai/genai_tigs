@@ -12,13 +12,16 @@
  Run the script by using a command.
  To train the VAE from scratch, run the following command:
 
-```bash
-python train.py --dataset mnist    // similarly for other datasets
+(```bash
+python train_master.py --dataset mnist)
+
+Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
 
 After downloading the checkpoints, run the following command to collect misbehavior-inducing inputs:\
+(```bash
+python sinvad_vae_mnist.py --checkpoint_path /path/to/checkpoint    // similarly for other three datasets )
 
-python sinvad_vae_mnist.py --checkpoint_path /path/to/checkpoint    // similarly for other three datasets
-
+Replace/path/to/checkpoint with the path to your file.
   
 ### Repository Structure:
 - experiments: contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
