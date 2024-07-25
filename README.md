@@ -5,7 +5,7 @@
  <p align="justify"> This research aims to evaluate the accuracy of various classifiers on datasets such as Mnist, Svhn, cifar10, and an Imagenet dataset. For this purpose, we utilized different generative models to introduce misbehavior-inducing images. Subsequently, we assessed the classifiers' ability to provide accurate predictions based on these images.</p>
 
  ## Configurations:
-  <p align="justify">_VAE:_ VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints](URL) and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
+  <p align="justify">**VAE:** VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints](URL) and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
 
  <p align="justify">\_GAN:_ Similarly, each dataset-name_experiments folder contains the gan folder as a subfolder. This folder contains one cdcgan folder and one sinvad_gai_dataset-name.py file. One can download the checkpoints from the weight directory under the cdcgan folder. After downloading it, run the script sinvad_gan_dataset-name.py.</p>
 
@@ -13,8 +13,8 @@
  To train the VAE from scratch, run the following command:
 
 ```bash
-python train_master.py --dataset mnist 
-```bash
+python train_master.py --dataset mnist
+```
 
 Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
 
