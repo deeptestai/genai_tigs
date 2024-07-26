@@ -4,7 +4,7 @@
     to create a new venv.
    -Please go ahead and install the CUDA 11.8 Toolkit by following the instructions given in this [link](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64).
    -Python version  must be 3.10.9 or higher (but lower than 3.11.0).
- 2. ## Setup Linux and installation of kohya-ss:
+2. ## Setup Linux and installation of kohya-ss:
     -To set up the project on Linux or macOS, perform the following steps:
     -Open a terminal and navigate to the desired installation directory.
     -Clone the repository by running the following command:
@@ -24,9 +24,9 @@
     -Run the setup script by executing the following command:
     ```bash
     ./setup.sh
-   ```
-
-   3. ## Fine-tune SD steps:
+    ```
+   
+3. ## Fine-tune SD steps:
     -Go to the directory kohya-ss and run the following command:
 
     ```bash
@@ -42,8 +42,8 @@
     - training parameters and BLIP parameters are described in configuration_parameters.md file [click here](URL)
     - train the model for six epochs.
    
--For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss)
-- either using Kohys-ss platform on the server OR Run the script directly by using Google:
+ -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss)
+ - Either using the Kohys-ss platform on the server using the above configuration OR Run the script directly by using Google Colab directly:
 #### Open Google Colab
 
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>](https://colab.research.google.com/github/camenduru/kohya_ss-colab/blob/main/kohya_ss_colab.ipynb)
