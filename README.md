@@ -32,12 +32,14 @@ Replace/path/to/checkpoint with the path to your file.
 
 ```bash
 python gan_master.py --dataset mnist
+
 ```
 Replace mnist with svhn or cifar10 to run the GAN for the other datasets.
 
 Similarly, after downloading or training the gan model, run the sinvad script for cdcgan.
 ```bash
 python sinvad_cdcgan_master.py --dataset mnist
+
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
