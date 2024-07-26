@@ -43,7 +43,8 @@
       file [click here](URL)
     - train the model for six epochs.
    
- -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss).\\
+ -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss).
+ 
  -Either using the Kohys-ss platform on the server using the above configuration OR Run the script directly by using Google Colab directly:
 #### Open Google Colab for kohya-ss:
 **click on button**
