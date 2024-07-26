@@ -6,6 +6,8 @@
  - Regulation images are optional. If you want to maintain flexibility inside the model, do not let it go outside the authentic class images and allow it to pick 
    random content from that prompt beyond the class. Here, we are using a real dataset, so regularization of images is required.
 - parameters for selecting reg img and img for training data are described in the table below.
+
+  
  | **Dataset**       | **Image-type/T.classes** | \# train images per class | \# repeat | **class-label** | **triggerword (Instance Prompt)** | **Class (Class prompt)** | **Prompt**                      |
 |-------------------|--------------------------|---------------------------|-----------|-----------------|----------------------------------|--------------------------|---------------------------------|
 | **MNIST**         | Greyscale/10             | 40                        | 30        | 0               | Z0ero                            | Number0                  | A photo of Z0ero Number0        |
