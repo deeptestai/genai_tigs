@@ -32,14 +32,12 @@ Replace/path/to/checkpoint with the path to your file.
 
 ```bash
 python gan_master.py --dataset mnist
-
 ```
 Replace mnist with svhn or cifar10 to run the GAN for the other datasets.
 
 Similarly, after downloading or training the gan model, run the sinvad script for cdcgan.
 ```bash
 python sinvad_cdcgan_master.py --dataset mnist
-
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
@@ -58,19 +56,19 @@ First, please make sure you have Conda installed. If not, you can download and i
    
    ```bash
    conda create --name stable_diffusion_env python=3.10
-   '''
+   ```
    
 2. **Installing desired packages**
      The requirements setup is already provided; run requirement-sd.txt using pip.
    
    ```bash
      pip install requirement-sd.txt
-   '''
+   ```
 
 3. **Running Stable Diffusion**
      ```bash
      python3 sinvad_lora_mnist.py
-   '''
+     ```
     Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset 
     name.
      
