@@ -35,15 +35,15 @@
     You will get a public link to open the Gradio as a public. Otherwise, you will get a local link. It's better to run with a public link.
 
     - Go to the LoRA tab and click the Data Preparation option.
-    Under the data preparation section, you can provide the path to the regularization and training images set in the perspective field.
-    - add the training path as well.
+      Under the data preparation section, you can provide the path to the regularization and training images in its perspective field.
+    - Add the training path as well.
     - Next, fix the prompt using BLIP captioning under the utility section by adjusting the prompt and parameters.
     - Now, adjust the training parameters for six epochs and save every N epoch.
     - Divide the regularization images & train images; training parameters settings and BLIP parameters settings are described in configuration_parameters.md 
       file [click here](URL)
     - train the model for six epochs.
    
- -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss)
+ -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss).
  -Either using the Kohys-ss platform on the server using the above configuration OR Run the script directly by using Google Colab directly:
 #### Open Google Colab for kohya-ss:
 **click on button**
