@@ -8,24 +8,23 @@
     -To set up the project on Linux or macOS, perform the following steps:
     -Open a terminal and navigate to the desired installation directory.
     -Clone the repository by running the following command:
-    '''bash
-    git clone --recursive https://github.com/bmaltais/kohya_ss.git
-    '''
+     ```bash
+     git clone --recursive https://github.com/bmaltais/kohya_ss.git
+     ```
     
     -Change directory name kohya-ss
-    '''bash
-    cd kohya_ss
-    '''
+     ```bash
+     cd kohya_ss
+     ```bash
 
-   -To resolve any permission issues, make the setup.sh script executable by using the following command:
-   '''bash
-   chmod +x ./setup.sh
-   '''
-   
-   -Run the setup script by executing the following command:
-   '''bash
-   ./setup.sh
-   '''
+    -To resolve any permission issues, make the setup.sh script executable by using the following command:
+    ```bash
+    chmod +x ./setup.sh
+    ```   
+    -Run the setup script by executing the following command:
+    ```bash
+    ./setup.sh
+   ```
 
  3. ## Fine-tune SD steps:
     -Go to the directory kohya-ss and run the following command:
