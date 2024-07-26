@@ -11,9 +11,9 @@
 
  ## RUN Script:
  ### VAE:
-  <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints](URL) and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
+  <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints here](URL), classifier checkpoints, and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
 
- Run the script by using a command.
+ Run the script by using a command.//
  To train the VAE from scratch, run the following command:
 
 ```bash
@@ -45,8 +45,8 @@ python sinvad_cdcgan_master.py --dataset mnist
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
-### stable diffusion configuration and Run script:
-Fine-tune stable diffusion using the khoya-ss platform and four different datasets. For a detailed description, please [click here](URL).
+### Stable diffusion configuration and Run script:
+Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](URL).
 
 Download the fine-tuned model weights from [this link](URL). 
 
@@ -69,7 +69,7 @@ First, please make sure you have Conda installed. If not, you can download and i
      pip install requirements-sd.txt
    ```
 
-3. **Running Stable Diffusion**
+3. **Run SD-based Generator**
      ```bash
      python3 sinvad_lora_mnist.py
      ```
@@ -81,9 +81,7 @@ First, please make sure you have Conda installed. If not, you can download and i
 
 ### Download classifier ckpt for all three types of datasets:
  <p align="justify">
-    This link provides a download for a singular zip file that contains three distinct sub-folders: mnist_classifier, cifar10_classifier, and svhn_classifier. Each of these folders includes checkpoint files for their respective datasets 
-    <a href="https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns">View and Download .ckpt Files</a>. 
-    Moreover, I prefer to use a pre-trained ckpt of imagenet classifier 
+    This [link downloads](href ="https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns") a single zip file containing three distinct subfolders: mnist_classifier, cifar10_classifier, and svhn_classifier. Each folder includes checkpoint files for its respective datasets. For Imagenet, we are using prepared classifier vgg-19-bn weights directly from the PyTorch repository.
     <a href="https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID">see link here</a>.
 </p>
 
