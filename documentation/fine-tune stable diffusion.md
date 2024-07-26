@@ -15,7 +15,7 @@
     -Change directory name kohya-ss
      ```bash
      cd kohya_ss
-     ```bash
+     ```
 
     -To resolve any permission issues, make the setup.sh script executable by using the following command:
     ```bash
@@ -26,11 +26,12 @@
     ./setup.sh
    ```
 
- 3. ## Fine-tune SD steps:
+   3. ## Fine-tune SD steps:
     -Go to the directory kohya-ss and run the following command:
-    '''bash
+
+    ```bash
     ./gui.sh ---share
-    '''
+    ```
     You will get a public link to open the Gradio as a public. Otherwise, you will get a local link. It's better to run with a public link.
 
     - Go to the LoRA tab and click the Data Preparation option.
@@ -43,7 +44,7 @@
    
 -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss)
 - either using Kohys-ss platform on the server OR Run the script directly by using Google:
-# Open Google Colab
+#### Open Google Colab
 
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>](https://colab.research.google.com/github/camenduru/kohya_ss-colab/blob/main/kohya_ss_colab.ipynb)
 
