@@ -5,6 +5,10 @@
 
  <p align="justify"> This research aims to evaluate the accuracy of various classifiers on datasets such as Mnist, Svhn, cifar10, and an Imagenet dataset. For this purpose, we utilized different generative models to introduce misbehavior-inducing images. Subsequently, we assessed the classifiers' ability to provide accurate predictions based on these images.</p>
 
+## Repository Structure:
+- experiments: contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
+
+
  ## RUN Script:
  ### VAE:
   <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints](URL) and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
@@ -47,7 +51,7 @@ Fine-tune stable diffusion using the khoya-ss platform and four different datase
 Download the fine-tuned model weights from [this link](URL). 
 
 To run the test generator for Stable diffusion. You are required to install the following setup steps:
-### Creating a Virtual Environment with Conda
+### Create a Virtual Environment and install packages to run the SD-based generator script
 
 First, please make sure you have Conda installed. If not, you can download and install it from [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
@@ -62,7 +66,7 @@ First, please make sure you have Conda installed. If not, you can download and i
      The requirements setup is already provided; run requirement-sd.txt using pip.
    
    ```bash
-     pip install requirement-sd.txt
+     pip install requirements-sd.txt
    ```
 
 3. **Running Stable Diffusion**
@@ -72,53 +76,8 @@ First, please make sure you have Conda installed. If not, you can download and i
     Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset 
     name.
      
-4. **Additional Notes**: keep upgrading diffusers and transformers to avoid any errors.
+4. **Additional Notes**: keep upgrading diffusers and transformers to avoid errors.
 
-
-    
-
-
-
-
-  
-### Repository Structure:
-- experiments: contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
-
-
-## Experimental Detail:
-  A pictorial representation below depicts the experimental Setup. All models are implemented on three types of datasets. 
-  
-  ![image](https://private-user-images.githubusercontent.com/129972846/274067116-e341c06d-c914-4038-ac93-d6002f4758ed.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE2OTY5NzQwMzAsIm5iZiI6MTY5Njk3MzczMCwicGF0aCI6Ii8xMjk5NzI4NDYvMjc0MDY3MTE2LWUzNDFjMDZkLWM5MTQtNDAzOC1hYzkzLWQ2MDAyZjQ3NThlZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMDEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTAxMFQyMTM1MzBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hYTFmNzgzMzFjM2Y0MGQ4ZGNhYzllNGE2YzE1MGE2Njg1OGY2ZDE2ZDVkODc3YzljNjgzZjZjZjlkZjFhMDY4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.4sXJwUjLid5wQTMCNjtX_Ojno5nI9f-ynJc785zu2cM)
-  
-### Datasets:
-   MNIST, SVHN, CIFAR10, Imagenet1k
-  
-**Table 1**: Models and its checkpoints 
-
-|       TYPE         |           Models                | datasets         | Checkpoints/Safetensors   |
-|--------------------|---------------------------------|------------------|---------------------------|
-|                    |                                 | MNIST_dcgan      |    Link [1]               |
-|                    |                                 | SVHN_dcgan       |    Link[2]                |
-| Generative Models  | Traditional GAN (Unconditional) | CIFAR10_dcgan    |    Link[3]                |
-|                    |                                 | Imagenet1K_dcgan |    Link[4]                |
-|                    |                                 |                  |                           |
-|                    |                                 | MNIST_cgan       |     Link[5]               |
-| Generative Models  | Conditional GAN  (Condition)    | SVHN_cgan        |     Link[6]               |
-|                    |                                 | CIFAR10_cgan     |     Link[7]               |
-|                    |                                 | Imagenet1K_cgan  |     Link[8]               |
-|                    |  Variational Autoencoder (VAE)  | Four datasets    |[VAE models single Link][9]|
-|                    |                                 |                  |                           |
-|                    |                                 |                  |                           |
-|                    |                                 |MNIST_ddpm        |                           |
-|Diffusers_Generative| DDPM       (Unconditional)      |SVHN_ddpm         |   Hugging face Account    |
-|    Models          |                                 |CIFAR10_ddpm      |   Complete Model script   |
-|                    |                                 |Imagenet1K_ddpm   |   alongwith checkpoints   |
-|                    |                                 |                  |                           |
-|                    |                                 |                  |                           |
-|Diffusers_Generative| SD_Lora_finetune(Conditional)   |MNIST_lora        |    Hugging face Account   |
-|    Models          |                                 |SVHN_lora         |  Complete Model script    |
-|                    |                                 |CIFAR10_lora      |  alongwith checkpoints    |
-|                    |                                 |Imagenet 1k       |                           |
 
 ### Download classifier ckpt for all three types of datasets:
  <p align="justify">
