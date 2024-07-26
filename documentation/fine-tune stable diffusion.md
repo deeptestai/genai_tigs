@@ -46,8 +46,10 @@
  -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss).
  
  -Either using the Kohys-ss platform on the server using the above configuration OR Run the script directly by using Google Colab directly:
-#### Open Google Colab for kohya-ss:
-**click on button**
+#### Open Google Colab for kohya-ss training:
+**click the GitHub link to complete Google colab Guide for training**
+[![GitHub](https://img.shields.io/badge/GitHub-Visit%20Repository-black?style=flat-square&logo=github)](https://github.com/camenduru/kohya_ss-colab)
+**click on the button for training via Google colab**
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>](https://colab.research.google.com/github/camenduru/kohya_ss-colab/blob/main/kohya_ss_colab.ipynb)
 
       
