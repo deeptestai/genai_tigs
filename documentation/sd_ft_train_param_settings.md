@@ -2,10 +2,19 @@
  This SD fine-tuned model consists of four distinct datasets: MNIST, SVHN, CIFAR10, Imagenet for class pizza, and Imagenet for class teddy.
 
  ## 1. Custom Dataset Settings:
- To prepare a custom dataset for training Lora-stable diffusion, it is mandatory to select an appropriate set of images for training and regularize them.
+ To prepare a custom dataset for training Lora-stable diffusion, selecting and regularizing an appropriate set of images for training is mandatory.
  - Regulation images are optional. If you want to maintain flexibility inside the model, do not let it go outside the authentic class images and allow it to pick 
    random content from that prompt beyond the class. Here, we are using a real dataset, so regularization of images is required.
-- parameters for selecting reg img and img for training data are described in the table below.
+- parameters for selecting reg img and img for training data are selected according to the dataset requirements: Mnist, SVHN, and CIFAR 10 small and blurred images. Thus choosing maximum images for training. While imagenet images are good quality and have large pixels, few are needed. Still, it depends on data project requirements (optional); some can select between 50 -100 train images without regularization or less than from it and use a regularization set of images.
+- After selecting img for training, regularization images are selected by using the following formula:
+
+- Regularization-image = train images x repeat             
+-                      =  40 x 30
+-                      = 1200   ( For MNIST, SVHN, CIFAR10)
+-                  ** For imagenet dataset **
+-                      = 37  x 25
+-                      = 925
+
 
   
  | **Dataset**       | **Image-type/T.classes** | \# train images per class | \# repeat | **class-label** | **triggerword (Instance Prompt)** | **Class (Class prompt)** | **Prompt**                      |
