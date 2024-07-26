@@ -1,10 +1,11 @@
 # Description of Fine-tune stable diffusion:
 1. ## Install pre-requirements for Linux OS:
-   -Configure the virtual environment on ubuntu22.04 using the command. click on [help](https://docs.python.org/3/library/venv.html#creating-virtual-environments) 
-    to create a new venv.
+   -Configure the virtual environment on ubuntu22.04 using the command. click on [help](https://docs.python.org/3/library/venv.html#creating-virtual-environments)to create a new venv.
+   
    -Please go ahead and install the CUDA 11.8 Toolkit by following the instructions given in this [link](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64).
+   
    -Python version  must be 3.10.9 or higher (but lower than 3.11.0).
-2. ## Setup Linux and installation of kohya-ss:
+3. ## Setup Linux and installation of kohya-ss:
     -To set up the project on Linux or macOS, perform the following steps:
     -Open a terminal and navigate to the desired installation directory.
     -Clone the repository by running the following command:
@@ -26,7 +27,7 @@
     ./setup.sh
     ```
    
-3. ## Fine-tune SD steps:
+4. ## Fine-tune SD steps:
     -Go to the directory kohya-ss and run the following command:
 
     ```bash
@@ -47,7 +48,7 @@
  
  -Either using the Kohys-ss platform on the server using the above configuration OR Run the script directly by using Google Colab directly:
 #### Open Google Colab for kohya-ss training:
-**click the GitHub link to complete Google colab Guide for training**
+**click the GitHub link to complete the Google colab Guide for training**
 [![GitHub](https://img.shields.io/badge/GitHub-Visit%20Repository-black?style=flat-square&logo=github)](https://github.com/camenduru/kohya_ss-colab)
 
 
