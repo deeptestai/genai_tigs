@@ -41,7 +41,7 @@
     - Next, fix the prompt using BLIP captioning under the utility section by adjusting the prompt and parameters.
     - Now, adjust the training parameters for six epochs and save every N epoch.
     - Divide the regularization images & train images; training parameters settings and BLIP parameters settings are described in sd_ft_train_param_settings.md 
-      file [click here](URL)
+      file [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/sd_ft_train_param_settings.md)
     - train the model for six epochs.
    
  -For window and other OS configurations, follow this [link](https://github.com/bmaltais/kohya_ss).
