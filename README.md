@@ -55,28 +55,28 @@ To run the test generator for Stable diffusion. You are required to install the 
 
 First, please make sure you have Conda installed. If not, you can download and install it from [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
-1. **Create a Conda virtual environment**:
+ **1.Create a Conda virtual environment**:
    Open a terminal or Anaconda Prompt and run the following command to create a new Conda virtual environment:
    
    ```bash
    conda create --name stable_diffusion_env python=3.10
    ```
    
-2. **Installing desired packages**
+ **2. Installing desired packages**
      The requirements setup is already provided; run requirement-sd.txt using pip.
    
    ```bash
      pip install requirements-sd.txt
    ```
 
-3. **Run SD-based Generator**
+ **3.Run SD-based Generator**
      ```bash
      python3 sinvad_lora_mnist.py
      ```
     Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset 
     name.
      
-4. **Additional Notes**: keep upgrading diffusers and transformers to avoid errors.
+ **4. Additional Notes**: keep upgrading diffusers and transformers to avoid errors.
 
 
 ### Download classifier ckpt for all three types of datasets:
