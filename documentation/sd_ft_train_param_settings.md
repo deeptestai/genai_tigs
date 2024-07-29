@@ -10,11 +10,10 @@
   Without regularization, it is possible to select only 50-100 training images and still effectively train the model.
 - After selecting the images for training, the regularization images are chosen using the following formula:
 
-  Regularization-image = train images x repeat   
- 
-                      =  40 x 30
-                      
-                      = 1200   ( For MNIST, SVHN, CIFAR10)
+  Regularization-image = train images x repeat
+  
+                       =  40 x 30
+                       = 1200   ( For MNIST, SVHN, CIFAR10)
                       
             ** For imagenet dataset **
             
@@ -23,7 +22,6 @@
                       = 925
   
 ## 2. Captioning: 
-
      Fine-tuning the SD model is essential, as precise captioning is required to generate appropriate images based on prompts. We utilized BLIP captioning.
 
 ### Guidelines for Captioning Images:
@@ -42,9 +40,10 @@
 
 **Imagenet prompt for 10 classes:**[  "A photo of 1pizza pizza_slice",  "A photo of 1teddy_toy teddy_bear"]
 
-**Notice:**
+> **Note:**
+> 
+> All prompts consist of a trigger word followed by a class word. Alternatively, a single trigger word can be used directly, and it will function correctly. The trigger word must be unique for the same class and can include additional label information to represent different behaviors or variations within the same image class. This helps in training and recognizing different shapes within a single image class.
 
-All prompts consist of a trigger word followed by a class word. Alternatively, a single trigger word can be used directly, and it will function correctly. The trigger word must be unique for the same class and can include additional label information to represent different behaviors or variations within the same image class. This helps in training and recognizing different shapes within a single image class.
 
 
 
