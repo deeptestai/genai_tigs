@@ -31,6 +31,7 @@ Fine-tuning the SD model is essential, as precise captioning is required to gene
 - Select a single keyword, incorporating any digit to ensure uniqueness.
 - Treat a word without a space as a one word word.
 - Use the superclass to represent regularization images, ensuring that the class word represents the entire class with a unique name. In our case, one1, HouseNo0,A1plane0 and so on.
+  
 -We trained the models for MNIST, SVHN, and CIFAR10 with 10 classes each, except for Imagenet, which was trained for two classes.
 
 #### Prompts for all classes are mentioned below:
