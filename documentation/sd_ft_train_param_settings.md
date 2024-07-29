@@ -21,7 +21,9 @@
                       = 37  x 25
                       
                       = 925
-## 2. Captioning:  
+  
+## 2. Captioning: 
+
      Fine-tuning the SD model is essential, as precise captioning is required to generate appropriate images based on prompts. We utilized BLIP captioning.
 
 ### Guidelines for Captioning Images:
@@ -33,10 +35,16 @@
 
 #### Prompts for all classes are mentioned below:
 **MNIST prompt for 10 classes:**  ["A photo of Z0ero Number0","A photo of one1 Number1","A photo of two2 Number2 ","A photo of three3 Number3","A photo of Four4 Number4","A photo of Five5 Number5","A photo of Six6 Number6","A photo of Seven7 Number7 ","A photo of Eight8 Number8","A photo of Nine9 Number9"]
+
 **SVHN prompt for 10 classes:**[ "A photo of HouseNo0 Hnumber0","A photo of HouseNo1 Hnumber1","A photo of HouseNo2 Hnumber2 ","A photo of HouseNo3 Hnumber3","A photo of HouseNo4 Hnumber4","A photo of HouseNo5 Hnumber5","A photo of HouseNo6 Hnumber6","A photo of HouseNo7 Hnumber7 ","A photo of HouseNo8 Hnumber8","A photo of HouseNo9 Hnumber9"]
+
 **CIFAR10 prompt for 10 classes:**[ "A photo of A1plane0 cifar10_0","A photo of car1 cifar10_1","A photo of bird2 cifar10_2","A photo of cat3 cifar10_3","A photo of deer4 cifar10_4","A photo of dog5 cifar10_5","A photo of frog6 cifar10_6","A photo of horse7 cifar10_7","A photo of ship8 cifar10_8","A photo of truck9 cifar10_9"]
+
 **Imagenet prompt for 10 classes:**[  "A photo of 1pizza pizza_slice",  "A photo of 1teddy_toy teddy_bear"]
 
+**Notice:**
+
+All prompts consist of a trigger word followed by a class word. Alternatively, a single trigger word can be used directly, and it will function correctly. The trigger word must be unique for the same class and can include additional label information to represent different behaviors or variations within the same image class. This helps in training and recognizing different shapes within a single image class.
 
 
 
