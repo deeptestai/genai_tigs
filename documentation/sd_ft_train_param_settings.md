@@ -9,6 +9,7 @@
   blurred, necessitating the choice of a larger image set. For ImageNet, where the images are already bright and of high quality, we selected 37 images along with 925 regularization images. 
   Without regularization, it is possible to select only 50-100 training images and still effectively train the model.
 - After selecting the images for training, the regularization images are chosen using the following formula:
+  
   Regularization-image = train images x repeat
   
                        =  40 x 30
@@ -20,8 +21,10 @@
                       
                       = 925
   
-## 2. Captioning: 
-     Fine-tuning the SD model is essential, as precise captioning is required to generate appropriate images based on prompts. We utilized BLIP captioning.
+## 2. Captioning:
+
+Fine-tuning the SD model is essential, as precise captioning is required to generate appropriate images based on prompts. We utilized BLIP captioning.
+
 
 ### Guidelines for Captioning Images:
 
