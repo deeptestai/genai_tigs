@@ -9,7 +9,6 @@
   blurred, necessitating the choice of a larger image set. For ImageNet, where the images are already bright and of high quality, we selected 37 images along with 925 regularization images. 
   Without regularization, it is possible to select only 50-100 training images and still effectively train the model.
 - After selecting the images for training, the regularization images are chosen using the following formula:
-
   Regularization-image = train images x repeat
   
                        =  40 x 30
@@ -43,9 +42,17 @@
 > **Note:**
 > 
 > All prompts consist of a trigger word followed by a class word. Alternatively, a single trigger word can be used directly, and it will function correctly. The trigger word must be unique for the same class and can include additional label information to represent different behaviors or variations within the same image class. This helps in training and recognizing different shapes within a single image class.
+#### Parameter settings for BLIP
+-Prefix: A field of trigger words.
+-Batch size: It should be between 1 and 2. Otherwise, the GPU should have high VRAM and 5 to 8 is adjustable.
 
+-beam-Search: selected for coherence.The number of beams produces a more coherent caption,”sentence-like,” Adjusted to 10-15.
 
+-Min-length: Adjust up to 25. Otherwise, the caption will light.
 
+-Finally, folder with captioning like this format.
+
+ General Syntax of folder:”nn-triggerwords Class.”
 
   
  | **Dataset**       | **Image-type/T.classes** | \# train images per class | \# repeat | **class-label** | **triggerword (Instance Prompt)** | **Class (Class prompt)** | **Prompt**                      |
