@@ -8,7 +8,7 @@
 - parameters for selecting reg img and img for training data are selected according to the dataset requirements: Mnist, SVHN, and CIFAR 10 small and blurred images. Thus choosing maximum images for training. While imagenet images are good quality and have large pixels, few are needed. Still, it depends on data project requirements (optional); some can select between 50 -100 train images without regularization or less than from it and use a regularization set of images.
 - After selecting img for training, regularization images are selected by using the following formula:
 
- Regularization-image = train images x repeat   
+  Regularization-image = train images x repeat   
  
                       =  40 x 30
                       
