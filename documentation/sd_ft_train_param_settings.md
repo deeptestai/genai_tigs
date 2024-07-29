@@ -77,5 +77,10 @@ Fine-tuning the SD model is essential, as precise captioning is required to gene
 
  
 
-## 2. training parameters:
+## 2. Training parameters:
+    We trained models for all four datasets using fixed training parameters.
+    -check training parameters setting under experiments/sd_experiments/.JSON file
+    - For detail study, and know about every parameters setting to train Lora model [click here](https://github.com/bmaltais/kohya_ss/wiki/LoRA-training-parameters)
+    
+    
 
