@@ -1,6 +1,6 @@
 # Description of Fine-tune stable diffusion:
 1. ## Install pre-requirements for Linux OS:
-   -Configure the virtual environment on ubuntu22.04 using the command. click on [help](https://docs.python.org/3/library/venv.html#creating-virtual-environments)to create a new venv.
+   -Configure the virtual environment on ubuntu22.04 using the command. click on [help](https://docs.python.org/3/library/venv.html#creating-virtual-environments) to create a new venv.
    
    -Please go ahead and install the CUDA 11.8 Toolkit by following the instructions given in this [link](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64).
    
