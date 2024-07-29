@@ -83,8 +83,11 @@ First, please make sure you have Conda installed. If not, you can download and i
 
 
  <p align="justify">
-   This link download checkpoints of trained classifiers[here](https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns) a single zip file containing three distinct subfolders: mnist_classifier, cifar10_classifier, and svhn_classifier. Each folder includes checkpoint files for its respective datasets. For Imagenet, we use prepared classifier vgg-19-bn weights directly from the PyTorch repository
-    <a href="https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID">see pytorch link</a>.
+   
+-This link download checkpoints of trained classifiers[here](https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns) a single zip file containing three distinct subfolders: mnist_classifier, cifar10_classifier, 
+ and svhn_classifier. Each folder includes checkpoint files for its respective datasets.
+ 
+-For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
 </p>
 
 ### REFERENCE:
