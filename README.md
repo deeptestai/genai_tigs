@@ -9,9 +9,23 @@
 - experiments: contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
 
 
- ## RUN Script:
+ ## Getting Started to RUN GAI-Tigs:
+ ### STEP-1: Configure the envronment:
+
+ ### STEP-2: Download Pretrained Classifier Checkpoints:
+         
+    To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
+    
+      -Mnist_classifier_ckpt: already uploaded under mnist/mnist-classifier/weights under repository structure
+      
+      -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
+      
+      -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
+      
+      -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
+ 
  ### VAE:
-  <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE [checkpoints here](URL), classifier checkpoints, and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
+  <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE, classifier checkpoints, and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
 
  Run the script by using a command.//
  To train the VAE from scratch, run the following command:
@@ -87,8 +101,7 @@ First, please make sure you have Conda installed. If not, you can download and i
 -This link download checkpoints of trained classifiers[here](https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns) a single zip file containing three distinct subfolders: mnist_classifier, cifar10_classifier, 
  and svhn_classifier. Each folder includes checkpoint files for its respective datasets.
  
--For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
-</p>
+-
 
 ### REFERENCE:
 
