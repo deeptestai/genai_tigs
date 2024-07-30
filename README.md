@@ -65,9 +65,9 @@ We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. 
  We utilize the 256x256 size Deep-BigGAN model with the specified pretrained weights by executing the following command:
  
  ```
- G = make_gan(gan_type='biggan', model_name='biggan-deep-512')
+ G = make_gan(gan_type='biggan', model_name='biggan-deep-256')
 ```
-
+ We set the truncation value to 1.0 to produce images with greater variation.
  To run the SINVAD CDCGAN for a specific dataset, use the following command:
 
 ```
