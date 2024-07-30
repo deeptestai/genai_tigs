@@ -81,7 +81,7 @@ python sinvad_cdcgan_master.py --dataset mnist
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
-### 3.Stable Diffusion Setup and Script Execution
+### 3. Stable Diffusion Setup and Script Execution
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](URL).
 
 Download the fine-tuned model weights from [this link](URL). 
