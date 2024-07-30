@@ -84,9 +84,12 @@ python sinvad_cdcgan_master.py --dataset mnist
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
 ### 3. Stable Diffusion Setup and Script Execution
-Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](URL).
-
+#### How to Fine tune Stable Diffusion? 
+Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
+#### Download SD weights
 Download the fine-tuned model weights from [this link](URL). 
+
+#### configuration to excute Sd_tig
 
 To run the test generator for Stable diffusion. You are required to install the following setup steps:
 ### Create a Virtual Environment and install packages to run the SD-based generator script
