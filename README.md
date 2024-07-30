@@ -13,6 +13,7 @@
  ### STEP-1: Configure the envronment:
 
  ### STEP-2: Download Pretrained Classifier Checkpoints:
+ 
          
     To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
     
