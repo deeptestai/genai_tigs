@@ -94,19 +94,20 @@ First, please make sure you have Conda installed. If not, you can download and i
  **1.Create a Conda virtual environment**:
    Open a terminal or Anaconda Prompt and run the following command to create a new Conda virtual environment:
    
-   ```bash
+   ```
    conda create --name stable_diffusion_env python=3.10
    ```
    
  **2. Installing desired packages**
      The requirements setup is already provided; run requirement-sd.txt using pip.
    
-   ```bash
+   ```
      pip install requirements-sd.txt
    ```
 
  **3.Run SD-based Generator**
-     ```bash
+ 
+     ```
      python3 sinvad_lora_mnist.py
      ```
     Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset 
