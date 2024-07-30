@@ -6,8 +6,8 @@
  <p align="justify">The objective of this research is to evaluate the accuracy of various classifiers on datasets including MNIST, SVHN, CIFAR-10, and ImageNet. To achieve this, we employed different generative models to create images that induce misbehavior. We then assessed the classifiers' performance by determining their accuracy in making predictions based on these challenging images.</p>
 
 ## Repository Structure:
-- <u> experiments: </u> contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
--  <u> documentation:</u>
+- <u>experiments</u> contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
+-  <u>documentation:</u>
 - 
 
 
