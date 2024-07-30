@@ -1,7 +1,7 @@
 # An Empirical Comparison of Test Input Generators for Image Classifiers
   <p align="justify">This repository contains the source code and test generation input data of the paper “ An Empirical Comparison of Test Input Generators for Image Classifiers” by ……….</p> 
 
-## Abstract:
+## Motivation:
 
  <p align="justify"> This research aims to evaluate the accuracy of various classifiers on datasets such as Mnist, Svhn, cifar10, and an Imagenet dataset. For this purpose, we utilized different generative models to introduce misbehavior-inducing images. Subsequently, we assessed the classifiers' ability to provide accurate predictions based on these images.</p>
 
@@ -40,7 +40,7 @@
  
  To train the VAE from scratch, run the following command:
 
-```bash
+```
 python train_master.py --dataset mnist 
 ```
 
@@ -48,23 +48,31 @@ Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
 
 After downloading the checkpoints, run the following command to collect misbehavior-inducing inputs, run the command:
 
-```bash
+```
 python sinvad_vae_mnist.py --checkpoint_path /path/to/checkpoint
 ```
 
 Replace/path/to/checkpoint with the path to your file.
 ### 2. GAN:
+
+We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under Repository structure. 
+-For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
+
+ We utilize the 256x256 size Deep-BigGAN model with the specified pretrained weights by executing the following command:
  
+ ```
+ G = make_gan(gan_type='biggan', model_name='biggan-deep-512')
+```
 
  To run the SINVAD CDCGAN for a specific dataset, use the following command:
 
-```bash
+```
 python gan_master.py --dataset mnist
 ```
 Replace mnist with svhn or cifar10 to run the GAN for the other datasets.
 
 Similarly, after downloading or training the gan model, run the sinvad script for cdcgan.
-```bash
+```
 python sinvad_cdcgan_master.py --dataset mnist
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
