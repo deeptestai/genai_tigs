@@ -28,7 +28,7 @@
     python3 train_mnist.py    (for mnist, similar for other datasets)
 
 
-### STEP-3: Execute Any One of the Three Generative AI Models
+### STEP-3: Execute Any One of the Three Generative AI Models Based on Test Input Generators
  
  ### 1. VAE:
  
