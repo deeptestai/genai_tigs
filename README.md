@@ -26,9 +26,12 @@
  -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
   
     python3 train_mnist.py    (for mnist, similar for other datasets)
+
+
+### STEP-3: Execute Any One of the Three Generative AI Models
  
- ### VAE:
-  <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE, classifier checkpoints, and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
+ ### 1. VAE:
+  
 
  Run the script by using a command.//
  To train the VAE from scratch, run the following command:
@@ -95,16 +98,6 @@ First, please make sure you have Conda installed. If not, you can download and i
      
  **4. Additional Notes**: keep upgrading diffusers and transformers to avoid errors.
 
-
-### Download classifier ckpt for all three types of datasets:
-
-
- <p align="justify">
-   
--This link download checkpoints of trained classifiers[here](https://drive.google.com/uc?export=download&id=1JS8xBjJZoOjHme0RLITsk8AYjNeKf2Ns) a single zip file containing three distinct subfolders: mnist_classifier, cifar10_classifier, 
- and svhn_classifier. Each folder includes checkpoint files for its respective datasets.
- 
--
 
 ### REFERENCE:
 
