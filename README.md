@@ -3,7 +3,7 @@
 
 ## Motivation:
 
- <p align="justify"> This research aims to evaluate the accuracy of various classifiers on datasets such as Mnist, Svhn, cifar10, and an Imagenet dataset. For this purpose, we utilized different generative models to introduce misbehavior-inducing images. Subsequently, we assessed the classifiers' ability to provide accurate predictions based on these images.</p>
+ <p align="justify">The objective of this research is to evaluate the accuracy of various classifiers on datasets including MNIST, SVHN, CIFAR-10, and ImageNet. To achieve this, we employed different generative models to create images that induce misbehavior. We then assessed the classifiers' performance by determining their accuracy in making predictions based on these challenging images.</p>
 
 ## Repository Structure:
 - experiments: contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
@@ -108,7 +108,7 @@ First, please make sure you have Conda installed. If not, you can download and i
  **3.Run SD-based Generator**
  
      ```
-     python3 sinvad_lora_mnist.py
+       python3 sinvad_lora_mnist.py
      ```
      
   Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset name.
