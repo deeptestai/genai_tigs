@@ -106,10 +106,11 @@ First, please make sure you have Conda installed. If not, you can download and i
    ```
 
  **3.Run SD-based Generator**
- 
+     To run the script of Sd generator, run the following command:
      ```bash
-       python3 sinvad_lora_mnist.py
+     python3 sinvad_lora_mnist.py
      ```
+     
      
   Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset name.
      
