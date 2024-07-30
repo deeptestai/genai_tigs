@@ -18,8 +18,11 @@
   -Mnist_classifier_ckpt: already uploaded mnist/mnist-classifier/weights under repository structure
   
   -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
+  
   -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
+  
   -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
+  
   -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
   
     python3 train_mnist.py    (for mnist, similar for other datasets)
