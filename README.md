@@ -56,6 +56,7 @@ Replace/path/to/checkpoint with the path to your file.
 ### 2. GAN:
 
 We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under Repository structure. 
+
 -For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
 
  We utilize the 256x256 size Deep-BigGAN model with the specified pretrained weights by executing the following command:
@@ -77,7 +78,7 @@ python sinvad_cdcgan_master.py --dataset mnist
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
-### Stable diffusion configuration and Run script:
+### 3.Stable Diffusion Setup and Script Execution
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](URL).
 
 Download the fine-tuned model weights from [this link](URL). 
@@ -114,7 +115,6 @@ First, please make sure you have Conda installed. If not, you can download and i
 ### REFERENCE:
 
 
-[9].https://drive.google.com/uc?export=download&id=1MNyzsNZWE5QzoX_xIbIlm-IV6lNri3W3
 
 
 
