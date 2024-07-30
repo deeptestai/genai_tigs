@@ -13,17 +13,15 @@
  ### STEP-1: Configure the envronment:
 
  ### STEP-2: Download Pretrained Classifier Checkpoints:
+ To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
  
-         
-    To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
-    
-      -Mnist_classifier_ckpt: already uploaded under mnist/mnist-classifier/weights under repository structure
+ -Mnist_classifier_ckpt: already uploaded under mnist/mnist-classifier/weights under repository structure
+  
+ -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
       
-      -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
+ -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
       
-      -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
-      
-      -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
+ -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
  
  ### VAE:
   <p align="justify"> VAE for all four types of datasets requires running the train.py file to train from scratch or downloading all VAE, classifier checkpoints, and then running the sinvad_vae_dataset.py file to collect misbehavior-inducing inputs.</p>
