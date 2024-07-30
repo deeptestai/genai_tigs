@@ -15,15 +15,12 @@
  ### STEP-2: Download Pretrained Classifier Checkpoints:
  To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
  
- -Mnist_classifier_ckpt: already uploaded mnist/mnist-classifier/weights under repository structure
+  -Mnist_classifier_ckpt: already uploaded mnist/mnist-classifier/weights under repository structure
   
- -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
-      
- -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
-      
- -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
-
- -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
+  -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
+  -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
+  -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
+  -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
   
     python3 train_mnist.py    (for mnist, similar for other datasets)
 
@@ -56,8 +53,8 @@ python sinvad_vae_mnist.py --checkpoint_path /path/to/checkpoint
 ```
 
 Replace/path/to/checkpoint with the path to your file.
-### GAN:
- <p align="justify"> Similarly, each dataset-name_experiments folder contains the gan folder as a subfolder. This folder contains one cdcgan folder and one sinvad_gai_dataset-name.py file. One can download the checkpoints from the weight directory under the cdcgan folder. After downloading it, run the script sinvad_gan_dataset-name.py.</p>
+### 2. GAN:
+ 
 
  To run the SINVAD CDCGAN for a specific dataset, use the following command:
 
