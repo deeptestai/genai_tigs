@@ -109,8 +109,9 @@ First, please make sure you have Conda installed. If not, you can download and i
     
     To run the script of Sd generator, run the following command:
 
-     ```
-     python3 sinvad_lora_mnist.py
+    
+
+     ```python3 sinvad_lora_mnist.py
      ```
      
      
