@@ -1,8 +1,11 @@
 import os
 import re
 import random
-from diffusers import  StableDiffusionPipeline,AutoencoderKL
+import cv2
+from diffusers import  StableDiffusionPipeline
+from DeepCache import DeepCacheSDHelper
 from tgate import TgateSDDeepCacheLoader
+#from StableDiffusionParallPipeline.libs.StableDiffusionParallelPipeline import StableDiffusionParallelPipeline
 from diffusers.schedulers import DPMSolverMultistepScheduler
 #from libs.benchmark import benchmark
 import numpy as np
@@ -13,13 +16,43 @@ from PIL import Image
 from torchvision import transforms
 from collections import Counter
 from svhn_classifier.model import VGGNet
-run =wandb.init(project="sinvadsvhnfitness")
+run =wandb.init(project="sinvadtestfitness")
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":16:8"
 torch.backends.cudnn.benchmark = False
 generator = torch.Generator(device = 'cuda')
 torch.use_deterministic_algorithms(True)
 
+def process_image(image):
+    """
+    Resize a 3-channel RGB PIL Image to 32x32 pixels and convert it to a PyTorch tensor.
+
+    Parameters:
+    - image (PIL.Image): The input RGB image.
+
+    Returns:
+    - tensor (torch.Tensor): The processed image as a PyTorch tensor.
+    """
+    if not isinstance(image, Image.Image):
+        raise TypeError("The provided image needs to be a PIL Image.")
+
+    # Convert PIL Image to numpy array (RGB)
+    img_np = np.array(image)
+
+    # Resize the image to 32x32 pixels if it's not already that size
+    if img_np.shape[0] != 32 or img_np.shape[1] != 32:
+        resized_image = cv2.resize(img_np, (32, 32), interpolation=cv2.INTER_NEAREST)
+    else:
+        resized_image = img_np
+
+    # Convert the numpy array back to PIL Image (to use torchvision transforms)
+    img_pil = Image.fromarray(resized_image)
+
+    # Convert PIL Image to PyTorch Tensor
+    transform = transforms.ToTensor()
+    tensor = transform(img_pil)
+
+    return tensor
 def calculate_fitness(logit, label):
 
     expected_logit = logit[label]
@@ -56,7 +89,9 @@ proj_name = "test"
 num_inference_steps = 25
 width = 512
 height = 512
-
+best_fitness_score = float('inf')
+best_image_tensor = None
+best_image_index = -1
 init_perturbation = 0.00217826347351074
 best_left = 10
 perturbation_size = 0.00108913173675537
@@ -69,10 +104,9 @@ all_img_lst = []
 num_samples = 100
 image_info = []
 predicted_labels = []
-proj_path = "./result_svhn_sdsinvad/"+proj_name+"_"
+proj_path = "./result_svhnup_sdrun0gs3.5,1.5/"+proj_name+"_"
 os.makedirs(proj_path, exist_ok=True)
 os.makedirs(proj_path+'/Newresult', exist_ok=True)
- os.makedirs(os.path.join(proj_path, 'generated_images'), exist_ok=True)
 print('Creating init image')
 #lms = PNDMScheduler(beta_start=0.0001, beta_end=0.02, beta_schedule="linear")
 base_model_id = "runwayml/stable-diffusion-v1-5"
@@ -81,16 +115,17 @@ weights_path = "./svhn_finetune_lorav1.5-000005.safetensors"
 pipe = StableDiffusionPipeline.from_pretrained(
 base_model_id,variant="fp16", torch_dtype=torch.float16, safety_checker=None).to(device)
 pipe.load_lora_weights(weights_path)
-vae = AutoencoderKL.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="vae", use_safetensors=True)
+#vae = AutoencoderKL.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="vae", use_safetensors=True)
+#pipe.vae = AutoencoderTiny.from_pretrained("madebyollin/taesd", torch_dtype=torch.float16)
 pipe = pipe.to(device)
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(
-    pipe.scheduler.config) # rescale_betas_zero_snr=True)
+    pipe.scheduler.config)                            #rescale_betas_zero_snr=True)
 pipe.unet.to(device)
 pipe.vae.to(device)
 pipe.text_encoder.to(device)
 pipe = TgateSDDeepCacheLoader(
        pipe,
-       cache_interval=5,
+       cache_interval=3,
        cache_branch_id=0,
 ).to(device)
 seed =0
@@ -105,8 +140,8 @@ for n in range(num_samples):
          randprompt = random.choice(prompts)
          expected_label = int(re.search(r"HouseNo(\d+)", randprompt).group(1))  # Extract the number following 'HouseNo'
          with torch.inference_mode():
-              init_img = pipe.tgate(prompt = randprompt,guidance_scale=1.4,gate_step = 10, num_inference_steps= num_inference_steps,latents=original_lv)["images"][0]
-         tensor_image = transform(init_img)
+              init_img = pipe.tgate(prompt = randprompt,guidance_scale= 3.5,gate_step =10, num_inference_steps= num_inference_steps,latents=original_lv)["images"][0]
+         tensor_image = process_image(init_img)
          tensor_image = tensor_image.unsqueeze(0).to(device)
          original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
          original_label = np.argmax(original_logit).item()
@@ -139,20 +174,50 @@ for n in range(num_samples):
         print(indivs_lv.shape)
         #per
         with torch.inference_mode():                         # torch.no_grad(),torch.cuda.amp.autocast(dtype =torch.bfloat16):
-             perturb_img = pipe([randprompt]*(pop_size),guidance_scale = 1.4,generator= generator, 
+             perturb_img = pipe.tgate([randprompt]*(pop_size),guidance_scale =1.4,gate_step = 10, generator= generator, 
                 num_inference_steps=num_inference_steps,
                 latents=indivs_lv,
              )["images"]
         # all_img_lst.append(perturb_img)
         torch.cuda.empty_cache()
 
-        tensor_image2 =torch.stack([transform(image) for image in perturb_img])
+       # model_image_pil = Image.fromarray(np.uint8(last_image))
+       # resized_image2 = model_image_pil.resize((28, 28), Image.Resampling.LANCZOS)
+        tensor_image2 =torch.stack([process_image(image) for image in perturb_img])
+       # tensor_image2 = transform(last_image)
         tensor_image2 = tensor_image2.to(device)
         all_logits = classifier(tensor_image2).detach().cpu().numpy()
         perturb_label1 = np.argmax(all_logits).item()
         print(all_logits.shape)
         print(tensor_image2.shape)
-  
+        os.makedirs(os.path.join(proj_path, 'generated_images'), exist_ok=True)
+       # label_filenames = []
+
+        # Loop through the logits and save each image with its label
+       # for idx, logits in enumerate(all_logits):
+            # label = np.argmax(logits)
+           # Get the image from perturb_img using idx
+            # image = perturb_img[idx]
+            # perturb_label_filename = f'gen_{i}_image_{idx}_Y{label}.png'
+    
+           # Save the image with the label in the filename
+            # image_filename = os.path.join(proj_path, 'generated_images', perturb_label_filename)
+            # image.save(image_filename)
+    
+            # Append the label and filename to the list
+            # label_filenames.append((label, perturb_label_filename))
+
+        # Save the label filenames to a text file
+       # label_file = os.path.join(proj_path, 'generated_images', 'label_filenames.txt')
+       # with open(label_file, 'w') as file:
+           # for label, filename in label_filenames:
+               # file.write(f"Label: {label}, Filename: {filename}\n")
+
+        # Count the label occurrences and print them
+       # label_list = [label for label, _ in label_filenames]
+        #3label_counts = Counter(label_list)
+       # for label, count in label_counts.items():
+            # print(f"Label {label}: Count {count}")
         fitness_scores = [
             calculate_fitness(all_logits[k_idx], original_label)
             for k_idx in range(pop_size)
@@ -187,6 +252,7 @@ for n in range(num_samples):
         # select k-idx for cross_over genes
         for k_idx in range(pop_size - best_left):
             mom_idx, pop_idx = np.random.choice(best_left, size=2, replace=False)
+           # print("mom_idx:", mom_idx, "pop_idx:", pop_idx)
             spl_idx = np.random.choice(4, size=1)[0]
             k_gene = torch.cat(
                 [parent_pop[mom_idx][:, :spl_idx], parent_pop[pop_idx][:, spl_idx:]],
@@ -197,8 +263,11 @@ for n in range(num_samples):
             k_gene += (
                    perturbation_size * torch.randn(k_gene.size(), device=k_gene.device) * diffs
             )  # random adding noise only to diff places
-          
+           # k_gene = torch.clamp(k_gene, min_val, max_val)
+           # interp_mask = binom_sampler.sample()
+           # k_gene = interp_mask * original_lv + (1 - interp_mask) * k_gene
             k_pop.append(k_gene)
+           # print("Size of k_pop:", len(k_pop))
 
         # Combine parent_pop and k_pop for the next generation
         now_pop = parent_pop + k_pop
@@ -241,3 +310,20 @@ for n in range(num_samples):
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
 np.save(os.path.join(proj_path, "bound_imgs_svhn_sd.npy"), all_imgs)
+# Save the image info
+with open(os.path.join(proj_path, "image_info.txt"), "w") as f:
+    f.write("Image Index,Iteration,Expected Label X, Predicted Label Y\n")
+    for img_info in image_info:
+        f.write(f"{img_info[0]}, {img_info[1]}, {img_info[2]}, {img_info[3]}\n")
+misclassified_count = 0
+
+# Iterate over the image info list
+for img_info in image_info:
+    expected_label = img_info[2]
+    predicted_label = img_info[3]
+    if predicted_label != expected_label:
+        misclassified_count += 1
+
+misclassification_percentage = (misclassified_count / len(image_info)) * 100
+
+print(f"Misclassification Percentage: {misclassification_percentage:.2f}%")
