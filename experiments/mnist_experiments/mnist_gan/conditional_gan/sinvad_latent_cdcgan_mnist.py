@@ -213,4 +213,4 @@ for img_idx in trange(imgs_to_samp):
     
 # Save all generated images as a numpy array
 all_imgs = np.vstack(all_img_lst)
-np.save(os.path.join(result_dir, "bound_imgs_svhn_cdcgan.npy"), all_imgs)
+np.save(os.path.join(result_dir, "bound_imgs_mnist_cdcgan.npy"), all_imgs)
