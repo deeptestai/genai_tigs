@@ -239,10 +239,7 @@ for n in range(imgs_to_samp):
            now_pop = [torch.clamp(tensor, min=min_val, max=max_val) for tensor in now_pop]
       
 
-      # mod      # .view(1, pipe.unet.config.in_channels, height // 8, width // 8).to(torch.float1
-      # with torch.inference_mode():
-
-      # last_image_list = pipe.tgate(prompt=randprompt,guidance_scale= 1.4, gate_step = 10,  num_inference_steps= 10, latents=mod_best)["images"]
+      
      # After the loop, save the last image if it exists
        if best_image_tensor is not None:
           tensor_image = best_image_tensor.to(device)
@@ -261,17 +258,6 @@ for n in range(imgs_to_samp):
     else: 
        # IF no match, simply skip to the next iteration (no image is saved or processed)
        print(f"Label mismatch for image {saved_images}:expected {expected_label},got {original_label}")
-    #For saving image for myself
-   # if best_image_tensor is not None:
-       # Ensure tensor is on CPU and squeeze out the batch dimension if necessary
-      # if best_image_tensor.dim() == 4 and best_image_tensor.shape[0] == 1:  # Checking for single item in batch
-       #     tensor_image = best_image_tensor.squeeze(0).cpu()
-      # else:
-       #     tensor_image = best_image_tensor.cpu()
-  #  best_image_pil = transforms.ToPILImage()(tensor_image.cpu())
-   # image_filename = f'image_{n}_iteration{i}_X{original_label}_Y{perturb_label}.png'
-   # last_image_path = os.path.join(proj_path, 'Newresult', image_filename)
-   # best_image_pil.save(last_image_path)
    
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
