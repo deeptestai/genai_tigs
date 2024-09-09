@@ -1,43 +1,63 @@
 import torch
-
-import wandb
+import torchvision.utils as vutils
+from tqdm import trange
+#import wandb
 import torchvision.transforms as transforms
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import os
 
-from cifar10_classifier.model import CifarClassifier
+from cifar10_VGGNETclassifier.model import VGGNet
 from cdcgan.cdcgan_cifar10 import Generator
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-run = wandb.init(project="Sinvad_fitness_CDCGAN_Cifar10")
+#run = wandb.init(project="Sinvad_fitness_CDCGAN_Cifar10")
 # Set device
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+def save_image(tensor, filename):
+    """
+    Save a tensor as an image
+    """
+    img = vutils.make_grid(tensor, normalize=True)  # Normalize ensures [0,1] range
+    img = img.mul(255).add_(0.5).clamp_(0, 255).permute(1, 2, 0)
+     # Now, transfer the tensor to CPU and convert it to numpy array for saving
+    img = img.to('cpu', torch.uint8).numpy()  # Convert tensor to numpy array in [0,255] range
+    img = Image.fromarray(img)
+    img.save(filename)
+
+
+
 img_size = 32 * 32 * 1
 # Load the trained models
 G = Generator(ngpu=1, nz=100, nc=3).to(device)  # Modify the Generator architecture
-classifier = CifarClassifier(img_size=img_size).to(device)
+classifier = VGGNet().to(device)
 
 # Load the weights of the models
 G.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/Cdcgan_test/cdcgan_cifar10/weights/netG_epoch_699cdcgancf.pth",
+        "./cdcgan/weights/netG_epoch_699.pth",
         map_location=device,
     )
 )
 classifier.load_state_dict(
     torch.load(
-        "/home/maryam/Documents/SEDL/SINVAD/Cdcgan_test/cdcgan_cifar10/cifar_10_classifier/CIFAR10_classifier.pth",
+        "./cifar10_VGGNETclassifier/CIFAR10_cifar10_train.pynet.pth",
         map_location=device,
     )
 )
 # Set models to evaluation mode
 G.eval()
 classifier.eval()
-result_dir = "./result_cifarcdcgan"
-
+result_dir = "./result23_cdcgan_cifar10" # Directory to save the images
+original_images_dir = os.path.join(result_dir, 'original_images')
+os.makedirs(result_dir, exist_ok=True)
+os.makedirs(original_images_dir, exist_ok=True)
+img_pil_dir = os.path.join(original_images_dir, "or_images")
+os.makedirs(img_pil_dir, exist_ok=True)
+prtb_img_dir = os.path.join(result_dir, "perturb_images")
+os.makedirs(prtb_img_dir, exist_ok=True)
 
 def calculate_fitness(logit, label):
     expected_logit = logit[label]
@@ -56,142 +76,157 @@ def calculate_fitness(logit, label):
 
 image_info = []
 predictions = []
-num_samples = 1
-gen_num = 500
+imgs_to_samp = 100
+gen_num = 250
 pop_size = 25
 best_left = 10
-perturbation_size = 0.07  # Default perturbation size
-initial_perturbation_size = 0.01  # Initial perturbation size
+min_val =-4.4389796257019
+max_val =4.66634130477905
+perturbation_size = 0.000910532093048095  # Default perturbation size
+initial_perturbation_size = 0.00182106418609619   # Initial perturbation size
 # mutation_perturbation_size = 0.1  # Mutation perturbation size
 # Generate a random latent vector
-latent_space = torch.randn(num_samples, 100, 1, 1).to(device)
-random_labels = torch.randint(0, 10, (num_samples,)).to(device)
+latent_space = torch.randn(imgs_to_samp, 100, 1, 1).to(device)
+random_labels = torch.randint(0, 10, (imgs_to_samp,)).to(device)
 all_img_lst = []
-for i in range(num_samples):
+saved_images =0
+for img_idx in trange(imgs_to_samp):
     # Generate the non-perturbed image
-    original_latent = latent_space[i].unsqueeze(0)
-    original_labelr = random_labels[i]
+    original_latent = latent_space[img_idx].unsqueeze(0)
+    original_labelr = random_labels[img_idx]
+    expected_label  = original_labelr.item()
     # Generate the non-perturbed image using the generator
     original_image = G(original_latent, original_labelr.view(1))
     original_logit = classifier(original_image).squeeze().detach().cpu().numpy()
     original_label = np.argmax(original_logit).item()
-    # Calculate fitness for the original image
-    fitness_original = calculate_fitness(original_logit, original_label)
-    ### Initialize optimization ###
+    # Compare the predicted label with the label used for generation
+    if original_label == expected_label:
+        print(f"Match found: True label {original_labelr.item()}, Predicted label {original_label}")
+       # original_image_pil = transforms.ToPILImage()(original_image.squeeze().detach().cpu())
+       # Calculate fitness for the original image
+        original_image_path = os.path.join(img_pil_dir,f'original_image{saved_images}_X{original_label}.png')
+        # original_image_pil.save(original_image_path)
+        save_image(original_image,original_image_path)
+        # Convert the tensor to a NumPy array
+        original_image_np = original_image.squeeze().detach().cpu().numpy()
 
-    ### Initialize optimization ###
-    init_pop = [
-        original_latent.unsqueeze(0)
-        + initial_perturbation_size * torch.randn_like(original_latent)
-        for _ in range(pop_size)
-    ]
-    now_pop = init_pop
-    prev_best = np.inf
-    binom_sampler = torch.distributions.binomial.Binomial(
-        probs=0.5 * torch.ones(original_latent.size(), device=device)
-    )
-    init_label = torch.tensor([original_labelr] * pop_size)
-    ###GA_algorithm###
-    for g_idx in range(gen_num):
-        indivs_lV = torch.cat(now_pop, dim=0).view(-1, 100, 1, 1)
-        indivs_labels = init_label
+        # Define the filename that includes the label
+        filename = f"original_image_{saved_images}_X_{original_label}.npy"
 
-        # Generate images using the generator
-        Gen_imgs = G(indivs_lV, indivs_labels)
-        Gen_imgs1 = Gen_imgs.detach().cpu().numpy()
-        predicted_labels = torch.argmax(classifier(Gen_imgs), dim=1).cpu()
+        # Define the full path for saving the file
+        file_path = os.path.join(original_images_dir, filename)
 
-        all_img_lst.append(Gen_imgs1)
-        # Calculate fitness scores for the current generation
-        all_logits = classifier(Gen_imgs).squeeze().detach().cpu().numpy()
-        fitness_scores = [
-            calculate_fitness(all_logits[k_idx], original_label)
-            for k_idx in range(pop_size)
+        # Save the image data as a NumPy file
+        np.save(file_path, original_image_np)
+    
+        saved_images +=1
+
+        ### Initialize optimization ###
+        init_pop = [
+            torch.clamp(original_latent.unsqueeze(0)
+            + initial_perturbation_size * torch.randn_like(original_latent), min=min_val, max=max_val)
+            for _ in range(pop_size)
         ]
+        now_pop = init_pop
+        prev_best = np.inf
+        best_fitness_score = np.inf
+        best_image_tensor = None
+        best_image_index = -1
+        init_label = torch.tensor([original_label] * pop_size)
+        ###GA_algorithm###
+        for g_idx in range(gen_num):
+            indivs_lV = torch.cat(now_pop, dim=0).view(-1, 100, 1, 1).to(device)
+            indivs_labels = init_label.to(device)
 
-        # Perform selection
-        selected_indices = sorted(
-            range(len(fitness_scores)), key=lambda i: fitness_scores[i], reverse=True
-        )[-best_left:]
-        now_best = np.min(fitness_scores)
+            # Generate images using the generator
+            Gen_imgs = G(indivs_lV, indivs_labels)
+            predicted_labels = torch.argmax(classifier(Gen_imgs), dim=1).cpu()
+            # Calculate fitness scores for the current generation
+            all_logits = classifier(Gen_imgs).squeeze().detach().cpu().numpy()
+            fitness_scores = [
+                calculate_fitness(all_logits[k_idx], original_label)
+                for k_idx in range(pop_size)
+            ]
 
-        parent_pop = [now_pop[i] for i in selected_indices]
+            # Finding the minimum fitness score in this generation
+            current_min_index = np.argmin(fitness_scores)
+            current_min_fitness = fitness_scores[current_min_index]
 
-        # Perform crossover and mutation
-        print("now_best " + str(now_best) + " now_best " + str(np.mean(fitness_scores)))
-        wandb.log({"ft_scores": now_best})
+            # Update global minimum if the current score is lower
+            if current_min_fitness < best_fitness_score:
+                best_fitness_score = current_min_fitness
+                best_image_tensor = Gen_imgs[current_min_index].cpu().detach()
+                best_image_index = current_min_index
 
-        if now_best < 0:
-            break
-        elif now_best == prev_best:
-            perturbation_size *= 2
-        else:
-            perturbation_size = initial_perturbation_size
+            # Perform selection
+            selected_indices = sorted(
+                range(len(fitness_scores)), key=lambda i: fitness_scores[i], reverse=True
+            )[-best_left:]
+            now_best = np.min(fitness_scores)
 
-        k_pop = []
-        for k_idx in range(pop_size - best_left):
-            mom_idx, pop_idx = np.random.choice(best_left, size=2, replace=False)
-            spl_idx = np.random.choice(100, size=1)[0]
-            k_gene = torch.cat(
-                [
-                    parent_pop[mom_idx][:, :spl_idx],
-                    parent_pop[pop_idx][:, spl_idx:],
-                ],
-                dim=1,
-            )  # Apply crossover to latent vector
+            parent_pop = [now_pop[i] for i in selected_indices]
 
-            # Mutation for latent vector
-            diffs = (k_gene != original_latent).float()
-            k_gene += perturbation_size * torch.randn_like(k_gene) * diffs
+            # Perform crossover and mutation
+            print("now_best " + str(now_best) + " now_best " + str(np.mean(fitness_scores)))
+            #wandb.log({"ft_scores": now_best})
 
-            # Perform random matching to latent_images[i]
-            interp_mask = binom_sampler.sample()
-            k_gene = interp_mask * original_latent + (1 - interp_mask) * k_gene
+            if now_best < 0:
+               break
+            elif now_best == prev_best:
+                perturbation_size *= 2
+            else:
+                perturbation_size = initial_perturbation_size
 
-            k_pop.append(k_gene)
+            k_pop = []
+            for k_idx in range(pop_size - best_left):
+                mom_idx, pop_idx = np.random.choice(best_left, size=2, replace=False)
+                spl_idx = np.random.choice(100, size=1)[0]
+                k_gene = torch.cat(
+                    [
+                        parent_pop[mom_idx][:, :spl_idx],
+                        parent_pop[pop_idx][:, spl_idx:],
+                    ],
+                    dim=1,
+                )  # Apply crossover to latent vector
 
-        now_pop = parent_pop + k_pop
-        prev_best = now_best
-        init_label = predicted_labels
+                # Mutation for latent vector
+                diffs = (k_gene != original_latent).float()
+                k_gene += perturbation_size * torch.randn_like(k_gene).to(device) * diffs
 
-    mod_best_latent = parent_pop[-1].squeeze(0)
-    # Adjusted expansion
+                k_pop.append(k_gene)
 
-    mod_best_image = G(mod_best_latent.unsqueeze(0), original_labelr.view(1))
+            now_pop = parent_pop + k_pop
+            prev_best = now_best
+            now_pop = [torch.clamp(tensor, min=min_val, max=max_val) for tensor in now_pop]
 
-    mod_best_label = torch.argmax(classifier(mod_best_image)).cpu().item()
-    final_bound_img = (
-        G(
-            mod_best_latent.unsqueeze(0),
-            torch.tensor([mod_best_label], dtype=torch.long, device=device),
+   
+        # Assuming best_image_tensor is a tensor that needs to be processed
+        mod_best_image_tensor = best_image_tensor.to(device)  # Move tensor to the appropriate device if not already
+        mod_best_image_np = best_image_tensor.cpu().detach().numpy()  # Convert tensor to numpy array after moving to CPU
+
+        # Assuming classifier is already defined and appropriate for the tensor as is
+        final_bound_logits = classifier(mod_best_image_tensor.unsqueeze(0))  # Ensure tensor is in correct shape for classifier
+        predicted_best_label = torch.argmax(final_bound_logits, dim=1).item()
+
+       # Define the path for saving the numpy file with detailed filename
+        image_path_np = os.path.join(
+            result_dir,
+            f"image_{saved_images}_iteration{g_idx + 1}_X{original_label}_Y{predicted_best_label}.npy"
         )
-        .detach()
-        .numpy()
-    )
-    all_img_lst.append(final_bound_img)
 
-    # Convert the image to a PyTorch tensor
-    final_bound_img = final_bound_img.reshape(3, 32, 32)
-    final_bound_img_tensor = torch.from_numpy(final_bound_img).float()
-    prediction = torch.argmax(classifier(final_bound_img_tensor)).item()
-    predictions.append(prediction)
+        # Save the numpy array to a file
+        np.save(image_path_np, mod_best_image_np)
+    
+        all_img_lst.append(mod_best_image_np)
 
-    # Save the image as PNG
-    # Convert a PyTorch tensor to a numpy array
-    image_array = final_bound_img_tensor.cpu().numpy().transpose(1, 2, 0)
-    image_array = ((image_array + 1) * 127.5).astype(np.uint8)
-    image = Image.fromarray(image_array)
-    wandb_image = wandb.Image(image)
+        image_path = os.path.join(prtb_img_dir,f'image{saved_images}_iteration_{g_idx + 1}_X{original_label}_Y{predicted_best_label}.png',)
+        # perturbed_image_pil.save(image_path)
+        save_image(mod_best_image_tensor,image_path)
+    else:
+        # Skip if no match found
+        print(f"Mismatch: True class: {expected_label}, Predicted class: {original_label}")
 
-    # Log the image along with other relevant information
-    wandb.log(
-        {
-            "Generated Image": wandb_image,
-            "Expected Label X": original_label,
-            "Predicted Label Y": predictions,  #   "Fitness Score": now_best,
-        }
-    )
-
-    # Save all generated images as a numpy array
-    all_imgs = np.vstack(all_img_lst)
-    np.save("generated_images.npy", all_imgs)
+    
+# Save all generated images as a numpy array
+all_imgs = np.vstack(all_img_lst)
+np.save(os.path.join(result_dir, "bound_imgs_cifar10_cdcgan.npy"), all_imgs)
