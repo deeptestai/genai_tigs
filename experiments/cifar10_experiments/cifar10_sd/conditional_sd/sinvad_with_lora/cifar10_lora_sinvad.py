@@ -1,6 +1,5 @@
 import os
 from diffusers import StableDiffusionPipeline
-#from StableDiffusionParallPipeline.libs.StableDiffusionParallelPipeline import StableDiffusionParallelPipeline
 from diffusers.schedulers import DPMSolverMultistepScheduler
 from tgate import TgateSDDeepCacheLoader
 import  re
