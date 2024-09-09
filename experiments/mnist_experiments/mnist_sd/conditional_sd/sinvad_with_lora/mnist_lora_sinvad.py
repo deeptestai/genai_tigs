@@ -4,17 +4,16 @@ import cv2
 import re
 from diffusers import StableDiffusionPipeline
 from diffusers.schedulers import DDIMScheduler                                
-from tgate import TgateSDDeepCacheLoader
 import numpy as np
-import wandb
+#import wandb
 import torch
-from tgate import TgateSDDeepCacheLoader
+#from tgate import TgateSDDeepCacheLoader
 from torch import autocast
 from PIL import Image
 from torchvision import transforms
 from collections import Counter
-from mnist_classifier.model import MnistClassifier
-run =wandb.init(project="sinvadtestfitness_mnist")
+from experiments.mnist_experiments.mnist_gan.conditional_gan.sa.model import MnistClassifier
+#run =wandb.init(project="sinvadtestfitness_mnist")
 img_size = 28 * 28
 def process_image(image):
     """
@@ -69,7 +68,7 @@ classifier = MnistClassifier(img_size=img_size).to(device)
 # Load pretrained model
 classifier.load_state_dict(
     torch.load(
-        "./mnist_classifier/MNIST_conv_classifier.pth",
+        "./sa/models/MNIST_conv_classifier.pth",
         map_location=device,
    )
 )
@@ -85,14 +84,14 @@ best_left = 10
 perturbation_size = 0.00108344359397888
 max_val =5.42081117630005
 min_val = -5.41362476348877
-gen_steps = 250
+gen_num = 250
 pop_size = 25
 fitness_scores = []
 predicted_labels = []
 all_img_lst = []
-num_samples = 100
+imgs_to_samp = 10
 image_info = []
-proj_path = "./evolution_mnist_sdsinvadkpp/"+proj_name+"_"
+proj_path = "./mnist_sd/"+proj_name+"_"
 os.makedirs(proj_path, exist_ok=True)
 os.makedirs(proj_path+'/Newresult', exist_ok=True)
 os.makedirs(os.path.join(proj_path, 'generated_images'), exist_ok=True)
@@ -100,7 +99,7 @@ os.makedirs(os.path.join(proj_path, 'generated_images'), exist_ok=True)
 print('Creating init image')
 #lms = LMSDiscreteScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear")
 base_model_id = "runwayml/stable-diffusion-v1-5"
-weights_path = "./Mnist_Lora_sdv1.5-000005.safetensors"
+weights_path = "./Mnist_Lora_sdv1.5.safetensors"
 
 pipe = StableDiffusionPipeline.from_pretrained(
 base_model_id,variant="fp16", torch_dtype=torch.float16, safety_checker=None).to(device)
@@ -110,132 +109,143 @@ pipe.unet.to(device)
 pipe.vae.to(device)
 pipe.text_encoder.to(device)
 seed = 0
-for n in range(num_samples):
-    seedSelect = seed+n
+saved_images = 0
+
+for n in range(imgs_to_samp):  # Loop exactly 100 times
+    seedSelect = seed + n  # Use current iteration index to update the seed
     generator = generator.manual_seed(seedSelect)
-    original_lv = torch.randn((1, pipe.unet.config.in_channels, height // 8, width // 8), device = device).to(torch.float16)
-    label_matched = False  # Flag to track when the correct label is matched
-    attempt_count = 0  # To prevent infinite loops
-    while not label_matched and attempt_count < 50:
-         randprompt = random.choice(prompts)
-         expected_label = int(re.search(r"Number(\d+)", randprompt).group(1))  # Extract the number following 'HouseNo'
-         with torch.inference_mode():
-              init_img = pipe (prompt = randprompt,guidance_scale=1.4, num_inference_steps= num_inference_steps,latents=original_lv)["images"][0]
-         tensor_image = process_image(init_img)
-         tensor_image = tensor_image.unsqueeze(0).to(device)
-         original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
-         original_label = np.argmax(original_logit).item()
-         # Check if the predicted label matches the expected label from the promp
-         if original_label == expected_label:
-           # Save the image only if the label matches
-            init_img_path = os.path.join(proj_path, f'image_{n}_X{original_label}_prompt_{expected_label}')
-            init_img.save(init_img_path)
-            print(f"Image {n} with matching label saved at {init_img_path}")
-            label_matched = True
-         else:
-            print(f"Attempt {attempt_count + 1}: Label mismatch for image {n}: expected {expected_label}, got {original_label}")
-            attempt_count += 1
-    if not label_matched:
-            print(f"No matching prompt found after 10 attempts for image {n}.")    
 
-    init_pop = [
-        original_lv + init_perturbation * torch.randn((4, height // 8, width // 8), device = device).to(torch.float16)
-        for _ in range(pop_size)
-    ]
+    original_lv = torch.randn((1, pipe.unet.config.in_channels, height // 8, width // 8), device=device).to(torch.float16)
 
-    best_fitness_score = float('inf')
-    best_image_tensor = None
-    best_image_index = -1
-    now_pop = init_pop
-    prev_best = np.inf
-    for i in range(gen_steps):
+    # Generate the prompt and expected label
+    randprompt = random.choice(prompts)
+    expected_label = int(re.search(r"Number(\d+)", randprompt).group(1))  # Extract the expected label
 
-        indivs_lv = torch.cat(now_pop, dim=0).view(-1, 4, height // 8, width // 8).to(torch.float16)
-        print(indivs_lv.shape)
-        with torch.inference_mode():
-            perturb_img = pipe ([randprompt]*(pop_size),guidance_scale = 1.4, generator= generator, 
-                num_inference_steps=num_inference_steps,
-                latents=indivs_lv,
-            )["images"]
-           #all_img_lst.append(perturb_img)
-        torch.cuda.empty_cache()
-        tensor_image2 =torch.stack([process_image(image) for image in perturb_img])
-        # tensor_image2 = transform(last_image)
-        tensor_image2 = tensor_image2.to(device)
-        all_logits = classifier(tensor_image2).detach().cpu().numpy()
-        perturb_label1 = np.argmax(all_logits).item()
-        print(all_logits.shape)
-        print(tensor_image2.shape)
-        #os.makedirs(os.path.join(proj_path, 'generated_images'), exist_ok=True)  
-        fitness_scores = [
-            calculate_fitness(all_logits[k_idx], original_label)
-            for k_idx in range(pop_size)
+    with torch.inference_mode():
+        init_img = pipe(prompt=randprompt, guidance_scale=3.5, num_inference_steps=num_inference_steps, latents=original_lv)["images"][0]
+
+    # Process the generated image
+    tensor_image = process_image(init_img)
+    tensor_image = tensor_image.unsqueeze(0).to(device)
+    original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
+    original_label = np.argmax(original_logit).item()
+
+    # Check if the predicted label matches the expected label
+    if original_label == expected_label:
+        # If the label matches, save the image and proceed with the genetic algorithm
+        init_img_path = os.path.join(proj_path, f'image_{saved_images}_X{original_label}_prompt_{expected_label}.png')
+        init_img.save(init_img_path)
+        print(f"Image {saved_images} with matching label saved at {init_img_path}")
+        saved_images +=1
+        # Proceed with the genetic algorithm now that the label matches
+        init_pop = [
+            original_lv + init_perturbation * torch.randn((4, height // 8, width // 8), device=device).to(torch.float16)
+            for _ in range(pop_size)
         ]
-        print("print fitness",len(fitness_scores))
-        # Find the minimum fitness score in the current generation
-        current_min_index = np.argmin(fitness_scores)
-        current_min_fitness = fitness_scores[current_min_index]
-    
-        # Update best tracking variables if the current minimum is less than the tracked best
-        if current_min_fitness < best_fitness_score:
-           best_fitness_score = current_min_fitness
-           best_image_tensor  = tensor_image2[current_min_index]  # Ensure a deep copy
-           best_image_index = current_min_index
-        # Perform selection
-        selected_indices = sorted(range(len(fitness_scores)), key=lambda i: fitness_scores[i], reverse=True,
-           )[-best_left:]
-        now_best = np.min(fitness_scores)
-        parent_pop = [now_pop[idx] for idx in selected_indices]
-        print("now_best " + str(now_best) + " average_best " + str(np.mean(fitness_scores)))
-        wandb.log({"ft_score":now_best})
-        if now_best < 0:
-           break
-        elif now_best == prev_best:
-            perturbation_size *= 2
+
+        best_fitness_score = float('inf')
+        best_image_tensor = None
+        best_image_index = -1
+        now_pop = init_pop
+        prev_best = np.inf
+
+        for g_idx in range(gen_num):  # Start from 1 for genetic algorithm steps
+            indivs_lv = torch.cat(now_pop, dim=0).view(-1, 4, height // 8, width // 8).to(torch.float16)
+            print(indivs_lv.shape)
+            with torch.inference_mode():
+                perturb_img = pipe([randprompt] * pop_size, guidance_scale=1.4, generator=generator, 
+                    num_inference_steps=num_inference_steps,
+                    latents=indivs_lv,
+                )["images"]
+
+            torch.cuda.empty_cache()
+            tensor_image2 = torch.stack([process_image(image) for image in perturb_img])
+            tensor_image2 = tensor_image2.to(device)
+            all_logits = classifier(tensor_image2).detach().cpu().numpy()
+            perturb_label1 = np.argmax(all_logits).item()
+            print(all_logits.shape)
+            print(tensor_image2.shape)
+
+            fitness_scores = [
+                calculate_fitness(all_logits[k_idx], original_label)
+                for k_idx in range(pop_size)
+            ]
+            print("print fitness", len(fitness_scores))
+
+            # Find the minimum fitness score in the current generation
+            current_min_index = np.argmin(fitness_scores)
+            current_min_fitness = fitness_scores[current_min_index]
+
+            # Update best tracking variables if the current minimum is less than the tracked best
+            if current_min_fitness < best_fitness_score:
+                best_fitness_score = current_min_fitness
+                best_image_tensor = tensor_image2[current_min_index]  # Ensure a deep copy
+                best_image_index = current_min_index
+
+            # Perform selection
+            selected_indices = sorted(range(len(fitness_scores)), key=lambda i: fitness_scores[i], reverse=True)[-best_left:]
+            now_best = np.min(fitness_scores)
+            parent_pop = [now_pop[idx] for idx in selected_indices]
+            print("now_best " + str(now_best) + " average_best " + str(np.mean(fitness_scores)))
+           # wandb.log({"ft_score": now_best})
+
+            if now_best < 0:
+                break
+            elif now_best == prev_best:
+                perturbation_size *= 2
+            else:
+                perturbation_size = init_perturbation
+
+            k_pop = []
+            print("Size of parent_pop:", len(parent_pop))
+
+            # Select k-idx for cross_over genes
+            for k_idx in range(pop_size - best_left):
+                mom_idx, pop_idx = np.random.choice(best_left, size=2, replace=False)
+                print("mom_idx:", mom_idx, "pop_idx:", pop_idx)
+                spl_idx = np.random.choice(4, size=1)[0]
+                k_gene = torch.cat(
+                    [parent_pop[mom_idx][:, :spl_idx], parent_pop[pop_idx][:, spl_idx:]],
+                    dim=1,
+                )  # crossover
+
+                # Mutation
+                diffs = (k_gene != original_lv).float()
+                k_gene += (
+                    perturbation_size * torch.randn(k_gene.size(), device=k_gene.device) * diffs
+                )  # random adding noise only to different places
+
+                k_pop.append(k_gene)
+
+            # Combine parent_pop and k_pop for the next generation
+            now_pop = parent_pop + k_pop
+            prev_best = now_best
+            # Apply a final clamp across all now_pop before next iteration starts
+            now_pop = [torch.clamp(tensor, min=min_val, max=max_val) for tensor in now_pop]
+
+        # After the loop, save the last image if it exists
+        if best_image_tensor is not None:
+            tensor_image = best_image_tensor.to(device)
+            tensor_image = tensor_image.unsqueeze(0).to(device)
+            tensor_image_np = tensor_image.squeeze().detach().cpu().numpy()
+            perturb_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
+            perturb_label = np.argmax(perturb_logit).item()
+            predicted_labels.append(perturb_label)
+            all_img_lst.append(tensor_image_np)
+
+            # Save the image as a numpy array
+            image_filename = f'image_{saved_images}_iteration{g_idx + 1}_X{original_label}_Y{perturb_label}'
+            np.save(os.path.join(proj_path, 'generated_images', image_filename), tensor_image_np)
         else:
-            perturbation_size = init_perturbation
-        k_pop = []
-        print("Size of parent_pop:", len(parent_pop))
-        # select k-idx for cross_over genes
-        for k_idx in range(pop_size - best_left):
-            mom_idx, pop_idx = np.random.choice(best_left, size=2, replace=False)
-            print("mom_idx:", mom_idx, "pop_idx:", pop_idx)
-            spl_idx = np.random.choice(4, size=1)[0]
-            k_gene = torch.cat(
-                [parent_pop[mom_idx][:, :spl_idx], parent_pop[pop_idx][:, spl_idx:]],
-                dim=1,
-            )  # crossover
+            print("image is none")
 
-            # Mutation
-            diffs = (k_gene != original_lv).float()
-            k_gene += (
-                   perturbation_size * torch.randn(k_gene.size(), device = k_gene.device) * diffs
-            )  # random adding noise only to diff places
+    else:
+        # If no match, simply skip to the next iteration (no image is saved or processed)
+        print(f"Label mismatch for image {saved_images}: expected {expected_label}, got {original_label}")
 
-            k_pop.append(k_gene)
-
-        # Combine parent_pop and k_pop for the next generation
-        now_pop = parent_pop + k_pop
-        prev_best = now_best
-        # Apply a final clamp across all now_pop before next iteration starts
-        now_pop = [torch.clamp(tensor, min=min_val, max=max_val) for tensor in now_pop]
-
-    # After the loop, save the last image if it exists
-    if best_image_tensor is not None:
-       tensor_image = best_image_tensor.to(device)
-       tensor_image = tensor_image.unsqueeze(0).to(device)
-       tensor_image_np= tensor_image.squeeze().detach().cpu().numpy()
-       perturb_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
-       perturb_label = np.argmax(perturb_logit).item()
-       predicted_labels.append(perturb_label)
-       all_img_lst.append(tensor_image_np)
-       # Save the image as a numpy array
-       image_filename = f'image_{n}_iteration{i}_X{original_label}_Y{perturb_label}'
-       # Save the image as a numpy array
-       np.save(os.path.join(proj_path,'generated_images', image_filename), tensor_image_np)
-    else: 
-       print("image is none")
-    
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
 np.save(os.path.join(proj_path, "bound_imgs_mnist_sd.npy"), all_imgs)
+
+
+
