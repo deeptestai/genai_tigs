@@ -65,13 +65,12 @@ def calculate_fitness(logit, label):
 
 image_info = []
 predictions = []
-num_samples = 100
+imgs_to_samp = 100
 gen_num = 250
 pop_size = 25
 best_left = 10
 min_val=-5.26724052429199
 max_val=4.72675895690918
-imgs_to_samp = 100
 perturbation_size = 0.00999399948120117 #  perturbation size
 initial_perturbation_size = 0.0199879989624023  # Initial perturbation size
 
