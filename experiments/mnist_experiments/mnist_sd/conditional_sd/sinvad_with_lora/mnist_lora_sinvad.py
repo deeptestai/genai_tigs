@@ -7,7 +7,6 @@ from diffusers.schedulers import DDIMScheduler
 import numpy as np
 #import wandb
 import torch
-#from tgate import TgateSDDeepCacheLoader
 from torch import autocast
 from PIL import Image
 from torchvision import transforms
