@@ -198,7 +198,7 @@ for img_idx in trange(imgs_to_samp):  # Loop will run for 100 iterations
         # Define the path for saving the numpy file with detailed filename
         image_path_np = os.path.join(
             result_dir,
-            f"image_{saved_images}_iteration{g_idx}_X{original_label}_Y{predicted_best_label}.npy"
+            f"image_{saved_images}_iteration{g_idx + 1}_X{original_label}_Y{predicted_best_label}.npy"
         )
 
         # Save the numpy array to a file
