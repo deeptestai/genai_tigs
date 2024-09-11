@@ -85,12 +85,12 @@ os.makedirs(os.path.join(proj_path, 'generated_images'), exist_ok=True)
 correct_predictions = 0
 
 # Generate and classify images
-for img_idx in range(imgs_to_samp):
+for n in range(imgs_to_samp):
     prompt = prompts[n % len(prompts)]
     expected_label = n % len(prompts)
 
     with torch.no_grad():
-        seedSelect = seed+img_idx
+        seedSelect = seed+ n
         generator = generator.manual_seed(seedSelect)
         original_lv = torch.randn((1, pipe.unet.config.in_channels, height // 8, width // 8),generator=generator, device = device).to(torch.float16)
         # Generate image
@@ -108,7 +108,7 @@ for img_idx in range(imgs_to_samp):
             correct_predictions += 1
         
         # Save generated image
-        image.save(os.path.join(proj_path, 'generated_images', f'generated_image_{img_idx}_X{expected_label}_Y{predicted_label}.png'))
+        image.save(os.path.join(proj_path, 'generated_images', f'generated_image_{n}_X{expected_label}_Y{predicted_label}.png'))
 
 # Calculate accuracy
 accuracy = (correct_predictions / imgs_to_samp) * 100
