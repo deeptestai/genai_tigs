@@ -1,0 +1,31 @@
+Dataset,Model,Mutation extent,# of seed, % correctly predicted seeds
+MNIST,VAE,Low,100,99
+,GAN,,100,99
+,SD,,100,87
+,VAE,High,100,99
+,GAN,,100,99
+,SD,,100,87
+SVHN,VAE,Low,100,66
+,GAN,,100,84
+,SD,,100,95
+,VAE,High,100,66
+,GAN,,100,84
+,SD,,100,95
+CIFAR10,VAE,Low,100,39
+,GAN,,100,69
+,SD,,100,87
+,VAE,High,100,39
+,GAN,,100,69
+,SD,,100,87
+Imagenet (teddy_bear),VAE,Low,100,14
+,GAN,,100,85
+,SD,,100,87
+,VAE,High,100,14
+,GAN,,100,85
+,SD,,100,87
+Imagenet (pizza),VAE,Low,100,25
+,GAN,,100,99
+,SD,,100,73
+,VAE,High,100,25
+,GAN,,100,99
+,SD,,100,73

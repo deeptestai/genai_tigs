@@ -1,0 +1,380 @@
+Image URL,ID,DATASET,TOOL,MUT_EXT,ITER,Expected,Predicted,ASS 1,ASS 2,Misclass Human 1,Misclass Human 2,Valid Human 1,Valid Human 2,Label Preservation?,Validity?
+126_SVHN_gan_high_iteration28_X6_Y0,126,SVHN,gan,high,28,6,0,6,6,0,0,0,0,yes,yes
+180_SVHN_gan_low_iteration30_X7_Y2,180,SVHN,gan,low,30,7,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+230_SVHN_sd_high_iteration1_X0_Y9,230,SVHN,sd,high,1,0,9,8,8,1,1,0,0,no,yes
+198_SVHN_vae_low_iteration1_X2_Y3,198,SVHN,vae,low,1,2,3,3,1,1,1,0,0,no,yes
+226_SVHN_sd_high_iteration1_X2_Y7,226,SVHN,sd,high,1,2,7,1,1,1,1,0,0,no,yes
+146_SVHN_gan_high_iteration22_X9_Y4,146,SVHN,gan,high,22,9,4,9,Not a House Number,0,1,0,1,N/A,N/A
+42_SVHN_vae_high_iteration61_X1_Y7,42,SVHN,vae,high,61,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+138_SVHN_gan_high_iteration1_X3_Y7,138,SVHN,gan,high,1,3,7,2,3,1,0,0,0,N/A,yes
+324_SVHN_sd_low_iteration201_X0_Y9,324,SVHN,sd,low,201,0,9,9,7,1,1,0,0,no,yes
+316_SVHN_sd_low_iteration31_X6_Y1,316,SVHN,sd,low,31,6,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+118_SVHN_gan_high_iteration64_X1_Y7,118,SVHN,gan,high,64,1,7,Not a House Number,1,1,0,1,0,N/A,N/A
+290_SVHN_sd_high_iteration1_X9_Y3,290,SVHN,sd,high,1,9,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+349_SVHN_sd_low_iteration155_X0_Y6,349,SVHN,sd,low,155,0,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+233_SVHN_sd_high_iteration1_X8_Y5,233,SVHN,sd,high,1,8,5,Not a House Number,2,1,1,1,0,no,N/A
+223_SVHN_sd_high_iteration14_X4_Y1,223,SVHN,sd,high,14,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+213_SVHN_vae_low_iteration242_X4_Y3,213,SVHN,vae,low,242,4,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+90_SVHN_gan_high_iteration23_X9_Y0,90,SVHN,gan,high,23,9,0,0,9,1,0,0,0,N/A,yes
+216_SVHN_vae_low_iteration21_X8_Y6,216,SVHN,vae,low,21,8,6,6,8,1,0,0,0,N/A,yes
+43_SVHN_vae_high_iteration44_X1_Y3,43,SVHN,vae,high,44,1,3,3,3,1,1,0,0,no,yes
+113_SVHN_gan_high_iteration12_X9_Y8,113,SVHN,gan,high,12,9,8,9,Not a House Number,0,1,0,1,N/A,N/A
+32_SVHN_vae_high_iteration33_X1_Y6,32,SVHN,vae,high,33,1,6,Not a House Number,6,1,1,1,0,no,N/A
+95_SVHN_gan_high_iteration108_X3_Y1,95,SVHN,gan,high,108,3,1,3,3,0,0,0,0,yes,yes
+294_SVHN_sd_high_iteration42_X7_Y1,294,SVHN,sd,high,42,7,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+200_SVHN_vae_low_iteration154_X6_Y0,200,SVHN,vae,low,154,6,0,6,6,0,0,0,0,yes,yes
+166_SVHN_gan_low_iteration137_X0_Y2,166,SVHN,gan,low,137,0,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+178_SVHN_gan_low_iteration9_X2_Y7,178,SVHN,gan,low,9,2,7,Not a House Number,8,1,1,1,0,no,N/A
+98_SVHN_gan_high_iteration44_X6_Y8,98,SVHN,gan,high,44,6,8,Not a House Number,Not a House Number,1,1,1,1,no,no
+280_SVHN_sd_high_iteration112_X0_Y9,280,SVHN,sd,high,112,0,9,Not a House Number,0,1,0,1,0,N/A,N/A
+241_SVHN_sd_high_iteration12_X7_Y0,241,SVHN,sd,high,12,7,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+314_SVHN_sd_low_iteration144_X8_Y0,314,SVHN,sd,low,144,8,0,8,Not a House Number,0,1,0,1,N/A,N/A
+119_SVHN_gan_high_iteration46_X4_Y1,119,SVHN,gan,high,46,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+337_SVHN_sd_low_iteration107_X0_Y9,337,SVHN,sd,low,107,0,9,0,Not a House Number,0,1,0,1,N/A,N/A
+193_SVHN_vae_low_iteration120_X9_Y0,193,SVHN,vae,low,120,9,0,9,0,0,1,0,0,N/A,yes
+82_SVHN_gan_high_iteration5_X6_Y8,82,SVHN,gan,high,5,6,8,0,0,1,1,0,0,no,yes
+281_SVHN_sd_high_iteration1_X2_Y3,281,SVHN,sd,high,1,2,3,3,3,1,1,0,0,no,yes
+208_SVHN_vae_low_iteration118_X1_Y4,208,SVHN,vae,low,118,1,4,0,Not a House Number,1,1,0,1,no,N/A
+176_SVHN_gan_low_iteration124_X0_Y2,176,SVHN,gan,low,124,0,2,9,1,1,1,0,0,no,yes
+234_SVHN_sd_high_iteration1_X0_Y8,234,SVHN,sd,high,1,0,8,3,Not a House Number,1,1,0,1,no,N/A
+287_SVHN_sd_high_iteration4_X6_Y5,287,SVHN,sd,high,4,6,5,Not a House Number,Not a House Number,1,1,1,1,no,no
+4_SVHN_vae_high_iteration16_X5_Y1,4,SVHN,vae,high,16,5,1,5,5,0,0,0,0,yes,yes
+17_SVHN_vae_high_iteration32_X1_Y6,17,SVHN,vae,high,32,1,6,Not a House Number,9,1,1,1,0,no,N/A
+328_SVHN_sd_low_iteration1_X2_Y0,328,SVHN,sd,low,1,2,0,Not a House Number,8,1,1,1,0,no,N/A
+74_SVHN_gan_high_iteration55_X5_Y6,74,SVHN,gan,high,55,5,6,5,5,0,0,0,0,yes,yes
+242_SVHN_sd_high_iteration28_X1_Y4,242,SVHN,sd,high,28,1,4,Not a House Number,1,1,0,1,0,N/A,N/A
+313_SVHN_sd_low_iteration1_X9_Y3,313,SVHN,sd,low,1,9,3,9,9,0,0,0,0,yes,yes
+254_SVHN_sd_high_iteration1_X1_Y8,254,SVHN,sd,high,1,1,8,Not a House Number,Not a House Number,1,1,1,1,no,no
+341_SVHN_sd_low_iteration23_X2_Y9,341,SVHN,sd,low,23,2,9,8,8,1,1,0,0,no,yes
+351_SVHN_sd_low_iteration116_X5_Y1,351,SVHN,sd,low,116,5,1,5,5,0,0,0,0,yes,yes
+121_SVHN_gan_high_iteration22_X3_Y8,121,SVHN,gan,high,22,3,8,3,3,0,0,0,0,yes,yes
+25_SVHN_vae_high_iteration16_X2_Y8,25,SVHN,vae,high,16,2,8,2,3,0,1,0,0,N/A,yes
+170_SVHN_gan_low_iteration154_X4_Y3,170,SVHN,gan,low,154,4,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+184_SVHN_gan_low_iteration1_X4_Y1,184,SVHN,gan,low,1,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+270_SVHN_sd_high_iteration1_X8_Y5,270,SVHN,sd,high,1,8,5,Not a House Number,5,1,1,1,0,no,N/A
+116_SVHN_gan_high_iteration28_X6_Y8,116,SVHN,gan,high,28,6,8,Not a House Number,Not a House Number,1,1,1,1,no,no
+195_SVHN_vae_low_iteration118_X4_Y1,195,SVHN,vae,low,118,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+377_SVHN_sd_low_iteration64_X7_Y1,377,SVHN,sd,low,64,7,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+211_SVHN_vae_low_iteration8_X6_Y0,211,SVHN,vae,low,8,6,0,Not a House Number,1,1,1,1,0,no,N/A
+73_SVHN_gan_high_iteration15_X0_Y2,73,SVHN,gan,high,15,0,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+173_SVHN_gan_low_iteration153_X1_Y7,173,SVHN,gan,low,153,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+258_SVHN_sd_high_iteration1_X4_Y1,258,SVHN,sd,high,1,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+12_SVHN_vae_high_iteration30_X8_Y9,12,SVHN,vae,high,30,8,9,8,8,0,0,0,0,yes,yes
+160_SVHN_gan_low_iteration229_X3_Y1,160,SVHN,gan,low,229,3,1,8,Not a House Number,1,1,0,1,no,N/A
+140_SVHN_gan_high_iteration1_X1_Y4,140,SVHN,gan,high,1,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+259_SVHN_sd_high_iteration7_X8_Y6,259,SVHN,sd,high,7,8,6,3,Not a House Number,1,1,0,1,no,N/A
+86_SVHN_gan_high_iteration31_X3_Y1,86,SVHN,gan,high,31,3,1,4,Not a House Number,1,1,0,1,no,N/A
+148_SVHN_gan_high_iteration1_X3_Y7,148,SVHN,gan,high,1,3,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+218_SVHN_sd_high_iteration11_X1_Y3,218,SVHN,sd,high,11,1,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+65_SVHN_vae_high_iteration145_X7_Y2,65,SVHN,vae,high,145,7,2,2,2,1,1,0,0,no,yes
+306_SVHN_sd_high_iteration1_X1_Y0,306,SVHN,sd,high,1,1,0,0,Not a House Number,1,1,0,1,no,N/A
+267_SVHN_sd_high_iteration1_X2_Y6,267,SVHN,sd,high,1,2,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+292_SVHN_sd_high_iteration36_X8_Y2,292,SVHN,sd,high,36,8,2,8,8,0,0,0,0,yes,yes
+102_SVHN_gan_high_iteration8_X2_Y3,102,SVHN,gan,high,8,2,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+361_SVHN_sd_low_iteration1_X3_Y2,361,SVHN,sd,low,1,3,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+21_SVHN_vae_high_iteration10_X1_Y3,21,SVHN,vae,high,10,1,3,1,Not a House Number,0,1,0,1,N/A,N/A
+334_SVHN_sd_low_iteration1_X8_Y3,334,SVHN,sd,low,1,8,3,8,8,0,0,0,0,yes,yes
+240_SVHN_sd_high_iteration1_X5_Y6,240,SVHN,sd,high,1,5,6,5,5,0,0,0,0,yes,yes
+190_SVHN_vae_low_iteration123_X0_Y7,190,SVHN,vae,low,123,0,7,0,Not a House Number,0,1,0,1,N/A,N/A
+157_SVHN_gan_low_iteration139_X8_Y9,157,SVHN,gan,low,139,8,9,3,3,1,1,0,0,no,yes
+68_SVHN_gan_high_iteration20_X6_Y8,68,SVHN,gan,high,20,6,8,8,8,1,1,0,0,no,yes
+149_SVHN_gan_low_iteration18_X9_Y1,149,SVHN,gan,low,18,9,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+100_SVHN_gan_high_iteration28_X6_Y1,100,SVHN,gan,high,28,6,1,6,Not a House Number,0,1,0,1,N/A,N/A
+11_SVHN_vae_high_iteration7_X6_Y4,11,SVHN,vae,high,7,6,4,0,Not a House Number,1,1,0,1,no,N/A
+36_SVHN_vae_high_iteration19_X0_Y2,36,SVHN,vae,high,19,0,2,9,0,1,0,0,0,N/A,yes
+364_SVHN_sd_low_iteration1_X3_Y5,364,SVHN,sd,low,1,3,5,5,5,1,1,0,0,no,yes
+162_SVHN_gan_low_iteration114_X1_Y4,162,SVHN,gan,low,114,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+10_SVHN_vae_high_iteration10_X1_Y3,10,SVHN,vae,high,10,1,3,2,Not a House Number,1,1,0,1,no,N/A
+295_SVHN_sd_high_iteration8_X3_Y5,295,SVHN,sd,high,8,3,5,Not a House Number,5,1,1,1,0,no,N/A
+101_SVHN_gan_high_iteration18_X7_Y4,101,SVHN,gan,high,18,7,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+362_SVHN_sd_low_iteration69_X8_Y9,362,SVHN,sd,low,69,8,9,8,Not a House Number,0,1,0,1,N/A,N/A
+235_SVHN_sd_high_iteration2_X4_Y1,235,SVHN,sd,high,2,4,1,1,4,1,0,0,0,N/A,yes
+99_SVHN_gan_high_iteration29_X5_Y6,99,SVHN,gan,high,29,5,6,3,Not a House Number,1,1,0,1,no,N/A
+130_SVHN_gan_high_iteration6_X7_Y6,130,SVHN,gan,high,6,7,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+291_SVHN_sd_high_iteration1_X2_Y1,291,SVHN,sd,high,1,2,1,5,Not a House Number,1,1,0,1,no,N/A
+301_SVHN_sd_high_iteration26_X0_Y1,301,SVHN,sd,high,26,0,1,0,Not a House Number,0,1,0,1,N/A,N/A
+54_SVHN_vae_high_iteration17_X4_Y1,54,SVHN,vae,high,17,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+206_SVHN_vae_low_iteration105_X7_Y3,206,SVHN,vae,low,105,7,3,3,3,1,1,0,0,no,yes
+350_SVHN_sd_low_iteration196_X0_Y8,350,SVHN,sd,low,196,0,8,8,8,1,1,0,0,no,yes
+125_SVHN_gan_high_iteration22_X7_Y1,125,SVHN,gan,high,22,7,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+204_SVHN_vae_low_iteration15_X9_Y0,204,SVHN,vae,low,15,9,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+147_SVHN_gan_high_iteration28_X3_Y1,147,SVHN,gan,high,28,3,1,2,2,1,1,0,0,no,yes
+53_SVHN_vae_high_iteration69_X4_Y1,53,SVHN,vae,high,69,4,1,4,1,0,1,0,0,N/A,yes
+55_SVHN_vae_high_iteration16_X2_Y8,55,SVHN,vae,high,16,2,8,2,2,0,0,0,0,yes,yes
+144_SVHN_gan_high_iteration126_X7_Y2,144,SVHN,gan,high,126,7,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+110_SVHN_gan_high_iteration5_X1_Y4,110,SVHN,gan,high,5,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+143_SVHN_gan_high_iteration74_X9_Y0,143,SVHN,gan,high,74,9,0,8,9,1,0,0,0,N/A,yes
+357_SVHN_sd_low_iteration149_X6_Y0,357,SVHN,sd,low,149,6,0,0,Not a House Number,1,1,0,1,no,N/A
+46_SVHN_vae_high_iteration35_X3_Y5,46,SVHN,vae,high,35,3,5,Not a House Number,3,1,0,1,0,N/A,N/A
+61_SVHN_vae_high_iteration11_X2_Y7,61,SVHN,vae,high,11,2,7,2,2,0,0,0,0,yes,yes
+238_SVHN_sd_high_iteration1_X3_Y6,238,SVHN,sd,high,1,3,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+168_SVHN_gan_low_iteration1_X8_Y2,168,SVHN,gan,low,1,8,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+48_SVHN_vae_high_iteration38_X0_Y9,48,SVHN,vae,high,38,0,9,Not a House Number,Not a House Number,1,1,1,1,no,no
+51_SVHN_vae_high_iteration20_X2_Y3,51,SVHN,vae,high,20,2,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+156_SVHN_gan_low_iteration30_X7_Y2,156,SVHN,gan,low,30,7,2,Not a House Number,2,1,1,1,0,no,N/A
+289_SVHN_sd_high_iteration42_X1_Y7,289,SVHN,sd,high,42,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+186_SVHN_vae_low_iteration104_X1_Y4,186,SVHN,vae,low,104,1,4,Not a House Number,0,1,1,1,0,no,N/A
+40_SVHN_vae_high_iteration97_X2_Y1,40,SVHN,vae,high,97,2,1,8,8,1,1,0,0,no,yes
+131_SVHN_gan_high_iteration20_X2_Y7,131,SVHN,gan,high,20,2,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+331_SVHN_sd_low_iteration1_X8_Y6,331,SVHN,sd,low,1,8,6,Not a House Number,2,1,1,1,0,no,N/A
+58_SVHN_vae_high_iteration4_X4_Y1,58,SVHN,vae,high,4,4,1,1,Not a House Number,1,1,0,1,no,N/A
+329_SVHN_sd_low_iteration1_X5_Y1,329,SVHN,sd,low,1,5,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+188_SVHN_vae_low_iteration20_X0_Y4,188,SVHN,vae,low,20,0,4,Not a House Number,4,1,1,1,0,no,N/A
+220_SVHN_sd_high_iteration4_X3_Y5,220,SVHN,sd,high,4,3,5,Not a House Number,5,1,1,1,0,no,N/A
+83_SVHN_gan_high_iteration140_X0_Y9,83,SVHN,gan,high,140,0,9,0,0,0,0,0,0,yes,yes
+378_SVHN_sd_low_iteration17_X8_Y4,378,SVHN,sd,low,17,8,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+150_SVHN_gan_low_iteration133_X3_Y8,150,SVHN,gan,low,133,3,8,5,3,1,0,0,0,N/A,yes
+371_SVHN_sd_low_iteration103_X0_Y1,371,SVHN,sd,low,103,0,1,Not a House Number,0,1,0,1,0,N/A,N/A
+38_SVHN_vae_high_iteration63_X4_Y8,38,SVHN,vae,high,63,4,8,Not a House Number,1,1,1,1,0,no,N/A
+37_SVHN_vae_high_iteration30_X2_Y7,37,SVHN,vae,high,30,2,7,Not a House Number,7,1,1,1,0,no,N/A
+185_SVHN_vae_low_iteration109_X4_Y6,185,SVHN,vae,low,109,4,6,Not a House Number,6,1,1,1,0,no,N/A
+202_SVHN_vae_low_iteration212_X2_Y7,202,SVHN,vae,low,212,2,7,2,7,0,1,0,0,N/A,yes
+104_SVHN_gan_high_iteration74_X1_Y4,104,SVHN,gan,high,74,1,4,7,2,1,1,0,0,no,yes
+312_SVHN_sd_high_iteration1_X6_Y5,312,SVHN,sd,high,1,6,5,Not a House Number,5,1,1,1,0,no,N/A
+368_SVHN_sd_low_iteration104_X4_Y3,368,SVHN,sd,low,104,4,3,4,4,0,0,0,0,yes,yes
+199_SVHN_vae_low_iteration126_X8_Y6,199,SVHN,vae,low,126,8,6,8,8,0,0,0,0,yes,yes
+310_SVHN_sd_high_iteration1_X7_Y3,310,SVHN,sd,high,1,7,3,Not a House Number,6,1,1,1,0,no,N/A
+159_SVHN_gan_low_iteration161_X1_Y3,159,SVHN,gan,low,161,1,3,Not a House Number,4,1,1,1,0,no,N/A
+320_SVHN_sd_low_iteration7_X8_Y3,320,SVHN,sd,low,7,8,3,8,8,0,0,0,0,yes,yes
+354_SVHN_sd_low_iteration99_X9_Y5,354,SVHN,sd,low,99,9,5,8,9,1,0,0,0,N/A,yes
+91_SVHN_gan_high_iteration22_X4_Y1,91,SVHN,gan,high,22,4,1,Not a House Number,9,1,1,1,0,no,N/A
+158_SVHN_gan_low_iteration52_X4_Y3,158,SVHN,gan,low,52,4,3,4,4,0,0,0,0,yes,yes
+332_SVHN_sd_low_iteration144_X1_Y7,332,SVHN,sd,low,144,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+34_SVHN_vae_high_iteration26_X1_Y0,34,SVHN,vae,high,26,1,0,1,Not a House Number,0,1,0,1,N/A,N/A
+212_SVHN_vae_low_iteration210_X0_Y9,212,SVHN,vae,low,210,0,9,Not a House Number,Not a House Number,1,1,1,1,no,no
+151_SVHN_gan_low_iteration23_X0_Y1,151,SVHN,gan,low,23,0,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+201_SVHN_vae_low_iteration53_X3_Y2,201,SVHN,vae,low,53,3,2,Not a House Number,8,1,1,1,0,no,N/A
+172_SVHN_gan_low_iteration82_X8_Y2,172,SVHN,gan,low,82,8,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+16_SVHN_vae_high_iteration24_X1_Y0,16,SVHN,vae,high,24,1,0,Not a House Number,0,1,1,1,0,no,N/A
+323_SVHN_sd_low_iteration95_X5_Y2,323,SVHN,sd,low,95,5,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+348_SVHN_sd_low_iteration135_X4_Y1,348,SVHN,sd,low,135,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+7_SVHN_vae_high_iteration21_X4_Y1,7,SVHN,vae,high,21,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+47_SVHN_vae_high_iteration87_X2_Y3,47,SVHN,vae,high,87,2,3,2,2,0,0,0,0,yes,yes
+359_SVHN_sd_low_iteration40_X0_Y1,359,SVHN,sd,low,40,0,1,0,0,0,0,0,0,yes,yes
+209_SVHN_vae_low_iteration51_X2_Y8,209,SVHN,vae,low,51,2,8,2,2,0,0,0,0,yes,yes
+319_SVHN_sd_low_iteration227_X1_Y0,319,SVHN,sd,low,227,1,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+41_SVHN_vae_high_iteration20_X4_Y6,41,SVHN,vae,high,20,4,6,8,8,1,1,0,0,no,yes
+64_SVHN_vae_high_iteration25_X1_Y8,64,SVHN,vae,high,25,1,8,9,Not a House Number,1,1,0,1,no,N/A
+269_SVHN_sd_high_iteration1_X7_Y1,269,SVHN,sd,high,1,7,1,7,2,0,1,0,0,N/A,yes
+251_SVHN_sd_high_iteration2_X9_Y0,251,SVHN,sd,high,2,9,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+197_SVHN_vae_low_iteration63_X5_Y6,197,SVHN,vae,low,63,5,6,5,5,0,0,0,0,yes,yes
+373_SVHN_sd_low_iteration1_X3_Y5,373,SVHN,sd,low,1,3,5,3,3,0,0,0,0,yes,yes
+253_SVHN_sd_high_iteration130_X9_Y4,253,SVHN,sd,high,130,9,4,9,9,0,0,0,0,yes,yes
+358_SVHN_sd_low_iteration170_X6_Y5,358,SVHN,sd,low,170,6,5,Not a House Number,3,1,1,1,0,no,N/A
+250_SVHN_sd_high_iteration7_X3_Y8,250,SVHN,sd,high,7,3,8,Not a House Number,3,1,0,1,0,N/A,N/A
+141_SVHN_gan_high_iteration85_X0_Y1,141,SVHN,gan,high,85,0,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+15_SVHN_vae_high_iteration2_X8_Y6,15,SVHN,vae,high,2,8,6,Not a House Number,6,1,1,1,0,no,N/A
+85_SVHN_gan_high_iteration154_X1_Y7,85,SVHN,gan,high,154,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+345_SVHN_sd_low_iteration30_X1_Y4,345,SVHN,sd,low,30,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+246_SVHN_sd_high_iteration1_X5_Y6,246,SVHN,sd,high,1,5,6,Not a House Number,5,1,0,1,0,N/A,N/A
+19_SVHN_vae_high_iteration43_X4_Y1,19,SVHN,vae,high,43,4,1,Not a House Number,4,1,0,1,0,N/A,N/A
+333_SVHN_sd_low_iteration71_X5_Y3,333,SVHN,sd,low,71,5,3,Not a House Number,5,1,0,1,0,N/A,N/A
+299_SVHN_sd_high_iteration1_X5_Y9,299,SVHN,sd,high,1,5,9,0,Not a House Number,1,1,0,1,no,N/A
+266_SVHN_sd_high_iteration1_X5_Y6,266,SVHN,sd,high,1,5,6,6,Not a House Number,1,1,0,1,no,N/A
+344_SVHN_sd_low_iteration129_X1_Y9,344,SVHN,sd,low,129,1,9,Not a House Number,Not a House Number,1,1,1,1,no,no
+114_SVHN_gan_high_iteration37_X1_Y4,114,SVHN,gan,high,37,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+24_SVHN_vae_high_iteration24_X1_Y0,24,SVHN,vae,high,24,1,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+62_SVHN_vae_high_iteration43_X1_Y6,62,SVHN,vae,high,43,1,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+268_SVHN_sd_high_iteration1_X0_Y8,268,SVHN,sd,high,1,0,8,8,Not a House Number,1,1,0,1,no,N/A
+365_SVHN_sd_low_iteration158_X6_Y8,365,SVHN,sd,low,158,6,8,1,Not a House Number,1,1,0,1,no,N/A
+187_SVHN_vae_low_iteration217_X1_Y2,187,SVHN,vae,low,217,1,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+175_SVHN_gan_low_iteration55_X3_Y1,175,SVHN,gan,low,55,3,1,2,2,1,1,0,0,no,yes
+255_SVHN_sd_high_iteration1_X4_Y2,255,SVHN,sd,high,1,4,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+192_SVHN_vae_low_iteration89_X8_Y6,192,SVHN,vae,low,89,8,6,8,8,0,0,0,0,yes,yes
+342_SVHN_sd_low_iteration113_X9_Y8,342,SVHN,sd,low,113,9,8,8,9,1,0,0,0,N/A,yes
+376_SVHN_sd_low_iteration108_X7_Y1,376,SVHN,sd,low,108,7,1,7,7,0,0,0,0,yes,yes
+22_SVHN_vae_high_iteration8_X7_Y1,22,SVHN,vae,high,8,7,1,1,7,1,0,0,0,N/A,yes
+75_SVHN_gan_high_iteration34_X9_Y0,75,SVHN,gan,high,34,9,0,0,9,1,0,0,0,N/A,yes
+164_SVHN_gan_low_iteration54_X0_Y6,164,SVHN,gan,low,54,0,6,0,Not a House Number,0,1,0,1,N/A,N/A
+263_SVHN_sd_high_iteration9_X9_Y2,263,SVHN,sd,high,9,9,2,Not a House Number,5,1,1,1,0,no,N/A
+315_SVHN_sd_low_iteration206_X4_Y6,315,SVHN,sd,low,206,4,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+50_SVHN_vae_high_iteration25_X1_Y4,50,SVHN,vae,high,25,1,4,1,Not a House Number,0,1,0,1,N/A,N/A
+189_SVHN_vae_low_iteration61_X1_Y0,189,SVHN,vae,low,61,1,0,2,0,1,1,0,0,no,yes
+13_SVHN_vae_high_iteration31_X1_Y4,13,SVHN,vae,high,31,1,4,0,1,1,0,0,0,N/A,yes
+275_SVHN_sd_high_iteration4_X6_Y0,275,SVHN,sd,high,4,6,0,5,5,1,1,0,0,no,yes
+215_SVHN_vae_low_iteration181_X2_Y1,215,SVHN,vae,low,181,2,1,8,8,1,1,0,0,no,yes
+89_SVHN_gan_high_iteration12_X8_Y6,89,SVHN,gan,high,12,8,6,8,8,0,0,0,0,yes,yes
+128_SVHN_gan_high_iteration73_X9_Y0,128,SVHN,gan,high,73,9,0,9,9,0,0,0,0,yes,yes
+84_SVHN_gan_high_iteration25_X1_Y0,84,SVHN,gan,high,25,1,0,2,2,1,1,0,0,no,yes
+272_SVHN_sd_high_iteration1_X4_Y9,272,SVHN,sd,high,1,4,9,Not a House Number,Not a House Number,1,1,1,1,no,no
+77_SVHN_gan_high_iteration1_X5_Y4,77,SVHN,gan,high,1,5,4,3,Not a House Number,1,1,0,1,no,N/A
+174_SVHN_gan_low_iteration182_X5_Y6,174,SVHN,gan,low,182,5,6,5,5,0,0,0,0,yes,yes
+97_SVHN_gan_high_iteration19_X1_Y4,97,SVHN,gan,high,19,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+252_SVHN_sd_high_iteration1_X3_Y7,252,SVHN,sd,high,1,3,7,0,Not a House Number,1,1,0,1,no,N/A
+221_SVHN_sd_high_iteration1_X2_Y0,221,SVHN,sd,high,1,2,0,9,Not a House Number,1,1,0,1,no,N/A
+363_SVHN_sd_low_iteration228_X7_Y1,363,SVHN,sd,low,228,7,1,8,7,1,0,0,0,N/A,yes
+196_SVHN_vae_low_iteration165_X3_Y2,196,SVHN,vae,low,165,3,2,3,3,0,0,0,0,yes,yes
+227_SVHN_sd_high_iteration2_X6_Y5,227,SVHN,sd,high,2,6,5,Not a House Number,Not a House Number,1,1,1,1,no,no
+237_SVHN_sd_high_iteration42_X3_Y2,237,SVHN,sd,high,42,3,2,3,3,0,0,0,0,yes,yes
+26_SVHN_vae_high_iteration20_X6_Y8,26,SVHN,vae,high,20,6,8,8,8,1,1,0,0,no,yes
+336_SVHN_sd_low_iteration42_X2_Y7,336,SVHN,sd,low,42,2,7,2,2,0,0,0,0,yes,yes
+129_SVHN_gan_high_iteration118_X1_Y3,129,SVHN,gan,high,118,1,3,3,Not a House Number,1,1,0,1,no,N/A
+107_SVHN_gan_high_iteration11_X9_Y0,107,SVHN,gan,high,11,9,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+274_SVHN_sd_high_iteration9_X0_Y9,274,SVHN,sd,high,9,0,9,9,Not a House Number,1,1,0,1,no,N/A
+293_SVHN_sd_high_iteration1_X3_Y8,293,SVHN,sd,high,1,3,8,8,Not a House Number,1,1,0,1,no,N/A
+167_SVHN_gan_low_iteration75_X2_Y1,167,SVHN,gan,low,75,2,1,2,2,0,0,0,0,yes,yes
+59_SVHN_vae_high_iteration21_X6_Y8,59,SVHN,vae,high,21,6,8,8,Not a House Number,1,1,0,1,no,N/A
+346_SVHN_sd_low_iteration50_X9_Y8,346,SVHN,sd,low,50,9,8,9,Not a House Number,0,1,0,1,N/A,N/A
+369_SVHN_sd_low_iteration163_X9_Y8,369,SVHN,sd,low,163,9,8,8,Not a House Number,1,1,0,1,no,N/A
+92_SVHN_gan_high_iteration19_X1_Y4,92,SVHN,gan,high,19,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+106_SVHN_gan_high_iteration32_X2_Y1,106,SVHN,gan,high,32,2,1,2,Not a House Number,0,1,0,1,N/A,N/A
+340_SVHN_sd_low_iteration1_X8_Y3,340,SVHN,sd,low,1,8,3,8,Not a House Number,0,1,0,1,N/A,N/A
+33_SVHN_vae_high_iteration12_X1_Y3,33,SVHN,vae,high,12,1,3,0,3,1,1,0,0,no,yes
+20_SVHN_vae_high_iteration39_X4_Y6,20,SVHN,vae,high,39,4,6,0,Not a House Number,1,1,0,1,no,N/A
+191_SVHN_vae_low_iteration91_X8_Y6,191,SVHN,vae,low,91,8,6,5,2,1,1,0,0,no,yes
+123_SVHN_gan_high_iteration15_X7_Y0,123,SVHN,gan,high,15,7,0,7,Not a House Number,0,1,0,1,N/A,N/A
+169_SVHN_gan_low_iteration11_X5_Y6,169,SVHN,gan,low,11,5,6,5,Not a House Number,0,1,0,1,N/A,N/A
+298_SVHN_sd_high_iteration1_X7_Y3,298,SVHN,sd,high,1,7,3,8,Not a House Number,1,1,0,1,no,N/A
+231_SVHN_sd_high_iteration8_X4_Y1,231,SVHN,sd,high,8,4,1,4,Not a House Number,0,1,0,1,N/A,N/A
+278_SVHN_sd_high_iteration6_X2_Y0,278,SVHN,sd,high,6,2,0,9,2,1,0,0,0,N/A,yes
+154_SVHN_gan_low_iteration150_X4_Y1,154,SVHN,gan,low,150,4,1,2,Not a House Number,1,1,0,1,no,N/A
+35_SVHN_vae_high_iteration23_X1_Y2,35,SVHN,vae,high,23,1,2,2,Not a House Number,1,1,0,1,no,N/A
+224_SVHN_sd_high_iteration1_X9_Y0,224,SVHN,sd,high,1,9,0,Not a House Number,0,1,1,1,0,no,N/A
+57_SVHN_vae_high_iteration26_X2_Y1,57,SVHN,vae,high,26,2,1,1,Not a House Number,1,1,0,1,no,N/A
+23_SVHN_vae_high_iteration23_X1_Y4,23,SVHN,vae,high,23,1,4,1,Not a House Number,0,1,0,1,N/A,N/A
+247_SVHN_sd_high_iteration6_X1_Y2,247,SVHN,sd,high,6,1,2,1,Not a House Number,0,1,0,1,N/A,N/A
+282_SVHN_sd_high_iteration1_X0_Y2,282,SVHN,sd,high,1,0,2,2,2,1,1,0,0,no,yes
+171_SVHN_gan_low_iteration189_X2_Y7,171,SVHN,gan,low,189,2,7,2,2,0,0,0,0,yes,yes
+31_SVHN_vae_high_iteration25_X1_Y4,31,SVHN,vae,high,25,1,4,1,Not a House Number,0,1,0,1,N/A,N/A
+302_SVHN_sd_high_iteration1_X6_Y5,302,SVHN,sd,high,1,6,5,9,Not a House Number,1,1,0,1,no,N/A
+6_SVHN_vae_high_iteration1_X8_Y6,6,SVHN,vae,high,1,8,6,1,Not a House Number,1,1,0,1,no,N/A
+322_SVHN_sd_low_iteration47_X0_Y1,322,SVHN,sd,low,47,0,1,1,Not a House Number,1,1,0,1,no,N/A
+27_SVHN_vae_high_iteration3_X6_Y4,27,SVHN,vae,high,3,6,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+124_SVHN_gan_high_iteration22_X5_Y6,124,SVHN,gan,high,22,5,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+347_SVHN_sd_low_iteration122_X0_Y6,347,SVHN,sd,low,122,0,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+222_SVHN_sd_high_iteration1_X4_Y1,222,SVHN,sd,high,1,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+217_SVHN_vae_low_iteration237_X5_Y4,217,SVHN,vae,low,237,5,4,Not a House Number,9,1,1,1,0,no,N/A
+243_SVHN_sd_high_iteration1_X1_Y2,243,SVHN,sd,high,1,1,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+3_SVHN_vae_high_iteration18_X1_Y4,3,SVHN,vae,high,18,1,4,Not a House Number,1,1,0,1,0,N/A,N/A
+30_SVHN_vae_high_iteration52_X1_Y2,30,SVHN,vae,high,52,1,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+153_SVHN_gan_low_iteration43_X9_Y2,153,SVHN,gan,low,43,9,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+285_SVHN_sd_high_iteration9_X1_Y0,285,SVHN,sd,high,9,1,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+88_SVHN_gan_high_iteration27_X8_Y2,88,SVHN,gan,high,27,8,2,Not a House Number,Not a House Number,1,1,1,1,no,no
+81_SVHN_gan_high_iteration45_X3_Y1,81,SVHN,gan,high,45,3,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+49_SVHN_vae_high_iteration4_X3_Y8,49,SVHN,vae,high,4,3,8,8,9,1,1,0,0,no,yes
+14_SVHN_vae_high_iteration93_X3_Y9,14,SVHN,vae,high,93,3,9,3,3,0,0,0,0,yes,yes
+163_SVHN_gan_low_iteration114_X3_Y1,163,SVHN,gan,low,114,3,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+265_SVHN_sd_high_iteration1_X3_Y2,265,SVHN,sd,high,1,3,2,2,Not a House Number,1,1,0,1,no,N/A
+94_SVHN_gan_high_iteration9_X9_Y4,94,SVHN,gan,high,9,9,4,9,9,0,0,0,0,yes,yes
+288_SVHN_sd_high_iteration20_X6_Y5,288,SVHN,sd,high,20,6,5,3,3,1,1,0,0,no,yes
+326_SVHN_sd_low_iteration23_X4_Y6,326,SVHN,sd,low,23,4,6,4,4,0,0,0,0,yes,yes
+370_SVHN_sd_low_iteration108_X9_Y1,370,SVHN,sd,low,108,9,1,2,2,1,1,0,0,no,yes
+245_SVHN_sd_high_iteration188_X0_Y6,245,SVHN,sd,high,188,0,6,Not a House Number,9,1,1,1,0,no,N/A
+63_SVHN_vae_high_iteration6_X3_Y2,63,SVHN,vae,high,6,3,2,2,7,1,1,0,0,no,yes
+145_SVHN_gan_high_iteration2_X8_Y6,145,SVHN,gan,high,2,8,6,6,8,1,0,0,0,N/A,yes
+264_SVHN_sd_high_iteration1_X0_Y9,264,SVHN,sd,high,1,0,9,Not a House Number,0,1,0,1,0,N/A,N/A
+9_SVHN_vae_high_iteration6_X1_Y7,9,SVHN,vae,high,6,1,7,2,Not a House Number,1,1,0,1,no,N/A
+286_SVHN_sd_high_iteration5_X7_Y1,286,SVHN,sd,high,5,7,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+210_SVHN_vae_low_iteration60_X0_Y6,210,SVHN,vae,low,60,0,6,8,Not a House Number,1,1,0,1,no,N/A
+303_SVHN_sd_high_iteration1_X0_Y9,303,SVHN,sd,high,1,0,9,9,Not a House Number,1,1,0,1,no,N/A
+366_SVHN_sd_low_iteration75_X5_Y8,366,SVHN,sd,low,75,5,8,5,5,0,0,0,0,yes,yes
+142_SVHN_gan_high_iteration21_X8_Y6,142,SVHN,gan,high,21,8,6,8,2,0,1,0,0,N/A,yes
+321_SVHN_sd_low_iteration201_X7_Y1,321,SVHN,sd,low,201,7,1,Not a House Number,2,1,1,1,0,no,N/A
+161_SVHN_gan_low_iteration19_X5_Y6,161,SVHN,gan,low,19,5,6,5,5,0,0,0,0,yes,yes
+261_SVHN_sd_high_iteration7_X1_Y3,261,SVHN,sd,high,7,1,3,Not a House Number,0,1,1,1,0,no,N/A
+117_SVHN_gan_high_iteration46_X5_Y6,117,SVHN,gan,high,46,5,6,6,5,1,0,0,0,N/A,yes
+207_SVHN_vae_low_iteration98_X8_Y6,207,SVHN,vae,low,98,8,6,8,8,0,0,0,0,yes,yes
+232_SVHN_sd_high_iteration57_X2_Y3,232,SVHN,sd,high,57,2,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+5_SVHN_vae_high_iteration1_X2_Y8,5,SVHN,vae,high,1,2,8,Not a House Number,7,1,1,1,0,no,N/A
+375_SVHN_sd_low_iteration68_X4_Y1,375,SVHN,sd,low,68,4,1,1,4,1,0,0,0,N/A,yes
+353_SVHN_sd_low_iteration1_X2_Y7,353,SVHN,sd,low,1,2,7,Not a House Number,3,1,1,1,0,no,N/A
+112_SVHN_gan_high_iteration92_X8_Y3,112,SVHN,gan,high,92,8,3,8,8,0,0,0,0,yes,yes
+79_SVHN_gan_high_iteration29_X8_Y6,79,SVHN,gan,high,29,8,6,8,8,0,0,0,0,yes,yes
+152_SVHN_gan_low_iteration226_X6_Y8,152,SVHN,gan,low,226,6,8,8,4,1,1,0,0,no,yes
+179_SVHN_gan_low_iteration186_X4_Y1,179,SVHN,gan,low,186,4,1,4,Not a House Number,0,1,0,1,N/A,N/A
+155_SVHN_gan_low_iteration106_X6_Y8,155,SVHN,gan,low,106,6,8,Not a House Number,Not a House Number,1,1,1,1,no,no
+296_SVHN_sd_high_iteration61_X5_Y3,296,SVHN,sd,high,61,5,3,Not a House Number,3,1,1,1,0,no,N/A
+1_SVHN_vae_high_iteration39_X1_Y7,1,SVHN,vae,high,39,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+236_SVHN_sd_high_iteration45_X2_Y7,236,SVHN,sd,high,45,2,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+214_SVHN_vae_low_iteration73_X8_Y6,214,SVHN,vae,low,73,8,6,8,Not a House Number,0,1,0,1,N/A,N/A
+115_SVHN_gan_high_iteration37_X1_Y7,115,SVHN,gan,high,37,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+177_SVHN_gan_low_iteration152_X4_Y7,177,SVHN,gan,low,152,4,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+76_SVHN_gan_high_iteration35_X8_Y3,76,SVHN,gan,high,35,8,3,Not a House Number,Not a House Number,1,1,1,1,no,no
+137_SVHN_gan_high_iteration78_X9_Y8,137,SVHN,gan,high,78,9,8,8,Not a House Number,1,1,0,1,no,N/A
+103_SVHN_gan_high_iteration1_X4_Y1,103,SVHN,gan,high,1,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+335_SVHN_sd_low_iteration1_X7_Y1,335,SVHN,sd,low,1,7,1,1,Not a House Number,1,1,0,1,no,N/A
+71_SVHN_gan_high_iteration42_X1_Y4,71,SVHN,gan,high,42,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+181_SVHN_gan_low_iteration49_X2_Y1,181,SVHN,gan,low,49,2,1,3,Not a House Number,1,1,0,1,no,N/A
+327_SVHN_sd_low_iteration173_X0_Y1,327,SVHN,sd,low,173,0,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+277_SVHN_sd_high_iteration1_X2_Y1,277,SVHN,sd,high,1,2,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+78_SVHN_gan_high_iteration22_X9_Y0,78,SVHN,gan,high,22,9,0,3,Not a House Number,1,1,0,1,no,N/A
+109_SVHN_gan_high_iteration74_X4_Y7,109,SVHN,gan,high,74,4,7,2,Not a House Number,1,1,0,1,no,N/A
+72_SVHN_gan_high_iteration76_X8_Y9,72,SVHN,gan,high,76,8,9,8,8,0,0,0,0,yes,yes
+182_SVHN_gan_low_iteration23_X8_Y3,182,SVHN,gan,low,23,8,3,1,Not a House Number,1,1,0,1,no,N/A
+2_SVHN_vae_high_iteration30_X1_Y9,2,SVHN,vae,high,30,1,9,9,9,1,1,0,0,no,yes
+360_SVHN_sd_low_iteration81_X7_Y1,360,SVHN,sd,low,81,7,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+262_SVHN_sd_high_iteration5_X7_Y3,262,SVHN,sd,high,5,7,3,8,Not a House Number,1,1,0,1,no,N/A
+136_SVHN_gan_high_iteration104_X1_Y4,136,SVHN,gan,high,104,1,4,3,Not a House Number,1,1,0,1,no,N/A
+271_SVHN_sd_high_iteration1_X9_Y8,271,SVHN,sd,high,1,9,8,8,3,1,1,0,0,no,yes
+111_SVHN_gan_high_iteration19_X7_Y1,111,SVHN,gan,high,19,7,1,7,2,0,1,0,0,N/A,yes
+225_SVHN_sd_high_iteration1_X5_Y1,225,SVHN,sd,high,1,5,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+93_SVHN_gan_high_iteration1_X8_Y4,93,SVHN,gan,high,1,8,4,4,Not a House Number,1,1,0,1,no,N/A
+134_SVHN_gan_high_iteration1_X4_Y0,134,SVHN,gan,high,1,4,0,1,Not a House Number,1,1,0,1,no,N/A
+372_SVHN_sd_low_iteration49_X5_Y6,372,SVHN,sd,low,49,5,6,3,9,1,1,0,0,no,yes
+96_SVHN_gan_high_iteration16_X1_Y6,96,SVHN,gan,high,16,1,6,5,Not a House Number,1,1,0,1,no,N/A
+256_SVHN_sd_high_iteration23_X5_Y8,256,SVHN,sd,high,23,5,8,3,Not a House Number,1,1,0,1,no,N/A
+317_SVHN_sd_low_iteration171_X7_Y1,317,SVHN,sd,low,171,7,1,1,Not a House Number,1,1,0,1,no,N/A
+352_SVHN_sd_low_iteration41_X7_Y2,352,SVHN,sd,low,41,7,2,2,Not a House Number,1,1,0,1,no,N/A
+69_SVHN_gan_high_iteration80_X5_Y6,69,SVHN,gan,high,80,5,6,7,5,1,0,0,0,N/A,yes
+307_SVHN_sd_high_iteration11_X2_Y0,307,SVHN,sd,high,11,2,0,2,Not a House Number,0,1,0,1,N/A,N/A
+257_SVHN_sd_high_iteration14_X7_Y6,257,SVHN,sd,high,14,7,6,6,Not a House Number,1,1,0,1,no,N/A
+29_SVHN_vae_high_iteration1_X4_Y1,29,SVHN,vae,high,1,4,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+325_SVHN_sd_low_iteration222_X2_Y4,325,SVHN,sd,low,222,2,4,2,2,0,0,0,0,yes,yes
+305_SVHN_sd_high_iteration1_X2_Y8,305,SVHN,sd,high,1,2,8,8,Not a House Number,1,1,0,1,no,N/A
+356_SVHN_sd_low_iteration1_X6_Y0,356,SVHN,sd,low,1,6,0,0,0,1,1,0,0,no,yes
+135_SVHN_gan_high_iteration46_X8_Y0,135,SVHN,gan,high,46,8,0,8,1,0,1,0,0,N/A,yes
+229_SVHN_sd_high_iteration2_X7_Y3,229,SVHN,sd,high,2,7,3,0,Not a House Number,1,1,0,1,no,N/A
+0_SVHN_vae_high_iteration8_X2_Y3,0,SVHN,vae,high,8,2,3,2,Not a House Number,0,1,0,1,N/A,N/A
+60_SVHN_vae_high_iteration3_X5_Y3,60,SVHN,vae,high,3,5,3,8,5,1,0,0,0,N/A,yes
+70_SVHN_gan_high_iteration52_X3_Y5,70,SVHN,gan,high,52,3,5,3,Not a House Number,0,1,0,1,N/A,N/A
+132_SVHN_gan_high_iteration17_X5_Y6,132,SVHN,gan,high,17,5,6,5,5,0,0,0,0,yes,yes
+108_SVHN_gan_high_iteration7_X9_Y1,108,SVHN,gan,high,7,9,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+338_SVHN_sd_low_iteration1_X5_Y3,338,SVHN,sd,low,1,5,3,5,5,0,0,0,0,yes,yes
+297_SVHN_sd_high_iteration1_X5_Y3,297,SVHN,sd,high,1,5,3,5,Not a House Number,0,1,0,1,N/A,N/A
+122_SVHN_gan_high_iteration41_X6_Y8,122,SVHN,gan,high,41,6,8,8,Not a House Number,1,1,0,1,no,N/A
+284_SVHN_sd_high_iteration1_X2_Y1,284,SVHN,sd,high,1,2,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+343_SVHN_sd_low_iteration10_X7_Y0,343,SVHN,sd,low,10,7,0,0,Not a House Number,1,1,0,1,no,N/A
+205_SVHN_vae_low_iteration116_X7_Y1,205,SVHN,vae,low,116,7,1,1,7,1,0,0,0,N/A,yes
+87_SVHN_gan_high_iteration17_X9_Y0,87,SVHN,gan,high,17,9,0,9,Not a House Number,0,1,0,1,N/A,N/A
+355_SVHN_sd_low_iteration110_X6_Y1,355,SVHN,sd,low,110,6,1,6,Not a House Number,0,1,0,1,N/A,N/A
+273_SVHN_sd_high_iteration1_X0_Y6,273,SVHN,sd,high,1,0,6,8,Not a House Number,1,1,0,1,no,N/A
+80_SVHN_gan_high_iteration40_X1_Y4,80,SVHN,gan,high,40,1,4,Not a House Number,Not a House Number,1,1,1,1,no,no
+239_SVHN_sd_high_iteration1_X4_Y2,239,SVHN,sd,high,1,4,2,2,2,1,1,0,0,no,yes
+260_SVHN_sd_high_iteration7_X4_Y0,260,SVHN,sd,high,7,4,0,1,1,1,1,0,0,no,yes
+304_SVHN_sd_high_iteration1_X0_Y8,304,SVHN,sd,high,1,0,8,8,8,1,1,0,0,no,yes
+279_SVHN_sd_high_iteration14_X8_Y9,279,SVHN,sd,high,14,8,9,0,9,1,1,0,0,no,yes
+56_SVHN_vae_high_iteration3_X4_Y0,56,SVHN,vae,high,3,4,0,1,1,1,1,0,0,no,yes
+228_SVHN_sd_high_iteration14_X1_Y3,228,SVHN,sd,high,14,1,3,8,3,1,1,0,0,no,yes
+183_SVHN_gan_low_iteration42_X7_Y1,183,SVHN,gan,low,42,7,1,1,7,1,0,0,0,N/A,yes
+249_SVHN_sd_high_iteration116_X5_Y6,249,SVHN,sd,high,116,5,6,6,5,1,0,0,0,N/A,yes
+8_SVHN_vae_high_iteration20_X5_Y3,8,SVHN,vae,high,20,5,3,2,5,1,0,0,0,N/A,yes
+39_SVHN_vae_high_iteration17_X1_Y3,39,SVHN,vae,high,17,1,3,1,Not a House Number,0,1,0,1,N/A,N/A
+44_SVHN_vae_high_iteration6_X7_Y0,44,SVHN,vae,high,6,7,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+105_SVHN_gan_high_iteration4_X3_Y4,105,SVHN,gan,high,4,3,4,3,3,0,0,0,0,yes,yes
+330_SVHN_sd_low_iteration1_X5_Y6,330,SVHN,sd,low,1,5,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+309_SVHN_sd_high_iteration4_X7_Y2,309,SVHN,sd,high,4,7,2,2,Not a House Number,1,1,0,1,no,N/A
+133_SVHN_gan_high_iteration86_X8_Y6,133,SVHN,gan,high,86,8,6,8,8,0,0,0,0,yes,yes
+339_SVHN_sd_low_iteration1_X1_Y7,339,SVHN,sd,low,1,1,7,Not a House Number,Not a House Number,1,1,1,1,no,no
+127_SVHN_gan_high_iteration8_X6_Y0,127,SVHN,gan,high,8,6,0,Not a House Number,Not a House Number,1,1,1,1,no,no
+66_SVHN_gan_high_iteration10_X1_Y4,66,SVHN,gan,high,10,1,4,8,Not a House Number,1,1,0,1,no,N/A
+248_SVHN_sd_high_iteration15_X5_Y6,248,SVHN,sd,high,15,5,6,Not a House Number,Not a House Number,1,1,1,1,no,no
+18_SVHN_vae_high_iteration24_X2_Y8,18,SVHN,vae,high,24,2,8,8,8,1,1,0,0,no,yes
+283_SVHN_sd_high_iteration1_X0_Y9,283,SVHN,sd,high,1,0,9,Not a House Number,Not a House Number,1,1,1,1,no,no
+367_SVHN_sd_low_iteration147_X7_Y1,367,SVHN,sd,low,147,7,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+308_SVHN_sd_high_iteration1_X6_Y1,308,SVHN,sd,high,1,6,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+194_SVHN_vae_low_iteration109_X3_Y1,194,SVHN,vae,low,109,3,1,8,3,1,0,0,0,N/A,yes
+244_SVHN_sd_high_iteration1_X3_Y5,244,SVHN,sd,high,1,3,5,5,5,1,1,0,0,no,yes
+120_SVHN_gan_high_iteration1_X3_Y0,120,SVHN,gan,high,1,3,0,3,3,0,0,0,0,yes,yes
+219_SVHN_sd_high_iteration1_X2_Y3,219,SVHN,sd,high,1,2,3,Not a House Number,2,1,0,1,0,N/A,N/A
+45_SVHN_vae_high_iteration13_X8_Y6,45,SVHN,vae,high,13,8,6,8,Not a House Number,0,1,0,1,N/A,N/A
+311_SVHN_sd_high_iteration1_X5_Y1,311,SVHN,sd,high,1,5,1,Not a House Number,Not a House Number,1,1,1,1,no,no
+374_SVHN_sd_low_iteration53_X3_Y2,374,SVHN,sd,low,53,3,2,3,3,0,0,0,0,yes,yes
+67_SVHN_gan_high_iteration33_X6_Y5,67,SVHN,gan,high,33,6,5,5,Not a House Number,1,1,0,1,no,N/A
+52_SVHN_vae_high_iteration11_X1_Y3,52,SVHN,vae,high,11,1,3,1,1,0,0,0,0,yes,yes
+203_SVHN_vae_low_iteration41_X0_Y4,203,SVHN,vae,low,41,0,4,4,Not a House Number,1,1,0,1,no,N/A
+28_SVHN_vae_high_iteration32_X0_Y9,28,SVHN,vae,high,32,0,9,0,0,0,0,0,0,yes,yes
+318_SVHN_sd_low_iteration1_X8_Y3,318,SVHN,sd,low,1,8,3,8,8,0,0,0,0,yes,yes
+276_SVHN_sd_high_iteration1_X0_Y4,276,SVHN,sd,high,1,0,4,5,Not a House Number,1,1,0,1,no,N/A
+165_SVHN_gan_low_iteration41_X6_Y1,165,SVHN,gan,low,41,6,1,1,Not a House Number,1,1,0,1,no,N/A
+139_SVHN_gan_high_iteration24_X4_Y7,139,SVHN,gan,high,24,4,7,4,Not a House Number,0,1,0,1,N/A,N/A
+300_SVHN_sd_high_iteration17_X3_Y5,300,SVHN,sd,high,17,3,5,6,3,1,0,0,0,N/A,yes

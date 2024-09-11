@@ -1,0 +1,381 @@
+Image URL,ID,DATASET,TOOL,MUT_EXT,ITER,Expected,Predicted,ASS 1,ASS 2,Misclass Human 1,Misclass Human 2,Valid Human 1,Valid Human 2,Label Preservation?,Validity?
+143_INPI_vae_high_iteration7_X963_Y611,143,INPI,vae,high,7,963,611,963,963,0,0,0,0,yes,yes
+353_INPI_sd_high_iteration17_X963_Y930,353,INPI,sd,high,17,963,930,963,963,0,0,0,0,yes,yes
+350_INPI_sd_high_iteration7_X963_Y923,350,INPI,sd,high,7,963,923,963,963,0,0,0,0,yes,yes
+67_INPI_gan_high_iteration61_X963_Y942,67,INPI,gan,high,61,963,942,963,963,0,0,0,0,yes,yes
+145_INPI_vae_high_iteration1_X963_Y927,145,INPI,vae,high,1,963,927,963,963,0,0,0,0,yes,yes
+50_INPI_gan_high_iteration100_X963_Y725,50,INPI,gan,high,100,963,725,not a real world object,923,1,1,1,0,no,N/A
+207_INPI_gan_low_iteration79_X963_Y928,207,INPI,gan,low,79,963,928,963,962,0,1,0,0,N/A,yes
+76_INPI_gan_high_iteration28_X963_Y925,76,INPI,gan,high,28,963,925,a different real world object,930,1,1,1,0,no,N/A
+18_INPI_vae_low_iteration48_X963_Y957,18,INPI,vae,low,48,963,957,963,963,0,0,0,0,yes,yes
+191_INPI_gan_low_iteration101_X963_Y941,191,INPI,gan,low,101,963,941,a different real world object,964,1,1,1,0,no,N/A
+258_INPI_sd_low_iteration71_X963_Y965,258,INPI,sd,low,71,963,965,963,963,0,0,0,0,yes,yes
+376_INPI_sd_high_iteration5_X963_Y962,376,INPI,sd,high,5,963,962,963,963,0,0,0,0,yes,yes
+112_INPI_gan_high_iteration17_X963_Y964,112,INPI,gan,high,17,963,964,963,963,0,0,0,0,yes,yes
+41_INPI_gan_high_iteration24_X963_Y861,41,INPI,gan,high,24,963,861,962,a different real world object,1,1,0,1,no,N/A
+152_INPI_gan_low_iteration221_X963_Y420,152,INPI,gan,low,221,963,420,963,a different real world object,0,1,0,1,N/A,N/A
+268_INPI_sd_low_iteration196_X963_Y964,268,INPI,sd,low,196,963,964,963,963,0,0,0,0,yes,yes
+172_INPI_gan_low_iteration243_X963_Y964,172,INPI,gan,low,243,963,964,930,a different real world object,1,1,0,1,no,N/A
+378_INPI_sd_high_iteration1_X963_Y121,378,INPI,sd,high,1,963,121,962,963,1,0,0,0,N/A,yes
+360_INPI_sd_high_iteration23_X963_Y964,360,INPI,sd,high,23,963,964,963,963,0,0,0,0,yes,yes
+36_INPI_gan_high_iteration61_X963_Y467,36,INPI,gan,high,61,963,467,567,963,1,0,0,0,N/A,yes
+195_INPI_gan_low_iteration226_X963_Y567,195,INPI,gan,low,226,963,567,a different real world object,964,1,1,1,0,no,N/A
+332_INPI_sd_high_iteration26_X963_Y927,332,INPI,sd,high,26,963,927,963,963,0,0,0,0,yes,yes
+38_INPI_gan_high_iteration67_X963_Y964,38,INPI,gan,high,67,963,964,962,927,1,1,0,0,no,yes
+371_INPI_sd_high_iteration1_X963_Y964,371,INPI,sd,high,1,963,964,964,963,1,0,0,0,N/A,yes
+148_INPI_vae_high_iteration1_X963_Y927,148,INPI,vae,high,1,963,927,963,927,0,1,0,0,N/A,yes
+3_INPI_vae_low_iteration11_X963_Y429,3,INPI,vae,low,11,963,429,963,927,0,1,0,0,N/A,yes
+289_INPI_sd_low_iteration37_X963_Y927,289,INPI,sd,low,37,963,927,963,963,0,0,0,0,yes,yes
+365_INPI_sd_high_iteration16_X963_Y930,365,INPI,sd,high,16,963,930,963,963,0,0,0,0,yes,yes
+234_INPI_gan_low_iteration235_X963_Y941,234,INPI,gan,low,235,963,941,963,963,0,0,0,0,yes,yes
+246_INPI_sd_low_iteration37_X963_Y964,246,INPI,sd,low,37,963,964,963,963,0,0,0,0,yes,yes
+37_INPI_gan_high_iteration33_X963_Y930,37,INPI,gan,high,33,963,930,930,962,1,1,0,0,no,yes
+335_INPI_sd_high_iteration16_X963_Y930,335,INPI,sd,high,16,963,930,963,963,0,0,0,0,yes,yes
+49_INPI_gan_high_iteration92_X963_Y853,49,INPI,gan,high,92,963,853,not a real world object,930,1,1,1,0,no,N/A
+121_INPI_gan_high_iteration20_X963_Y521,121,INPI,gan,high,20,963,521,963,963,0,0,0,0,yes,yes
+181_INPI_gan_low_iteration144_X963_Y539,181,INPI,gan,low,144,963,539,930,962,1,1,0,0,no,yes
+14_INPI_vae_low_iteration9_X963_Y301,14,INPI,vae,low,9,963,301,963,963,0,0,0,0,yes,yes
+114_INPI_gan_high_iteration29_X963_Y933,114,INPI,gan,high,29,963,933,963,963,0,0,0,0,yes,yes
+346_INPI_sd_high_iteration10_X963_Y964,346,INPI,sd,high,10,963,964,963,963,0,0,0,0,yes,yes
+254_INPI_sd_low_iteration223_X963_Y956,254,INPI,sd,low,223,963,956,963,963,0,0,0,0,yes,yes
+97_INPI_gan_high_iteration14_X963_Y964,97,INPI,gan,high,14,963,964,a different real world object,963,1,0,1,0,N/A,N/A
+132_INPI_vae_high_iteration1_X963_Y927,132,INPI,vae,high,1,963,927,963,a different real world object,0,1,0,1,N/A,N/A
+170_INPI_gan_low_iteration245_X963_Y941,170,INPI,gan,low,245,963,941,964,a different real world object,1,1,0,1,no,N/A
+177_INPI_gan_low_iteration98_X963_Y809,177,INPI,gan,low,98,963,809,963,923,0,1,0,0,N/A,yes
+59_INPI_gan_high_iteration40_X963_Y965,59,INPI,gan,high,40,963,965,923,923,1,1,0,0,no,yes
+104_INPI_gan_high_iteration83_X963_Y544,104,INPI,gan,high,83,963,544,963,963,0,0,0,0,yes,yes
+127_INPI_vae_high_iteration1_X963_Y926,127,INPI,vae,high,1,963,926,963,963,0,0,0,0,yes,yes
+242_INPI_sd_low_iteration128_X963_Y964,242,INPI,sd,low,128,963,964,963,963,0,0,0,0,yes,yes
+87_INPI_gan_high_iteration36_X963_Y809,87,INPI,gan,high,36,963,809,963,964,0,1,0,0,N/A,yes
+176_INPI_gan_low_iteration234_X963_Y964,176,INPI,gan,low,234,963,964,963,963,0,0,0,0,yes,yes
+341_INPI_sd_high_iteration14_X963_Y996,341,INPI,sd,high,14,963,996,963,a different real world object,0,1,0,1,N/A,N/A
+209_INPI_gan_low_iteration165_X963_Y957,209,INPI,gan,low,165,963,957,963,963,0,0,0,0,yes,yes
+173_INPI_gan_low_iteration157_X963_Y760,173,INPI,gan,low,157,963,760,a different real world object,964,1,1,1,0,no,N/A
+221_INPI_gan_low_iteration117_X963_Y962,221,INPI,gan,low,117,963,962,964,963,1,0,0,0,N/A,yes
+301_INPI_sd_low_iteration99_X963_Y930,301,INPI,sd,low,99,963,930,963,963,0,0,0,0,yes,yes
+262_INPI_sd_low_iteration65_X963_Y964,262,INPI,sd,low,65,963,964,963,963,0,0,0,0,yes,yes
+169_INPI_gan_low_iteration239_X963_Y410,169,INPI,gan,low,239,963,410,not a real world object,964,1,1,1,0,no,N/A
+144_INPI_vae_high_iteration3_X963_Y927,144,INPI,vae,high,3,963,927,963,963,0,0,0,0,yes,yes
+363_INPI_sd_high_iteration22_X963_Y962,363,INPI,sd,high,22,963,962,963,963,0,0,0,0,yes,yes
+94_INPI_gan_high_iteration50_X963_Y941,94,INPI,gan,high,50,963,941,963,963,0,0,0,0,yes,yes
+16_INPI_vae_low_iteration11_X963_Y599,16,INPI,vae,low,11,963,599,963,963,0,0,0,0,yes,yes
+32_INPI_gan_high_iteration56_X963_Y934,32,INPI,gan,high,56,963,934,963,963,0,0,0,0,yes,yes
+259_INPI_sd_low_iteration23_X963_Y964,259,INPI,sd,low,23,963,964,963,963,0,0,0,0,yes,yes
+29_INPI_gan_high_iteration62_X963_Y544,29,INPI,gan,high,62,963,544,963,963,0,0,0,0,yes,yes
+182_INPI_gan_low_iteration165_X963_Y567,182,INPI,gan,low,165,963,567,963,963,0,0,0,0,yes,yes
+276_INPI_sd_low_iteration1_X963_Y964,276,INPI,sd,low,1,963,964,963,963,0,0,0,0,yes,yes
+311_INPI_sd_high_iteration33_X963_Y964,311,INPI,sd,high,33,963,964,963,963,0,0,0,0,yes,yes
+330_INPI_sd_high_iteration6_X963_Y964,330,INPI,sd,high,6,963,964,963,963,0,0,0,0,yes,yes
+327_INPI_sd_high_iteration9_X963_Y927,327,INPI,sd,high,9,963,927,963,963,0,0,0,0,yes,yes
+9_INPI_vae_low_iteration2_X963_Y927,9,INPI,vae,low,2,963,927,963,963,0,0,0,0,yes,yes
+379_INPI_sd_high_iteration6_X963_Y467,379,INPI,sd,high,6,963,467,963,963,0,0,0,0,yes,yes
+51_INPI_gan_high_iteration1_X963_Y892,51,INPI,gan,high,1,963,892,not a real world object,not a real world object,1,1,1,1,no,no
+283_INPI_sd_low_iteration28_X963_Y927,283,INPI,sd,low,28,963,927,963,963,0,0,0,0,yes,yes
+81_INPI_gan_high_iteration22_X963_Y941,81,INPI,gan,high,22,963,941,963,963,0,0,0,0,yes,yes
+298_INPI_sd_low_iteration1_X963_Y930,298,INPI,sd,low,1,963,930,963,963,0,0,0,0,yes,yes
+126_INPI_vae_high_iteration13_X963_Y684,126,INPI,vae,high,13,963,684,not a real world object,963,1,0,1,0,N/A,N/A
+167_INPI_gan_low_iteration122_X963_Y964,167,INPI,gan,low,122,963,964,963,963,0,0,0,0,yes,yes
+163_INPI_gan_low_iteration131_X963_Y619,163,INPI,gan,low,131,963,619,963,963,0,0,0,0,yes,yes
+369_INPI_sd_high_iteration6_X963_Y964,369,INPI,sd,high,6,963,964,963,963,0,0,0,0,yes,yes
+364_INPI_sd_high_iteration15_X963_Y962,364,INPI,sd,high,15,963,962,963,963,0,0,0,0,yes,yes
+4_INPI_vae_low_iteration37_X963_Y964,4,INPI,vae,low,37,963,964,not a real world object,963,1,0,1,0,N/A,N/A
+313_INPI_sd_high_iteration19_X963_Y962,313,INPI,sd,high,19,963,962,963,963,0,0,0,0,yes,yes
+73_INPI_gan_high_iteration16_X963_Y987,73,INPI,gan,high,16,963,987,963,963,0,0,0,0,yes,yes
+108_INPI_gan_high_iteration76_X963_Y926,108,INPI,gan,high,76,963,926,963,963,0,0,0,0,yes,yes
+236_INPI_sd_low_iteration154_X963_Y964,236,INPI,sd,low,154,963,964,963,963,0,0,0,0,yes,yes
+89_INPI_gan_high_iteration46_X963_Y923,89,INPI,gan,high,46,963,923,963,963,0,0,0,0,yes,yes
+291_INPI_sd_low_iteration1_X963_Y121,291,INPI,sd,low,1,963,121,963,963,0,0,0,0,yes,yes
+99_INPI_gan_high_iteration59_X963_Y957,99,INPI,gan,high,59,963,957,963,963,0,0,0,0,yes,yes
+217_INPI_gan_low_iteration168_X963_Y930,217,INPI,gan,low,168,963,930,930,930,1,1,0,0,no,yes
+210_INPI_gan_low_iteration156_X963_Y415,210,INPI,gan,low,156,963,415,963,963,0,0,0,0,yes,yes
+86_INPI_gan_high_iteration26_X963_Y567,86,INPI,gan,high,26,963,567,963,963,0,0,0,0,yes,yes
+25_INPI_gan_high_iteration61_X963_Y964,25,INPI,gan,high,61,963,964,963,963,0,0,0,0,yes,yes
+189_INPI_gan_low_iteration140_X963_Y933,189,INPI,gan,low,140,963,933,963,964,0,1,0,0,N/A,yes
+13_INPI_vae_low_iteration1_X963_Y567,13,INPI,vae,low,1,963,567,963,963,0,0,0,0,yes,yes
+244_INPI_sd_low_iteration9_X963_Y964,244,INPI,sd,low,9,963,964,963,963,0,0,0,0,yes,yes
+91_INPI_gan_high_iteration51_X963_Y567,91,INPI,gan,high,51,963,567,923,963,1,0,0,0,N/A,yes
+118_INPI_gan_high_iteration27_X963_Y964,118,INPI,gan,high,27,963,964,a different real world object,964,1,1,1,0,no,N/A
+66_INPI_gan_high_iteration70_X963_Y962,66,INPI,gan,high,70,963,962,963,963,0,0,0,0,yes,yes
+60_INPI_gan_high_iteration38_X963_Y933,60,INPI,gan,high,38,963,933,not a real world object,963,1,0,1,0,N/A,N/A
+7_INPI_vae_low_iteration13_X963_Y928,7,INPI,vae,low,13,963,928,963,963,0,0,0,0,yes,yes
+216_INPI_gan_low_iteration99_X963_Y567,216,INPI,gan,low,99,963,567,963,963,0,0,0,0,yes,yes
+84_INPI_gan_high_iteration62_X963_Y729,84,INPI,gan,high,62,963,729,not a real world object,a different real world object,1,1,1,1,no,no
+213_INPI_gan_low_iteration88_X963_Y809,213,INPI,gan,low,88,963,809,923,923,1,1,0,0,no,yes
+355_INPI_sd_high_iteration1_X963_Y965,355,INPI,sd,high,1,963,965,963,963,0,0,0,0,yes,yes
+338_INPI_sd_high_iteration2_X963_Y964,338,INPI,sd,high,2,963,964,963,963,0,0,0,0,yes,yes
+278_INPI_sd_low_iteration9_X963_Y964,278,INPI,sd,low,9,963,964,963,963,0,0,0,0,yes,yes
+5_INPI_vae_low_iteration3_X963_Y32,5,INPI,vae,low,3,963,32,963,963,0,0,0,0,yes,yes
+270_INPI_sd_low_iteration16_X963_Y965,270,INPI,sd,low,16,963,965,963,963,0,0,0,0,yes,yes
+322_INPI_sd_high_iteration5_X963_Y962,322,INPI,sd,high,5,963,962,963,963,0,0,0,0,yes,yes
+8_INPI_vae_low_iteration29_X963_Y931,8,INPI,vae,low,29,963,931,963,963,0,0,0,0,yes,yes
+215_INPI_gan_low_iteration123_X963_Y124,215,INPI,gan,low,123,963,124,not a real world object,567,1,1,1,0,no,N/A
+273_INPI_sd_low_iteration203_X963_Y927,273,INPI,sd,low,203,963,927,963,963,0,0,0,0,yes,yes
+312_INPI_sd_high_iteration4_X963_Y964,312,INPI,sd,high,4,963,964,963,963,0,0,0,0,yes,yes
+123_INPI_gan_high_iteration22_X963_Y923,123,INPI,gan,high,22,963,923,964,964,1,1,0,0,no,yes
+124_INPI_vae_high_iteration1_X963_Y964,124,INPI,vae,high,1,963,964,963,963,0,0,0,0,yes,yes
+205_INPI_gan_low_iteration119_X963_Y959,205,INPI,gan,low,119,963,959,962,964,1,1,0,0,no,yes
+6_INPI_vae_low_iteration3_X963_Y599,6,INPI,vae,low,3,963,599,963,963,0,0,0,0,yes,yes
+174_INPI_gan_low_iteration98_X963_Y926,174,INPI,gan,low,98,963,926,930,a different real world object,1,1,0,1,no,N/A
+55_INPI_gan_high_iteration56_X963_Y923,55,INPI,gan,high,56,963,923,962,963,1,0,0,0,N/A,yes
+265_INPI_sd_low_iteration122_X963_Y591,265,INPI,sd,low,122,963,591,963,963,0,0,0,0,yes,yes
+351_INPI_sd_high_iteration5_X963_Y927,351,INPI,sd,high,5,963,927,963,964,0,1,0,0,N/A,yes
+187_INPI_gan_low_iteration119_X963_Y942,187,INPI,gan,low,119,963,942,962,567,1,1,0,0,no,yes
+356_INPI_sd_high_iteration5_X963_Y922,356,INPI,sd,high,5,963,922,963,963,0,0,0,0,yes,yes
+229_INPI_gan_low_iteration171_X963_Y567,229,INPI,gan,low,171,963,567,963,963,0,0,0,0,yes,yes
+223_INPI_gan_low_iteration170_X963_Y934,223,INPI,gan,low,170,963,934,963,963,0,0,0,0,yes,yes
+34_INPI_gan_high_iteration40_X963_Y521,34,INPI,gan,high,40,963,521,963,963,0,0,0,0,yes,yes
+140_INPI_vae_high_iteration1_X963_Y599,140,INPI,vae,high,1,963,599,963,963,0,0,0,0,yes,yes
+318_INPI_sd_high_iteration6_X963_Y964,318,INPI,sd,high,6,963,964,963,963,0,0,0,0,yes,yes
+184_INPI_gan_low_iteration182_X963_Y937,184,INPI,gan,low,182,963,937,963,963,0,0,0,0,yes,yes
+377_INPI_sd_high_iteration4_X963_Y930,377,INPI,sd,high,4,963,930,963,963,0,0,0,0,yes,yes
+19_INPI_vae_low_iteration9_X963_Y924,19,INPI,vae,low,9,963,924,963,963,0,0,0,0,yes,yes
+202_INPI_gan_low_iteration197_X963_Y964,202,INPI,gan,low,197,963,964,923,a different real world object,1,1,0,1,no,N/A
+230_INPI_gan_low_iteration207_X963_Y964,230,INPI,gan,low,207,963,964,963,963,0,0,0,0,yes,yes
+305_INPI_sd_low_iteration214_X963_Y962,305,INPI,sd,low,214,963,962,963,a different real world object,0,1,0,1,N/A,N/A
+198_INPI_gan_low_iteration134_X963_Y950,198,INPI,gan,low,134,963,950,962,not a real world object,1,1,0,1,no,N/A
+287_INPI_sd_low_iteration36_X963_Y962,287,INPI,sd,low,36,963,962,962,a different real world object,1,1,0,1,no,N/A
+334_INPI_sd_high_iteration54_X963_Y116,334,INPI,sd,high,54,963,116,927,a different real world object,1,1,0,1,no,N/A
+39_INPI_gan_high_iteration54_X963_Y962,39,INPI,gan,high,54,963,962,963,a different real world object,0,1,0,1,N/A,N/A
+78_INPI_gan_high_iteration41_X963_Y927,78,INPI,gan,high,41,963,927,963,963,0,0,0,0,yes,yes
+316_INPI_sd_high_iteration1_X963_Y964,316,INPI,sd,high,1,963,964,963,963,0,0,0,0,yes,yes
+142_INPI_vae_high_iteration1_X963_Y599,142,INPI,vae,high,1,963,599,963,963,0,0,0,0,yes,yes
+28_INPI_gan_high_iteration42_X963_Y964,28,INPI,gan,high,42,963,964,962,963,1,0,0,0,N/A,yes
+227_INPI_gan_low_iteration156_X963_Y532,227,INPI,gan,low,156,963,532,963,963,0,0,0,0,yes,yes
+80_INPI_gan_high_iteration20_X963_Y933,80,INPI,gan,high,20,963,933,963,963,0,0,0,0,yes,yes
+48_INPI_gan_high_iteration26_X963_Y809,48,INPI,gan,high,26,963,809,963,a different real world object,0,1,0,1,N/A,N/A
+196_INPI_gan_low_iteration230_X963_Y659,196,INPI,gan,low,230,963,659,923,923,1,1,0,0,no,yes
+324_INPI_sd_high_iteration33_X963_Y962,324,INPI,sd,high,33,963,962,963,963,0,0,0,0,yes,yes
+23_INPI_vae_low_iteration10_X963_Y76,23,INPI,vae,low,10,963,76,963,a different real world object,0,1,0,1,N/A,N/A
+326_INPI_sd_high_iteration10_X963_Y891,326,INPI,sd,high,10,963,891,963,963,0,0,0,0,yes,yes
+293_INPI_sd_low_iteration177_X963_Y964,293,INPI,sd,low,177,963,964,963,963,0,0,0,0,yes,yes
+95_INPI_gan_high_iteration29_X963_Y964,95,INPI,gan,high,29,963,964,963,963,0,0,0,0,yes,yes
+348_INPI_sd_high_iteration7_X963_Y964,348,INPI,sd,high,7,963,964,963,963,0,0,0,0,yes,yes
+64_INPI_gan_high_iteration89_X963_Y962,64,INPI,gan,high,89,963,962,a different real world object,963,1,0,1,0,N/A,N/A
+98_INPI_gan_high_iteration68_X963_Y933,98,INPI,gan,high,68,963,933,a different real world object,963,1,0,1,0,N/A,N/A
+345_INPI_sd_high_iteration2_X963_Y964,345,INPI,sd,high,2,963,964,963,963,0,0,0,0,yes,yes
+44_INPI_gan_high_iteration59_X963_Y121,44,INPI,gan,high,59,963,121,964,963,1,0,0,0,N/A,yes
+68_INPI_gan_high_iteration52_X963_Y962,68,INPI,gan,high,52,963,962,963,963,0,0,0,0,yes,yes
+136_INPI_vae_high_iteration3_X963_Y964,136,INPI,vae,high,3,963,964,963,963,0,0,0,0,yes,yes
+180_INPI_gan_low_iteration250_X963_Y964,180,INPI,gan,low,250,963,964,a different real world object,963,1,0,1,0,N/A,N/A
+30_INPI_gan_high_iteration33_X963_Y962,30,INPI,gan,high,33,963,962,a different real world object,963,1,0,1,0,N/A,N/A
+222_INPI_gan_low_iteration133_X963_Y964,222,INPI,gan,low,133,963,964,963,963,0,0,0,0,yes,yes
+274_INPI_sd_low_iteration26_X963_Y962,274,INPI,sd,low,26,963,962,963,963,0,0,0,0,yes,yes
+156_INPI_gan_low_iteration228_X963_Y521,156,INPI,gan,low,228,963,521,963,963,0,0,0,0,yes,yes
+333_INPI_sd_high_iteration16_X963_Y930,333,INPI,sd,high,16,963,930,963,963,0,0,0,0,yes,yes
+309_INPI_sd_high_iteration12_X963_Y121,309,INPI,sd,high,12,963,121,963,963,0,0,0,0,yes,yes
+279_INPI_sd_low_iteration88_X963_Y930,279,INPI,sd,low,88,963,930,963,963,0,0,0,0,yes,yes
+219_INPI_gan_low_iteration60_X963_Y567,219,INPI,gan,low,60,963,567,963,963,0,0,0,0,yes,yes
+241_INPI_sd_low_iteration76_X963_Y930,241,INPI,sd,low,76,963,930,963,963,0,0,0,0,yes,yes
+257_INPI_sd_low_iteration81_X963_Y965,257,INPI,sd,low,81,963,965,963,963,0,0,0,0,yes,yes
+171_INPI_gan_low_iteration223_X963_Y424,171,INPI,gan,low,223,963,424,a different real world object,not a real world object,1,1,1,1,no,no
+179_INPI_gan_low_iteration223_X963_Y923,179,INPI,gan,low,223,963,923,963,963,0,0,0,0,yes,yes
+153_INPI_gan_low_iteration194_X963_Y962,153,INPI,gan,low,194,963,962,963,963,0,0,0,0,yes,yes
+193_INPI_gan_low_iteration156_X963_Y927,193,INPI,gan,low,156,963,927,963,963,0,0,0,0,yes,yes
+141_INPI_vae_high_iteration2_X963_Y891,141,INPI,vae,high,2,963,891,963,963,0,0,0,0,yes,yes
+162_INPI_gan_low_iteration191_X963_Y925,162,INPI,gan,low,191,963,925,a different real world object,a different real world object,1,1,1,1,no,no
+319_INPI_sd_high_iteration16_X963_Y824,319,INPI,sd,high,16,963,824,930,963,1,0,0,0,N/A,yes
+366_INPI_sd_high_iteration16_X963_Y962,366,INPI,sd,high,16,963,962,964,963,1,0,0,0,N/A,yes
+46_INPI_gan_high_iteration92_X963_Y934,46,INPI,gan,high,92,963,934,a different real world object,a different real world object,1,1,1,1,no,no
+295_INPI_sd_low_iteration39_X963_Y923,295,INPI,sd,low,39,963,923,963,963,0,0,0,0,yes,yes
+304_INPI_sd_low_iteration94_X963_Y930,304,INPI,sd,low,94,963,930,963,963,0,0,0,0,yes,yes
+17_INPI_vae_low_iteration6_X963_Y927,17,INPI,vae,low,6,963,927,963,963,0,0,0,0,yes,yes
+0_INPI_vae_low_iteration7_X963_Y927,0,INPI,vae,low,7,963,927,963,963,0,0,0,0,yes,yes
+161_INPI_gan_low_iteration184_X963_Y567,161,INPI,gan,low,184,963,567,963,963,0,0,0,0,yes,yes
+253_INPI_sd_low_iteration97_X963_Y911,253,INPI,sd,low,97,963,911,963,963,0,0,0,0,yes,yes
+267_INPI_sd_low_iteration178_X963_Y962,267,INPI,sd,low,178,963,962,963,963,0,0,0,0,yes,yes
+251_INPI_sd_low_iteration52_X963_Y962,251,INPI,sd,low,52,963,962,963,963,0,0,0,0,yes,yes
+149_INPI_gan_low_iteration143_X963_Y813,149,INPI,gan,low,143,963,813,963,963,0,0,0,0,yes,yes
+225_INPI_gan_low_iteration80_X963_Y935,225,INPI,gan,low,80,963,935,923,a different real world object,1,1,0,1,no,N/A
+79_INPI_gan_high_iteration12_X963_Y532,79,INPI,gan,high,12,963,532,930,963,1,0,0,0,N/A,yes
+315_INPI_sd_high_iteration11_X963_Y964,315,INPI,sd,high,11,963,964,962,963,1,0,0,0,N/A,yes
+263_INPI_sd_low_iteration13_X963_Y962,263,INPI,sd,low,13,963,962,965,963,1,0,0,0,N/A,yes
+157_INPI_gan_low_iteration224_X963_Y927,157,INPI,gan,low,224,963,927,963,963,0,0,0,0,yes,yes
+130_INPI_vae_high_iteration1_X963_Y927,130,INPI,vae,high,1,963,927,963,963,0,0,0,0,yes,yes
+40_INPI_gan_high_iteration43_X963_Y567,40,INPI,gan,high,43,963,567,963,963,0,0,0,0,yes,yes
+203_INPI_gan_low_iteration152_X963_Y415,203,INPI,gan,low,152,963,415,927,962,1,1,0,0,no,yes
+2_INPI_vae_low_iteration19_X963_Y937,2,INPI,vae,low,19,963,937,963,963,0,0,0,0,yes,yes
+220_INPI_gan_low_iteration157_X963_Y464,220,INPI,gan,low,157,963,464,not a real world object,a different real world object,1,1,1,1,no,no
+204_INPI_gan_low_iteration191_X963_Y923,204,INPI,gan,low,191,963,923,963,962,0,1,0,0,N/A,yes
+117_INPI_gan_high_iteration72_X963_Y957,117,INPI,gan,high,72,963,957,963,963,0,0,0,0,yes,yes
+42_INPI_gan_high_iteration50_X963_Y809,42,INPI,gan,high,50,963,809,963,963,0,0,0,0,yes,yes
+358_INPI_sd_high_iteration1_X963_Y930,358,INPI,sd,high,1,963,930,963,963,0,0,0,0,yes,yes
+105_INPI_gan_high_iteration58_X963_Y809,105,INPI,gan,high,58,963,809,965,a different real world object,1,1,0,1,no,N/A
+206_INPI_gan_low_iteration148_X963_Y923,206,INPI,gan,low,148,963,923,962,a different real world object,1,1,0,1,no,N/A
+45_INPI_gan_high_iteration46_X963_Y964,45,INPI,gan,high,46,963,964,963,963,0,0,0,0,yes,yes
+90_INPI_gan_high_iteration27_X963_Y965,90,INPI,gan,high,27,963,965,964,963,1,0,0,0,N/A,yes
+186_INPI_gan_low_iteration171_X963_Y965,186,INPI,gan,low,171,963,965,962,a different real world object,1,1,0,1,no,N/A
+102_INPI_gan_high_iteration58_X963_Y957,102,INPI,gan,high,58,963,957,962,963,1,0,0,0,N/A,yes
+178_INPI_gan_low_iteration111_X963_Y923,178,INPI,gan,low,111,963,923,923,964,1,1,0,0,no,yes
+15_INPI_vae_low_iteration3_X963_Y957,15,INPI,vae,low,3,963,957,963,963,0,0,0,0,yes,yes
+96_INPI_gan_high_iteration33_X963_Y910,96,INPI,gan,high,33,963,910,930,964,1,1,0,0,no,yes
+75_INPI_gan_high_iteration51_X963_Y937,75,INPI,gan,high,51,963,937,930,a different real world object,1,1,0,1,no,N/A
+47_INPI_gan_high_iteration60_X963_Y923,47,INPI,gan,high,60,963,923,a different real world object,923,1,1,1,0,no,N/A
+24_INPI_vae_low_iteration1_X963_Y927,24,INPI,vae,low,1,963,927,963,963,0,0,0,0,yes,yes
+218_INPI_gan_low_iteration137_X963_Y927,218,INPI,gan,low,137,963,927,923,927,1,1,0,0,no,yes
+243_INPI_sd_low_iteration53_X963_Y964,243,INPI,sd,low,53,963,964,963,963,0,0,0,0,yes,yes
+103_INPI_gan_high_iteration70_X963_Y455,103,INPI,gan,high,70,963,455,963,930,0,1,0,0,N/A,yes
+146_INPI_vae_high_iteration1_X963_Y932,146,INPI,vae,high,1,963,932,963,963,0,0,0,0,yes,yes
+54_INPI_gan_high_iteration50_X963_Y941,54,INPI,gan,high,50,963,941,963,964,0,1,0,0,N/A,yes
+232_INPI_gan_low_iteration153_X963_Y927,232,INPI,gan,low,153,963,927,a different real world object,963,1,0,1,0,N/A,N/A
+224_INPI_gan_low_iteration183_X963_Y923,224,INPI,gan,low,183,963,923,a different real world object,963,1,0,1,0,N/A,N/A
+226_INPI_gan_low_iteration114_X963_Y940,226,INPI,gan,low,114,963,940,963,963,0,0,0,0,yes,yes
+328_INPI_sd_high_iteration15_X963_Y930,328,INPI,sd,high,15,963,930,963,963,0,0,0,0,yes,yes
+249_INPI_sd_low_iteration126_X963_Y964,249,INPI,sd,low,126,963,964,963,cat,0,1,0,0,N/A,yes
+281_INPI_sd_low_iteration115_X963_Y824,281,INPI,sd,low,115,963,824,963,963,0,0,0,0,yes,yes
+255_INPI_sd_low_iteration1_X963_Y964,255,INPI,sd,low,1,963,964,963,963,0,0,0,0,yes,yes
+325_INPI_sd_high_iteration20_X963_Y962,325,INPI,sd,high,20,963,962,963,963,0,0,0,0,yes,yes
+110_INPI_gan_high_iteration81_X963_Y116,110,INPI,gan,high,81,963,116,963,963,0,0,0,0,yes,yes
+1_INPI_vae_low_iteration23_X963_Y927,1,INPI,vae,low,23,963,927,963,963,0,0,0,0,yes,yes
+286_INPI_sd_low_iteration8_X963_Y964,286,INPI,sd,low,8,963,964,963,963,0,0,0,0,yes,yes
+342_INPI_sd_high_iteration1_X963_Y962,342,INPI,sd,high,1,963,962,963,963,0,0,0,0,yes,yes
+372_INPI_sd_high_iteration36_X963_Y956,372,INPI,sd,high,36,963,956,963,963,0,0,0,0,yes,yes
+303_INPI_sd_low_iteration113_X963_Y930,303,INPI,sd,low,113,963,930,963,963,0,0,0,0,yes,yes
+214_INPI_gan_low_iteration204_X963_Y567,214,INPI,gan,low,204,963,567,a different real world object,963,1,0,1,0,N/A,N/A
+69_INPI_gan_high_iteration17_X963_Y891,69,INPI,gan,high,17,963,891,not a real world object,963,1,0,1,0,N/A,N/A
+212_INPI_gan_low_iteration170_X963_Y940,212,INPI,gan,low,170,963,940,963,963,0,0,0,0,yes,yes
+185_INPI_gan_low_iteration61_X963_Y999,185,INPI,gan,low,61,963,999,923,923,1,1,0,0,no,yes
+85_INPI_gan_high_iteration47_X963_Y934,85,INPI,gan,high,47,963,934,not a real world object,965,1,1,1,0,no,N/A
+138_INPI_vae_high_iteration1_X963_Y949,138,INPI,vae,high,1,963,949,963,963,0,0,0,0,yes,yes
+70_INPI_gan_high_iteration27_X963_Y959,70,INPI,gan,high,27,963,959,a different real world object,963,1,0,1,0,N/A,N/A
+175_INPI_gan_low_iteration199_X963_Y415,175,INPI,gan,low,199,963,415,not a real world object,930,1,1,1,0,no,N/A
+10_INPI_vae_low_iteration11_X963_Y927,10,INPI,vae,low,11,963,927,963,963,0,0,0,0,yes,yes
+294_INPI_sd_low_iteration59_X963_Y964,294,INPI,sd,low,59,963,964,963,963,0,0,0,0,yes,yes
+139_INPI_vae_high_iteration1_X963_Y54,139,INPI,vae,high,1,963,54,963,963,0,0,0,0,yes,yes
+308_INPI_sd_high_iteration26_X963_Y962,308,INPI,sd,high,26,963,962,963,963,0,0,0,0,yes,yes
+233_INPI_gan_low_iteration195_X963_Y923,233,INPI,gan,low,195,963,923,963,963,0,0,0,0,yes,yes
+77_INPI_gan_high_iteration20_X963_Y928,77,INPI,gan,high,20,963,928,963,963,0,0,0,0,yes,yes
+120_INPI_gan_high_iteration59_X963_Y567,120,INPI,gan,high,59,963,567,963,963,0,0,0,0,yes,yes
+266_INPI_sd_low_iteration118_X963_Y962,266,INPI,sd,low,118,963,962,963,963,0,0,0,0,yes,yes
+128_INPI_vae_high_iteration1_X963_Y965,128,INPI,vae,high,1,963,965,not a real world object,963,1,0,1,0,N/A,N/A
+63_INPI_gan_high_iteration75_X963_Y964,63,INPI,gan,high,75,963,964,963,963,0,0,0,0,yes,yes
+290_INPI_sd_low_iteration149_X963_Y567,290,INPI,sd,low,149,963,567,963,963,0,0,0,0,yes,yes
+164_INPI_gan_low_iteration144_X963_Y941,164,INPI,gan,low,144,963,941,927,963,1,0,0,0,N/A,yes
+300_INPI_sd_low_iteration27_X963_Y930,300,INPI,sd,low,27,963,930,962,963,1,0,0,0,N/A,yes
+245_INPI_sd_low_iteration32_X963_Y927,245,INPI,sd,low,32,963,927,963,963,0,0,0,0,yes,yes
+201_INPI_gan_low_iteration78_X963_Y712,201,INPI,gan,low,78,963,712,962,923,1,1,0,0,no,yes
+116_INPI_gan_high_iteration51_X963_Y923,116,INPI,gan,high,51,963,923,963,963,0,0,0,0,yes,yes
+307_INPI_sd_high_iteration2_X963_Y962,307,INPI,sd,high,2,963,962,963,963,0,0,0,0,yes,yes
+119_INPI_gan_high_iteration55_X963_Y962,119,INPI,gan,high,55,963,962,963,963,0,0,0,0,yes,yes
+331_INPI_sd_high_iteration29_X963_Y964,331,INPI,sd,high,29,963,964,963,963,0,0,0,0,yes,yes
+188_INPI_gan_low_iteration43_X963_Y923,188,INPI,gan,low,43,963,923,963,963,0,0,0,0,yes,yes
+361_INPI_sd_high_iteration23_X963_Y953,361,INPI,sd,high,23,963,953,963,963,0,0,0,0,yes,yes
+74_INPI_gan_high_iteration39_X963_Y567,74,INPI,gan,high,39,963,567,963,963,0,0,0,0,yes,yes
+65_INPI_gan_high_iteration70_X963_Y521,65,INPI,gan,high,70,963,521,963,963,0,0,0,0,yes,yes
+284_INPI_sd_low_iteration67_X963_Y750,284,INPI,sd,low,67,963,750,963,963,0,0,0,0,yes,yes
+53_INPI_gan_high_iteration62_X963_Y809,53,INPI,gan,high,62,963,809,964,964,1,1,0,0,no,yes
+357_INPI_sd_high_iteration33_X963_Y964,357,INPI,sd,high,33,963,964,963,963,0,0,0,0,yes,yes
+134_INPI_vae_high_iteration3_X963_Y957,134,INPI,vae,high,3,963,957,963,963,0,0,0,0,yes,yes
+285_INPI_sd_low_iteration126_X963_Y110,285,INPI,sd,low,126,963,110,963,963,0,0,0,0,yes,yes
+280_INPI_sd_low_iteration125_X963_Y930,280,INPI,sd,low,125,963,930,963,963,0,0,0,0,yes,yes
+31_INPI_gan_high_iteration57_X963_Y924,31,INPI,gan,high,57,963,924,963,963,0,0,0,0,yes,yes
+296_INPI_sd_low_iteration20_X963_Y964,296,INPI,sd,low,20,963,964,963,963,0,0,0,0,yes,yes
+329_INPI_sd_high_iteration39_X963_Y964,329,INPI,sd,high,39,963,964,963,963,0,0,0,0,yes,yes
+52_INPI_gan_high_iteration39_X963_Y659,52,INPI,gan,high,39,963,659,not a real world object,923,1,1,1,0,no,N/A
+147_INPI_vae_high_iteration1_X963_Y509,147,INPI,vae,high,1,963,509,not a real world object,not a real world object,1,1,1,1,no,no
+320_INPI_sd_high_iteration4_X963_Y923,320,INPI,sd,high,4,963,923,963,963,0,0,0,0,yes,yes
+299_INPI_sd_low_iteration48_X963_Y959,299,INPI,sd,low,48,963,959,963,963,0,0,0,0,yes,yes
+367_INPI_sd_high_iteration4_X963_Y956,367,INPI,sd,high,4,963,956,963,963,0,0,0,0,yes,yes
+370_INPI_sd_high_iteration10_X963_Y66,370,INPI,sd,high,10,963,66,963,963,0,0,0,0,yes,yes
+239_INPI_sd_low_iteration1_X963_Y891,239,INPI,sd,low,1,963,891,963,963,0,0,0,0,yes,yes
+323_INPI_sd_high_iteration2_X963_Y964,323,INPI,sd,high,2,963,964,963,963,0,0,0,0,yes,yes
+252_INPI_sd_low_iteration69_X963_Y922,252,INPI,sd,low,69,963,922,963,963,0,0,0,0,yes,yes
+292_INPI_sd_low_iteration1_X963_Y962,292,INPI,sd,low,1,963,962,963,963,0,0,0,0,yes,yes
+297_INPI_sd_low_iteration207_X963_Y964,297,INPI,sd,low,207,963,964,963,963,0,0,0,0,yes,yes
+107_INPI_gan_high_iteration26_X963_Y927,107,INPI,gan,high,26,963,927,927,963,1,0,0,0,N/A,yes
+250_INPI_sd_low_iteration40_X963_Y891,250,INPI,sd,low,40,963,891,963,963,0,0,0,0,yes,yes
+199_INPI_gan_low_iteration204_X963_Y927,199,INPI,gan,low,204,963,927,963,963,0,0,0,0,yes,yes
+62_INPI_gan_high_iteration87_X963_Y924,62,INPI,gan,high,87,963,924,963,963,0,0,0,0,yes,yes
+347_INPI_sd_high_iteration23_X963_Y964,347,INPI,sd,high,23,963,964,963,963,0,0,0,0,yes,yes
+71_INPI_gan_high_iteration22_X963_Y420,71,INPI,gan,high,22,963,420,963,963,0,0,0,0,yes,yes
+354_INPI_sd_high_iteration24_X963_Y567,354,INPI,sd,high,24,963,567,963,963,0,0,0,0,yes,yes
+277_INPI_sd_low_iteration113_X963_Y964,277,INPI,sd,low,113,963,964,963,963,0,0,0,0,yes,yes
+35_INPI_gan_high_iteration71_X963_Y924,35,INPI,gan,high,71,963,924,963,963,0,0,0,0,yes,yes
+113_INPI_gan_high_iteration62_X963_Y941,113,INPI,gan,high,62,963,941,not a real world object,a different real world object,1,1,1,1,no,no
+248_INPI_sd_low_iteration30_X963_Y964,248,INPI,sd,low,30,963,964,963,963,0,0,0,0,yes,yes
+137_INPI_vae_high_iteration8_X963_Y121,137,INPI,vae,high,8,963,121,not a real world object,963,1,0,1,0,N/A,N/A
+154_INPI_gan_low_iteration147_X963_Y964,154,INPI,gan,low,147,963,964,963,963,0,0,0,0,yes,yes
+194_INPI_gan_low_iteration237_X963_Y953,194,INPI,gan,low,237,963,953,not a real world object,963,1,0,1,0,N/A,N/A
+352_INPI_sd_high_iteration13_X963_Y964,352,INPI,sd,high,13,963,964,963,963,0,0,0,0,yes,yes
+155_INPI_gan_low_iteration154_X963_Y964,155,INPI,gan,low,154,963,964,not a real world object,963,1,0,1,0,N/A,N/A
+135_INPI_vae_high_iteration1_X963_Y965,135,INPI,vae,high,1,963,965,not a real world object,not a real world object,1,1,1,1,no,no
+12_INPI_vae_low_iteration26_X963_Y927,12,INPI,vae,low,26,963,927,963,963,0,0,0,0,yes,yes
+168_INPI_gan_low_iteration240_X963_Y926,168,INPI,gan,low,240,963,926,962,923,1,1,0,0,no,yes
+375_INPI_sd_high_iteration2_X963_Y964,375,INPI,sd,high,2,963,964,963,963,0,0,0,0,yes,yes
+122_INPI_gan_high_iteration66_X963_Y926,122,INPI,gan,high,66,963,926,963,963,0,0,0,0,yes,yes
+321_INPI_sd_high_iteration1_X963_Y831,321,INPI,sd,high,1,963,831,963,963,0,0,0,0,yes,yes
+339_INPI_sd_high_iteration14_X963_Y116,339,INPI,sd,high,14,963,116,963,963,0,0,0,0,yes,yes
+129_INPI_vae_high_iteration3_X963_Y965,129,INPI,vae,high,3,963,965,963,a different real world object,0,1,0,1,N/A,N/A
+261_INPI_sd_low_iteration180_X963_Y930,261,INPI,sd,low,180,963,930,963,963,0,0,0,0,yes,yes
+264_INPI_sd_low_iteration99_X963_Y964,264,INPI,sd,low,99,963,964,963,963,0,0,0,0,yes,yes
+61_INPI_gan_high_iteration32_X963_Y952,61,INPI,gan,high,32,963,952,963,963,0,0,0,0,yes,yes
+238_INPI_sd_low_iteration212_X963_Y964,238,INPI,sd,low,212,963,964,963,963,0,0,0,0,yes,yes
+271_INPI_sd_low_iteration156_X963_Y962,271,INPI,sd,low,156,963,962,963,963,0,0,0,0,yes,yes
+131_INPI_vae_high_iteration7_X963_Y957,131,INPI,vae,high,7,963,957,930,963,1,0,0,0,N/A,yes
+88_INPI_gan_high_iteration51_X963_Y926,88,INPI,gan,high,51,963,926,963,963,0,0,0,0,yes,yes
+166_INPI_gan_low_iteration93_X963_Y923,166,INPI,gan,low,93,963,923,964,963,1,0,0,0,N/A,yes
+256_INPI_sd_low_iteration154_X963_Y953,256,INPI,sd,low,154,963,953,963,963,0,0,0,0,yes,yes
+275_INPI_sd_low_iteration168_X963_Y930,275,INPI,sd,low,168,963,930,963,963,0,0,0,0,yes,yes
+368_INPI_sd_high_iteration3_X963_Y962,368,INPI,sd,high,3,963,962,965,963,1,0,0,0,N/A,yes
+362_INPI_sd_high_iteration26_X963_Y766,362,INPI,sd,high,26,963,766,963,963,0,0,0,0,yes,yes
+92_INPI_gan_high_iteration37_X963_Y950,92,INPI,gan,high,37,963,950,927,963,1,0,0,0,N/A,yes
+21_INPI_vae_low_iteration12_X963_Y509,21,INPI,vae,low,12,963,509,not a real world object,963,1,0,1,0,N/A,N/A
+20_INPI_vae_low_iteration23_X963_Y964,20,INPI,vae,low,23,963,964,963,963,0,0,0,0,yes,yes
+33_INPI_gan_high_iteration54_X963_Y903,33,INPI,gan,high,54,963,903,a different real world object,962,1,1,1,0,no,N/A
+109_INPI_gan_high_iteration16_X963_Y923,109,INPI,gan,high,16,963,923,964,963,1,0,0,0,N/A,yes
+240_INPI_sd_low_iteration31_X963_Y923,240,INPI,sd,low,31,963,923,963,963,0,0,0,0,yes,yes
+336_INPI_sd_high_iteration11_X963_Y965,336,INPI,sd,high,11,963,965,963,963,0,0,0,0,yes,yes
+93_INPI_gan_high_iteration61_X963_Y677,93,INPI,gan,high,61,963,677,a different real world object,567,1,1,1,0,no,N/A
+231_INPI_gan_low_iteration188_X963_Y124,231,INPI,gan,low,188,963,124,a different real world object,a different real world object,1,1,1,1,no,no
+151_INPI_gan_low_iteration160_X963_Y927,151,INPI,gan,low,160,963,927,963,963,0,0,0,0,yes,yes
+317_INPI_sd_high_iteration20_X963_Y930,317,INPI,sd,high,20,963,930,963,963,0,0,0,0,yes,yes
+58_INPI_gan_high_iteration19_X963_Y567,58,INPI,gan,high,19,963,567,963,963,0,0,0,0,yes,yes
+192_INPI_gan_low_iteration227_X963_Y928,192,INPI,gan,low,227,963,928,964,927,1,1,0,0,no,yes
+106_INPI_gan_high_iteration67_X963_Y567,106,INPI,gan,high,67,963,567,963,964,0,1,0,0,N/A,yes
+288_INPI_sd_low_iteration24_X963_Y956,288,INPI,sd,low,24,963,956,963,963,0,0,0,0,yes,yes
+22_INPI_vae_low_iteration1_X963_Y567,22,INPI,vae,low,1,963,567,963,963,0,0,0,0,yes,yes
+306_INPI_sd_low_iteration38_X963_Y964,306,INPI,sd,low,38,963,964,963,963,0,0,0,0,yes,yes
+43_INPI_gan_high_iteration57_X963_Y957,43,INPI,gan,high,57,963,957,965,927,1,1,0,0,no,yes
+340_INPI_sd_high_iteration4_X963_Y964,340,INPI,sd,high,4,963,964,963,963,0,0,0,0,yes,yes
+11_INPI_vae_low_iteration6_X963_Y599,11,INPI,vae,low,6,963,599,963,963,0,0,0,0,yes,yes
+57_INPI_gan_high_iteration55_X963_Y942,57,INPI,gan,high,55,963,942,963,963,0,0,0,0,yes,yes
+115_INPI_gan_high_iteration45_X963_Y406,115,INPI,gan,high,45,963,406,923,not a real world object,1,1,0,1,no,N/A
+237_INPI_sd_low_iteration1_X963_Y964,237,INPI,sd,low,1,963,964,963,963,0,0,0,0,yes,yes
+228_INPI_gan_low_iteration46_X963_Y923,228,INPI,gan,low,46,963,923,a different real world object,963,1,0,1,0,N/A,N/A
+83_INPI_gan_high_iteration62_X963_Y962,83,INPI,gan,high,62,963,962,not a real world object,a different real world object,1,1,1,1,no,no
+82_INPI_gan_high_iteration32_X963_Y567,82,INPI,gan,high,32,963,567,a different real world object,963,1,0,1,0,N/A,N/A
+310_INPI_sd_high_iteration8_X963_Y959,310,INPI,sd,high,8,963,959,a different real world object,963,1,0,1,0,N/A,N/A
+260_INPI_sd_low_iteration9_X963_Y930,260,INPI,sd,low,9,963,930,963,963,0,0,0,0,yes,yes
+190_INPI_gan_low_iteration146_X963_Y941,190,INPI,gan,low,146,963,941,not a real world object,963,1,0,1,0,N/A,N/A
+100_INPI_gan_high_iteration20_X963_Y813,100,INPI,gan,high,20,963,813,not a real world object,963,1,0,1,0,N/A,N/A
+56_INPI_gan_high_iteration33_X963_Y933,56,INPI,gan,high,33,963,933,not a real world object,963,1,0,1,0,N/A,N/A
+349_INPI_sd_high_iteration7_X963_Y996,349,INPI,sd,high,7,963,996,963,963,0,0,0,0,yes,yes
+111_INPI_gan_high_iteration79_X963_Y923,111,INPI,gan,high,79,963,923,962,a different real world object,1,1,0,1,no,N/A
+208_INPI_gan_low_iteration76_X963_Y952,208,INPI,gan,low,76,963,952,963,not a real world object,0,1,0,1,N/A,N/A
+125_INPI_vae_high_iteration1_X963_Y56,125,INPI,vae,high,1,963,56,962,a different real world object,1,1,0,1,no,N/A
+374_INPI_sd_high_iteration16_X963_Y567,374,INPI,sd,high,16,963,567,963,963,0,0,0,0,yes,yes
+72_INPI_gan_high_iteration67_X963_Y567,72,INPI,gan,high,67,963,567,963,a different real world object,0,1,0,1,N/A,N/A
+272_INPI_sd_low_iteration28_X963_Y824,272,INPI,sd,low,28,963,824,963,not a real world object,0,1,0,1,N/A,N/A
+160_INPI_gan_low_iteration120_X963_Y964,160,INPI,gan,low,120,963,964,963,964,0,1,0,0,N/A,yes
+27_INPI_gan_high_iteration100_X963_Y567,27,INPI,gan,high,100,963,567,963,a different real world object,0,1,0,1,N/A,N/A
+343_INPI_sd_high_iteration2_X963_Y930,343,INPI,sd,high,2,963,930,963,963,0,0,0,0,yes,yes
+282_INPI_sd_low_iteration90_X963_Y964,282,INPI,sd,low,90,963,964,963,963,0,0,0,0,yes,yes
+26_INPI_gan_high_iteration22_X963_Y502,26,INPI,gan,high,22,963,502,963,963,0,0,0,0,yes,yes
+197_INPI_gan_low_iteration148_X963_Y957,197,INPI,gan,low,148,963,957,963,963,0,0,0,0,yes,yes
+235_INPI_gan_low_iteration96_X963_Y567,235,INPI,gan,low,96,963,567,963,963,0,0,0,0,yes,yes
+337_INPI_sd_high_iteration14_X963_Y824,337,INPI,sd,high,14,963,824,963,963,0,0,0,0,yes,yes
+373_INPI_sd_high_iteration1_X963_Y964,373,INPI,sd,high,1,963,964,963,963,0,0,0,0,yes,yes
+211_INPI_gan_low_iteration194_X963_Y923,211,INPI,gan,low,194,963,923,963,963,0,0,0,0,yes,yes
+150_INPI_gan_low_iteration196_X963_Y567,150,INPI,gan,low,196,963,567,963,963,0,0,0,0,yes,yes
+159_INPI_gan_low_iteration220_X963_Y964,159,INPI,gan,low,220,963,964,963,963,0,0,0,0,yes,yes
+200_INPI_gan_low_iteration230_X963_Y868,200,INPI,gan,low,230,963,868,963,963,0,0,0,0,yes,yes
+302_INPI_sd_low_iteration11_X963_Y964,302,INPI,sd,low,11,963,964,963,963,0,0,0,0,yes,yes
+344_INPI_sd_high_iteration1_X963_Y964,344,INPI,sd,high,1,963,964,963,963,0,0,0,0,yes,yes
+314_INPI_sd_high_iteration17_X963_Y964,314,INPI,sd,high,17,963,964,963,963,0,0,0,0,yes,yes
+269_INPI_sd_low_iteration47_X963_Y121,269,INPI,sd,low,47,963,121,963,963,0,0,0,0,yes,yes
+247_INPI_sd_low_iteration113_X963_Y930,247,INPI,sd,low,113,963,930,963,963,0,0,0,0,yes,yes
+133_INPI_vae_high_iteration1_X963_Y962,133,INPI,vae,high,1,963,962,963,963,0,0,0,0,yes,yes
+165_INPI_gan_low_iteration236_X963_Y962,165,INPI,gan,low,236,963,962,a different real world object,963,1,0,1,0,N/A,N/A
+183_INPI_gan_low_iteration203_X963_Y942,183,INPI,gan,low,203,963,942,a different real world object,963,1,0,1,0,N/A,N/A
+359_INPI_sd_high_iteration1_X963_Y891,359,INPI,sd,high,1,963,891,963,963,0,0,0,0,yes,yes
+158_INPI_gan_low_iteration175_X963_Y964,158,INPI,gan,low,175,963,964,963,963,0,0,0,0,yes,yes
+101_INPI_gan_high_iteration22_X963_Y927,101,INPI,gan,high,22,963,927,963,963,0,0,0,0,yes,yes

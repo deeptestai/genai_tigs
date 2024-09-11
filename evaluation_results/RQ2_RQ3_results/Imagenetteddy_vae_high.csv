@@ -1,0 +1,15 @@
+Filename,GeneratorName,run,Initial_perturbation,Perturbation_Size,ImageNumber,Iteration,Expected_label(X),Predicted_label(Y),Classification
+image_0_iteration3_X850_Y153.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,0,3,850,153,Misclassified
+image_1_iteration1_X850_Y865.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,1,1,850,865,Misclassified
+image_2_iteration1_X850_Y341.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,2,1,850,341,Misclassified
+image_3_iteration1_X850_Y927.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,3,1,850,927,Misclassified
+image_4_iteration1_X850_Y956.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,4,1,850,956,Misclassified
+image_5_iteration1_X850_Y258.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,5,1,850,258,Misclassified
+image_6_iteration1_X850_Y865.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,6,1,850,865,Misclassified
+image_7_iteration1_X850_Y812.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,7,1,850,812,Misclassified
+image_8_iteration3_X850_Y188.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,8,3,850,188,Misclassified
+image_9_iteration1_X850_Y258.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,9,1,850,258,Misclassified
+image_10_iteration2_X850_Y865.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,10,2,850,865,Misclassified
+image_11_iteration1_X850_Y684.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,11,1,850,684,Misclassified
+image_12_iteration1_X850_Y931.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,12,1,850,931,Misclassified
+image_13_iteration1_X850_Y927.npy,Imagenetteddy_vae,High,0.0216982479095459,0.010849123954773,13,1,850,927,Misclassified
