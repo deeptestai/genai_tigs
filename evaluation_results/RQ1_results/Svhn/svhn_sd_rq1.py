@@ -73,7 +73,7 @@ pipe = TgateSDDeepCacheLoader(
 seed = 0
 correct_matches = 0
 
-for img_idx in range(imgs_to_samp):
+for n in range(imgs_to_samp):
     seedSelect = seed + n
     generator = generator.manual_seed(seedSelect)
     original_lv = torch.randn((1, pipe.unet.config.in_channels, height // 8, width // 8), generator=generator, device=device).to(torch.float16)
@@ -88,11 +88,11 @@ for img_idx in range(imgs_to_samp):
     original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
     predicted_label = np.argmax(original_logit).item()
     
-    init_img_path = os.path.join(proj_path, f'image_{img_idx}_prompt_{randprompt}_X{expected_label}_Y_{predicted_label}.png')
+    init_img_path = os.path.join(proj_path, f'image_{n}_prompt_{randprompt}_X{expected_label}_Y_{predicted_label}.png')
     init_img.save(init_img_path)
     print(f"Image {n} saved at {init_img_path}")
     # Convert the tensor image to numpy and save as .npy
-    npy_path = os.path.join(proj_path, f'image_{img_idx}_prompt_{randprompt}_X{expected_label}_Y_{predicted_label}.npy')
+    npy_path = os.path.join(proj_path, f'image_{n}_prompt_{randprompt}_X{expected_label}_Y_{predicted_label}.npy')
     np_image = tensor_image.squeeze().cpu().numpy()  # Remove batch dimension and convert to numpy
     np.save(npy_path, np_image)
     
