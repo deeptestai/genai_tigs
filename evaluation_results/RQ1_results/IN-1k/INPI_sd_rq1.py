@@ -58,7 +58,7 @@ pipe = TgateSDDeepCacheLoader(pipe, cache_interval=3, cache_branch_id=0).to(devi
 seed = 0
 correct_matches = 0
 imgs_to_samp = 100
-desired_label_index = 963  # Index for the desired label 'pizza'
+expected_label = 963  # Index for the desired label 'pizza'
 
 # Generate and classify images
 for n in range(imgs_to_samp):
@@ -75,14 +75,14 @@ for n in range(imgs_to_samp):
     original_logit = classifier(tensor_image).squeeze().detach().cpu().numpy()
     predicted_label = np.argmax(original_logit).item()
     
-    init_img_path = os.path.join(proj_path, f'image_{n}_prompt{prompt}_X{desired_label_index}_Y{predicted_label}.png')
+    init_img_path = os.path.join(proj_path, f'image_{n}_prompt{prompt}_X{expected_label}_Y{predicted_label}.png')
     init_img.save(init_img_path)
     print(f"Image {n} saved at {init_img_path}")
     # Save the same image as a NumPy array
-    npy_path = os.path.join(proj_path, f'image_{n}_prompt{prompt}_X{desired_label_index}_Y{predicted_label}.npy')
+    npy_path = os.path.join(proj_path, f'image_{n}_prompt{prompt}_X{expected_label}_Y{predicted_label}.npy')
     np_image = tensor_image.squeeze().cpu().numpy()  # Convert tensor to numpy
     np.save(npy_path, np_image)    
-    if predicted_label == desired_label_index:
+    if predicted_label == expected_label:
         correct_matches += 1
 
 # Calculate and print accuracy
