@@ -96,10 +96,10 @@ saved_images = 0
 #max_attempts_per_image = 500  # Maximum attempts to generate a correct pizza image
 pop_size = 25
 best_left = 10
-min_val = -0.799978375434876
-max_val = 0.799991071224213
-perturbation_size = 0.000159996944665909   # perturbation size
-initial_perturbation_size = 0.000319993889331818  # Initial perturbation size
+min_val = -1.99990940093994
+max_val = 1.99996650218964
+perturbation_size = 0.000399987590312958   # perturbation size
+initial_perturbation_size = 0.000799975180625916  # Initial perturbation size
 # Generate a random latent vector
 latent_space = torch.randn(imgs_to_samp, 128).to(device)
 # Create one-hot encoded class vectors for pizza class only
