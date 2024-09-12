@@ -78,8 +78,8 @@ pop_size = 25
 best_left = 10
 min_val =-4.07097911834717
 max_val =4.55557680130005
-perturbation_size = 0.00862655591964722  # Default perturbation size
-initial_perturbation_size = 0.0172531118392944  # Initial perturbation size
+perturbation_size = 0.00862655591964722  # Default perturbation size (high_mutation value)
+initial_perturbation_size = 0.0172531118392944  # Initial perturbation size (high_mutation value)
 # Generate a random latent vector
 latent_space = torch.randn(imgs_to_samp, 100, 1, 1).to(device)
 random_labels = torch.randint(0, 10, (imgs_to_samp,)).to(device)
