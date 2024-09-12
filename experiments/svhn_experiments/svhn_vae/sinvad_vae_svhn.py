@@ -71,8 +71,8 @@ pop_size = 25
 best_left = 10
 min_val=-5.26724052429199
 max_val=4.72675895690918
-perturbation_size = 0.00999399948120117 #  perturbation size
-initial_perturbation_size = 0.0199879989624023  # Initial perturbation size
+perturbation_size = 0.00999399948120117 #  perturbation size (high_mutation value)
+initial_perturbation_size = 0.0199879989624023  # Initial perturbation size (high_mutation value)
 
 all_img_lst = []
 saved_images = 0  # Initialize saved image counter
