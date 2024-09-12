@@ -75,7 +75,7 @@ best_left = 10
 min_val = -5.22431135177612
 max_val = 5.62481260299683
 imgs_to_samp = 100
-Expected_class_index = 963
+expected_label = 963       # 963 for pizza class /add 850 for teddy_class when teddy class is required
 perturbation_size = 0.0010849123954773
 initial_perturbation_size =0.00216982479095459 
 all_img_lst = []
@@ -98,7 +98,7 @@ for img_idx in trange(imgs_to_samp):  # Loop runs for 100 iterations
     original_label = original_logit.argmax().item()
 
     # Check if the label matches the expected class
-    if original_label == Expected_class_index:
+    if original_label == expected_class:
         # Save the image if it matches
         save_image(original_image, os.path.join(img_pil_dir, f'original_image_{saved_images}_X{original_label}.png'))
         saved_images +=1
@@ -206,7 +206,7 @@ for img_idx in trange(imgs_to_samp):  # Loop runs for 100 iterations
 
     else:
         # If no match is found
-        print(f"No match for image {img_idx}: True class {Expected_class_index}, Predicted class {original_label}")
+        print(f"No match for image {img_idx}: True class {expected_class}, Predicted class {original_label}")
 
 # Save the images as a numpy array
 all_imgs = np.vstack(all_img_lst)
