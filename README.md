@@ -1,6 +1,6 @@
-# Benchmarking Generative AI Models for Deep
+# Benchmarking Generative AI Models for Deep Learning Test Input Generation
 Learning Test Input Generation
-  <p align="justify">This repository contains the source code and test generation input data of the paper “ An Empirical Comparison of Test Input Generators for Image Classifiers” by ……….</p> 
+  <p align="justify">This repository contains the source code and test generation input data of the paper “Benchmarking Generative AI Models for Deep Learning Test Input Generation” by ……….</p> 
 
 ## Motivation:
 
