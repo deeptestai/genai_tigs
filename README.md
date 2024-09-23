@@ -6,10 +6,10 @@
  <p align="justify">The objective of this research is to evaluate the accuracy of various classifiers on datasets including MNIST, SVHN, CIFAR-10, and ImageNet. To achieve this, we employed different generative models to create images that induce misbehavior. We then assessed the classifiers' performance by determining their accuracy in making predictions based on these challenging images.</p>
 
 ## Repository Structure:
-- **experiments:** contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the raw experimental data and the script used to obtain the results reported in the paper.
--  **documentation:**
-- 
-
+- **experiments:** contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the script used to obtain the results reported in the paper.
+- **documentation:** contains a quick installation guide and a detailed secription about stable diffusion Models.
+- **generated_images:** This folder contains images generated from three different test input generators across four datasets: MNIST, SVHN, CIFAR10, and ImageNet, each with varying mutation levels (high and low).
+- **evaluation_results:** This folder contains CSV files with the results of all research questions, including data from the MTurk study. Additionally, it provides CSV files that outline the mutation extent ranges for each model. 
 
  ## Getting Started to RUN GAI-Tigs:
  ### STEP-1: Configure the envronment:
