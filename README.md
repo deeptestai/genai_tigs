@@ -8,7 +8,7 @@ Learning Test Input Generation
 
 ## Repository Structure:
 - **experiments:** contain subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the script used to obtain the results reported in the paper.
-- **documentation:** contains a quick installation guide and a detailed secription about stable diffusion Models.
+- **documentation:** contains a quick installation guide and a detailed description about stable diffusion Models.
 - **generated_images:** This folder contains images generated from three different test input generators across four datasets: MNIST, SVHN, CIFAR10, and ImageNet, each with varying mutation levels (high and low).
 - **evaluation_results:** This folder contains CSV files with the results of all research questions, including data from the MTurk study. Additionally, it provides CSV files that outline the mutation extent ranges for each model. 
 
