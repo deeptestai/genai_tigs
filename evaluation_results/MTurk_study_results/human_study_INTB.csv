@@ -1,0 +1,372 @@
+Image URL,ID,DATASET,TOOL,MUT_EXT,ITER,Expected,Predicted,ASS 1,ASS 2,Misclass Human 1,Misclass Human 2,Valid Human 1,Valid Human 2,Validity?,Label Preservation?
+112_INTB_sd_high_iteration8_X850_Y865,112,INTB,sd,high,8,850,865,850,865,0,1,0,0,yes,N/A
+365_INTB_gan_low_iteration54_X850_Y88,365,INTB,gan,low,54,850,88,a different real world object,265,1,1,0,0,yes,no
+305_INTB_gan_low_iteration40_X850_Y265,305,INTB,gan,low,40,850,265,850,850,0,0,0,0,yes,yes
+210_INTB_gan_high_iteration16_X850_Y266,210,INTB,gan,high,16,850,266,850,850,0,0,0,0,yes,yes
+37_INTB_sd_low_iteration1_X850_Y191,37,INTB,sd,low,1,850,191,850,267,0,1,0,0,yes,N/A
+76_INTB_sd_low_iteration35_X850_Y267,76,INTB,sd,low,35,850,267,850,267,0,1,0,0,yes,N/A
+139_INTB_sd_high_iteration5_X850_Y995,139,INTB,sd,high,5,850,995,850,865,0,1,0,0,yes,N/A
+97_INTB_sd_high_iteration1_X850_Y76,97,INTB,sd,high,1,850,76,850,850,0,0,0,0,yes,yes
+104_INTB_sd_high_iteration7_X850_Y265,104,INTB,sd,high,7,850,265,850,850,0,0,0,0,yes,yes
+57_INTB_sd_low_iteration40_X850_Y260,57,INTB,sd,low,40,850,260,850,850,0,0,0,0,yes,yes
+129_INTB_sd_high_iteration14_X850_Y265,129,INTB,sd,high,14,850,265,850,850,0,0,0,0,yes,yes
+209_INTB_gan_high_iteration44_X850_Y949,209,INTB,gan,high,44,850,949,not a real world object,a different real world object,1,1,1,0,N/A,no
+25_INTB_sd_low_iteration1_X850_Y406,25,INTB,sd,low,1,850,406,850,865,0,1,0,0,yes,N/A
+186_INTB_vae_low_iteration3_X850_Y258,186,INTB,vae,low,3,850,258,850,850,0,0,0,0,yes,yes
+68_INTB_sd_low_iteration1_X850_Y996,68,INTB,sd,low,1,850,996,850,865,0,1,0,0,yes,N/A
+114_INTB_sd_high_iteration8_X850_Y934,114,INTB,sd,high,8,850,934,850,850,0,0,0,0,yes,yes
+39_INTB_sd_low_iteration113_X850_Y865,39,INTB,sd,low,113,850,865,850,850,0,0,0,0,yes,yes
+363_INTB_gan_low_iteration104_X850_Y452,363,INTB,gan,low,104,850,452,850,265,0,1,0,0,yes,N/A
+174_INTB_vae_low_iteration23_X850_Y927,174,INTB,vae,low,23,850,927,850,850,0,0,0,0,yes,yes
+235_INTB_gan_high_iteration42_X850_Y266,235,INTB,gan,high,42,850,266,850,265,0,1,0,0,yes,N/A
+236_INTB_gan_high_iteration16_X850_Y415,236,INTB,gan,high,16,850,415,265,865,1,1,0,0,yes,no
+191_INTB_gan_high_iteration25_X850_Y219,191,INTB,gan,high,25,850,219,260,266,1,1,0,0,yes,no
+20_INTB_sd_low_iteration106_X850_Y296,20,INTB,sd,low,106,850,296,850,850,0,0,0,0,yes,yes
+302_INTB_gan_low_iteration62_X850_Y995,302,INTB,gan,low,62,850,995,850,not a real world object,0,1,0,1,N/A,N/A
+192_INTB_gan_high_iteration34_X850_Y719,192,INTB,gan,high,34,850,719,850,850,0,0,0,0,yes,yes
+99_INTB_sd_high_iteration10_X850_Y996,99,INTB,sd,high,10,850,996,850,865,0,1,0,0,yes,N/A
+291_INTB_gan_low_iteration41_X850_Y700,291,INTB,gan,low,41,850,700,not a real world object,850,1,0,1,0,N/A,N/A
+164_INTB_sd_high_iteration1_X850_Y467,164,INTB,sd,high,1,850,467,850,415,0,1,0,0,yes,N/A
+301_INTB_gan_low_iteration103_X850_Y568,301,INTB,gan,low,103,850,568,850,850,0,0,0,0,yes,yes
+364_INTB_gan_low_iteration68_X850_Y457,364,INTB,gan,low,68,850,457,850,850,0,0,0,0,yes,yes
+208_INTB_gan_high_iteration26_X850_Y865,208,INTB,gan,high,26,850,865,850,850,0,0,0,0,yes,yes
+367_INTB_gan_low_iteration62_X850_Y529,367,INTB,gan,low,62,850,529,265,850,1,0,0,0,yes,N/A
+47_INTB_sd_low_iteration73_X850_Y911,47,INTB,sd,low,73,850,911,265,not a real world object,1,1,0,1,N/A,no
+352_INTB_gan_low_iteration196_X850_Y865,352,INTB,gan,low,196,850,865,850,not a real world object,0,1,0,1,N/A,N/A
+142_INTB_sd_high_iteration5_X850_Y189,142,INTB,sd,high,5,850,189,266,850,1,0,0,0,yes,N/A
+113_INTB_sd_high_iteration8_X850_Y911,113,INTB,sd,high,8,850,911,265,not a real world object,1,1,0,1,N/A,no
+41_INTB_sd_low_iteration81_X850_Y996,41,INTB,sd,low,81,850,996,265,850,1,0,0,0,yes,N/A
+117_INTB_sd_high_iteration8_X850_Y354,117,INTB,sd,high,8,850,354,265,not a real world object,1,1,0,1,N/A,no
+157_INTB_sd_high_iteration12_X850_Y443,157,INTB,sd,high,12,850,443,265,850,1,0,0,0,yes,N/A
+16_INTB_sd_low_iteration116_X850_Y265,16,INTB,sd,low,116,850,265,850,not a real world object,0,1,0,1,N/A,N/A
+72_INTB_sd_low_iteration63_X850_Y996,72,INTB,sd,low,63,850,996,865,865,1,1,0,0,yes,no
+145_INTB_sd_high_iteration7_X850_Y222,145,INTB,sd,high,7,850,222,850,850,0,0,0,0,yes,yes
+250_INTB_gan_high_iteration18_X850_Y415,250,INTB,gan,high,18,850,415,865,865,1,1,0,0,yes,no
+77_INTB_sd_low_iteration1_X850_Y188,77,INTB,sd,low,1,850,188,865,865,1,1,0,0,yes,no
+137_INTB_sd_high_iteration9_X850_Y373,137,INTB,sd,high,9,850,373,850,850,0,0,0,0,yes,yes
+56_INTB_sd_low_iteration9_X850_Y388,56,INTB,sd,low,9,850,388,850,850,0,0,0,0,yes,yes
+187_INTB_gan_high_iteration19_X850_Y415,187,INTB,gan,high,19,850,415,865,865,1,1,0,0,yes,no
+171_INTB_sd_high_iteration1_X850_Y582,171,INTB,sd,high,1,850,582,865,850,1,0,0,0,yes,N/A
+195_INTB_gan_high_iteration11_X850_Y266,195,INTB,gan,high,11,850,266,265,850,1,0,0,0,yes,N/A
+90_INTB_sd_high_iteration7_X850_Y865,90,INTB,sd,high,7,850,865,865,865,1,1,0,0,yes,no
+264_INTB_gan_high_iteration17_X850_Y643,264,INTB,gan,high,17,850,643,850,850,0,0,0,0,yes,yes
+89_INTB_sd_high_iteration5_X850_Y865,89,INTB,sd,high,5,850,865,850,265,0,1,0,0,yes,N/A
+318_INTB_gan_low_iteration72_X850_Y614,318,INTB,gan,low,72,850,614,865,865,1,1,0,0,yes,no
+115_INTB_sd_high_iteration12_X850_Y189,115,INTB,sd,high,12,850,189,265,865,1,1,0,0,yes,no
+277_INTB_vae_high_iteration3_X850_Y188,277,INTB,vae,high,3,850,188,850,850,0,0,0,0,yes,yes
+65_INTB_sd_low_iteration1_X850_Y964,65,INTB,sd,low,1,850,964,850,265,0,1,0,0,yes,N/A
+322_INTB_gan_low_iteration122_X850_Y155,322,INTB,gan,low,122,850,155,850,265,0,1,0,0,yes,N/A
+223_INTB_gan_high_iteration54_X850_Y463,223,INTB,gan,high,54,850,463,850,865,0,1,0,0,yes,N/A
+180_INTB_vae_low_iteration5_X850_Y258,180,INTB,vae,low,5,850,258,850,850,0,0,0,0,yes,yes
+43_INTB_sd_low_iteration1_X850_Y228,43,INTB,sd,low,1,850,228,850,850,0,0,0,0,yes,yes
+211_INTB_gan_high_iteration20_X850_Y415,211,INTB,gan,high,20,850,415,865,865,1,1,0,0,yes,no
+346_INTB_gan_low_iteration126_X850_Y267,346,INTB,gan,low,126,850,267,265,850,1,0,0,0,yes,N/A
+61_INTB_sd_low_iteration117_X850_Y911,61,INTB,sd,low,117,850,911,865,850,1,0,0,0,yes,N/A
+172_INTB_sd_high_iteration5_X850_Y260,172,INTB,sd,high,5,850,260,850,850,0,0,0,0,yes,yes
+17_INTB_sd_low_iteration15_X850_Y584,17,INTB,sd,low,15,850,584,850,850,0,0,0,0,yes,yes
+73_INTB_sd_low_iteration41_X850_Y961,73,INTB,sd,low,41,850,961,850,not a real world object,0,1,0,1,N/A,N/A
+369_INTB_gan_low_iteration104_X850_Y584,369,INTB,gan,low,104,850,584,a different real world object,not a real world object,1,1,0,1,N/A,no
+224_INTB_gan_high_iteration12_X850_Y265,224,INTB,gan,high,12,850,265,267,850,1,0,0,0,yes,N/A
+28_INTB_sd_low_iteration74_X850_Y865,28,INTB,sd,low,74,850,865,865,865,1,1,0,0,yes,no
+353_INTB_gan_low_iteration83_X850_Y568,353,INTB,gan,low,83,850,568,265,850,1,0,0,0,yes,N/A
+87_INTB_sd_high_iteration1_X850_Y377,87,INTB,sd,high,1,850,377,850,850,0,0,0,0,yes,yes
+356_INTB_gan_low_iteration120_X850_Y348,356,INTB,gan,low,120,850,348,850,265,0,1,0,0,yes,N/A
+159_INTB_sd_high_iteration1_X850_Y584,159,INTB,sd,high,1,850,584,850,850,0,0,0,0,yes,yes
+316_INTB_gan_low_iteration99_X850_Y703,316,INTB,gan,low,99,850,703,267,850,1,0,0,0,yes,N/A
+84_INTB_sd_low_iteration109_X850_Y260,84,INTB,sd,low,109,850,260,850,850,0,0,0,0,yes,yes
+196_INTB_gan_high_iteration20_X850_Y434,196,INTB,gan,high,20,850,434,850,265,0,1,0,0,yes,N/A
+262_INTB_gan_high_iteration46_X850_Y735,262,INTB,gan,high,46,850,735,850,850,0,0,0,0,yes,yes
+101_INTB_sd_high_iteration14_X850_Y181,101,INTB,sd,high,14,850,181,850,850,0,0,0,0,yes,yes
+237_INTB_gan_high_iteration18_X850_Y266,237,INTB,gan,high,18,850,266,850,265,0,1,0,0,yes,N/A
+276_INTB_vae_high_iteration1_X850_Y258,276,INTB,vae,high,1,850,258,850,265,0,1,0,0,yes,N/A
+243_INTB_gan_high_iteration41_X850_Y808,243,INTB,gan,high,41,850,808,not a real world object,not a real world object,1,1,1,1,no,N/A
+218_INTB_gan_high_iteration34_X850_Y865,218,INTB,gan,high,34,850,865,not a real world object,not a real world object,1,1,1,1,no,N/A
+366_INTB_gan_low_iteration46_X850_Y222,366,INTB,gan,low,46,850,222,265,265,1,1,0,0,yes,no
+231_INTB_gan_high_iteration34_X850_Y865,231,INTB,gan,high,34,850,865,not a real world object,not a real world object,1,1,1,1,no,N/A
+26_INTB_sd_low_iteration40_X850_Y260,26,INTB,sd,low,40,850,260,265,850,1,0,0,0,yes,N/A
+162_INTB_sd_high_iteration5_X850_Y188,162,INTB,sd,high,5,850,188,265,850,1,0,0,0,yes,N/A
+175_INTB_vae_low_iteration15_X850_Y865,175,INTB,vae,low,15,850,865,not a real world object,850,1,0,1,0,N/A,N/A
+70_INTB_sd_low_iteration48_X850_Y643,70,INTB,sd,low,48,850,643,265,850,1,0,0,0,yes,N/A
+30_INTB_sd_low_iteration40_X850_Y260,30,INTB,sd,low,40,850,260,850,850,0,0,0,0,yes,yes
+125_INTB_sd_high_iteration2_X850_Y995,125,INTB,sd,high,2,850,995,265,865,1,1,0,0,yes,no
+239_INTB_gan_high_iteration34_X850_Y265,239,INTB,gan,high,34,850,265,267,265,1,1,0,0,yes,no
+128_INTB_sd_high_iteration1_X850_Y964,128,INTB,sd,high,1,850,964,850,850,0,0,0,0,yes,yes
+36_INTB_sd_low_iteration85_X850_Y265,36,INTB,sd,low,85,850,265,850,850,0,0,0,0,yes,yes
+335_INTB_gan_low_iteration85_X850_Y348,335,INTB,gan,low,85,850,348,850,850,0,0,0,0,yes,yes
+205_INTB_gan_high_iteration14_X850_Y266,205,INTB,gan,high,14,850,266,266,265,1,1,0,0,yes,no
+271_INTB_gan_high_iteration20_X850_Y267,271,INTB,gan,high,20,850,267,267,265,1,1,0,0,yes,no
+198_INTB_gan_high_iteration53_X850_Y865,198,INTB,gan,high,53,850,865,not a real world object,850,1,0,1,0,N/A,N/A
+331_INTB_gan_low_iteration40_X850_Y868,331,INTB,gan,low,40,850,868,not a real world object,865,1,1,1,0,N/A,no
+48_INTB_sd_low_iteration79_X850_Y267,48,INTB,sd,low,79,850,267,850,850,0,0,0,0,yes,yes
+51_INTB_sd_low_iteration24_X850_Y865,51,INTB,sd,low,24,850,865,850,865,0,1,0,0,yes,N/A
+317_INTB_gan_low_iteration99_X850_Y865,317,INTB,gan,low,99,850,865,850,865,0,1,0,0,yes,N/A
+22_INTB_sd_low_iteration53_X850_Y181,22,INTB,sd,low,53,850,181,850,265,0,1,0,0,yes,N/A
+234_INTB_gan_high_iteration49_X850_Y865,234,INTB,gan,high,49,850,865,850,265,0,1,0,0,yes,N/A
+283_INTB_vae_high_iteration1_X850_Y684,283,INTB,vae,high,1,850,684,850,265,0,1,0,0,yes,N/A
+119_INTB_sd_high_iteration1_X850_Y169,119,INTB,sd,high,1,850,169,850,265,0,1,0,0,yes,N/A
+238_INTB_gan_high_iteration41_X850_Y911,238,INTB,gan,high,41,850,911,850,265,0,1,0,0,yes,N/A
+55_INTB_sd_low_iteration1_X850_Y333,55,INTB,sd,low,1,850,333,850,not a real world object,0,1,0,1,N/A,N/A
+167_INTB_sd_high_iteration3_X850_Y333,167,INTB,sd,high,3,850,333,850,266,0,1,0,0,yes,N/A
+307_INTB_gan_low_iteration69_X850_Y431,307,INTB,gan,low,69,850,431,850,265,0,1,0,0,yes,N/A
+350_INTB_gan_low_iteration103_X850_Y951,350,INTB,gan,low,103,850,951,850,265,0,1,0,0,yes,N/A
+355_INTB_gan_low_iteration63_X850_Y973,355,INTB,gan,low,63,850,973,850,865,0,1,0,0,yes,N/A
+66_INTB_sd_low_iteration63_X850_Y188,66,INTB,sd,low,63,850,188,265,865,1,1,0,0,yes,no
+181_INTB_vae_low_iteration29_X850_Y927,181,INTB,vae,low,29,850,927,850,850,0,0,0,0,yes,yes
+138_INTB_sd_high_iteration5_X850_Y260,138,INTB,sd,high,5,850,260,850,850,0,0,0,0,yes,yes
+288_INTB_gan_low_iteration103_X850_Y265,288,INTB,gan,low,103,850,265,850,265,0,1,0,0,yes,N/A
+259_INTB_gan_high_iteration38_X850_Y640,259,INTB,gan,high,38,850,640,850,265,0,1,0,0,yes,N/A
+287_INTB_gan_low_iteration170_X850_Y125,287,INTB,gan,low,170,850,125,260,not a real world object,1,1,0,1,N/A,no
+85_INTB_sd_low_iteration1_X850_Y996,85,INTB,sd,low,1,850,996,267,865,1,1,0,0,yes,no
+309_INTB_gan_low_iteration6_X850_Y181,309,INTB,gan,low,6,850,181,850,265,0,1,0,0,yes,N/A
+260_INTB_gan_high_iteration15_X850_Y415,260,INTB,gan,high,15,850,415,267,865,1,1,0,0,yes,no
+248_INTB_gan_high_iteration11_X850_Y265,248,INTB,gan,high,11,850,265,265,850,1,0,0,0,yes,N/A
+18_INTB_sd_low_iteration62_X850_Y865,18,INTB,sd,low,62,850,865,865,265,1,1,0,0,yes,no
+214_INTB_gan_high_iteration11_X850_Y266,214,INTB,gan,high,11,850,266,265,850,1,0,0,0,yes,N/A
+285_INTB_vae_high_iteration1_X850_Y865,285,INTB,vae,high,1,850,865,850,850,0,0,0,0,yes,yes
+242_INTB_gan_high_iteration31_X850_Y956,242,INTB,gan,high,31,850,956,865,266,1,1,0,0,yes,no
+190_INTB_gan_high_iteration10_X850_Y266,190,INTB,gan,high,10,850,266,265,850,1,0,0,0,yes,N/A
+241_INTB_gan_high_iteration62_X850_Y865,241,INTB,gan,high,62,850,865,265,267,1,1,0,0,yes,no
+168_INTB_sd_high_iteration3_X850_Y296,168,INTB,sd,high,3,850,296,865,850,1,0,0,0,yes,N/A
+351_INTB_gan_low_iteration122_X850_Y191,351,INTB,gan,low,122,850,191,265,996,1,1,0,0,yes,no
+220_INTB_gan_high_iteration18_X850_Y265,220,INTB,gan,high,18,850,265,265,850,1,0,0,0,yes,N/A
+141_INTB_sd_high_iteration1_X850_Y333,141,INTB,sd,high,1,850,333,865,865,1,1,0,0,yes,no
+161_INTB_sd_high_iteration1_X850_Y980,161,INTB,sd,high,1,850,980,850,265,0,1,0,0,yes,N/A
+21_INTB_sd_low_iteration1_X850_Y996,21,INTB,sd,low,1,850,996,850,865,0,1,0,0,yes,N/A
+23_INTB_sd_low_iteration19_X850_Y189,23,INTB,sd,low,19,850,189,865,865,1,1,0,0,yes,no
+201_INTB_gan_high_iteration24_X850_Y568,201,INTB,gan,high,24,850,568,850,850,0,0,0,0,yes,yes
+281_INTB_vae_high_iteration1_X850_Y927,281,INTB,vae,high,1,850,927,850,850,0,0,0,0,yes,yes
+207_INTB_gan_high_iteration10_X850_Y265,207,INTB,gan,high,10,850,265,850,265,0,1,0,0,yes,N/A
+146_INTB_sd_high_iteration18_X850_Y265,146,INTB,sd,high,18,850,265,850,265,0,1,0,0,yes,N/A
+49_INTB_sd_low_iteration23_X850_Y865,49,INTB,sd,low,23,850,865,865,865,1,1,0,0,yes,no
+143_INTB_sd_high_iteration17_X850_Y865,143,INTB,sd,high,17,850,865,850,850,0,0,0,0,yes,yes
+338_INTB_gan_low_iteration133_X850_Y435,338,INTB,gan,low,133,850,435,a different real world object,850,1,0,0,0,yes,N/A
+29_INTB_sd_low_iteration51_X850_Y222,29,INTB,sd,low,51,850,222,850,850,0,0,0,0,yes,yes
+284_INTB_vae_high_iteration3_X850_Y153,284,INTB,vae,high,3,850,153,a different real world object,850,1,0,0,0,yes,N/A
+323_INTB_gan_low_iteration217_X850_Y889,323,INTB,gan,low,217,850,889,a different real world object,not a real world object,1,1,0,1,N/A,no
+240_INTB_gan_high_iteration17_X850_Y267,240,INTB,gan,high,17,850,267,265,266,1,1,0,0,yes,no
+332_INTB_gan_low_iteration40_X850_Y260,332,INTB,gan,low,40,850,260,260,267,1,1,0,0,yes,no
+24_INTB_sd_low_iteration70_X850_Y995,24,INTB,sd,low,70,850,995,a different real world object,850,1,0,0,0,yes,N/A
+71_INTB_sd_low_iteration14_X850_Y265,71,INTB,sd,low,14,850,265,260,850,1,0,0,0,yes,N/A
+91_INTB_sd_high_iteration1_X850_Y260,91,INTB,sd,high,1,850,260,a different real world object,850,1,0,0,0,yes,N/A
+177_INTB_vae_low_iteration17_X850_Y388,177,INTB,vae,low,17,850,388,260,850,1,0,0,0,yes,N/A
+35_INTB_sd_low_iteration13_X850_Y267,35,INTB,sd,low,13,850,267,850,850,0,0,0,0,yes,yes
+254_INTB_gan_high_iteration14_X850_Y415,254,INTB,gan,high,14,850,415,850,865,0,1,0,0,yes,N/A
+306_INTB_gan_low_iteration131_X850_Y265,306,INTB,gan,low,131,850,265,850,850,0,0,0,0,yes,yes
+345_INTB_gan_low_iteration107_X850_Y291,345,INTB,gan,low,107,850,291,850,865,0,1,0,0,yes,N/A
+156_INTB_sd_high_iteration5_X850_Y963,156,INTB,sd,high,5,850,963,850,850,0,0,0,0,yes,yes
+315_INTB_gan_low_iteration162_X850_Y951,315,INTB,gan,low,162,850,951,850,865,0,1,0,0,yes,N/A
+203_INTB_gan_high_iteration10_X850_Y865,203,INTB,gan,high,10,850,865,850,865,0,1,0,0,yes,N/A
+5_INTB_sd_low_iteration7_X850_Y265,5,INTB,sd,low,7,850,265,850,850,0,0,0,0,yes,yes
+126_INTB_sd_high_iteration4_X850_Y496,126,INTB,sd,high,4,850,496,850,850,0,0,0,0,yes,yes
+360_INTB_gan_low_iteration74_X850_Y568,360,INTB,gan,low,74,850,568,850,850,0,0,0,0,yes,yes
+330_INTB_gan_low_iteration152_X850_Y257,330,INTB,gan,low,152,850,257,a different real world object,a different real world object,1,1,0,0,yes,no
+80_INTB_sd_low_iteration15_X850_Y415,80,INTB,sd,low,15,850,415,850,865,0,1,0,0,yes,N/A
+261_INTB_gan_high_iteration20_X850_Y516,261,INTB,gan,high,20,850,516,850,850,0,0,0,0,yes,yes
+202_INTB_gan_high_iteration24_X850_Y619,202,INTB,gan,high,24,850,619,415,a different real world object,1,1,0,0,yes,no
+0_INTB_sd_low_iteration123_X850_Y188,0,INTB,sd,low,123,850,188,850,267,0,1,0,0,yes,N/A
+247_INTB_gan_high_iteration11_X850_Y415,247,INTB,gan,high,11,850,415,865,865,1,1,0,0,yes,no
+290_INTB_gan_low_iteration118_X850_Y865,290,INTB,gan,low,118,850,865,865,865,1,1,0,0,yes,no
+282_INTB_vae_high_iteration1_X850_Y341,282,INTB,vae,high,1,850,341,265,850,1,0,0,0,yes,N/A
+34_INTB_sd_low_iteration85_X850_Y415,34,INTB,sd,low,85,850,415,850,865,0,1,0,0,yes,N/A
+251_INTB_gan_high_iteration19_X850_Y415,251,INTB,gan,high,19,850,415,865,865,1,1,0,0,yes,no
+153_INTB_sd_high_iteration7_X850_Y996,153,INTB,sd,high,7,850,996,850,850,0,0,0,0,yes,yes
+339_INTB_gan_low_iteration34_X850_Y296,339,INTB,gan,low,34,850,296,850,850,0,0,0,0,yes,yes
+52_INTB_sd_low_iteration1_X850_Y191,52,INTB,sd,low,1,850,191,850,850,0,0,0,0,yes,yes
+121_INTB_sd_high_iteration1_X850_Y12,121,INTB,sd,high,1,850,12,850,850,0,0,0,0,yes,yes
+221_INTB_gan_high_iteration19_X850_Y267,221,INTB,gan,high,19,850,267,850,850,0,0,0,0,yes,yes
+92_INTB_sd_high_iteration16_X850_Y973,92,INTB,sd,high,16,850,973,850,850,0,0,0,0,yes,yes
+170_INTB_sd_high_iteration12_X850_Y865,170,INTB,sd,high,12,850,865,850,850,0,0,0,0,yes,yes
+206_INTB_gan_high_iteration21_X850_Y267,206,INTB,gan,high,21,850,267,850,850,0,0,0,0,yes,yes
+194_INTB_gan_high_iteration52_X850_Y995,194,INTB,gan,high,52,850,995,850,850,0,0,0,0,yes,yes
+135_INTB_sd_high_iteration4_X850_Y996,135,INTB,sd,high,4,850,996,850,850,0,0,0,0,yes,yes
+46_INTB_sd_low_iteration1_X850_Y911,46,INTB,sd,low,1,850,911,850,850,0,0,0,0,yes,yes
+130_INTB_sd_high_iteration8_X850_Y865,130,INTB,sd,high,8,850,865,850,850,0,0,0,0,yes,yes
+14_INTB_sd_low_iteration6_X850_Y265,14,INTB,sd,low,6,850,265,850,850,0,0,0,0,yes,yes
+100_INTB_sd_high_iteration1_X850_Y865,100,INTB,sd,high,1,850,865,865,850,1,0,0,0,yes,N/A
+81_INTB_sd_low_iteration38_X850_Y189,81,INTB,sd,low,38,850,189,265,850,1,0,0,0,yes,N/A
+293_INTB_gan_low_iteration181_X850_Y995,293,INTB,gan,low,181,850,995,850,850,0,0,0,0,yes,yes
+359_INTB_gan_low_iteration18_X850_Y955,359,INTB,gan,low,18,850,955,a different real world object,850,1,0,0,0,yes,N/A
+294_INTB_gan_low_iteration150_X850_Y865,294,INTB,gan,low,150,850,865,865,850,1,0,0,0,yes,N/A
+12_INTB_sd_low_iteration40_X850_Y496,12,INTB,sd,low,40,850,496,265,850,1,0,0,0,yes,N/A
+69_INTB_sd_low_iteration4_X850_Y911,69,INTB,sd,low,4,850,911,265,850,1,0,0,0,yes,N/A
+324_INTB_gan_low_iteration55_X850_Y434,324,INTB,gan,low,55,850,434,265,not a real world object,1,1,0,1,N/A,no
+327_INTB_gan_low_iteration117_X850_Y359,327,INTB,gan,low,117,850,359,a different real world object,not a real world object,1,1,0,1,N/A,no
+274_INTB_vae_high_iteration1_X850_Y812,274,INTB,vae,high,1,850,812,850,850,0,0,0,0,yes,yes
+233_INTB_gan_high_iteration17_X850_Y865,233,INTB,gan,high,17,850,865,850,850,0,0,0,0,yes,yes
+32_INTB_sd_low_iteration1_X850_Y377,32,INTB,sd,low,1,850,377,850,850,0,0,0,0,yes,yes
+63_INTB_sd_low_iteration47_X850_Y265,63,INTB,sd,low,47,850,265,850,850,0,0,0,0,yes,yes
+42_INTB_sd_low_iteration94_X850_Y996,42,INTB,sd,low,94,850,996,865,850,1,0,0,0,yes,N/A
+8_INTB_sd_low_iteration91_X850_Y865,8,INTB,sd,low,91,850,865,850,850,0,0,0,0,yes,yes
+176_INTB_vae_low_iteration15_X850_Y844,176,INTB,vae,low,15,850,844,850,850,0,0,0,0,yes,yes
+120_INTB_sd_high_iteration1_X850_Y996,120,INTB,sd,high,1,850,996,865,850,1,0,0,0,yes,N/A
+54_INTB_sd_low_iteration126_X850_Y616,54,INTB,sd,low,126,850,616,265,850,1,0,0,0,yes,N/A
+178_INTB_vae_low_iteration25_X850_Y961,178,INTB,vae,low,25,850,961,850,850,0,0,0,0,yes,yes
+344_INTB_gan_low_iteration86_X850_Y189,344,INTB,gan,low,86,850,189,not a real world object,266,1,1,1,0,N/A,no
+270_INTB_gan_high_iteration32_X850_Y406,270,INTB,gan,high,32,850,406,not a real world object,850,1,0,1,0,N/A,N/A
+275_INTB_vae_high_iteration1_X850_Y258,275,INTB,vae,high,1,850,258,850,850,0,0,0,0,yes,yes
+269_INTB_gan_high_iteration18_X850_Y266,269,INTB,gan,high,18,850,266,not a real world object,850,1,0,1,0,N/A,N/A
+67_INTB_sd_low_iteration18_X850_Y189,67,INTB,sd,low,18,850,189,850,850,0,0,0,0,yes,yes
+183_INTB_vae_low_iteration8_X850_Y406,183,INTB,vae,low,8,850,406,850,850,0,0,0,0,yes,yes
+31_INTB_sd_low_iteration1_X850_Y996,31,INTB,sd,low,1,850,996,not a real world object,850,1,0,1,0,N/A,N/A
+253_INTB_gan_high_iteration12_X850_Y415,253,INTB,gan,high,12,850,415,not a real world object,850,1,0,1,0,N/A,N/A
+370_INTB_gan_low_iteration87_X850_Y787,370,INTB,gan,low,87,850,787,not a real world object,a different real world object,1,1,1,0,N/A,no
+212_INTB_gan_high_iteration42_X850_Y921,212,INTB,gan,high,42,850,921,865,a different real world object,1,1,0,0,yes,no
+13_INTB_sd_low_iteration113_X850_Y206,13,INTB,sd,low,113,850,206,850,265,0,1,0,0,yes,N/A
+278_INTB_vae_high_iteration1_X850_Y927,278,INTB,vae,high,1,850,927,a different real world object,a different real world object,1,1,0,0,yes,no
+303_INTB_gan_low_iteration170_X850_Y995,303,INTB,gan,low,170,850,995,not a real world object,not a real world object,1,1,1,1,no,N/A
+268_INTB_gan_high_iteration10_X850_Y266,268,INTB,gan,high,10,850,266,265,260,1,1,0,0,yes,no
+107_INTB_sd_high_iteration7_X850_Y996,107,INTB,sd,high,7,850,996,850,265,0,1,0,0,yes,N/A
+40_INTB_sd_low_iteration41_X850_Y296,40,INTB,sd,low,41,850,296,850,not a real world object,0,1,0,1,N/A,N/A
+118_INTB_sd_high_iteration9_X850_Y260,118,INTB,sd,high,9,850,260,850,850,0,0,0,0,yes,yes
+53_INTB_sd_low_iteration1_X850_Y260,53,INTB,sd,low,1,850,260,850,850,0,0,0,0,yes,yes
+116_INTB_sd_high_iteration6_X850_Y260,116,INTB,sd,high,6,850,260,850,850,0,0,0,0,yes,yes
+337_INTB_gan_low_iteration13_X850_Y865,337,INTB,gan,low,13,850,865,865,850,1,0,0,0,yes,N/A
+122_INTB_sd_high_iteration5_X850_Y961,122,INTB,sd,high,5,850,961,850,850,0,0,0,0,yes,yes
+7_INTB_sd_low_iteration1_X850_Y865,7,INTB,sd,low,1,850,865,850,850,0,0,0,0,yes,yes
+10_INTB_sd_low_iteration1_X850_Y265,10,INTB,sd,low,1,850,265,265,850,1,0,0,0,yes,N/A
+230_INTB_gan_high_iteration11_X850_Y265,230,INTB,gan,high,11,850,265,265,850,1,0,0,0,yes,N/A
+219_INTB_gan_high_iteration23_X850_Y265,219,INTB,gan,high,23,850,265,265,850,1,0,0,0,yes,N/A
+188_INTB_gan_high_iteration41_X850_Y265,188,INTB,gan,high,41,850,265,265,850,1,0,0,0,yes,N/A
+75_INTB_sd_low_iteration104_X850_Y191,75,INTB,sd,low,104,850,191,850,850,0,0,0,0,yes,yes
+74_INTB_sd_low_iteration57_X850_Y865,74,INTB,sd,low,57,850,865,865,865,1,1,0,0,yes,no
+82_INTB_sd_low_iteration45_X850_Y332,82,INTB,sd,low,45,850,332,850,265,0,1,0,0,yes,N/A
+11_INTB_sd_low_iteration1_X850_Y267,11,INTB,sd,low,1,850,267,850,265,0,1,0,0,yes,N/A
+226_INTB_gan_high_iteration17_X850_Y415,226,INTB,gan,high,17,850,415,865,865,1,1,0,0,yes,no
+15_INTB_sd_low_iteration71_X850_Y865,15,INTB,sd,low,71,850,865,865,865,1,1,0,0,yes,no
+88_INTB_sd_high_iteration2_X850_Y189,88,INTB,sd,high,2,850,189,850,865,0,1,0,0,yes,N/A
+326_INTB_gan_low_iteration178_X850_Y950,326,INTB,gan,low,178,850,950,a different real world object,a different real world object,1,1,0,0,yes,no
+289_INTB_gan_low_iteration96_X850_Y265,289,INTB,gan,low,96,850,265,850,850,0,0,0,0,yes,yes
+158_INTB_sd_high_iteration6_X850_Y188,158,INTB,sd,high,6,850,188,865,865,1,1,0,0,yes,no
+336_INTB_gan_low_iteration69_X850_Y728,336,INTB,gan,low,69,850,728,865,a different real world object,1,1,0,0,yes,no
+165_INTB_sd_high_iteration19_X850_Y958,165,INTB,sd,high,19,850,958,850,850,0,0,0,0,yes,yes
+123_INTB_sd_high_iteration1_X850_Y191,123,INTB,sd,high,1,850,191,850,850,0,0,0,0,yes,yes
+292_INTB_gan_low_iteration169_X850_Y265,292,INTB,gan,low,169,850,265,850,265,0,1,0,0,yes,N/A
+189_INTB_gan_high_iteration23_X850_Y415,189,INTB,gan,high,23,850,415,850,865,0,1,0,0,yes,N/A
+227_INTB_gan_high_iteration44_X850_Y911,227,INTB,gan,high,44,850,911,850,not a real world object,0,1,0,1,N/A,N/A
+19_INTB_sd_low_iteration1_X850_Y33,19,INTB,sd,low,1,850,33,850,850,0,0,0,0,yes,yes
+95_INTB_sd_high_iteration11_X850_Y191,95,INTB,sd,high,11,850,191,850,850,0,0,0,0,yes,yes
+333_INTB_gan_low_iteration43_X850_Y865,333,INTB,gan,low,43,850,865,850,not a real world object,0,1,0,1,N/A,N/A
+222_INTB_gan_high_iteration34_X850_Y496,222,INTB,gan,high,34,850,496,850,850,0,0,0,0,yes,yes
+2_INTB_sd_low_iteration47_X850_Y333,2,INTB,sd,low,47,850,333,850,850,0,0,0,0,yes,yes
+328_INTB_gan_low_iteration36_X850_Y443,328,INTB,gan,low,36,850,443,a different real world object,a different real world object,1,1,0,0,yes,no
+93_INTB_sd_high_iteration3_X850_Y189,93,INTB,sd,high,3,850,189,850,850,0,0,0,0,yes,yes
+150_INTB_sd_high_iteration13_X850_Y191,150,INTB,sd,high,13,850,191,850,850,0,0,0,0,yes,yes
+173_INTB_vae_low_iteration2_X850_Y872,173,INTB,vae,low,2,850,872,850,850,0,0,0,0,yes,yes
+216_INTB_gan_high_iteration33_X850_Y911,216,INTB,gan,high,33,850,911,850,850,0,0,0,0,yes,yes
+204_INTB_gan_high_iteration11_X850_Y266,204,INTB,gan,high,11,850,266,267,850,1,0,0,0,yes,N/A
+272_INTB_vae_high_iteration1_X850_Y865,272,INTB,vae,high,1,850,865,850,850,0,0,0,0,yes,yes
+349_INTB_gan_low_iteration187_X850_Y865,349,INTB,gan,low,187,850,865,not a real world object,850,1,0,1,0,N/A,N/A
+368_INTB_gan_low_iteration117_X850_Y865,368,INTB,gan,low,117,850,865,not a real world object,850,1,0,1,0,N/A,N/A
+313_INTB_gan_low_iteration51_X850_Y492,313,INTB,gan,low,51,850,492,850,850,0,0,0,0,yes,yes
+298_INTB_gan_low_iteration17_X850_Y354,298,INTB,gan,low,17,850,354,850,850,0,0,0,0,yes,yes
+133_INTB_sd_high_iteration20_X850_Y191,133,INTB,sd,high,20,850,191,850,850,0,0,0,0,yes,yes
+106_INTB_sd_high_iteration3_X850_Y388,106,INTB,sd,high,3,850,388,850,850,0,0,0,0,yes,yes
+334_INTB_gan_low_iteration46_X850_Y191,334,INTB,gan,low,46,850,191,850,850,0,0,0,0,yes,yes
+59_INTB_sd_low_iteration110_X850_Y865,59,INTB,sd,low,110,850,865,850,850,0,0,0,0,yes,yes
+185_INTB_vae_low_iteration17_X850_Y156,185,INTB,vae,low,17,850,156,not a real world object,850,1,0,1,0,N/A,N/A
+267_INTB_gan_high_iteration10_X850_Y267,267,INTB,gan,high,10,850,267,850,850,0,0,0,0,yes,yes
+329_INTB_gan_low_iteration190_X850_Y741,329,INTB,gan,low,190,850,741,not a real world object,a different real world object,1,1,1,0,N/A,no
+4_INTB_sd_low_iteration16_X850_Y995,4,INTB,sd,low,16,850,995,850,850,0,0,0,0,yes,yes
+357_INTB_gan_low_iteration99_X850_Y265,357,INTB,gan,low,99,850,265,850,850,0,0,0,0,yes,yes
+361_INTB_gan_low_iteration87_X850_Y265,361,INTB,gan,low,87,850,265,850,267,0,1,0,0,yes,N/A
+325_INTB_gan_low_iteration105_X850_Y434,325,INTB,gan,low,105,850,434,850,267,0,1,0,0,yes,N/A
+297_INTB_gan_low_iteration94_X850_Y219,297,INTB,gan,low,94,850,219,850,850,0,0,0,0,yes,yes
+273_INTB_vae_high_iteration2_X850_Y865,273,INTB,vae,high,2,850,865,850,850,0,0,0,0,yes,yes
+109_INTB_sd_high_iteration16_X850_Y267,109,INTB,sd,high,16,850,267,850,850,0,0,0,0,yes,yes
+343_INTB_gan_low_iteration177_X850_Y388,343,INTB,gan,low,177,850,388,850,850,0,0,0,0,yes,yes
+127_INTB_sd_high_iteration1_X850_Y643,127,INTB,sd,high,1,850,643,850,850,0,0,0,0,yes,yes
+252_INTB_gan_high_iteration29_X850_Y658,252,INTB,gan,high,29,850,658,850,850,0,0,0,0,yes,yes
+45_INTB_sd_low_iteration128_X850_Y996,45,INTB,sd,low,128,850,996,850,850,0,0,0,0,yes,yes
+152_INTB_sd_high_iteration25_X850_Y865,152,INTB,sd,high,25,850,865,850,850,0,0,0,0,yes,yes
+163_INTB_sd_high_iteration3_X850_Y865,163,INTB,sd,high,3,850,865,850,850,0,0,0,0,yes,yes
+140_INTB_sd_high_iteration9_X850_Y529,140,INTB,sd,high,9,850,529,850,850,0,0,0,0,yes,yes
+200_INTB_gan_high_iteration47_X850_Y889,200,INTB,gan,high,47,850,889,not a real world object,a different real world object,1,1,1,0,N/A,no
+160_INTB_sd_high_iteration13_X850_Y996,160,INTB,sd,high,13,850,996,850,850,0,0,0,0,yes,yes
+108_INTB_sd_high_iteration18_X850_Y228,108,INTB,sd,high,18,850,228,850,260,0,1,0,0,yes,N/A
+199_INTB_gan_high_iteration10_X850_Y266,199,INTB,gan,high,10,850,266,850,260,0,1,0,0,yes,N/A
+304_INTB_gan_low_iteration86_X850_Y328,304,INTB,gan,low,86,850,328,850,267,0,1,0,0,yes,N/A
+6_INTB_sd_low_iteration22_X850_Y338,6,INTB,sd,low,22,850,338,850,260,0,1,0,0,yes,N/A
+96_INTB_sd_high_iteration2_X850_Y267,96,INTB,sd,high,2,850,267,850,260,0,1,0,0,yes,N/A
+256_INTB_gan_high_iteration19_X850_Y257,256,INTB,gan,high,19,850,257,850,850,0,0,0,0,yes,yes
+94_INTB_sd_high_iteration1_X850_Y33,94,INTB,sd,high,1,850,33,850,850,0,0,0,0,yes,yes
+44_INTB_sd_low_iteration42_X850_Y588,44,INTB,sd,low,42,850,588,850,850,0,0,0,0,yes,yes
+102_INTB_sd_high_iteration18_X850_Y265,102,INTB,sd,high,18,850,265,850,850,0,0,0,0,yes,yes
+311_INTB_gan_low_iteration17_X850_Y267,311,INTB,gan,low,17,850,267,850,850,0,0,0,0,yes,yes
+286_INTB_gan_low_iteration211_X850_Y496,286,INTB,gan,low,211,850,496,a different real world object,not a real world object,1,1,0,1,N/A,no
+58_INTB_sd_low_iteration18_X850_Y333,58,INTB,sd,low,18,850,333,850,850,0,0,0,0,yes,yes
+182_INTB_vae_low_iteration8_X850_Y804,182,INTB,vae,low,8,850,804,850,not a real world object,0,1,0,1,N/A,N/A
+3_INTB_sd_low_iteration19_X850_Y333,3,INTB,sd,low,19,850,333,850,850,0,0,0,0,yes,yes
+148_INTB_sd_high_iteration16_X850_Y865,148,INTB,sd,high,16,850,865,850,865,0,1,0,0,yes,N/A
+296_INTB_gan_low_iteration58_X850_Y434,296,INTB,gan,low,58,850,434,a different real world object,not a real world object,1,1,0,1,N/A,no
+98_INTB_sd_high_iteration7_X850_Y995,98,INTB,sd,high,7,850,995,850,850,0,0,0,0,yes,yes
+33_INTB_sd_low_iteration83_X850_Y865,33,INTB,sd,low,83,850,865,865,850,1,0,0,0,yes,N/A
+340_INTB_gan_low_iteration186_X850_Y700,340,INTB,gan,low,186,850,700,not a real world object,not a real world object,1,1,1,1,no,N/A
+64_INTB_sd_low_iteration12_X850_Y260,64,INTB,sd,low,12,850,260,850,850,0,0,0,0,yes,yes
+255_INTB_gan_high_iteration33_X850_Y496,255,INTB,gan,high,33,850,496,850,850,0,0,0,0,yes,yes
+263_INTB_gan_high_iteration43_X850_Y958,263,INTB,gan,high,43,850,958,850,850,0,0,0,0,yes,yes
+257_INTB_gan_high_iteration29_X850_Y265,257,INTB,gan,high,29,850,265,850,850,0,0,0,0,yes,yes
+348_INTB_gan_low_iteration35_X850_Y66,348,INTB,gan,low,35,850,66,850,850,0,0,0,0,yes,yes
+103_INTB_sd_high_iteration12_X850_Y865,103,INTB,sd,high,12,850,865,865,850,1,0,0,0,yes,N/A
+215_INTB_gan_high_iteration16_X850_Y267,215,INTB,gan,high,16,850,267,266,267,1,1,0,0,yes,no
+312_INTB_gan_low_iteration71_X850_Y222,312,INTB,gan,low,71,850,222,not a real world object,850,1,0,1,0,N/A,N/A
+131_INTB_sd_high_iteration1_X850_Y222,131,INTB,sd,high,1,850,222,850,865,0,1,0,0,yes,N/A
+354_INTB_gan_low_iteration108_X850_Y12,354,INTB,gan,low,108,850,12,265,865,1,1,0,0,yes,no
+179_INTB_vae_low_iteration16_X850_Y746,179,INTB,vae,low,16,850,746,850,265,0,1,0,0,yes,N/A
+246_INTB_gan_high_iteration30_X850_Y267,246,INTB,gan,high,30,850,267,850,265,0,1,0,0,yes,N/A
+111_INTB_sd_high_iteration4_X850_Y265,111,INTB,sd,high,4,850,265,850,265,0,1,0,0,yes,N/A
+229_INTB_gan_high_iteration29_X850_Y865,229,INTB,gan,high,29,850,865,260,865,1,1,0,0,yes,no
+193_INTB_gan_high_iteration36_X850_Y496,193,INTB,gan,high,36,850,496,850,850,0,0,0,0,yes,yes
+1_INTB_sd_low_iteration92_X850_Y333,1,INTB,sd,low,92,850,333,850,850,0,0,0,0,yes,yes
+155_INTB_sd_high_iteration1_X850_Y406,155,INTB,sd,high,1,850,406,850,865,0,1,0,0,yes,N/A
+79_INTB_sd_low_iteration45_X850_Y865,79,INTB,sd,low,45,850,865,850,265,0,1,0,0,yes,N/A
+197_INTB_gan_high_iteration13_X850_Y415,197,INTB,gan,high,13,850,415,not a real world object,265,1,1,1,0,N/A,no
+310_INTB_gan_low_iteration47_X850_Y266,310,INTB,gan,low,47,850,266,850,260,0,1,0,0,yes,N/A
+136_INTB_sd_high_iteration2_X850_Y191,136,INTB,sd,high,2,850,191,850,260,0,1,0,0,yes,N/A
+347_INTB_gan_low_iteration142_X850_Y330,347,INTB,gan,low,142,850,330,850,260,0,1,0,0,yes,N/A
+225_INTB_gan_high_iteration10_X850_Y266,225,INTB,gan,high,10,850,266,850,850,0,0,0,0,yes,yes
+124_INTB_sd_high_iteration14_X850_Y219,124,INTB,sd,high,14,850,219,850,850,0,0,0,0,yes,yes
+132_INTB_sd_high_iteration5_X850_Y188,132,INTB,sd,high,5,850,188,850,850,0,0,0,0,yes,yes
+149_INTB_sd_high_iteration1_X850_Y996,149,INTB,sd,high,1,850,996,not a real world object,850,1,0,1,0,N/A,N/A
+358_INTB_gan_low_iteration84_X850_Y728,358,INTB,gan,low,84,850,728,a different real world object,265,1,1,0,0,yes,no
+308_INTB_gan_low_iteration45_X850_Y515,308,INTB,gan,low,45,850,515,850,850,0,0,0,0,yes,yes
+362_INTB_gan_low_iteration89_X850_Y568,362,INTB,gan,low,89,850,568,850,a different real world object,0,1,0,0,yes,N/A
+27_INTB_sd_low_iteration65_X850_Y568,27,INTB,sd,low,65,850,568,not a real world object,not a real world object,1,1,1,1,no,N/A
+62_INTB_sd_low_iteration8_X850_Y191,62,INTB,sd,low,8,850,191,850,850,0,0,0,0,yes,yes
+321_INTB_gan_low_iteration110_X850_Y388,321,INTB,gan,low,110,850,388,850,850,0,0,0,0,yes,yes
+265_INTB_gan_high_iteration72_X850_Y247,265,INTB,gan,high,72,850,247,not a real world object,850,1,0,1,0,N/A,N/A
+184_INTB_vae_low_iteration7_X850_Y999,184,INTB,vae,low,7,850,999,850,850,0,0,0,0,yes,yes
+249_INTB_gan_high_iteration20_X850_Y415,249,INTB,gan,high,20,850,415,not a real world object,a different real world object,1,1,1,0,N/A,no
+110_INTB_sd_high_iteration2_X850_Y415,110,INTB,sd,high,2,850,415,not a real world object,not a real world object,1,1,1,1,no,N/A
+50_INTB_sd_low_iteration1_X850_Y963,50,INTB,sd,low,1,850,963,850,850,0,0,0,0,yes,yes
+86_INTB_sd_high_iteration1_X850_Y267,86,INTB,sd,high,1,850,267,850,850,0,0,0,0,yes,yes
+245_INTB_gan_high_iteration9_X850_Y265,245,INTB,gan,high,9,850,265,260,850,1,0,0,0,yes,N/A
+280_INTB_vae_high_iteration1_X850_Y956,280,INTB,vae,high,1,850,956,850,850,0,0,0,0,yes,yes
+83_INTB_sd_low_iteration38_X850_Y260,83,INTB,sd,low,38,850,260,850,850,0,0,0,0,yes,yes
+217_INTB_gan_high_iteration16_X850_Y267,217,INTB,gan,high,16,850,267,260,850,1,0,0,0,yes,N/A
+144_INTB_sd_high_iteration2_X850_Y267,144,INTB,sd,high,2,850,267,260,not a real world object,1,1,0,1,N/A,no
+244_INTB_gan_high_iteration32_X850_Y469,244,INTB,gan,high,32,850,469,not a real world object,not a real world object,1,1,1,1,no,N/A
+213_INTB_gan_high_iteration45_X850_Y637,213,INTB,gan,high,45,850,637,a different real world object,a different real world object,1,1,0,0,yes,no
+232_INTB_gan_high_iteration29_X850_Y388,232,INTB,gan,high,29,850,388,260,850,1,0,0,0,yes,N/A
+169_INTB_sd_high_iteration1_X850_Y265,169,INTB,sd,high,1,850,265,260,850,1,0,0,0,yes,N/A
+60_INTB_sd_low_iteration155_X850_Y181,60,INTB,sd,low,155,850,181,265,850,1,0,0,0,yes,N/A
+228_INTB_gan_high_iteration20_X850_Y957,228,INTB,gan,high,20,850,957,265,850,1,0,0,0,yes,N/A
+134_INTB_sd_high_iteration7_X850_Y588,134,INTB,sd,high,7,850,588,265,850,1,0,0,0,yes,N/A
+78_INTB_sd_low_iteration83_X850_Y911,78,INTB,sd,low,83,850,911,850,850,0,0,0,0,yes,yes
+299_INTB_gan_low_iteration59_X850_Y151,299,INTB,gan,low,59,850,151,267,850,1,0,0,0,yes,N/A
+166_INTB_sd_high_iteration1_X850_Y591,166,INTB,sd,high,1,850,591,267,850,1,0,0,0,yes,N/A
+314_INTB_gan_low_iteration101_X850_Y125,314,INTB,gan,low,101,850,125,415,850,1,0,0,0,yes,N/A
+300_INTB_gan_low_iteration54_X850_Y184,300,INTB,gan,low,54,850,184,850,850,0,0,0,0,yes,yes
+266_INTB_gan_high_iteration38_X850_Y452,266,INTB,gan,high,38,850,452,850,850,0,0,0,0,yes,yes
+154_INTB_sd_high_iteration1_X850_Y228,154,INTB,sd,high,1,850,228,850,850,0,0,0,0,yes,yes
+279_INTB_vae_high_iteration1_X850_Y931,279,INTB,vae,high,1,850,931,850,850,0,0,0,0,yes,yes
+151_INTB_sd_high_iteration1_X850_Y260,151,INTB,sd,high,1,850,260,850,850,0,0,0,0,yes,yes
+258_INTB_gan_high_iteration44_X850_Y796,258,INTB,gan,high,44,850,796,850,850,0,0,0,0,yes,yes
+320_INTB_gan_low_iteration39_X850_Y937,320,INTB,gan,low,39,850,937,850,850,0,0,0,0,yes,yes
+341_INTB_gan_low_iteration87_X850_Y265,341,INTB,gan,low,87,850,265,850,850,0,0,0,0,yes,yes
+295_INTB_gan_low_iteration244_X850_Y434,295,INTB,gan,low,244,850,434,not a real world object,850,1,0,1,0,N/A,N/A
+105_INTB_sd_high_iteration19_X850_Y191,105,INTB,sd,high,19,850,191,850,850,0,0,0,0,yes,yes
+147_INTB_sd_high_iteration2_X850_Y434,147,INTB,sd,high,2,850,434,265,850,1,0,0,0,yes,N/A
+9_INTB_sd_low_iteration69_X850_Y207,9,INTB,sd,low,69,850,207,850,850,0,0,0,0,yes,yes
+342_INTB_gan_low_iteration119_X850_Y719,342,INTB,gan,low,119,850,719,850,850,0,0,0,0,yes,yes
+38_INTB_sd_low_iteration93_X850_Y191,38,INTB,sd,low,93,850,191,850,850,0,0,0,0,yes,yes
+319_INTB_gan_low_iteration193_X850_Y502,319,INTB,gan,low,193,850,502,not a real world object,850,1,0,1,0,N/A,N/A
