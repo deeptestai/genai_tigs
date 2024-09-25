@@ -1,0 +1,352 @@
+Image URL,ID,DATASET,TOOL,MUT_EXT,ITER,Expected,Predicted,ASS 1,ASS 2,Misclass Human 1,Misclass Human 2,Valid Human 1,Valid Human 2,Validity?,Label Preservation?
+344_CIF_sd_high_iteration32_X7_Y3,344,CIF,sd,high,32,7,3,7,7,0,0,0,0,yes,yes
+33_CIF_sd_low_iteration1_X2_Y3,33,CIF,sd,low,1,2,3,not a real-world object,5,1,1,1,0,N/A,no
+259_CIF_vae_high_iteration16_X8_Y3,259,CIF,vae,high,16,8,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+334_CIF_sd_high_iteration1_X4_Y3,334,CIF,sd,high,1,4,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+9_CIF_vae_low_iteration62_X4_Y7,9,CIF,vae,low,62,4,7,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+254_CIF_vae_high_iteration1_X7_Y2,254,CIF,vae,high,1,7,2,not a real-world object,3,1,1,1,0,N/A,no
+107_CIF_sd_low_iteration150_X0_Y8,107,CIF,sd,low,150,0,8,0,0,0,0,0,0,yes,yes
+127_CIF_gan_high_iteration1_X5_Y2,127,CIF,gan,high,1,5,2,not a real-world object,5,1,0,1,0,N/A,N/A
+105_CIF_sd_low_iteration245_X8_Y3,105,CIF,sd,low,245,8,3,not a real-world object,8,1,0,1,0,N/A,N/A
+8_CIF_vae_low_iteration223_X8_Y0,8,CIF,vae,low,223,8,0,not a real-world object,9,1,1,1,0,N/A,no
+45_CIF_sd_low_iteration163_X5_Y3,45,CIF,sd,low,163,5,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+134_CIF_gan_high_iteration20_X7_Y9,134,CIF,gan,high,20,7,9,7,not a real-world object,0,1,0,1,N/A,N/A
+137_CIF_gan_high_iteration71_X1_Y9,137,CIF,gan,high,71,1,9,1,1,0,0,0,0,yes,yes
+44_CIF_sd_low_iteration1_X8_Y0,44,CIF,sd,low,1,8,0,0,0,1,1,0,0,yes,no
+136_CIF_gan_high_iteration5_X9_Y3,136,CIF,gan,high,5,9,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+332_CIF_sd_high_iteration3_X9_Y3,332,CIF,sd,high,3,9,3,not a real-world object,1,1,1,1,0,N/A,no
+89_CIF_sd_low_iteration1_X7_Y3,89,CIF,sd,low,1,7,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+288_CIF_sd_high_iteration7_X7_Y4,288,CIF,sd,high,7,7,4,7,7,0,0,0,0,yes,yes
+36_CIF_sd_low_iteration9_X9_Y3,36,CIF,sd,low,9,9,3,1,1,1,1,0,0,yes,no
+132_CIF_gan_high_iteration27_X5_Y2,132,CIF,gan,high,27,5,2,2,not a real-world object,1,1,0,1,N/A,no
+20_CIF_vae_low_iteration72_X3_Y6,20,CIF,vae,low,72,3,6,not a real-world object,5,1,1,1,0,N/A,no
+290_CIF_sd_high_iteration1_X7_Y3,290,CIF,sd,high,1,7,3,7,7,0,0,0,0,yes,yes
+229_CIF_vae_high_iteration25_X8_Y0,229,CIF,vae,high,25,8,0,not a real-world object,5,1,1,1,0,N/A,no
+81_CIF_sd_low_iteration50_X2_Y3,81,CIF,sd,low,50,2,3,2,2,0,0,0,0,yes,yes
+84_CIF_sd_low_iteration1_X4_Y2,84,CIF,sd,low,1,4,2,4,4,0,0,0,0,yes,yes
+122_CIF_gan_high_iteration168_X6_Y1,122,CIF,gan,high,168,6,1,not a real-world object,6,1,0,1,0,N/A,N/A
+125_CIF_gan_high_iteration55_X5_Y2,125,CIF,gan,high,55,5,2,not a real-world object,5,1,0,1,0,N/A,N/A
+258_CIF_vae_high_iteration6_X9_Y8,258,CIF,vae,high,6,9,8,not a real-world object,2,1,1,1,0,N/A,no
+150_CIF_gan_high_iteration1_X3_Y5,150,CIF,gan,high,1,3,5,not a real-world object,2,1,1,1,0,N/A,no
+322_CIF_sd_high_iteration26_X4_Y2,322,CIF,sd,high,26,4,2,not a real-world object,4,1,0,1,0,N/A,N/A
+341_CIF_sd_high_iteration7_X9_Y8,341,CIF,sd,high,7,9,8,9,9,0,0,0,0,yes,yes
+203_CIF_gan_low_iteration179_X9_Y1,203,CIF,gan,low,179,9,1,1,9,1,0,0,0,yes,N/A
+57_CIF_sd_low_iteration33_X1_Y0,57,CIF,sd,low,33,1,0,1,1,0,0,0,0,yes,yes
+91_CIF_sd_low_iteration1_X2_Y3,91,CIF,sd,low,1,2,3,2,2,0,0,0,0,yes,yes
+178_CIF_gan_high_iteration7_X5_Y3,178,CIF,gan,high,7,5,3,9,3,1,1,0,0,yes,no
+191_CIF_gan_low_iteration142_X6_Y0,191,CIF,gan,low,142,6,0,6,4,0,1,0,0,yes,N/A
+147_CIF_gan_high_iteration81_X1_Y6,147,CIF,gan,high,81,1,6,2,0,1,1,0,0,yes,no
+37_CIF_sd_low_iteration102_X6_Y3,37,CIF,sd,low,102,6,3,6,5,0,1,0,0,yes,N/A
+52_CIF_sd_low_iteration1_X2_Y4,52,CIF,sd,low,1,2,4,2,2,0,0,0,0,yes,yes
+277_CIF_sd_high_iteration26_X7_Y3,277,CIF,sd,high,26,7,3,7,7,0,0,0,0,yes,yes
+198_CIF_gan_low_iteration26_X7_Y3,198,CIF,gan,low,26,7,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+318_CIF_sd_high_iteration37_X8_Y2,318,CIF,sd,high,37,8,2,8,not a real-world object,0,1,0,1,N/A,N/A
+196_CIF_gan_low_iteration159_X9_Y0,196,CIF,gan,low,159,9,0,1,not a real-world object,1,1,0,1,N/A,no
+189_CIF_gan_low_iteration40_X2_Y5,189,CIF,gan,low,40,2,5,6,not a real-world object,1,1,0,1,N/A,no
+24_CIF_vae_low_iteration24_X7_Y3,24,CIF,vae,low,24,7,3,7,7,0,0,0,0,yes,yes
+93_CIF_sd_low_iteration1_X2_Y4,93,CIF,sd,low,1,2,4,6,not a real-world object,1,1,0,1,N/A,no
+63_CIF_sd_low_iteration128_X3_Y5,63,CIF,sd,low,128,3,5,3,3,0,0,0,0,yes,yes
+326_CIF_sd_high_iteration1_X6_Y4,326,CIF,sd,high,1,6,4,6,not a real-world object,0,1,0,1,N/A,N/A
+247_CIF_vae_high_iteration10_X5_Y3,247,CIF,vae,high,10,5,3,5,5,0,0,0,0,yes,yes
+205_CIF_gan_low_iteration1_X2_Y4,205,CIF,gan,low,1,2,4,9,not a real-world object,1,1,0,1,N/A,no
+176_CIF_gan_high_iteration3_X1_Y9,176,CIF,gan,high,3,1,9,1,9,0,1,0,0,yes,N/A
+192_CIF_gan_low_iteration10_X3_Y5,192,CIF,gan,low,10,3,5,3,5,0,1,0,0,yes,N/A
+95_CIF_sd_low_iteration138_X7_Y3,95,CIF,sd,low,138,7,3,7,7,0,0,0,0,yes,yes
+76_CIF_sd_low_iteration18_X6_Y3,76,CIF,sd,low,18,6,3,6,4,0,1,0,0,yes,N/A
+271_CIF_sd_high_iteration15_X0_Y2,271,CIF,sd,high,15,0,2,0,0,0,0,0,0,yes,yes
+4_CIF_vae_low_iteration137_X8_Y5,4,CIF,vae,low,137,8,5,0,8,1,0,0,0,yes,N/A
+181_CIF_gan_low_iteration1_X0_Y8,181,CIF,gan,low,1,0,8,8,8,1,1,0,0,yes,no
+328_CIF_sd_high_iteration1_X5_Y3,328,CIF,sd,high,1,5,3,4,4,1,1,0,0,yes,no
+67_CIF_sd_low_iteration83_X3_Y2,67,CIF,sd,low,83,3,2,5,5,1,1,0,0,yes,no
+268_CIF_sd_high_iteration10_X2_Y4,268,CIF,sd,high,10,2,4,2,2,0,0,0,0,yes,yes
+230_CIF_vae_high_iteration47_X5_Y3,230,CIF,vae,high,47,5,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+321_CIF_sd_high_iteration15_X1_Y3,321,CIF,sd,high,15,1,3,1,1,0,0,0,0,yes,yes
+216_CIF_gan_low_iteration52_X3_Y0,216,CIF,gan,low,52,3,0,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+103_CIF_sd_low_iteration94_X3_Y4,103,CIF,sd,low,94,3,4,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+337_CIF_sd_high_iteration10_X4_Y3,337,CIF,sd,high,10,4,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+195_CIF_gan_low_iteration204_X5_Y3,195,CIF,gan,low,204,5,3,4,not a real-world object,1,1,0,1,N/A,no
+113_CIF_gan_high_iteration1_X3_Y5,113,CIF,gan,high,1,3,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+255_CIF_vae_high_iteration14_X0_Y2,255,CIF,vae,high,14,0,2,0,0,0,0,0,0,yes,yes
+141_CIF_gan_high_iteration41_X1_Y3,141,CIF,gan,high,41,1,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+245_CIF_vae_high_iteration30_X1_Y9,245,CIF,vae,high,30,1,9,1,not a real-world object,0,1,0,1,N/A,N/A
+346_CIF_sd_high_iteration28_X6_Y2,346,CIF,sd,high,28,6,2,not a real-world object,6,1,0,1,0,N/A,N/A
+172_CIF_gan_high_iteration146_X6_Y1,172,CIF,gan,high,146,6,1,not a real-world object,6,1,0,1,0,N/A,N/A
+303_CIF_sd_high_iteration25_X1_Y8,303,CIF,sd,high,25,1,8,not a real-world object,6,1,1,1,0,N/A,no
+210_CIF_gan_low_iteration138_X7_Y0,210,CIF,gan,low,138,7,0,not a real-world object,7,1,0,1,0,N/A,N/A
+285_CIF_sd_high_iteration18_X1_Y9,285,CIF,sd,high,18,1,9,1,1,0,0,0,0,yes,yes
+22_CIF_vae_low_iteration26_X8_Y0,22,CIF,vae,low,26,8,0,not a real-world object,2,1,1,1,0,N/A,no
+126_CIF_gan_high_iteration7_X7_Y5,126,CIF,gan,high,7,7,5,7,7,0,0,0,0,yes,yes
+324_CIF_sd_high_iteration1_X1_Y3,324,CIF,sd,high,1,1,3,1,9,0,1,0,0,yes,N/A
+142_CIF_gan_high_iteration33_X1_Y9,142,CIF,gan,high,33,1,9,not a real-world object,9,1,1,1,0,N/A,no
+149_CIF_gan_high_iteration9_X1_Y9,149,CIF,gan,high,9,1,9,not a real-world object,9,1,1,1,0,N/A,no
+242_CIF_vae_high_iteration10_X7_Y2,242,CIF,vae,high,10,7,2,not a real-world object,7,1,0,1,0,N/A,N/A
+256_CIF_vae_high_iteration71_X0_Y2,256,CIF,vae,high,71,0,2,not a real-world object,0,1,0,1,0,N/A,N/A
+345_CIF_sd_high_iteration1_X8_Y3,345,CIF,sd,high,1,8,3,not a real-world object,5,1,1,1,0,N/A,no
+311_CIF_sd_high_iteration1_X7_Y3,311,CIF,sd,high,1,7,3,not a real-world object,5,1,1,1,0,N/A,no
+209_CIF_gan_low_iteration1_X6_Y5,209,CIF,gan,low,1,6,5,not a real-world object,5,1,1,1,0,N/A,no
+40_CIF_sd_low_iteration1_X2_Y0,40,CIF,sd,low,1,2,0,2,2,0,0,0,0,yes,yes
+279_CIF_sd_high_iteration49_X0_Y8,279,CIF,sd,high,49,0,8,2,0,1,0,0,0,yes,N/A
+276_CIF_sd_high_iteration27_X3_Y6,276,CIF,sd,high,27,3,6,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+170_CIF_gan_high_iteration1_X5_Y6,170,CIF,gan,high,1,5,6,not a real-world object,5,1,0,1,0,N/A,N/A
+244_CIF_vae_high_iteration46_X1_Y8,244,CIF,vae,high,46,1,8,not a real-world object,1,1,0,1,0,N/A,N/A
+70_CIF_sd_low_iteration56_X9_Y7,70,CIF,sd,low,56,9,7,9,9,0,0,0,0,yes,yes
+88_CIF_sd_low_iteration113_X8_Y6,88,CIF,sd,low,113,8,6,8,8,0,0,0,0,yes,yes
+226_CIF_vae_high_iteration26_X3_Y7,226,CIF,vae,high,26,3,7,2,7,1,1,0,0,yes,no
+291_CIF_sd_high_iteration4_X9_Y7,291,CIF,sd,high,4,9,7,1,9,1,0,0,0,yes,N/A
+248_CIF_vae_high_iteration22_X0_Y2,248,CIF,vae,high,22,0,2,2,2,1,1,0,0,yes,no
+266_CIF_sd_high_iteration17_X9_Y6,266,CIF,sd,high,17,9,6,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+110_CIF_gan_high_iteration3_X3_Y1,110,CIF,gan,high,3,3,1,5,7,1,1,0,0,yes,no
+111_CIF_gan_high_iteration1_X2_Y6,111,CIF,gan,high,1,2,6,2,2,0,0,0,0,yes,yes
+159_CIF_gan_high_iteration71_X6_Y2,159,CIF,gan,high,71,6,2,5,1,1,1,0,0,yes,no
+50_CIF_sd_low_iteration245_X4_Y6,50,CIF,sd,low,245,4,6,1,9,1,1,0,0,yes,no
+348_CIF_sd_high_iteration2_X7_Y4,348,CIF,sd,high,2,7,4,7,7,0,0,0,0,yes,yes
+257_CIF_vae_high_iteration9_X3_Y2,257,CIF,vae,high,9,3,2,5,7,1,1,0,0,yes,no
+183_CIF_gan_low_iteration78_X5_Y3,183,CIF,gan,low,78,5,3,4,5,1,0,0,0,yes,N/A
+58_CIF_sd_low_iteration126_X3_Y1,58,CIF,sd,low,126,3,1,3,5,0,1,0,0,yes,N/A
+307_CIF_sd_high_iteration16_X7_Y5,307,CIF,sd,high,16,7,5,7,7,0,0,0,0,yes,yes
+186_CIF_gan_low_iteration87_X3_Y5,186,CIF,gan,low,87,3,5,not a real-world object,5,1,1,1,0,N/A,no
+101_CIF_sd_low_iteration195_X3_Y8,101,CIF,sd,low,195,3,8,not a real-world object,5,1,1,1,0,N/A,no
+152_CIF_gan_high_iteration9_X3_Y5,152,CIF,gan,high,9,3,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+155_CIF_gan_high_iteration51_X5_Y3,155,CIF,gan,high,51,5,3,5,5,0,0,0,0,yes,yes
+233_CIF_vae_high_iteration5_X3_Y5,233,CIF,vae,high,5,3,5,not a real-world object,1,1,1,1,0,N/A,no
+175_CIF_gan_high_iteration1_X3_Y0,175,CIF,gan,high,1,3,0,1,2,1,1,0,0,yes,no
+131_CIF_gan_high_iteration1_X2_Y0,131,CIF,gan,high,1,2,0,not a real-world object,2,1,0,1,0,N/A,N/A
+41_CIF_sd_low_iteration226_X5_Y4,41,CIF,sd,low,226,5,4,5,3,0,1,0,0,yes,N/A
+117_CIF_gan_high_iteration5_X2_Y5,117,CIF,gan,high,5,2,5,2,2,0,0,0,0,yes,yes
+182_CIF_gan_low_iteration195_X1_Y3,182,CIF,gan,low,195,1,3,1,1,0,0,0,0,yes,yes
+261_CIF_vae_high_iteration40_X3_Y5,261,CIF,vae,high,40,3,5,4,3,1,0,0,0,yes,N/A
+104_CIF_sd_low_iteration1_X7_Y3,104,CIF,sd,low,1,7,3,7,7,0,0,0,0,yes,yes
+327_CIF_sd_high_iteration12_X3_Y5,327,CIF,sd,high,12,3,5,5,2,1,1,0,0,yes,no
+350_CIF_sd_high_iteration1_X1_Y0,350,CIF,sd,high,1,1,0,9,0,1,1,0,0,yes,no
+319_CIF_sd_high_iteration18_X2_Y0,319,CIF,sd,high,18,2,0,2,2,0,0,0,0,yes,yes
+278_CIF_sd_high_iteration25_X3_Y6,278,CIF,sd,high,25,3,6,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+17_CIF_vae_low_iteration31_X3_Y7,17,CIF,vae,low,31,3,7,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+14_CIF_vae_low_iteration123_X4_Y3,14,CIF,vae,low,123,4,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+2_CIF_vae_low_iteration50_X3_Y5,2,CIF,vae,low,50,3,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+1_CIF_vae_low_iteration94_X0_Y2,1,CIF,vae,low,94,0,2,2,0,1,0,0,0,yes,N/A
+10_CIF_vae_low_iteration129_X5_Y3,10,CIF,vae,low,129,5,3,3,not a real-world object,1,1,0,1,N/A,no
+253_CIF_vae_high_iteration5_X3_Y5,253,CIF,vae,high,5,3,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+87_CIF_sd_low_iteration134_X1_Y0,87,CIF,sd,low,134,1,0,1,not a real-world object,0,1,0,1,N/A,N/A
+317_CIF_sd_high_iteration46_X4_Y2,317,CIF,sd,high,46,4,2,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+154_CIF_gan_high_iteration26_X6_Y3,154,CIF,gan,high,26,6,3,6,not a real-world object,0,1,0,1,N/A,N/A
+153_CIF_gan_high_iteration7_X0_Y9,153,CIF,gan,high,7,0,9,1,0,1,0,0,0,yes,N/A
+215_CIF_gan_low_iteration71_X6_Y1,215,CIF,gan,low,71,6,1,not a real-world object,6,1,0,1,0,N/A,N/A
+31_CIF_vae_low_iteration17_X0_Y8,31,CIF,vae,low,17,0,8,9,9,1,1,0,0,yes,no
+29_CIF_vae_low_iteration82_X8_Y3,29,CIF,vae,low,82,8,3,1,8,1,0,0,0,yes,N/A
+16_CIF_vae_low_iteration45_X1_Y3,16,CIF,vae,low,45,1,3,1,1,0,0,0,0,yes,yes
+320_CIF_sd_high_iteration1_X0_Y8,320,CIF,sd,high,1,0,8,9,0,1,0,0,0,yes,N/A
+133_CIF_gan_high_iteration35_X0_Y1,133,CIF,gan,high,35,0,1,0,2,0,1,0,0,yes,N/A
+190_CIF_gan_low_iteration1_X3_Y7,190,CIF,gan,low,1,3,7,not a real-world object,3,1,0,1,0,N/A,N/A
+298_CIF_sd_high_iteration1_X8_Y3,298,CIF,sd,high,1,8,3,not a real-world object,8,1,0,1,0,N/A,N/A
+140_CIF_gan_high_iteration6_X3_Y6,140,CIF,gan,high,6,3,6,not a real-world object,0,1,1,1,0,N/A,no
+106_CIF_sd_low_iteration1_X4_Y3,106,CIF,sd,low,1,4,3,5,5,1,1,0,0,yes,no
+283_CIF_sd_high_iteration11_X8_Y3,283,CIF,sd,high,11,8,3,8,8,0,0,0,0,yes,yes
+208_CIF_gan_low_iteration184_X7_Y5,208,CIF,gan,low,184,7,5,5,3,1,1,0,0,yes,no
+235_CIF_vae_high_iteration24_X7_Y4,235,CIF,vae,high,24,7,4,5,4,1,1,0,0,yes,no
+100_CIF_sd_low_iteration151_X1_Y9,100,CIF,sd,low,151,1,9,1,1,0,0,0,0,yes,yes
+35_CIF_sd_low_iteration5_X4_Y0,35,CIF,sd,low,5,4,0,7,4,1,0,0,0,yes,N/A
+83_CIF_sd_low_iteration140_X5_Y3,83,CIF,sd,low,140,5,3,5,5,0,0,0,0,yes,yes
+204_CIF_gan_low_iteration211_X5_Y4,204,CIF,gan,low,211,5,4,7,7,1,1,0,0,yes,no
+212_CIF_gan_low_iteration215_X2_Y0,212,CIF,gan,low,215,2,0,5,2,1,0,0,0,yes,N/A
+72_CIF_sd_low_iteration23_X0_Y8,72,CIF,sd,low,23,0,8,0,0,0,0,0,0,yes,yes
+162_CIF_gan_high_iteration1_X3_Y5,162,CIF,gan,high,1,3,5,0,5,1,1,0,0,yes,no
+0_CIF_vae_low_iteration87_X2_Y0,0,CIF,vae,low,87,2,0,2,2,0,0,0,0,yes,yes
+284_CIF_sd_high_iteration7_X8_Y3,284,CIF,sd,high,7,8,3,8,8,0,0,0,0,yes,yes
+30_CIF_vae_low_iteration219_X3_Y8,30,CIF,vae,low,219,3,8,2,6,1,1,0,0,yes,no
+219_CIF_gan_low_iteration14_X5_Y2,219,CIF,gan,low,14,5,2,2,5,1,0,0,0,yes,N/A
+340_CIF_sd_high_iteration10_X8_Y0,340,CIF,sd,high,10,8,0,8,4,0,1,0,0,yes,N/A
+281_CIF_sd_high_iteration1_X1_Y3,281,CIF,sd,high,1,1,3,1,1,0,0,0,0,yes,yes
+220_CIF_gan_low_iteration79_X8_Y0,220,CIF,gan,low,79,8,0,2,5,1,1,0,0,yes,no
+6_CIF_vae_low_iteration36_X3_Y5,6,CIF,vae,low,36,3,5,0,5,1,1,0,0,yes,no
+135_CIF_gan_high_iteration15_X1_Y9,135,CIF,gan,high,15,1,9,9,9,1,1,0,0,yes,no
+86_CIF_sd_low_iteration179_X0_Y8,86,CIF,sd,low,179,0,8,2,2,1,1,0,0,yes,no
+48_CIF_sd_low_iteration31_X7_Y4,48,CIF,sd,low,31,7,4,7,7,0,0,0,0,yes,yes
+51_CIF_sd_low_iteration62_X0_Y8,51,CIF,sd,low,62,0,8,0,not a real-world object,0,1,0,1,N/A,N/A
+310_CIF_sd_high_iteration22_X7_Y3,310,CIF,sd,high,22,7,3,7,7,0,0,0,0,yes,yes
+97_CIF_sd_low_iteration1_X7_Y4,97,CIF,sd,low,1,7,4,4,not a real-world object,1,1,0,1,N/A,no
+108_CIF_sd_low_iteration51_X4_Y3,108,CIF,sd,low,51,4,3,4,7,0,1,0,0,yes,N/A
+64_CIF_sd_low_iteration162_X0_Y8,64,CIF,sd,low,162,0,8,2,2,1,1,0,0,yes,no
+331_CIF_sd_high_iteration1_X5_Y4,331,CIF,sd,high,1,5,4,5,not a real-world object,0,1,0,1,N/A,N/A
+273_CIF_sd_high_iteration18_X8_Y3,273,CIF,sd,high,18,8,3,8,not a real-world object,0,1,0,1,N/A,N/A
+166_CIF_gan_high_iteration1_X2_Y0,166,CIF,gan,high,1,2,0,5,not a real-world object,1,1,0,1,N/A,no
+47_CIF_sd_low_iteration14_X5_Y2,47,CIF,sd,low,14,5,2,5,5,0,0,0,0,yes,yes
+274_CIF_sd_high_iteration10_X2_Y3,274,CIF,sd,high,10,2,3,2,2,0,0,0,0,yes,yes
+25_CIF_vae_low_iteration38_X7_Y4,25,CIF,vae,low,38,7,4,5,not a real-world object,1,1,0,1,N/A,no
+294_CIF_sd_high_iteration20_X2_Y4,294,CIF,sd,high,20,2,4,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+77_CIF_sd_low_iteration36_X4_Y2,77,CIF,sd,low,36,4,2,4,4,0,0,0,0,yes,yes
+347_CIF_sd_high_iteration1_X9_Y8,347,CIF,sd,high,1,9,8,1,1,1,1,0,0,yes,no
+38_CIF_sd_low_iteration245_X3_Y6,38,CIF,sd,low,245,3,6,5,not a real-world object,1,1,0,1,N/A,no
+201_CIF_gan_low_iteration1_X3_Y5,201,CIF,gan,low,1,3,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+323_CIF_sd_high_iteration1_X6_Y3,323,CIF,sd,high,1,6,3,6,6,0,0,0,0,yes,yes
+234_CIF_vae_high_iteration15_X3_Y7,234,CIF,vae,high,15,3,7,7,not a real-world object,1,1,0,1,N/A,no
+199_CIF_gan_low_iteration1_X3_Y5,199,CIF,gan,low,1,3,5,not a real-world object,5,1,1,1,0,N/A,no
+82_CIF_sd_low_iteration1_X1_Y3,82,CIF,sd,low,1,1,3,1,1,0,0,0,0,yes,yes
+329_CIF_sd_high_iteration14_X1_Y3,329,CIF,sd,high,14,1,3,1,1,0,0,0,0,yes,yes
+42_CIF_sd_low_iteration171_X4_Y3,42,CIF,sd,low,171,4,3,5,7,1,1,0,0,yes,no
+272_CIF_sd_high_iteration46_X5_Y2,272,CIF,sd,high,46,5,2,5,5,0,0,0,0,yes,yes
+289_CIF_sd_high_iteration25_X3_Y5,289,CIF,sd,high,25,3,5,5,3,1,0,0,0,yes,N/A
+46_CIF_sd_low_iteration138_X4_Y3,46,CIF,sd,low,138,4,3,not a real-world object,4,1,0,1,0,N/A,N/A
+270_CIF_sd_high_iteration1_X7_Y4,270,CIF,sd,high,1,7,4,7,7,0,0,0,0,yes,yes
+237_CIF_vae_high_iteration1_X4_Y6,237,CIF,vae,high,1,4,6,not a real-world object,6,1,1,1,0,N/A,no
+213_CIF_gan_low_iteration1_X3_Y5,213,CIF,gan,low,1,3,5,5,5,1,1,0,0,yes,no
+39_CIF_sd_low_iteration78_X4_Y7,39,CIF,sd,low,78,4,7,4,2,0,1,0,0,yes,N/A
+267_CIF_sd_high_iteration6_X8_Y3,267,CIF,sd,high,6,8,3,not a real-world object,2,1,1,1,0,N/A,no
+299_CIF_sd_high_iteration1_X5_Y3,299,CIF,sd,high,1,5,3,not a real-world object,5,1,0,1,0,N/A,N/A
+325_CIF_sd_high_iteration28_X8_Y1,325,CIF,sd,high,28,8,1,not a real-world object,1,1,1,1,0,N/A,no
+43_CIF_sd_low_iteration118_X6_Y3,43,CIF,sd,low,118,6,3,not a real-world object,3,1,1,1,0,N/A,no
+55_CIF_sd_low_iteration1_X5_Y3,55,CIF,sd,low,1,5,3,5,5,0,0,0,0,yes,yes
+163_CIF_gan_high_iteration26_X9_Y1,163,CIF,gan,high,26,9,1,not a real-world object,1,1,1,1,0,N/A,no
+275_CIF_sd_high_iteration18_X0_Y8,275,CIF,sd,high,18,0,8,0,0,0,0,0,0,yes,yes
+309_CIF_sd_high_iteration9_X7_Y4,309,CIF,sd,high,9,7,4,not a real-world object,4,1,1,1,0,N/A,no
+129_CIF_gan_high_iteration85_X6_Y3,129,CIF,gan,high,85,6,3,not a real-world object,6,1,0,1,0,N/A,N/A
+12_CIF_vae_low_iteration151_X3_Y5,12,CIF,vae,low,151,3,5,2,2,1,1,0,0,yes,no
+23_CIF_vae_low_iteration111_X5_Y3,23,CIF,vae,low,111,5,3,2,5,1,0,0,0,yes,N/A
+177_CIF_gan_high_iteration3_X5_Y7,177,CIF,gan,high,3,5,7,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+85_CIF_sd_low_iteration57_X6_Y3,85,CIF,sd,low,57,6,3,6,6,0,0,0,0,yes,yes
+161_CIF_gan_high_iteration46_X5_Y7,161,CIF,gan,high,46,5,7,not a real-world object,5,1,0,1,0,N/A,N/A
+293_CIF_sd_high_iteration41_X3_Y5,293,CIF,sd,high,41,3,5,not a real-world object,5,1,1,1,0,N/A,no
+202_CIF_gan_low_iteration171_X8_Y1,202,CIF,gan,low,171,8,1,8,8,0,0,0,0,yes,yes
+185_CIF_gan_low_iteration104_X5_Y2,185,CIF,gan,low,104,5,2,not a real-world object,5,1,0,1,0,N/A,N/A
+18_CIF_vae_low_iteration15_X7_Y4,18,CIF,vae,low,15,7,4,not a real-world object,7,1,0,1,0,N/A,N/A
+184_CIF_gan_low_iteration46_X6_Y5,184,CIF,gan,low,46,6,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+28_CIF_vae_low_iteration5_X3_Y5,28,CIF,vae,low,5,3,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+145_CIF_gan_high_iteration1_X8_Y1,145,CIF,gan,high,1,8,1,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+15_CIF_vae_low_iteration13_X3_Y7,15,CIF,vae,low,13,3,7,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+308_CIF_sd_high_iteration36_X8_Y0,308,CIF,sd,high,36,8,0,not a real-world object,8,1,0,1,0,N/A,N/A
+34_CIF_sd_low_iteration87_X3_Y0,34,CIF,sd,low,87,3,0,3,not a real-world object,0,1,0,1,N/A,N/A
+121_CIF_gan_high_iteration48_X6_Y3,121,CIF,gan,high,48,6,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+115_CIF_gan_high_iteration1_X3_Y7,115,CIF,gan,high,1,3,7,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+118_CIF_gan_high_iteration6_X7_Y3,118,CIF,gan,high,6,7,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+342_CIF_sd_high_iteration11_X7_Y3,342,CIF,sd,high,11,7,3,7,7,0,0,0,0,yes,yes
+144_CIF_gan_high_iteration38_X1_Y6,144,CIF,gan,high,38,1,6,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+282_CIF_sd_high_iteration1_X2_Y3,282,CIF,sd,high,1,2,3,4,not a real-world object,1,1,0,1,N/A,no
+224_CIF_gan_low_iteration247_X1_Y6,224,CIF,gan,low,247,1,6,6,not a real-world object,1,1,0,1,N/A,no
+217_CIF_gan_low_iteration76_X0_Y2,217,CIF,gan,low,76,0,2,2,not a real-world object,1,1,0,1,N/A,no
+59_CIF_sd_low_iteration48_X0_Y8,59,CIF,sd,low,48,0,8,0,not a real-world object,0,1,0,1,N/A,N/A
+232_CIF_vae_high_iteration12_X3_Y2,232,CIF,vae,high,12,3,2,7,not a real-world object,1,1,0,1,N/A,no
+280_CIF_sd_high_iteration25_X9_Y0,280,CIF,sd,high,25,9,0,9,9,0,0,0,0,yes,yes
+32_CIF_sd_low_iteration19_X2_Y4,32,CIF,sd,low,19,2,4,4,not a real-world object,1,1,0,1,N/A,no
+21_CIF_vae_low_iteration93_X1_Y3,21,CIF,vae,low,93,1,3,9,not a real-world object,1,1,0,1,N/A,no
+260_CIF_vae_high_iteration8_X3_Y5,260,CIF,vae,high,8,3,5,6,not a real-world object,1,1,0,1,N/A,no
+156_CIF_gan_high_iteration35_X1_Y9,156,CIF,gan,high,35,1,9,9,not a real-world object,1,1,0,1,N/A,no
+250_CIF_vae_high_iteration9_X9_Y8,250,CIF,vae,high,9,9,8,9,not a real-world object,0,1,0,1,N/A,N/A
+164_CIF_gan_high_iteration12_X9_Y3,164,CIF,gan,high,12,9,3,1,not a real-world object,1,1,0,1,N/A,no
+119_CIF_gan_high_iteration47_X1_Y9,119,CIF,gan,high,47,1,9,1,9,0,1,0,0,yes,N/A
+138_CIF_gan_high_iteration76_X6_Y3,138,CIF,gan,high,76,6,3,9,not a real-world object,1,1,0,1,N/A,no
+53_CIF_sd_low_iteration1_X0_Y3,53,CIF,sd,low,1,0,3,0,not a real-world object,0,1,0,1,N/A,N/A
+304_CIF_sd_high_iteration81_X0_Y3,304,CIF,sd,high,81,0,3,0,0,0,0,0,0,yes,yes
+90_CIF_sd_low_iteration23_X1_Y9,90,CIF,sd,low,23,1,9,1,not a real-world object,0,1,0,1,N/A,N/A
+174_CIF_gan_high_iteration24_X1_Y8,174,CIF,gan,high,24,1,8,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+286_CIF_sd_high_iteration32_X3_Y4,286,CIF,sd,high,32,3,4,3,3,0,0,0,0,yes,yes
+92_CIF_sd_low_iteration1_X9_Y3,92,CIF,sd,low,1,9,3,9,not a real-world object,0,1,0,1,N/A,N/A
+128_CIF_gan_high_iteration1_X9_Y1,128,CIF,gan,high,1,9,1,not a real-world object,9,1,0,1,0,N/A,N/A
+221_CIF_gan_low_iteration107_X0_Y2,221,CIF,gan,low,107,0,2,0,8,0,1,0,0,yes,N/A
+300_CIF_sd_high_iteration28_X8_Y3,300,CIF,sd,high,28,8,3,not a real-world object,1,1,1,1,0,N/A,no
+96_CIF_sd_low_iteration168_X8_Y3,96,CIF,sd,low,168,8,3,not a real-world object,3,1,1,1,0,N/A,no
+98_CIF_sd_low_iteration47_X4_Y3,98,CIF,sd,low,47,4,3,not a real-world object,4,1,0,1,0,N/A,N/A
+231_CIF_vae_high_iteration5_X9_Y3,231,CIF,vae,high,5,9,3,not a real-world object,9,1,0,1,0,N/A,N/A
+146_CIF_gan_high_iteration108_X6_Y0,146,CIF,gan,high,108,6,0,not a real-world object,7,1,1,1,0,N/A,no
+123_CIF_gan_high_iteration21_X5_Y2,123,CIF,gan,high,21,5,2,not a real-world object,5,1,0,1,0,N/A,N/A
+180_CIF_gan_low_iteration1_X3_Y6,180,CIF,gan,low,1,3,6,not a real-world object,2,1,1,1,0,N/A,no
+262_CIF_vae_high_iteration4_X9_Y3,262,CIF,vae,high,4,9,3,not a real-world object,9,1,0,1,0,N/A,N/A
+157_CIF_gan_high_iteration18_X5_Y3,157,CIF,gan,high,18,5,3,not a real-world object,5,1,0,1,0,N/A,N/A
+112_CIF_gan_high_iteration4_X5_Y3,112,CIF,gan,high,4,5,3,not a real-world object,5,1,0,1,0,N/A,N/A
+246_CIF_vae_high_iteration29_X5_Y3,246,CIF,vae,high,29,5,3,not a real-world object,3,1,1,1,0,N/A,no
+75_CIF_sd_low_iteration1_X6_Y3,75,CIF,sd,low,1,6,3,not a real-world object,6,1,0,1,0,N/A,N/A
+252_CIF_vae_high_iteration2_X9_Y1,252,CIF,vae,high,2,9,1,not a real-world object,1,1,1,1,0,N/A,no
+339_CIF_sd_high_iteration1_X9_Y5,339,CIF,sd,high,1,9,5,not a real-world object,9,1,0,1,0,N/A,N/A
+301_CIF_sd_high_iteration24_X3_Y6,301,CIF,sd,high,24,3,6,not a real-world object,4,1,1,1,0,N/A,no
+11_CIF_vae_low_iteration199_X0_Y3,11,CIF,vae,low,199,0,3,not a real-world object,2,1,1,1,0,N/A,no
+297_CIF_sd_high_iteration9_X7_Y2,297,CIF,sd,high,9,7,2,3,7,1,0,0,0,yes,N/A
+269_CIF_sd_high_iteration18_X0_Y8,269,CIF,sd,high,18,0,8,not a real-world object,0,1,0,1,0,N/A,N/A
+333_CIF_sd_high_iteration1_X1_Y0,333,CIF,sd,high,1,1,0,1,not a real-world object,0,1,0,1,N/A,N/A
+120_CIF_gan_high_iteration8_X9_Y7,120,CIF,gan,high,8,9,7,9,not a real-world object,0,1,0,1,N/A,N/A
+169_CIF_gan_high_iteration48_X6_Y1,169,CIF,gan,high,48,6,1,3,not a real-world object,1,1,0,1,N/A,no
+211_CIF_gan_low_iteration1_X3_Y6,211,CIF,gan,low,1,3,6,4,2,1,1,0,0,yes,no
+171_CIF_gan_high_iteration14_X9_Y1,171,CIF,gan,high,14,9,1,1,9,1,0,0,0,yes,N/A
+66_CIF_sd_low_iteration1_X2_Y3,66,CIF,sd,low,1,2,3,2,2,0,0,0,0,yes,yes
+225_CIF_vae_high_iteration64_X8_Y0,225,CIF,vae,high,64,8,0,8,not a real-world object,0,1,0,1,N/A,N/A
+80_CIF_sd_low_iteration35_X0_Y2,80,CIF,sd,low,35,0,2,0,0,0,0,0,0,yes,yes
+168_CIF_gan_high_iteration1_X9_Y1,168,CIF,gan,high,1,9,1,9,not a real-world object,0,1,0,1,N/A,N/A
+187_CIF_gan_low_iteration45_X1_Y9,187,CIF,gan,low,45,1,9,9,1,1,0,0,0,yes,N/A
+148_CIF_gan_high_iteration6_X0_Y8,148,CIF,gan,high,6,0,8,2,8,1,1,0,0,yes,no
+160_CIF_gan_high_iteration1_X3_Y5,160,CIF,gan,high,1,3,5,5,3,1,0,0,0,yes,N/A
+264_CIF_sd_high_iteration23_X7_Y3,264,CIF,sd,high,23,7,3,7,7,0,0,0,0,yes,yes
+206_CIF_gan_low_iteration43_X5_Y7,206,CIF,gan,low,43,5,7,7,5,1,0,0,0,yes,N/A
+130_CIF_gan_high_iteration12_X1_Y9,130,CIF,gan,high,12,1,9,1,9,0,1,0,0,yes,N/A
+265_CIF_sd_high_iteration10_X2_Y3,265,CIF,sd,high,10,2,3,2,2,0,0,0,0,yes,yes
+116_CIF_gan_high_iteration24_X1_Y9,116,CIF,gan,high,24,1,9,1,9,0,1,0,0,yes,N/A
+27_CIF_vae_low_iteration120_X5_Y3,27,CIF,vae,low,120,5,3,5,5,0,0,0,0,yes,yes
+200_CIF_gan_low_iteration35_X5_Y3,200,CIF,gan,low,35,5,3,3,2,1,1,0,0,yes,no
+3_CIF_vae_low_iteration147_X3_Y5,3,CIF,vae,low,147,3,5,2,3,1,0,0,0,yes,N/A
+241_CIF_vae_high_iteration40_X0_Y8,241,CIF,vae,high,40,0,8,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+296_CIF_sd_high_iteration1_X7_Y4,296,CIF,sd,high,1,7,4,7,7,0,0,0,0,yes,yes
+335_CIF_sd_high_iteration1_X7_Y3,335,CIF,sd,high,1,7,3,not a real-world object,7,1,0,1,0,N/A,N/A
+60_CIF_sd_low_iteration1_X5_Y4,60,CIF,sd,low,1,5,4,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+74_CIF_sd_low_iteration95_X7_Y4,74,CIF,sd,low,95,7,4,7,7,0,0,0,0,yes,yes
+165_CIF_gan_high_iteration49_X9_Y1,165,CIF,gan,high,49,9,1,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+143_CIF_gan_high_iteration23_X1_Y9,143,CIF,gan,high,23,1,9,9,not a real-world object,1,1,0,1,N/A,no
+99_CIF_sd_low_iteration120_X8_Y2,99,CIF,sd,low,120,8,2,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+49_CIF_sd_low_iteration1_X2_Y4,49,CIF,sd,low,1,2,4,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+167_CIF_gan_high_iteration72_X6_Y1,167,CIF,gan,high,72,6,1,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+61_CIF_sd_low_iteration1_X8_Y0,61,CIF,sd,low,1,8,0,0,0,1,1,0,0,yes,no
+188_CIF_gan_low_iteration63_X0_Y2,188,CIF,gan,low,63,0,2,0,0,0,0,0,0,yes,yes
+295_CIF_sd_high_iteration1_X9_Y3,295,CIF,sd,high,1,9,3,1,7,1,1,0,0,yes,no
+197_CIF_gan_low_iteration51_X0_Y2,197,CIF,gan,low,51,0,2,3,not a real-world object,1,1,0,1,N/A,no
+218_CIF_gan_low_iteration23_X0_Y1,218,CIF,gan,low,23,0,1,8,not a real-world object,1,1,0,1,N/A,no
+68_CIF_sd_low_iteration54_X0_Y8,68,CIF,sd,low,54,0,8,0,0,0,0,0,0,yes,yes
+302_CIF_sd_high_iteration1_X7_Y4,302,CIF,sd,high,1,7,4,0,7,1,0,0,0,yes,N/A
+194_CIF_gan_low_iteration17_X3_Y6,194,CIF,gan,low,17,3,6,2,not a real-world object,1,1,0,1,N/A,no
+249_CIF_vae_high_iteration41_X0_Y8,249,CIF,vae,high,41,0,8,0,0,0,0,0,0,yes,yes
+56_CIF_sd_low_iteration1_X5_Y7,56,CIF,sd,low,1,5,7,8,5,1,0,0,0,yes,N/A
+315_CIF_sd_high_iteration22_X0_Y3,315,CIF,sd,high,22,0,3,0,0,0,0,0,0,yes,yes
+79_CIF_sd_low_iteration187_X8_Y3,79,CIF,sd,low,187,8,3,8,8,0,0,0,0,yes,yes
+13_CIF_vae_low_iteration215_X0_Y8,13,CIF,vae,low,215,0,8,0,2,0,1,0,0,yes,N/A
+109_CIF_sd_low_iteration1_X9_Y3,109,CIF,sd,low,1,9,3,9,not a real-world object,0,1,0,1,N/A,N/A
+73_CIF_sd_low_iteration4_X0_Y3,73,CIF,sd,low,4,0,3,6,not a real-world object,1,1,0,1,N/A,no
+316_CIF_sd_high_iteration10_X0_Y8,316,CIF,sd,high,10,0,8,0,0,0,0,0,0,yes,yes
+314_CIF_sd_high_iteration1_X2_Y4,314,CIF,sd,high,1,2,4,4,2,1,0,0,0,yes,N/A
+139_CIF_gan_high_iteration1_X9_Y1,139,CIF,gan,high,1,9,1,5,not a real-world object,1,1,0,1,N/A,no
+292_CIF_sd_high_iteration1_X8_Y3,292,CIF,sd,high,1,8,3,8,8,0,0,0,0,yes,yes
+5_CIF_vae_low_iteration2_X5_Y3,5,CIF,vae,low,2,5,3,5,5,0,0,0,0,yes,yes
+78_CIF_sd_low_iteration18_X6_Y5,78,CIF,sd,low,18,6,5,not a real-world object,2,1,1,1,0,N/A,no
+19_CIF_vae_low_iteration25_X1_Y8,19,CIF,vae,low,25,1,8,not a real-world object,1,1,0,1,0,N/A,N/A
+240_CIF_vae_high_iteration30_X3_Y6,240,CIF,vae,high,30,3,6,not a real-world object,3,1,0,1,0,N/A,N/A
+251_CIF_vae_high_iteration6_X0_Y8,251,CIF,vae,high,6,0,8,2,2,1,1,0,0,yes,no
+349_CIF_sd_high_iteration1_X6_Y2,349,CIF,sd,high,1,6,2,not a real-world object,6,1,0,1,0,N/A,N/A
+7_CIF_vae_low_iteration74_X8_Y0,7,CIF,vae,low,74,8,0,8,1,0,1,0,0,yes,N/A
+330_CIF_sd_high_iteration38_X3_Y7,330,CIF,sd,high,38,3,7,3,3,0,0,0,0,yes,yes
+223_CIF_gan_low_iteration1_X9_Y1,223,CIF,gan,low,1,9,1,not a real-world object,1,1,1,1,0,N/A,no
+158_CIF_gan_high_iteration1_X0_Y3,158,CIF,gan,high,1,0,3,not a real-world object,0,1,0,1,0,N/A,N/A
+54_CIF_sd_low_iteration123_X3_Y0,54,CIF,sd,low,123,3,0,3,7,0,1,0,0,yes,N/A
+179_CIF_gan_low_iteration183_X0_Y2,179,CIF,gan,low,183,0,2,not a real-world object,7,1,1,1,0,N/A,no
+239_CIF_vae_high_iteration27_X8_Y0,239,CIF,vae,high,27,8,0,0,0,1,1,0,0,yes,no
+243_CIF_vae_high_iteration3_X3_Y0,243,CIF,vae,high,3,3,0,not a real-world object,5,1,1,1,0,N/A,no
+287_CIF_sd_high_iteration12_X4_Y5,287,CIF,sd,high,12,4,5,7,4,1,0,0,0,yes,N/A
+343_CIF_sd_high_iteration18_X7_Y3,343,CIF,sd,high,18,7,3,7,7,0,0,0,0,yes,yes
+65_CIF_sd_low_iteration50_X9_Y7,65,CIF,sd,low,50,9,7,not a real-world object,9,1,0,1,0,N/A,N/A
+214_CIF_gan_low_iteration203_X7_Y9,214,CIF,gan,low,203,7,9,not a real-world object,5,1,1,1,0,N/A,no
+305_CIF_sd_high_iteration10_X0_Y8,305,CIF,sd,high,10,0,8,0,0,0,0,0,0,yes,yes
+102_CIF_sd_low_iteration1_X2_Y3,102,CIF,sd,low,1,2,3,2,2,0,0,0,0,yes,yes
+228_CIF_vae_high_iteration9_X0_Y3,228,CIF,vae,high,9,0,3,not a real-world object,5,1,1,1,0,N/A,no
+336_CIF_sd_high_iteration1_X1_Y2,336,CIF,sd,high,1,1,2,1,1,0,0,0,0,yes,yes
+263_CIF_vae_high_iteration16_X8_Y3,263,CIF,vae,high,16,8,3,2,not a real-world object,1,1,0,1,N/A,no
+124_CIF_gan_high_iteration1_X3_Y5,124,CIF,gan,high,1,3,5,8,not a real-world object,1,1,0,1,N/A,no
+69_CIF_sd_low_iteration173_X3_Y5,69,CIF,sd,low,173,3,5,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+222_CIF_gan_low_iteration61_X2_Y0,222,CIF,gan,low,61,2,0,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+236_CIF_vae_high_iteration12_X3_Y7,236,CIF,vae,high,12,3,7,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+151_CIF_gan_high_iteration1_X2_Y0,151,CIF,gan,high,1,2,0,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+313_CIF_sd_high_iteration20_X7_Y3,313,CIF,sd,high,20,7,3,not a real-world object,7,1,0,1,0,N/A,N/A
+207_CIF_gan_low_iteration140_X1_Y9,207,CIF,gan,low,140,1,9,1,1,0,0,0,0,yes,yes
+62_CIF_sd_low_iteration1_X9_Y3,62,CIF,sd,low,1,9,3,not a real-world object,not a real-world object,1,1,1,1,no,N/A
+238_CIF_vae_high_iteration1_X8_Y0,238,CIF,vae,high,1,8,0,0,0,1,1,0,0,yes,no
+71_CIF_sd_low_iteration113_X0_Y8,71,CIF,sd,low,113,0,8,0,0,0,0,0,0,yes,yes
+312_CIF_sd_high_iteration7_X6_Y4,312,CIF,sd,high,7,6,4,2,2,1,1,0,0,yes,no
+94_CIF_sd_low_iteration33_X1_Y8,94,CIF,sd,low,33,1,8,1,1,0,0,0,0,yes,yes
+306_CIF_sd_high_iteration12_X5_Y3,306,CIF,sd,high,12,5,3,3,3,1,1,0,0,yes,no
+114_CIF_gan_high_iteration1_X9_Y3,114,CIF,gan,high,1,9,3,not a real-world object,1,1,1,1,0,N/A,no
+227_CIF_vae_high_iteration20_X1_Y9,227,CIF,vae,high,20,1,9,1,1,0,0,0,0,yes,yes
+26_CIF_vae_low_iteration222_X5_Y3,26,CIF,vae,low,222,5,3,3,3,1,1,0,0,yes,no
+193_CIF_gan_low_iteration223_X9_Y1,193,CIF,gan,low,223,9,1,9,1,0,1,0,0,yes,N/A
+173_CIF_gan_high_iteration6_X5_Y3,173,CIF,gan,high,6,5,3,0,1,1,1,0,0,yes,no
+338_CIF_sd_high_iteration7_X1_Y0,338,CIF,sd,high,7,1,0,1,1,0,0,0,0,yes,yes

@@ -1,0 +1,339 @@
+Image URL,ID,DATASET,TOOL,MUT_EXT,ITER,Expected,Predicted,ASS 1,ASS 2,Misclass Human 1,Misclass Human 2,Valid Human 1,Valid Human 2,Validity?,Label Preservation?
+320_MNST_vae_high_iteration44_X3_Y5,320,MNST,vae,high,44,3,5,3,3,0,0,0,0,yes,yes
+102_MNST_sd_low_iteration135_X6_Y4,102,MNST,sd,low,135,6,4,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+279_MNST_vae_high_iteration55_X1_Y2,279,MNST,vae,high,55,1,2,2,7,1,1,0,0,yes,no
+136_MNST_gan_low_iteration177_X5_Y9,136,MNST,gan,low,177,5,9,5,5,0,0,0,0,yes,yes
+318_MNST_vae_high_iteration47_X8_Y5,318,MNST,vae,high,47,8,5,8,8,0,0,0,0,yes,yes
+97_MNST_sd_low_iteration1_X2_Y6,97,MNST,sd,low,1,2,6,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+226_MNST_gan_high_iteration31_X3_Y8,226,MNST,gan,high,31,3,8,6,3,1,0,0,0,yes,N/A
+162_MNST_gan_high_iteration116_X3_Y6,162,MNST,gan,high,116,3,6,8,8,1,1,0,0,yes,no
+129_MNST_sd_low_iteration33_X2_Y6,129,MNST,sd,low,33,2,6,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+321_MNST_vae_high_iteration101_X5_Y1,321,MNST,vae,high,101,5,1,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+183_MNST_gan_high_iteration70_X6_Y0,183,MNST,gan,high,70,6,0,6,6,0,0,0,0,yes,yes
+245_MNST_vae_high_iteration91_X5_Y9,245,MNST,vae,high,91,5,9,Not a Digit,6,1,1,1,0,N/A,no
+313_MNST_vae_high_iteration61_X4_Y8,313,MNST,vae,high,61,4,8,8,8,1,1,0,0,yes,no
+56_MNST_sd_high_iteration65_X0_Y1,56,MNST,sd,high,65,0,1,1,1,1,1,0,0,yes,no
+212_MNST_gan_high_iteration94_X4_Y9,212,MNST,gan,high,94,4,9,4,4,0,0,0,0,yes,yes
+137_MNST_gan_low_iteration163_X4_Y9,137,MNST,gan,low,163,4,9,4,4,0,0,0,0,yes,yes
+305_MNST_vae_high_iteration110_X7_Y4,305,MNST,vae,high,110,7,4,4,4,1,1,0,0,yes,no
+295_MNST_vae_high_iteration47_X8_Y9,295,MNST,vae,high,47,8,9,9,9,1,1,0,0,yes,no
+250_MNST_vae_high_iteration101_X1_Y7,250,MNST,vae,high,101,1,7,7,7,1,1,0,0,yes,no
+4_MNST_sd_high_iteration19_X9_Y8,4,MNST,sd,high,19,9,8,8,4,1,1,0,0,yes,no
+34_MNST_sd_high_iteration10_X3_Y2,34,MNST,sd,high,10,3,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+28_MNST_sd_high_iteration4_X5_Y6,28,MNST,sd,high,4,5,6,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+175_MNST_gan_high_iteration125_X4_Y1,175,MNST,gan,high,125,4,1,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+328_MNST_vae_high_iteration96_X1_Y4,328,MNST,vae,high,96,1,4,4,4,1,1,0,0,yes,no
+5_MNST_sd_high_iteration62_X8_Y7,5,MNST,sd,high,62,8,7,6,7,1,1,0,0,yes,no
+284_MNST_vae_high_iteration105_X4_Y9,284,MNST,vae,high,105,4,9,4,4,0,0,0,0,yes,yes
+184_MNST_gan_high_iteration58_X6_Y0,184,MNST,gan,high,58,6,0,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+256_MNST_vae_high_iteration75_X6_Y4,256,MNST,vae,high,75,6,4,4,4,1,1,0,0,yes,no
+269_MNST_vae_high_iteration105_X6_Y5,269,MNST,vae,high,105,6,5,6,8,0,1,0,0,yes,N/A
+109_MNST_sd_low_iteration29_X9_Y4,109,MNST,sd,low,29,9,4,4,4,1,1,0,0,yes,no
+68_MNST_sd_high_iteration150_X3_Y5,68,MNST,sd,high,150,3,5,3,3,0,0,0,0,yes,yes
+336_MNST_vae_high_iteration49_X9_Y4,336,MNST,vae,high,49,9,4,9,9,0,0,0,0,yes,yes
+82_MNST_sd_high_iteration1_X7_Y2,82,MNST,sd,high,1,7,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+51_MNST_sd_high_iteration30_X5_Y3,51,MNST,sd,high,30,5,3,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+231_MNST_gan_high_iteration26_X5_Y9,231,MNST,gan,high,26,5,9,5,5,0,0,0,0,yes,yes
+205_MNST_gan_high_iteration155_X5_Y9,205,MNST,gan,high,155,5,9,5,5,0,0,0,0,yes,yes
+287_MNST_vae_high_iteration78_X4_Y9,287,MNST,vae,high,78,4,9,9,Not a Digit,1,1,0,1,N/A,no
+108_MNST_sd_low_iteration175_X7_Y2,108,MNST,sd,low,175,7,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+169_MNST_gan_high_iteration190_X3_Y9,169,MNST,gan,high,190,3,9,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+83_MNST_sd_high_iteration7_X1_Y4,83,MNST,sd,high,7,1,4,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+240_MNST_vae_high_iteration42_X9_Y7,240,MNST,vae,high,42,9,7,9,9,0,0,0,0,yes,yes
+14_MNST_sd_high_iteration15_X8_Y2,14,MNST,sd,high,15,8,2,2,Not a Digit,1,1,0,1,N/A,no
+220_MNST_gan_high_iteration92_X2_Y1,220,MNST,gan,high,92,2,1,2,Not a Digit,0,1,0,1,N/A,N/A
+70_MNST_sd_high_iteration1_X7_Y2,70,MNST,sd,high,1,7,2,2,Not a Digit,1,1,0,1,N/A,no
+331_MNST_vae_high_iteration101_X8_Y9,331,MNST,vae,high,101,8,9,9,9,1,1,0,0,yes,no
+124_MNST_sd_low_iteration87_X7_Y2,124,MNST,sd,low,87,7,2,7,7,0,0,0,0,yes,yes
+88_MNST_sd_high_iteration8_X0_Y2,88,MNST,sd,high,8,0,2,2,Not a Digit,1,1,0,1,N/A,no
+149_MNST_gan_high_iteration77_X9_Y5,149,MNST,gan,high,77,9,5,9,Not a Digit,0,1,0,1,N/A,N/A
+150_MNST_gan_high_iteration219_X0_Y2,150,MNST,gan,high,219,0,2,0,Not a Digit,0,1,0,1,N/A,N/A
+0_MNST_vae_low_iteration111_X7_Y9,0,MNST,vae,low,111,7,9,4,Not a Digit,1,1,0,1,N/A,no
+173_MNST_gan_high_iteration103_X4_Y7,173,MNST,gan,high,103,4,7,4,Not a Digit,0,1,0,1,N/A,N/A
+3_MNST_vae_low_iteration222_X5_Y3,3,MNST,vae,low,222,5,3,5,5,0,0,0,0,yes,yes
+81_MNST_sd_high_iteration1_X8_Y0,81,MNST,sd,high,1,8,0,6,6,1,1,0,0,yes,no
+167_MNST_gan_high_iteration250_X6_Y0,167,MNST,gan,high,250,6,0,6,6,0,0,0,0,yes,yes
+253_MNST_vae_high_iteration52_X8_Y2,253,MNST,vae,high,52,8,2,4,8,1,0,0,0,yes,N/A
+133_MNST_sd_low_iteration1_X7_Y4,133,MNST,sd,low,1,7,4,4,4,1,1,0,0,yes,no
+48_MNST_sd_high_iteration45_X9_Y4,48,MNST,sd,high,45,9,4,9,Not a Digit,0,1,0,1,N/A,N/A
+117_MNST_sd_low_iteration22_X9_Y4,117,MNST,sd,low,22,9,4,9,9,0,0,0,0,yes,yes
+147_MNST_gan_high_iteration153_X7_Y1,147,MNST,gan,high,153,7,1,7,7,0,0,0,0,yes,yes
+221_MNST_gan_high_iteration68_X8_Y9,221,MNST,gan,high,68,8,9,9,9,1,1,0,0,yes,no
+225_MNST_gan_high_iteration150_X7_Y1,225,MNST,gan,high,150,7,1,Not a Digit,3,1,1,1,0,N/A,no
+47_MNST_sd_high_iteration9_X1_Y2,47,MNST,sd,high,9,1,2,Not a Digit,1,1,0,1,0,N/A,N/A
+285_MNST_vae_high_iteration78_X5_Y9,285,MNST,vae,high,78,5,9,Not a Digit,5,1,0,1,0,N/A,N/A
+266_MNST_vae_high_iteration134_X1_Y6,266,MNST,vae,high,134,1,6,Not a Digit,6,1,1,1,0,N/A,no
+135_MNST_gan_low_iteration207_X7_Y2,135,MNST,gan,low,207,7,2,Not a Digit,0,1,1,1,0,N/A,no
+95_MNST_sd_low_iteration1_X4_Y5,95,MNST,sd,low,1,4,5,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+304_MNST_vae_high_iteration69_X1_Y8,304,MNST,vae,high,69,1,8,8,1,1,0,0,0,yes,N/A
+32_MNST_sd_high_iteration41_X8_Y2,32,MNST,sd,high,41,8,2,Not a Digit,8,1,0,1,0,N/A,N/A
+182_MNST_gan_high_iteration86_X2_Y1,182,MNST,gan,high,86,2,1,2,2,0,0,0,0,yes,yes
+174_MNST_gan_high_iteration140_X8_Y3,174,MNST,gan,high,140,8,3,8,8,0,0,0,0,yes,yes
+13_MNST_sd_high_iteration68_X5_Y3,13,MNST,sd,high,68,5,3,3,5,1,0,0,0,yes,N/A
+228_MNST_gan_high_iteration166_X1_Y4,228,MNST,gan,high,166,1,4,1,1,0,0,0,0,yes,yes
+267_MNST_vae_high_iteration65_X2_Y1,267,MNST,vae,high,65,2,1,2,2,0,0,0,0,yes,yes
+274_MNST_vae_high_iteration45_X8_Y3,274,MNST,vae,high,45,8,3,8,8,0,0,0,0,yes,yes
+12_MNST_sd_high_iteration1_X8_Y2,12,MNST,sd,high,1,8,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+63_MNST_sd_high_iteration53_X8_Y9,63,MNST,sd,high,53,8,9,8,Not a Digit,0,1,0,1,N/A,N/A
+242_MNST_vae_high_iteration26_X9_Y4,242,MNST,vae,high,26,9,4,9,9,0,0,0,0,yes,yes
+23_MNST_sd_high_iteration34_X9_Y8,23,MNST,sd,high,34,9,8,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+40_MNST_sd_high_iteration2_X1_Y4,40,MNST,sd,high,2,1,4,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+67_MNST_sd_high_iteration56_X1_Y8,67,MNST,sd,high,56,1,8,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+337_MNST_vae_high_iteration31_X9_Y4,337,MNST,vae,high,31,9,4,4,4,1,1,0,0,yes,no
+308_MNST_vae_high_iteration71_X7_Y1,308,MNST,vae,high,71,7,1,7,1,0,1,0,0,yes,N/A
+29_MNST_sd_high_iteration17_X6_Y1,29,MNST,sd,high,17,6,1,6,Not a Digit,0,1,0,1,N/A,N/A
+118_MNST_sd_low_iteration146_X4_Y8,118,MNST,sd,low,146,4,8,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+106_MNST_sd_low_iteration27_X8_Y9,106,MNST,sd,low,27,8,9,9,9,1,1,0,0,yes,no
+80_MNST_sd_high_iteration31_X4_Y1,80,MNST,sd,high,31,4,1,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+15_MNST_sd_high_iteration27_X1_Y6,15,MNST,sd,high,27,1,6,1,1,0,0,0,0,yes,yes
+153_MNST_gan_high_iteration154_X9_Y4,153,MNST,gan,high,154,9,4,9,4,0,1,0,0,yes,N/A
+312_MNST_vae_high_iteration87_X1_Y2,312,MNST,vae,high,87,1,2,Not a Digit,1,1,0,1,0,N/A,N/A
+93_MNST_sd_low_iteration68_X9_Y4,93,MNST,sd,low,68,9,4,4,4,1,1,0,0,yes,no
+105_MNST_sd_low_iteration105_X8_Y9,105,MNST,sd,low,105,8,9,9,Not a Digit,1,1,0,1,N/A,no
+258_MNST_vae_high_iteration70_X9_Y4,258,MNST,vae,high,70,9,4,4,Not a Digit,1,1,0,1,N/A,no
+199_MNST_gan_high_iteration246_X3_Y5,199,MNST,gan,high,246,3,5,3,3,0,0,0,0,yes,yes
+44_MNST_sd_high_iteration18_X1_Y6,44,MNST,sd,high,18,1,6,1,Not a Digit,0,1,0,1,N/A,N/A
+332_MNST_vae_high_iteration90_X9_Y4,332,MNST,vae,high,90,9,4,4,4,1,1,0,0,yes,no
+69_MNST_sd_high_iteration19_X8_Y3,69,MNST,sd,high,19,8,3,9,9,1,1,0,0,yes,no
+330_MNST_vae_high_iteration91_X1_Y7,330,MNST,vae,high,91,1,7,1,7,0,1,0,0,yes,N/A
+139_MNST_gan_low_iteration90_X4_Y9,139,MNST,gan,low,90,4,9,9,4,1,0,0,0,yes,N/A
+30_MNST_sd_high_iteration76_X8_Y2,30,MNST,sd,high,76,8,2,9,2,1,1,0,0,yes,no
+180_MNST_gan_high_iteration138_X9_Y4,180,MNST,gan,high,138,9,4,4,1,1,1,0,0,yes,no
+165_MNST_gan_high_iteration94_X8_Y4,165,MNST,gan,high,94,8,4,8,8,0,0,0,0,yes,yes
+224_MNST_gan_high_iteration72_X3_Y9,224,MNST,gan,high,72,3,9,3,3,0,0,0,0,yes,yes
+186_MNST_gan_high_iteration77_X4_Y9,186,MNST,gan,high,77,4,9,4,9,0,1,0,0,yes,N/A
+49_MNST_sd_high_iteration1_X9_Y4,49,MNST,sd,high,1,9,4,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+215_MNST_gan_high_iteration167_X6_Y4,215,MNST,gan,high,167,6,4,Not a Digit,6,1,0,1,0,N/A,N/A
+166_MNST_gan_high_iteration107_X7_Y0,166,MNST,gan,high,107,7,0,0,2,1,1,0,0,yes,no
+46_MNST_sd_high_iteration19_X3_Y2,46,MNST,sd,high,19,3,2,Not a Digit,3,1,0,1,0,N/A,N/A
+170_MNST_gan_high_iteration121_X4_Y9,170,MNST,gan,high,121,4,9,4,4,0,0,0,0,yes,yes
+286_MNST_vae_high_iteration48_X1_Y8,286,MNST,vae,high,48,1,8,8,8,1,1,0,0,yes,no
+217_MNST_gan_high_iteration118_X4_Y9,217,MNST,gan,high,118,4,9,4,9,0,1,0,0,yes,N/A
+251_MNST_vae_high_iteration30_X4_Y9,251,MNST,vae,high,30,4,9,4,4,0,0,0,0,yes,yes
+249_MNST_vae_high_iteration72_X8_Y2,249,MNST,vae,high,72,8,2,8,8,0,0,0,0,yes,yes
+223_MNST_gan_high_iteration146_X3_Y8,223,MNST,gan,high,146,3,8,3,3,0,0,0,0,yes,yes
+87_MNST_sd_high_iteration45_X4_Y8,87,MNST,sd,high,45,4,8,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+194_MNST_gan_high_iteration71_X9_Y4,194,MNST,gan,high,71,9,4,4,4,1,1,0,0,yes,no
+158_MNST_gan_high_iteration207_X6_Y0,158,MNST,gan,high,207,6,0,6,6,0,0,0,0,yes,yes
+121_MNST_sd_low_iteration1_X3_Y2,121,MNST,sd,low,1,3,2,8,8,1,1,0,0,yes,no
+238_MNST_gan_high_iteration32_X4_Y9,238,MNST,gan,high,32,4,9,4,4,0,0,0,0,yes,yes
+89_MNST_sd_high_iteration19_X5_Y3,89,MNST,sd,high,19,5,3,5,5,0,0,0,0,yes,yes
+84_MNST_sd_high_iteration4_X7_Y0,84,MNST,sd,high,4,7,0,0,Not a Digit,1,1,0,1,N/A,no
+155_MNST_gan_high_iteration47_X4_Y9,155,MNST,gan,high,47,4,9,4,4,0,0,0,0,yes,yes
+152_MNST_gan_high_iteration129_X5_Y6,152,MNST,gan,high,129,5,6,6,6,1,1,0,0,yes,no
+241_MNST_vae_high_iteration44_X2_Y0,241,MNST,vae,high,44,2,0,6,Not a Digit,1,1,0,1,N/A,no
+128_MNST_sd_low_iteration18_X8_Y9,128,MNST,sd,low,18,8,9,3,Not a Digit,1,1,0,1,N/A,no
+324_MNST_vae_high_iteration39_X8_Y2,324,MNST,vae,high,39,8,2,8,8,0,0,0,0,yes,yes
+222_MNST_gan_high_iteration77_X3_Y8,222,MNST,gan,high,77,3,8,9,8,1,1,0,0,yes,no
+132_MNST_sd_low_iteration1_X9_Y7,132,MNST,sd,low,1,9,7,2,Not a Digit,1,1,0,1,N/A,no
+127_MNST_sd_low_iteration168_X1_Y6,127,MNST,sd,low,168,1,6,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+131_MNST_sd_low_iteration167_X2_Y0,131,MNST,sd,low,167,2,0,2,2,0,0,0,0,yes,yes
+290_MNST_vae_high_iteration12_X4_Y8,290,MNST,vae,high,12,4,8,4,4,0,0,0,0,yes,yes
+216_MNST_gan_high_iteration83_X8_Y3,216,MNST,gan,high,83,8,3,8,8,0,0,0,0,yes,yes
+156_MNST_gan_high_iteration41_X2_Y3,156,MNST,gan,high,41,2,3,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+257_MNST_vae_high_iteration87_X1_Y8,257,MNST,vae,high,87,1,8,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+218_MNST_gan_high_iteration91_X9_Y4,218,MNST,gan,high,91,9,4,Not a Digit,4,1,1,1,0,N/A,no
+42_MNST_sd_high_iteration46_X7_Y2,42,MNST,sd,high,46,7,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+288_MNST_vae_high_iteration32_X3_Y9,288,MNST,vae,high,32,3,9,9,9,1,1,0,0,yes,no
+172_MNST_gan_high_iteration104_X4_Y1,172,MNST,gan,high,104,4,1,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+157_MNST_gan_high_iteration116_X8_Y9,157,MNST,gan,high,116,8,9,Not a Digit,9,1,1,1,0,N/A,no
+6_MNST_sd_high_iteration2_X3_Y1,6,MNST,sd,high,2,3,1,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+195_MNST_gan_high_iteration78_X5_Y3,195,MNST,gan,high,78,5,3,5,5,0,0,0,0,yes,yes
+159_MNST_gan_high_iteration35_X7_Y2,159,MNST,gan,high,35,7,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+227_MNST_gan_high_iteration134_X2_Y3,227,MNST,gan,high,134,2,3,2,2,0,0,0,0,yes,yes
+39_MNST_sd_high_iteration28_X0_Y6,39,MNST,sd,high,28,0,6,0,0,0,0,0,0,yes,yes
+119_MNST_sd_low_iteration22_X8_Y6,119,MNST,sd,low,22,8,6,8,8,0,0,0,0,yes,yes
+66_MNST_sd_high_iteration34_X8_Y9,66,MNST,sd,high,34,8,9,4,9,1,1,0,0,yes,no
+168_MNST_gan_high_iteration138_X4_Y7,168,MNST,gan,high,138,4,7,4,9,0,1,0,0,yes,N/A
+38_MNST_sd_high_iteration41_X1_Y2,38,MNST,sd,high,41,1,2,1,Not a Digit,0,1,0,1,N/A,N/A
+43_MNST_sd_high_iteration18_X3_Y5,43,MNST,sd,high,18,3,5,3,3,0,0,0,0,yes,yes
+292_MNST_vae_high_iteration96_X7_Y9,292,MNST,vae,high,96,7,9,2,Not a Digit,1,1,0,1,N/A,no
+60_MNST_sd_high_iteration10_X3_Y7,60,MNST,sd,high,10,3,7,3,3,0,0,0,0,yes,yes
+213_MNST_gan_high_iteration84_X8_Y9,213,MNST,gan,high,84,8,9,8,8,0,0,0,0,yes,yes
+200_MNST_gan_high_iteration160_X4_Y1,200,MNST,gan,high,160,4,1,4,Not a Digit,0,1,0,1,N/A,N/A
+214_MNST_gan_high_iteration116_X6_Y0,214,MNST,gan,high,116,6,0,6,6,0,0,0,0,yes,yes
+120_MNST_sd_low_iteration1_X9_Y3,120,MNST,sd,low,1,9,3,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+2_MNST_vae_low_iteration14_X8_Y0,2,MNST,vae,low,14,8,0,8,8,0,0,0,0,yes,yes
+9_MNST_sd_high_iteration8_X2_Y7,9,MNST,sd,high,8,2,7,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+178_MNST_gan_high_iteration91_X8_Y3,178,MNST,gan,high,91,8,3,Not a Digit,8,1,0,1,0,N/A,N/A
+90_MNST_sd_high_iteration11_X6_Y8,90,MNST,sd,high,11,6,8,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+294_MNST_vae_high_iteration132_X9_Y4,294,MNST,vae,high,132,9,4,4,4,1,1,0,0,yes,no
+247_MNST_vae_high_iteration59_X5_Y3,247,MNST,vae,high,59,5,3,5,5,0,0,0,0,yes,yes
+164_MNST_gan_high_iteration149_X1_Y7,164,MNST,gan,high,149,1,7,1,1,0,0,0,0,yes,yes
+125_MNST_sd_low_iteration131_X6_Y2,125,MNST,sd,low,131,6,2,0,0,1,1,0,0,yes,no
+71_MNST_sd_high_iteration34_X6_Y2,71,MNST,sd,high,34,6,2,6,6,0,0,0,0,yes,yes
+271_MNST_vae_high_iteration38_X5_Y8,271,MNST,vae,high,38,5,8,8,8,1,1,0,0,yes,no
+209_MNST_gan_high_iteration80_X8_Y2,209,MNST,gan,high,80,8,2,8,8,0,0,0,0,yes,yes
+146_MNST_gan_high_iteration69_X7_Y2,146,MNST,gan,high,69,7,2,7,7,0,0,0,0,yes,yes
+177_MNST_gan_high_iteration47_X4_Y9,177,MNST,gan,high,47,4,9,4,4,0,0,0,0,yes,yes
+335_MNST_vae_high_iteration69_X0_Y6,335,MNST,vae,high,69,0,6,6,Not a Digit,1,1,0,1,N/A,no
+58_MNST_sd_high_iteration1_X7_Y2,58,MNST,sd,high,1,7,2,2,Not a Digit,1,1,0,1,N/A,no
+260_MNST_vae_high_iteration49_X8_Y3,260,MNST,vae,high,49,8,3,8,8,0,0,0,0,yes,yes
+103_MNST_sd_low_iteration1_X0_Y6,103,MNST,sd,low,1,0,6,Not a Digit,1,1,1,1,0,N/A,no
+252_MNST_vae_high_iteration43_X4_Y9,252,MNST,vae,high,43,4,9,4,4,0,0,0,0,yes,yes
+278_MNST_vae_high_iteration40_X4_Y9,278,MNST,vae,high,40,4,9,4,4,0,0,0,0,yes,yes
+273_MNST_vae_high_iteration34_X3_Y7,273,MNST,vae,high,34,3,7,3,3,0,0,0,0,yes,yes
+53_MNST_sd_high_iteration29_X3_Y5,53,MNST,sd,high,29,3,5,Not a Digit,5,1,1,1,0,N/A,no
+190_MNST_gan_high_iteration79_X2_Y1,190,MNST,gan,high,79,2,1,2,2,0,0,0,0,yes,yes
+196_MNST_gan_high_iteration80_X2_Y3,196,MNST,gan,high,80,2,3,Not a Digit,3,1,1,1,0,N/A,no
+16_MNST_sd_high_iteration51_X4_Y2,16,MNST,sd,high,51,4,2,Not a Digit,4,1,0,1,0,N/A,N/A
+154_MNST_gan_high_iteration63_X4_Y1,154,MNST,gan,high,63,4,1,4,4,0,0,0,0,yes,yes
+289_MNST_vae_high_iteration66_X7_Y1,289,MNST,vae,high,66,7,1,7,1,0,1,0,0,yes,N/A
+277_MNST_vae_high_iteration33_X2_Y6,277,MNST,vae,high,33,2,6,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+283_MNST_vae_high_iteration34_X2_Y4,283,MNST,vae,high,34,2,4,4,4,1,1,0,0,yes,no
+57_MNST_sd_high_iteration1_X6_Y1,57,MNST,sd,high,1,6,1,Not a Digit,1,1,1,1,0,N/A,no
+73_MNST_sd_high_iteration13_X3_Y5,73,MNST,sd,high,13,3,5,6,3,1,0,0,0,yes,N/A
+202_MNST_gan_high_iteration159_X6_Y0,202,MNST,gan,high,159,6,0,Not a Digit,6,1,0,1,0,N/A,N/A
+11_MNST_sd_high_iteration5_X1_Y6,11,MNST,sd,high,5,1,6,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+35_MNST_sd_high_iteration3_X0_Y6,35,MNST,sd,high,3,0,6,Not a Digit,8,1,1,1,0,N/A,no
+204_MNST_gan_high_iteration74_X3_Y5,204,MNST,gan,high,74,3,5,5,5,1,1,0,0,yes,no
+36_MNST_sd_high_iteration16_X0_Y2,36,MNST,sd,high,16,0,2,6,9,1,1,0,0,yes,no
+50_MNST_sd_high_iteration48_X9_Y7,50,MNST,sd,high,48,9,7,7,7,1,1,0,0,yes,no
+37_MNST_sd_high_iteration8_X7_Y9,37,MNST,sd,high,8,7,9,4,4,1,1,0,0,yes,no
+233_MNST_gan_high_iteration19_X8_Y2,233,MNST,gan,high,19,8,2,8,8,0,0,0,0,yes,yes
+115_MNST_sd_low_iteration34_X5_Y3,115,MNST,sd,low,34,5,3,5,3,0,1,0,0,yes,N/A
+275_MNST_vae_high_iteration44_X8_Y5,275,MNST,vae,high,44,8,5,8,8,0,0,0,0,yes,yes
+171_MNST_gan_high_iteration120_X1_Y8,171,MNST,gan,high,120,1,8,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+79_MNST_sd_high_iteration24_X9_Y7,79,MNST,sd,high,24,9,7,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+181_MNST_gan_high_iteration143_X7_Y1,181,MNST,gan,high,143,7,1,7,Not a Digit,0,1,0,1,N/A,N/A
+239_MNST_vae_high_iteration67_X5_Y6,239,MNST,vae,high,67,5,6,6,6,1,1,0,0,yes,no
+243_MNST_vae_high_iteration54_X6_Y0,243,MNST,vae,high,54,6,0,6,6,0,0,0,0,yes,yes
+244_MNST_vae_high_iteration15_X8_Y7,244,MNST,vae,high,15,8,7,8,8,0,0,0,0,yes,yes
+297_MNST_vae_high_iteration56_X6_Y5,297,MNST,vae,high,56,6,5,6,8,0,1,0,0,yes,N/A
+296_MNST_vae_high_iteration58_X9_Y4,296,MNST,vae,high,58,9,4,9,9,0,0,0,0,yes,yes
+230_MNST_gan_high_iteration230_X1_Y9,230,MNST,gan,high,230,1,9,1,Not a Digit,0,1,0,1,N/A,N/A
+188_MNST_gan_high_iteration54_X9_Y7,188,MNST,gan,high,54,9,7,9,9,0,0,0,0,yes,yes
+54_MNST_sd_high_iteration10_X6_Y1,54,MNST,sd,high,10,6,1,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+329_MNST_vae_high_iteration68_X5_Y9,329,MNST,vae,high,68,5,9,5,9,0,1,0,0,yes,N/A
+107_MNST_sd_low_iteration113_X1_Y7,107,MNST,sd,low,113,1,7,1,Not a Digit,0,1,0,1,N/A,N/A
+45_MNST_sd_high_iteration53_X9_Y2,45,MNST,sd,high,53,9,2,2,Not a Digit,1,1,0,1,N/A,no
+281_MNST_vae_high_iteration65_X5_Y3,281,MNST,vae,high,65,5,3,5,3,0,1,0,0,yes,N/A
+307_MNST_vae_high_iteration80_X4_Y6,307,MNST,vae,high,80,4,6,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+123_MNST_sd_low_iteration1_X3_Y5,123,MNST,sd,low,1,3,5,5,5,1,1,0,0,yes,no
+160_MNST_gan_high_iteration36_X8_Y0,160,MNST,gan,high,36,8,0,Not a Digit,8,1,0,1,0,N/A,N/A
+94_MNST_sd_low_iteration13_X3_Y5,94,MNST,sd,low,13,3,5,5,5,1,1,0,0,yes,no
+265_MNST_vae_high_iteration64_X7_Y4,265,MNST,vae,high,64,7,4,7,7,0,0,0,0,yes,yes
+143_MNST_gan_high_iteration49_X2_Y3,143,MNST,gan,high,49,2,3,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+301_MNST_vae_high_iteration54_X4_Y7,301,MNST,vae,high,54,4,7,4,4,0,0,0,0,yes,yes
+52_MNST_sd_high_iteration9_X9_Y8,52,MNST,sd,high,9,9,8,8,8,1,1,0,0,yes,no
+280_MNST_vae_high_iteration42_X4_Y9,280,MNST,vae,high,42,4,9,4,4,0,0,0,0,yes,yes
+291_MNST_vae_high_iteration97_X5_Y9,291,MNST,vae,high,97,5,9,5,5,0,0,0,0,yes,yes
+8_MNST_sd_high_iteration25_X5_Y3,8,MNST,sd,high,25,5,3,5,5,0,0,0,0,yes,yes
+141_MNST_gan_low_iteration142_X4_Y9,141,MNST,gan,low,142,4,9,Not a Digit,4,1,0,1,0,N/A,N/A
+74_MNST_sd_high_iteration1_X2_Y3,74,MNST,sd,high,1,2,3,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+99_MNST_sd_low_iteration1_X6_Y0,99,MNST,sd,low,1,6,0,Not a Digit,0,1,1,1,0,N/A,no
+322_MNST_vae_high_iteration72_X2_Y8,322,MNST,vae,high,72,2,8,Not a Digit,8,1,1,1,0,N/A,no
+234_MNST_gan_high_iteration80_X1_Y8,234,MNST,gan,high,80,1,8,Not a Digit,1,1,0,1,0,N/A,N/A
+319_MNST_vae_high_iteration35_X7_Y0,319,MNST,vae,high,35,7,0,Not a Digit,0,1,1,1,0,N/A,no
+100_MNST_sd_low_iteration18_X1_Y4,100,MNST,sd,low,18,1,4,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+126_MNST_sd_low_iteration17_X6_Y0,126,MNST,sd,low,17,6,0,6,6,0,0,0,0,yes,yes
+327_MNST_vae_high_iteration7_X9_Y7,327,MNST,vae,high,7,9,7,9,9,0,0,0,0,yes,yes
+197_MNST_gan_high_iteration219_X1_Y9,197,MNST,gan,high,219,1,9,Not a Digit,1,1,0,1,0,N/A,N/A
+235_MNST_gan_high_iteration36_X2_Y3,235,MNST,gan,high,36,2,3,2,8,0,1,0,0,yes,N/A
+65_MNST_sd_high_iteration23_X2_Y3,65,MNST,sd,high,23,2,3,5,8,1,1,0,0,yes,no
+248_MNST_vae_high_iteration57_X4_Y1,248,MNST,vae,high,57,4,1,4,4,0,0,0,0,yes,yes
+323_MNST_vae_high_iteration115_X1_Y6,323,MNST,vae,high,115,1,6,4,Not a Digit,1,1,0,1,N/A,no
+10_MNST_sd_high_iteration11_X1_Y4,10,MNST,sd,high,11,1,4,4,Not a Digit,1,1,0,1,N/A,no
+201_MNST_gan_high_iteration26_X4_Y9,201,MNST,gan,high,26,4,9,4,Not a Digit,0,1,0,1,N/A,N/A
+85_MNST_sd_high_iteration32_X2_Y4,85,MNST,sd,high,32,2,4,6,Not a Digit,1,1,0,1,N/A,no
+22_MNST_sd_high_iteration2_X7_Y4,22,MNST,sd,high,2,7,4,6,Not a Digit,1,1,0,1,N/A,no
+303_MNST_vae_high_iteration31_X4_Y9,303,MNST,vae,high,31,4,9,4,4,0,0,0,0,yes,yes
+193_MNST_gan_high_iteration242_X1_Y8,193,MNST,gan,high,242,1,8,1,Not a Digit,0,1,0,1,N/A,N/A
+151_MNST_gan_high_iteration18_X7_Y2,151,MNST,gan,high,18,7,2,7,7,0,0,0,0,yes,yes
+189_MNST_gan_high_iteration87_X4_Y5,189,MNST,gan,high,87,4,5,4,4,0,0,0,0,yes,yes
+261_MNST_vae_high_iteration48_X2_Y7,261,MNST,vae,high,48,2,7,Not a Digit,7,1,1,1,0,N/A,no
+185_MNST_gan_high_iteration127_X7_Y1,185,MNST,gan,high,127,7,1,8,7,1,0,0,0,yes,N/A
+237_MNST_gan_high_iteration205_X6_Y2,237,MNST,gan,high,205,6,2,6,6,0,0,0,0,yes,yes
+25_MNST_sd_high_iteration1_X7_Y2,25,MNST,sd,high,1,7,2,Not a Digit,4,1,1,1,0,N/A,no
+112_MNST_sd_low_iteration171_X5_Y9,112,MNST,sd,low,171,5,9,Not a Digit,3,1,1,1,0,N/A,no
+142_MNST_gan_low_iteration71_X7_Y3,142,MNST,gan,low,71,7,3,7,7,0,0,0,0,yes,yes
+191_MNST_gan_high_iteration46_X5_Y9,191,MNST,gan,high,46,5,9,5,6,0,1,0,0,yes,N/A
+21_MNST_sd_high_iteration88_X4_Y1,21,MNST,sd,high,88,4,1,Not a Digit,7,1,1,1,0,N/A,no
+264_MNST_vae_high_iteration18_X8_Y0,264,MNST,vae,high,18,8,0,Not a Digit,8,1,0,1,0,N/A,N/A
+254_MNST_vae_high_iteration17_X6_Y0,254,MNST,vae,high,17,6,0,Not a Digit,6,1,0,1,0,N/A,N/A
+64_MNST_sd_high_iteration17_X6_Y4,64,MNST,sd,high,17,6,4,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+92_MNST_sd_low_iteration234_X9_Y4,92,MNST,sd,low,234,9,4,4,9,1,0,0,0,yes,N/A
+268_MNST_vae_high_iteration31_X2_Y1,268,MNST,vae,high,31,2,1,1,1,1,1,0,0,yes,no
+161_MNST_gan_high_iteration59_X4_Y9,161,MNST,gan,high,59,4,9,4,4,0,0,0,0,yes,yes
+111_MNST_sd_low_iteration93_X1_Y4,111,MNST,sd,low,93,1,4,4,4,1,1,0,0,yes,no
+232_MNST_gan_high_iteration44_X2_Y7,232,MNST,gan,high,44,2,7,2,7,0,1,0,0,yes,N/A
+315_MNST_vae_high_iteration87_X0_Y8,315,MNST,vae,high,87,0,8,8,0,1,0,0,0,yes,N/A
+1_MNST_vae_low_iteration199_X5_Y8,1,MNST,vae,low,199,5,8,Not a Digit,5,1,0,1,0,N/A,N/A
+246_MNST_vae_high_iteration65_X5_Y3,246,MNST,vae,high,65,5,3,3,3,1,1,0,0,yes,no
+263_MNST_vae_high_iteration71_X3_Y8,263,MNST,vae,high,71,3,8,8,8,1,1,0,0,yes,no
+326_MNST_vae_high_iteration25_X8_Y0,326,MNST,vae,high,25,8,0,8,8,0,0,0,0,yes,yes
+179_MNST_gan_high_iteration137_X4_Y9,179,MNST,gan,high,137,4,9,4,4,0,0,0,0,yes,yes
+138_MNST_gan_low_iteration133_X5_Y3,138,MNST,gan,low,133,5,3,5,5,0,0,0,0,yes,yes
+203_MNST_gan_high_iteration138_X4_Y9,203,MNST,gan,high,138,4,9,4,4,0,0,0,0,yes,yes
+282_MNST_vae_high_iteration63_X3_Y5,282,MNST,vae,high,63,3,5,3,3,0,0,0,0,yes,yes
+270_MNST_vae_high_iteration103_X6_Y2,270,MNST,vae,high,103,6,2,3,3,1,1,0,0,yes,no
+20_MNST_sd_high_iteration90_X3_Y2,20,MNST,sd,high,90,3,2,8,3,1,0,0,0,yes,N/A
+144_MNST_gan_high_iteration73_X3_Y8,144,MNST,gan,high,73,3,8,9,3,1,0,0,0,yes,N/A
+116_MNST_sd_low_iteration84_X0_Y3,116,MNST,sd,low,84,0,3,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+306_MNST_vae_high_iteration114_X6_Y0,306,MNST,vae,high,114,6,0,0,Not a Digit,1,1,0,1,N/A,no
+317_MNST_vae_high_iteration24_X9_Y7,317,MNST,vae,high,24,9,7,7,9,1,0,0,0,yes,N/A
+198_MNST_gan_high_iteration96_X3_Y2,198,MNST,gan,high,96,3,2,3,3,0,0,0,0,yes,yes
+18_MNST_sd_high_iteration1_X1_Y7,18,MNST,sd,high,1,1,7,7,7,1,1,0,0,yes,no
+86_MNST_sd_high_iteration45_X9_Y4,86,MNST,sd,high,45,9,4,4,4,1,1,0,0,yes,no
+27_MNST_sd_high_iteration42_X1_Y2,27,MNST,sd,high,42,1,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+75_MNST_sd_high_iteration17_X1_Y2,75,MNST,sd,high,17,1,2,1,Not a Digit,0,1,0,1,N/A,N/A
+62_MNST_sd_high_iteration1_X9_Y7,62,MNST,sd,high,1,9,7,7,Not a Digit,1,1,0,1,N/A,no
+31_MNST_sd_high_iteration34_X5_Y7,31,MNST,sd,high,34,5,7,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+298_MNST_vae_high_iteration4_X3_Y5,298,MNST,vae,high,4,3,5,3,Not a Digit,0,1,0,1,N/A,N/A
+219_MNST_gan_high_iteration56_X4_Y9,219,MNST,gan,high,56,4,9,4,Not a Digit,0,1,0,1,N/A,N/A
+130_MNST_sd_low_iteration179_X6_Y4,130,MNST,sd,low,179,6,4,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+208_MNST_gan_high_iteration110_X0_Y8,208,MNST,gan,high,110,0,8,0,0,0,0,0,0,yes,yes
+210_MNST_gan_high_iteration37_X3_Y2,210,MNST,gan,high,37,3,2,2,7,1,1,0,0,yes,no
+333_MNST_vae_high_iteration78_X8_Y5,333,MNST,vae,high,78,8,5,6,6,1,1,0,0,yes,no
+104_MNST_sd_low_iteration1_X3_Y1,104,MNST,sd,low,1,3,1,3,Not a Digit,0,1,0,1,N/A,N/A
+7_MNST_sd_high_iteration28_X3_Y2,7,MNST,sd,high,28,3,2,3,3,0,0,0,0,yes,yes
+229_MNST_gan_high_iteration207_X6_Y5,229,MNST,gan,high,207,6,5,6,6,0,0,0,0,yes,yes
+140_MNST_gan_low_iteration230_X9_Y8,140,MNST,gan,low,230,9,8,9,9,0,0,0,0,yes,yes
+316_MNST_vae_high_iteration19_X4_Y9,316,MNST,vae,high,19,4,9,4,9,0,1,0,0,yes,N/A
+113_MNST_sd_low_iteration1_X8_Y2,113,MNST,sd,low,1,8,2,7,Not a Digit,1,1,0,1,N/A,no
+19_MNST_sd_high_iteration1_X5_Y3,19,MNST,sd,high,1,5,3,5,5,0,0,0,0,yes,yes
+293_MNST_vae_high_iteration194_X7_Y3,293,MNST,vae,high,194,7,3,7,Not a Digit,0,1,0,1,N/A,N/A
+299_MNST_vae_high_iteration24_X8_Y5,299,MNST,vae,high,24,8,5,8,8,0,0,0,0,yes,yes
+145_MNST_gan_high_iteration162_X4_Y9,145,MNST,gan,high,162,4,9,4,9,0,1,0,0,yes,N/A
+59_MNST_sd_high_iteration25_X5_Y3,59,MNST,sd,high,25,5,3,3,5,1,0,0,0,yes,N/A
+76_MNST_sd_high_iteration62_X4_Y5,76,MNST,sd,high,62,4,5,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+26_MNST_sd_high_iteration1_X0_Y9,26,MNST,sd,high,1,0,9,0,0,0,0,0,0,yes,yes
+41_MNST_sd_high_iteration37_X9_Y4,41,MNST,sd,high,37,9,4,4,9,1,0,0,0,yes,N/A
+98_MNST_sd_low_iteration222_X4_Y1,98,MNST,sd,low,222,4,1,1,1,1,1,0,0,yes,no
+236_MNST_gan_high_iteration78_X4_Y9,236,MNST,gan,high,78,4,9,9,4,1,0,0,0,yes,N/A
+148_MNST_gan_high_iteration90_X3_Y7,148,MNST,gan,high,90,3,7,3,4,0,1,0,0,yes,N/A
+61_MNST_sd_high_iteration18_X8_Y3,61,MNST,sd,high,18,8,3,8,8,0,0,0,0,yes,yes
+17_MNST_sd_high_iteration13_X4_Y0,17,MNST,sd,high,13,4,0,Not a Digit,6,1,1,1,0,N/A,no
+325_MNST_vae_high_iteration60_X0_Y2,325,MNST,vae,high,60,0,2,0,0,0,0,0,0,yes,yes
+78_MNST_sd_high_iteration38_X0_Y6,78,MNST,sd,high,38,0,6,0,3,0,1,0,0,yes,N/A
+77_MNST_sd_high_iteration70_X3_Y2,77,MNST,sd,high,70,3,2,7,7,1,1,0,0,yes,no
+334_MNST_vae_high_iteration115_X9_Y4,334,MNST,vae,high,115,9,4,4,4,1,1,0,0,yes,no
+211_MNST_gan_high_iteration80_X2_Y7,211,MNST,gan,high,80,2,7,7,7,1,1,0,0,yes,no
+310_MNST_vae_high_iteration89_X9_Y4,310,MNST,vae,high,89,9,4,4,4,1,1,0,0,yes,no
+101_MNST_sd_low_iteration28_X3_Y7,101,MNST,sd,low,28,3,7,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+33_MNST_sd_high_iteration20_X4_Y2,33,MNST,sd,high,20,4,2,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+96_MNST_sd_low_iteration37_X3_Y2,96,MNST,sd,low,37,3,2,2,3,1,0,0,0,yes,N/A
+192_MNST_gan_high_iteration22_X8_Y2,192,MNST,gan,high,22,8,2,8,8,0,0,0,0,yes,yes
+311_MNST_vae_high_iteration59_X4_Y7,311,MNST,vae,high,59,4,7,4,4,0,0,0,0,yes,yes
+122_MNST_sd_low_iteration1_X8_Y5,122,MNST,sd,low,1,8,5,5,Not a Digit,1,1,0,1,N/A,no
+91_MNST_sd_low_iteration1_X9_Y1,91,MNST,sd,low,1,9,1,4,Not a Digit,1,1,0,1,N/A,no
+24_MNST_sd_high_iteration21_X7_Y9,24,MNST,sd,high,21,7,9,9,9,1,1,0,0,yes,no
+259_MNST_vae_high_iteration80_X3_Y1,259,MNST,vae,high,80,3,1,Not a Digit,Not a Digit,1,1,1,1,no,N/A
+207_MNST_gan_high_iteration94_X6_Y0,207,MNST,gan,high,94,6,0,6,6,0,0,0,0,yes,yes
+302_MNST_vae_high_iteration63_X4_Y1,302,MNST,vae,high,63,4,1,4,4,0,0,0,0,yes,yes
+176_MNST_gan_high_iteration90_X0_Y6,176,MNST,gan,high,90,0,6,0,0,0,0,0,0,yes,yes
+72_MNST_sd_high_iteration37_X5_Y3,72,MNST,sd,high,37,5,3,3,5,1,0,0,0,yes,N/A
+187_MNST_gan_high_iteration10_X3_Y5,187,MNST,gan,high,10,3,5,9,3,1,0,0,0,yes,N/A
+262_MNST_vae_high_iteration47_X3_Y5,262,MNST,vae,high,47,3,5,8,5,1,1,0,0,yes,no
+110_MNST_sd_low_iteration17_X2_Y8,110,MNST,sd,low,17,2,8,8,8,1,1,0,0,yes,no
+272_MNST_vae_high_iteration19_X9_Y5,272,MNST,vae,high,19,9,5,9,9,0,0,0,0,yes,yes
+163_MNST_gan_high_iteration17_X3_Y8,163,MNST,gan,high,17,3,8,8,3,1,0,0,0,yes,N/A
+309_MNST_vae_high_iteration54_X7_Y0,309,MNST,vae,high,54,7,0,4,Not a Digit,1,1,0,1,N/A,no
+55_MNST_sd_high_iteration67_X1_Y8,55,MNST,sd,high,67,1,8,Not a Digit,4,1,1,1,0,N/A,no
+255_MNST_vae_high_iteration90_X1_Y7,255,MNST,vae,high,90,1,7,Not a Digit,9,1,1,1,0,N/A,no
+206_MNST_gan_high_iteration109_X7_Y8,206,MNST,gan,high,109,7,8,Not a Digit,7,1,0,1,0,N/A,N/A
+134_MNST_sd_low_iteration87_X3_Y7,134,MNST,sd,low,87,3,7,Not a Digit,4,1,1,1,0,N/A,no
+314_MNST_vae_high_iteration59_X1_Y8,314,MNST,vae,high,59,1,8,Not a Digit,1,1,0,1,0,N/A,N/A
+300_MNST_vae_high_iteration66_X4_Y9,300,MNST,vae,high,66,4,9,4,4,0,0,0,0,yes,yes
+114_MNST_sd_low_iteration24_X3_Y2,114,MNST,sd,low,24,3,2,3,3,0,0,0,0,yes,yes
+276_MNST_vae_high_iteration88_X1_Y7,276,MNST,vae,high,88,1,7,9,9,1,1,0,0,yes,no
