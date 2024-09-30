@@ -5,19 +5,19 @@ import cv2
 
 # Directories containing the .npy files for each dataset
 vae_input_directory = (
-    "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/svhn_vae_high"
+    "/add/path/to/input_directory/svhn_vae_high"
 )
 gan_input_directory = (
-    "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/svhn_gan_high"
+    "/add/path/to/input_directory/svhn_gan_high"
 )
 sd_input_directory = (
-    "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/svhn_sd_high"
+    "/add/path/to/input_directory/svhn_sd_high"
 )
 
 # Output directories for each dataset
-vae_output_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/svhn_vae_high_png"
-gan_output_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/svhn_gan_high_png"
-sd_output_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/svhn_sd_high_png"
+vae_output_directory = "/add/path/to/output_directory/svhn_vae_high_png"
+gan_output_directory = "/add/path/to/output_directory/svhn_gan_high_png"
+sd_output_directory = "/add/path/to/output_directory/svhn_sd_high_png"
 
 # Ensure the output directories exist
 os.makedirs(vae_output_directory, exist_ok=True)
