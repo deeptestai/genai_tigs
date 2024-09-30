@@ -12,7 +12,7 @@ Learning Test Input Generation
 - [generated_images](./generated_images) This folder contains images generated from three different test input generators across four datasets: MNIST, SVHN, CIFAR10, and ImageNet, each with varying mutation levels (high and low).
 - [evaluation_results](./evaluation_results) This folder contains CSV files with the results of all research questions, including data from the MTurk study. Additionally, it provides CSV files that outline the mutation extent ranges for each model. 
 
- ## Getting Started to RUN GAI-Tigs:
+ ## Getting Started to RUN GenAI-Tigs:
  ### STEP-1: Configure the envronment:
 
  ### STEP-2: Download Pretrained Classifier Checkpoints:
@@ -78,7 +78,7 @@ python gan_master.py --dataset mnist
 ```
 Replace mnist with svhn or cifar10 to run the GAN for the other datasets.
 
-Similarly, after downloading or training the gan model, run the sinvad script for cdcgan.
+Similarly, after downloading or training the gan model, run the tig script for cdcgan.
 ```
 python sinvad_cdcgan_master.py --dataset mnist
 ```
