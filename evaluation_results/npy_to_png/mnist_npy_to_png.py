@@ -15,9 +15,9 @@ sd_input_directory = (
 )
 
 # Output directories for each dataset
-vae_output_directory = "/add/path/to/onput_directory/mnist_vae_high_png"
-gan_output_directory = "/add/path/to/onput_directory/mnist_gan_high_png"
-sd_output_directory = "/add/path/to/onput_directory/mnist_sd_high_png"
+vae_output_directory = "/add/path/to/output_directory/mnist_vae_high_png"
+gan_output_directory = "/add/path/to/output_directory/mnist_gan_high_png"
+sd_output_directory = "/add/path/to/output_directory/mnist_sd_high_png"
 
 # Ensure the output directories exist
 os.makedirs(vae_output_directory, exist_ok=True)
