@@ -4,14 +4,14 @@ from PIL import Image
 import cv2
 
 # Directories containing the .npy files for each dataset
-vae_input_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/cifar10_vae_high"
-gan_input_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/cifar10_gan_high"
-sd_input_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/cifar10_sd_high"
+vae_input_directory = "/add/path/to/input_directory"
+gan_input_directory = "/add/path/to/input_directory"
+sd_input_directory = "/add/path/to/input_directory"
 
 # Output directories for each dataset
-vae_output_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/cifar10_vae_high_png"
-gan_output_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/cifar10_gan_high_png"
-sd_output_directory = "/home/maryam/Documents/SEDL/SINVAD/experiments_complete/all_results/cifar10_sd_high_png"
+vae_output_directory = "/add/path/to/output_directory"
+gan_output_directory = "/add/path/to/output_directory"
+sd_output_directory = "/add/path/to/output_directory"
 
 # Ensure the output directories exist
 os.makedirs(vae_output_directory, exist_ok=True)
