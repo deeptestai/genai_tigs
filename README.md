@@ -13,7 +13,7 @@ Learning Test Input Generation
 - [evaluation_results](./evaluation_results) This folder contains CSV files with the results of all research questions, including data from the MTurk study. Additionally, it provides CSV files that outline the mutation extent ranges for each model. 
 
  ## Getting Started to RUN GenAI-Tigs:
- ### STEP-1: Configure the envronment:
+ ### STEP-1: Configure the environment:
 
  ### STEP-2: Download Pretrained Classifier Checkpoints:
  To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
@@ -80,12 +80,12 @@ Replace mnist with svhn or cifar10 to run the GAN for the other datasets.
 
 Similarly, after downloading or training the gan model, run the tig script for cdcgan.
 ```
-python sinvad_cdcgan_master.py --dataset mnist
+python gan_master.py --dataset mnist
 ```
 Replace mnist with other datasets such as svhn, cifar10, imagenet
 
 ### 3. Stable Diffusion Setup and Script Execution
-#### How to Fine tune Stable Diffusion? 
+#### How to Fine-tune Stable Diffusion? 
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
 #### Download SD weights
 Download the fine-tuned model weights from [this link](URL). 
@@ -115,7 +115,7 @@ First, please make sure you have Conda installed. If not, you can download and i
      To run the script of the SD generator, run the following command:
 
 ```bash
-python3 sinvad_lora_mnist.py
+python3 tig_sd_mnist.py
 ```     
      
   Similar mnist is replaced with other dataset names, svhn, cifar10, and imagenet, according to their dataset name.
