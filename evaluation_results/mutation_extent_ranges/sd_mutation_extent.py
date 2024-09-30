@@ -28,7 +28,7 @@ os.makedirs(proj_path, exist_ok=True)
 
 print('Creating init image')
 base_model_id = "runwayml/stable-diffusion-v1-5"
-weights_path = "./img_sd/cifar10_finetune_lorav1.5-000005.safetensors"   //change checkpoints and compute ranges for other dataset models
+weights_path = "./img_sd/cifar10_finetune_lorav1.5-000005.safetensors"   ##change checkpoints and compute ranges for other dataset models
 
 pipe = StableDiffusionPipeline.from_pretrained(
 base_model_id, safety_checker=None).to(device)
