@@ -11,12 +11,12 @@ sd1_input_directory = "/add/path/to/input_directory/Imagenetteddy_sd_low"
 sd2_input_directory = "/add/path/to/input_directory/Imagenetteddy_sd_high"
 
 # Output directories for each dataset
-vae1_output_directory = "/add/path/to/onput_directory/Imagenetteddy_vae_low_png"
-vae2_output_directory = "/add/path/to/onput_directory/Imagenetteddy_vae_high_png"
-gan1_output_directory = "/add/path/to/onput_directory/Imagenetteddy_gan_low_png"
-gan2_output_directory = "/add/path/to/onput_directory/Imagenetteddy_gan_high_png"
-sd1_output_directory = "/add/path/to/onput_directory/Imagenetteddy_sd_low_png"
-sd2_output_directory = "/add/path/to/onput_directory/Imagenetteddy_sd_high_png"
+vae1_output_directory = "/add/path/to/output_directory/Imagenetteddy_vae_low_png"
+vae2_output_directory = "/add/path/to/output_directory/Imagenetteddy_vae_high_png"
+gan1_output_directory = "/add/path/to/output_directory/Imagenetteddy_gan_low_png"
+gan2_output_directory = "/add/path/to/output_directory/Imagenetteddy_gan_high_png"
+sd1_output_directory = "/add/path/to/output_directory/Imagenetteddy_sd_low_png"
+sd2_output_directory = "/add/path/to/output_directory/Imagenetteddy_sd_high_png"
 
 # Ensure the output directories exist
 os.makedirs(vae1_output_directory, exist_ok=True)
