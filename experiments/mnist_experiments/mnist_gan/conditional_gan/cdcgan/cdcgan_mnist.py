@@ -108,7 +108,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--dataroot",
-        default="/home/maryam/Documents/SEDL/SINVAD/mnist_dcgan/datasets",
+        default="./mnist_dcgan/datasets",
         required=False,
         help="path to  the MNIST dataset",
     )
