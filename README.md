@@ -88,7 +88,7 @@ Replace mnist with other datasets such as svhn, cifar10, imagenet
 #### How to Fine-tune Stable Diffusion? 
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
 #### Download SD weights
-Download the fine-tuned model weights from [this link](URL). 
+Download the fine-tuned model weights from [this link](https://drive.google.com/file/d/1FauJR7XbPt_g0W4r-LPIbv7si79JHh4V/view?usp=sharing). 
 
 #### configuration to excute Sd_tig
 
