@@ -10,7 +10,7 @@ Learning Test Input Generation
 - **experiments** contains subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the script used to obtain the results reported in the paper.
 - **documentation** contains a quick installation guide and a detailed description about stable diffusion Models.
 - **generated_images** contains images generated from three different test input generators across four datasets: MNIST, SVHN, CIFAR10, and ImageNet, each with varying mutation levels (high and low).
-- **evaluation_results** This folder contains CSV files with the results of all research questions, including data from the MTurk study. Additionally, it provides CSV files that outline the mutation extent ranges for each model. 
+- **evaluation_results** contains .csv files with the results for all research questions, including data from the MTurk study. Additionally, the csv_results and scripts folders contain .csv files and .py files, respectively, detailing the mutation extent ranges for each model.
 
  ## Getting Started to RUN GenAI-Tigs:
  ### STEP-1: Configure the environment:
