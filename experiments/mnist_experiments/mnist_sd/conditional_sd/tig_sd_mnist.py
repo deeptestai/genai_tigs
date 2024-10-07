@@ -233,7 +233,7 @@ for n in range(imgs_to_samp):  # Loop exactly 100 times
             all_img_lst.append(tensor_image_np)
 
             # Save the image as a numpy array
-            image_filename = f'image_{saved_images}_iteration{g_idx + 1}_X{original_label}_Y{perturb_label}'
+            image_filename = f'image_{saved_images-1}_iteration{g_idx + 1}_X{original_label}_Y{perturb_label}'
             np.save(os.path.join(proj_path, 'generated_images', image_filename), tensor_image_np)
         else:
             print("image is none")
