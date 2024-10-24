@@ -147,7 +147,6 @@ for n in range(imgs_to_samp):
        init_img_path = os.path.join(proj_path, f'image_{saved_images}_X{original_label}_prompt_{expected_label}.png')
        init_img.save(init_img_path)
        print(f"Image {saved_images} with matching label saved at {init_img_path}")
-       saved_images +=1
 
        init_pop = [
          original_lv + init_perturbation * torch.randn((pipe.unet.config.in_channels, height // 8, width // 8), device=device).to(torch.float16)
@@ -255,6 +254,7 @@ for n in range(imgs_to_samp):
           np.save(os.path.join(proj_path,'generated_images', image_filename), tensor_image_np)
        else: 
           print("image is none")
+       saved_images +=1
     else: 
        # IF no match, simply skip to the next iteration (no image is saved or processed)
        print(f"Label mismatch for image {saved_images}:expected {expected_label},got {original_label}")
