@@ -1,13 +1,12 @@
 # Benchmarking Generative AI Models for Deep Learning Test Input Generation
-Learning Test Input Generation
-  <p align="justify">This repository contains the source code and test generation input data of the paper “Benchmarking Generative AI Models for Deep Learning Test Input Generation” ……….</p> 
+  <p align="justify">This repository contains the source code and test generation input data of the paper “Benchmarking Generative AI Models for Deep Learning Test Input Generation” accepted at ICST 2025.</p> 
 
 ## Motivation:
 
- <p align="justify">The objective of this research is to evaluate the accuracy of various classifiers on datasets including MNIST, SVHN, CIFAR-10, and ImageNet. To achieve this, we employed different generative models to create images that induce misbehavior. We then assessed the classifiers' performance by determining their accuracy in making predictions based on these challenging images.</p>
+ <p align="justify">The objective of this research is to benchmark and combine different GenAI models with test input generators, assessing their effectiveness, efficiency, and quality of the generated test images, in terms of domain validity and label preservation</p>
 
 ## Repository Structure:
-- **experiments** contains subfolders of four separate datasets, each with three different generative AI model-based folders. These folders consist of the script used to obtain the results reported in the paper.
+- **experiments** contains subfolders of four separate datasets, each with three folders corresponding to different generative AI model-based test generators. These folders consist of the script used to obtain the results reported in the paper.
 - **documentation** contains a quick installation guide and a detailed description about stable diffusion Models.
 - **generated_images** contains images generated from three different test input generators across four datasets: MNIST, SVHN, CIFAR10, and ImageNet, each with varying mutation levels (high and low).
 - **evaluation_results** contains .csv files with the results for all research questions, including data from the MTurk study. Additionally, the csv_results and scripts folders contain .csv files and .py files, respectively, detailing the mutation extent ranges for each model.
@@ -124,7 +123,7 @@ python3 tig_sd_mnist.py
 
 
 ### REFERENCE:
-
+Maryam, M., Biagiola, M., Stocco, A., & Riccio, V. (2024). Benchmarking Generative AI Models for Deep Learning Test Input Generation. In Proceedings of the 18th IEEE International Conference on Software Testing, Verification and Validation (ICST 2025)
 
 
 
