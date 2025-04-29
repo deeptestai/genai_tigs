@@ -31,7 +31,7 @@ checkpoint_path = "./imagenet_vae_model_epoch_41.pth"
 vae = load_model(checkpoint_path)
 vae.eval()
 
-classifier = torch.hub.load("pytorch/vision:v0.10.0", "vgg16_bn", pretrained=True).to(device)
+classifier = torch.hub.load("pytorch/vision:v0.10.0", "vgg19_bn", pretrained=True).to(device)
 classifier.eval()
 
 transform = transforms.Compose([
