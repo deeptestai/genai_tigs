@@ -1,0 +1,292 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question.
+
+          Your image file URLs will be substituted for the "image_url" variable below 
+          when you publish a batch with a CSV input file containing multiple image file URLs.
+          To preview the element with an example image, try setting the src attribute to
+          "https://s3.amazonaws.com/cv-demo-images/one-bird.jpg" -->
+    <crowd-image-classifier 
+        src="${image_url0}"
+        categories="['burrito','cat', 'frying pan', 'french loaf', 'meat loaf', 'pizza', ' potpie', 'plate',  'trifle', 'not a real world object', 'a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_0">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url1}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_1">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url2}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_2">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url3}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_3">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url4}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_4">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url5}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_5">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url6}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_6">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url7}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_7">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url8}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_8">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url9}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_9">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+    <crowd-image-classifier 
+        src="${image_url10}"
+        categories="['burrito','cat','frying pan','french loaf','meat loaf','pizza',' potpie','plate', 'trifle','not a real world object','a different real world object']"
+        header="Please indicate the digit represented by the image"
+        name="category_10">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </full-instructions>
+
+    </crowd-image-classifier>
+</crowd-form>
