@@ -26,7 +26,17 @@ This tool provides a Gradio-based interface with three generative models — **V
 ---
 
 ## How to Run?
+ GIFTbench can be run in two ways:
+## Option A: Run from Docker Hub (Recommended)
+Use this method if you want to **quickly run the tool without installing or configuring anything**.  
+It is the fastest way for reviewers and users to reproduce our results.
 
+```bash
+docker pull maryam483/giftbench:v1.2.0
+docker run --name giftbench-running --gpus all -p 7860:7860 maryam483/giftbench:v1.2.0
+```
+## Option B: Build from Source (Developers)
+Use this if you want to see or modify the code, or rebuild the Docker image locally.
 ###  1. Clone this repository and switch to `gradio-tool` branch:
 
 ```bash
