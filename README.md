@@ -64,7 +64,7 @@ After running:
 ```bash
   ./run.sh
 ```
-You will see output like this:
+You will see output like this in both options:
 
 -Running on http://0.0.0.0:7860/   (for local RUN: use URL:http://localhost:7860/)
 
