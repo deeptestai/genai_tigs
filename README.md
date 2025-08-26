@@ -66,9 +66,9 @@ After running:
 ```
 You will see output like this in both options:
 
--Running on http://0.0.0.0:7860/   (for local RUN: use URL:http://localhost:7860/)
+-Running on http://0.0.0.0:7860/   (for local RUN: use URL:http://localhostip:7860/)
 
--Running on public URL: https://abcdef12345.gradio.live
+-Running on public URL: https://abcdef12345.gradio.live (you can access this link remotely)
 
 ###  3. How to View and Stop Watching Log:
 
