@@ -7,6 +7,7 @@ from PIL import Image
 import zipfile
 from sa.mnist_classifier.model import MnistClassifier
 from cdcgan.mnist_cdcgan.cdcgan_mnist import Generator
+from control import stop_flag, stop_generation
 #full Min and Max value
 min_val = -4.78276300430298
 max_val = 4.08758640289307
@@ -31,6 +32,7 @@ def calculate_fitness(logit, label):
     return expected_logit - new_logit
 
 def run_gan_tig(gen_num, pop_size, best_left,perturbation_size,initial_perturbation_size, imgs_to_samp, classifier_choice, classifier_file):
+    stop_flag.clear()
     if classifier_choice == "deepconv":
         classifier = MnistClassifier(img_size=28 * 28).to(device)
         classifier.load_state_dict(
@@ -81,6 +83,9 @@ def run_gan_tig(gen_num, pop_size, best_left,perturbation_size,initial_perturbat
 
 
     for img_idx in trange(imgs_to_samp):
+        if stop_flag.is_set():
+            print("[STOPPED] User interrupted generation")
+            break
         original_latent = latent_space[img_idx].unsqueeze(0)
         original_label_tensor = random_labels[img_idx]
         expected_label = original_label_tensor.item()
@@ -114,7 +119,10 @@ def run_gan_tig(gen_num, pop_size, best_left,perturbation_size,initial_perturbat
         best_fitness_score = np.inf
         best_image_tensor = None
 
-        for g_idx in range(gen_num): 
+        for g_idx in range(gen_num):
+            if stop_flag.is_set():
+                print("[STOPPED] User interrupted generation")
+                break  
             indivs_lV = torch.cat(now_pop, dim=0).view(-1, 100, 1, 1).to(device)
             indivs_labels = torch.tensor([original_label] * pop_size).to(device)
             Gen_imgs = G(indivs_lV, indivs_labels)

@@ -8,6 +8,7 @@ import torchvision.utils as vutils
 from PIL import Image
 from tqdm import trange
 import zipfile
+from control import stop_flag, stop_generation
 def save_image(tensor, filename):
     img = vutils.make_grid(tensor, normalize=True)
     img = img.mul(255).add_(0.5).clamp_(0, 255).permute(1, 2, 0)
@@ -74,7 +75,7 @@ def calculate_fitness(logit, label):
     return fitness
 
 def run_vae_tig_teddy(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier_choice,classifier_file):
-
+    stop_flag.clear()
     if classifier_choice == "VGG19bn":
         classifier = torch.hub.load("pytorch/vision:v0.10.0", "vgg19_bn", pretrained=True).to(device)
         classifier.eval()
@@ -109,6 +110,9 @@ def run_vae_tig_teddy(gen_num, pop_size, best_left, perturb_size, initial_pertur
     expected_label = 850
 
     for img_idx in trange(imgs_to_samp):
+        if stop_flag.is_set():
+            print("[STOPPED] User interrupted generation")
+            break
         for i, (x, _) in enumerate(test_loader):
             samp_img = x.to(device)
             break  # Only take one image
@@ -146,7 +150,10 @@ def run_vae_tig_teddy(gen_num, pop_size, best_left, perturb_size, initial_pertur
         best_fitness_score = np.inf
         best_image_tensor = None
 
-        for g_idx in range(gen_num): 
+        for g_idx in range(gen_num):
+            if stop_flag.is_set():
+                print("[STOPPED] User interrupted generation")
+                break 
             indivs = torch.cat(now_pop, dim=0)
             dec_imgs = vae.decode(indivs)
             all_logits = classifier(dec_imgs).squeeze().detach().cpu().numpy()

@@ -9,6 +9,7 @@ from cdcgan.cifar10_cdcgan.cdcgan_cifar10 import Generator
 import torchvision.utils as vutils
 from torchvision import transforms
 import zipfile
+from control import stop_flag, stop_generation
 def save_image(tensor, filename, size=None):
     """
     Save a tensor as an image, properly handling RGB (SVHN) format.
@@ -55,6 +56,7 @@ def calculate_fitness(logit, label):
     return expected_logit - new_logit
 
 def run_gan_tig2(gen_num, pop_size, best_left,perturbation_size,initial_perturbation_size, imgs_to_samp, classifier_choice,classifier_file):
+    stop_flag.clear()
     if classifier_choice == "VGGNET":
         classifier = VGGNet().to(device)
         classifier.load_state_dict(
@@ -101,6 +103,9 @@ def run_gan_tig2(gen_num, pop_size, best_left,perturbation_size,initial_perturba
 
 
     for img_idx in trange(imgs_to_samp):
+        if stop_flag.is_set():
+            print("[STOPPED] User interrupted generation")
+            break
         original_latent = latent_space[img_idx].unsqueeze(0)
         original_label_tensor = random_labels[img_idx]
         expected_label = original_label_tensor.item()
@@ -140,6 +145,9 @@ def run_gan_tig2(gen_num, pop_size, best_left,perturbation_size,initial_perturba
         best_image_tensor = None
 
         for g_idx in range(gen_num):
+            if stop_flag.is_set():
+                print("[STOPPED] User interrupted generation")
+                break
             indivs_lV = torch.cat(now_pop, dim=0).view(-1, 100, 1, 1).to(device)
             indivs_labels = torch.tensor([original_label] * pop_size).to(device)
             Gen_imgs = G(indivs_lV, indivs_labels)

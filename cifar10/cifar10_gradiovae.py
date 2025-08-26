@@ -9,6 +9,7 @@ from PIL import Image
 from sa.cifar10_classifier.model import VGGNet
 from vae.cifar10_vae.vae_model import ConvVAE
 import zipfile
+from control import stop_flag, stop_generation
 # Full min and max values
 min_val = -4.15868806838989
 max_val = 3.85224413871765
@@ -40,7 +41,7 @@ def calculate_fitness(logit, label):
     return fitness
 
 def run_vae_tig2(gen_num, pop_size, best_left, perturbation_size, initial_perturbation_size, imgs_to_samp,classifier_choice,classifier_file):
-    
+    stop_flag.clear()
     if classifier_choice == "VGGNET":
         classifier = VGGNet().to(device)
         classifier.load_state_dict(
@@ -82,6 +83,9 @@ def run_vae_tig2(gen_num, pop_size, best_left, perturbation_size, initial_pertur
     status_rows = []
 
     for img_idx in trange(imgs_to_samp):
+        if stop_flag.is_set():
+            print("[STOPPED] User interrupted generation")
+            break
         for i, (x, x_class) in enumerate(test_data_loader):
             samp_img = x[0:1]
             samp_class = x_class[0].item()
@@ -111,7 +115,9 @@ def run_vae_tig2(gen_num, pop_size, best_left, perturbation_size, initial_pertur
         best_image_tensor = None
 
         for g_idx in range(gen_num):
-             
+            if stop_flag.is_set():
+                print("[STOPPED] User interrupted generation")
+                break
             indivs = torch.cat(now_pop, dim=0)
             dec_imgs = vae.decode(indivs).view(-1, 3, 32, 32)
             all_logits = classifier(dec_imgs).squeeze().detach().cpu().numpy()

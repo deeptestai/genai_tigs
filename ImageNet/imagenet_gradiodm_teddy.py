@@ -17,7 +17,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 import numpy as np
 from PIL import Image
 import torch
-
+from control import stop_flag, stop_generation
 def tensor_to_pil(tensor_image):
     """
     Safely convert a torch tensor to a PIL image.
@@ -114,6 +114,7 @@ predicted_labels = []
 all_img_lst = []
 def run_diffusion_tig_teddy(gen_num, pop_size, best_left, perturbation_size, initial_perturbation_size,
                       imgs_to_samp, classifier_choice, prompt,classifier_file):
+    stop_flag.clear()
     if classifier_choice == "VGG19bn":
         classifier = torch.hub.load("pytorch/vision:v0.10.0", "vgg19_bn", pretrained=True).to(device)
         classifier.eval()
@@ -148,6 +149,9 @@ def run_diffusion_tig_teddy(gen_num, pop_size, best_left, perturbation_size, ini
     torch_generator = torch.Generator(device=device)
 
     for n in range(imgs_to_samp):
+        if stop_flag.is_set():
+            print("[STOPPED] User interrupted generation")
+            break
         seedSelect = seed + n
         generator = torch_generator.manual_seed(seedSelect)
 
@@ -185,6 +189,9 @@ def run_diffusion_tig_teddy(gen_num, pop_size, best_left, perturbation_size, ini
         prev_best = np.inf
 
         for g_idx in range(gen_num):  # Start from 1 for genetic algorithm steps
+            if stop_flag.is_set():
+                print("[STOPPED] User interrupted generation")
+                break
             indivs_lv = torch.cat(now_pop, dim=0).view(-1, 4, height // 8, width // 8).to(torch.float16)
             print(indivs_lv.shape)
             with torch.inference_mode():

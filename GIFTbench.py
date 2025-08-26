@@ -22,6 +22,7 @@ from ImageNet.imagenet_gradiodm_pizza import run_diffusion_tig_pizza as run_imag
 from ImageNet.imagenet_gradiovae_teddy import run_vae_tig_teddy as run_imagenet_vae1
 from ImageNet.imagenet_gradiobiggan_teddy import run_biggan_tig_teddy as run_imagenet_biggan1
 from ImageNet.imagenet_gradiodm_teddy import run_diffusion_tig_teddy as run_imagenet_dm1
+from control import stop_flag, stop_generation
 
 # Prompts
 mnist_prompts = [
@@ -242,11 +243,6 @@ def run_imagenet2(model_choice, gen_num, pop_size, best_left, perturb_size, init
 
 with gr.Blocks() as demo:
     gr.Markdown("## TEST INPUT GENERATORS – (VAE / GAN / Diffusion)")
-    with gr.Row():
-        global_stop_btn = gr.Button(" Stop All Running Tasks", variant="stop")
-        global_status = gr.Textbox(label="Global Status", interactive=False)
-
-    global_stop_btn.click(fn=stop_generation, outputs=global_status)
  
  #with gr.Blocks(css=".orange-btn button {background-color: orange !important; color: white !important;}") as demo:
     with gr.Tab("MNIST"):
@@ -266,9 +262,11 @@ with gr.Blocks() as demo:
         with gr.Row():
             prompt_mnist = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
             run_btn_mnist = gr.Button("Run MNIST TIG")
+            stop_btn_mnist = gr.Button("Stop")   # simple stop button
 
         with gr.Row():
             status_mnist = gr.Textbox(label="Status", interactive=False)
+
         with gr.Row():
             status_table = gr.Dataframe(headers=["# Image", "Expected Label", "Predicted Label", "# Iterations"], interactive=False)
             gallery_mnist = gr.Gallery(label="MNIST Images", columns=2, allow_preview=True)
@@ -285,6 +283,7 @@ with gr.Blocks() as demo:
                     perturb_mnist, initial_perturb_mnist, imgs_to_samp_mnist, classifier_dropdown, prompt_mnist,classifier_upload],
             outputs=[status_mnist, gallery_mnist, download_mnist, status_table]
         )
+        stop_btn_mnist.click(fn=stop_generation, outputs=status_mnist)
 #demo.launch()
     with gr.Tab("SVHN"):
         model_svhn = gr.Radio(["VAE", "GAN", "DM"], label="Model Type", value="")
@@ -300,8 +299,9 @@ with gr.Blocks() as demo:
            # prompt_svhn = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
             classifier_upload = gr.File(label="Upload .jit TorchScript Classifier",type="filepath",file_types=[".jit"],visible=False)
         with gr.Row():
-            run_btn_svhn = gr.Button("Run SVHN TIG")
             prompt_svhn = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
+            run_btn_svhn = gr.Button("Run SVHN TIG")
+            stop_btn_svhn = gr.Button("Stop")   # simple stop button
         
         with gr.Row():
             status_svhn = gr.Textbox(label="Status", interactive=False)
@@ -326,6 +326,7 @@ with gr.Blocks() as demo:
                     perturb_svhn, initial_perturb_svhn, imgs_to_samp_svhn, classifier_dropdown, prompt_svhn,classifier_upload],
             outputs=[status_svhn, gallery_svhn, download_svhn, status_table]
         )
+        stop_btn_svhn.click(fn=stop_generation, outputs=status_svhn)
   
     with gr.Tab("CIFAR-10"):
         model_cifar10 = gr.Radio(["VAE", "GAN", "DM"], label="Model Type")
@@ -341,8 +342,9 @@ with gr.Blocks() as demo:
             classifier_upload = gr.File(label="Upload .jit TorchScript Classifier",type="filepath",file_types=[".jit"],visible=False)
            # prompt_cifar10 = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
         with gr.Row():
-            run_btn_cifar10 = gr.Button("Run CIFAR-10 TIG")
             prompt_cifar10 = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
+            run_btn_cifar10 = gr.Button("Run CIFAR-10 TIG")
+            stop_btn_cifar10 = gr.Button("Stop")   # simple stop button
         with gr.Row():
             status_cifar10 = gr.Textbox(label="Status", interactive=False)
         
@@ -361,9 +363,9 @@ with gr.Blocks() as demo:
                     perturb_cifar10, initial_perturb_cifar10, imgs_to_samp_cifar10, classifier_dropdown, prompt_cifar10,classifier_upload],
             outputs=[status_cifar10, gallery_cifar10,download_Cifar10, status_table]
         )
-
+        stop_btn_cifar10.click(fn=stop_generation, outputs=status_cifar10)
     with gr.Tab("ImageNet (class-pizza)"):
-        model_imagenet = gr.Radio(["VAE (pizza)", "GAN (pizza)", "DM (pizza)"], label="Model Type", value="VAE")
+        model_imagenet = gr.Radio(["VAE (pizza)", "GAN (pizza)", "DM (pizza)"], label="Model Type", value="VAE(pizza)")
         with gr.Row():
             gen_num_imagenet = gr.Slider(100, 500, value=250, step=1, label="Generations")
             pop_size_imagenet = gr.Slider(10, 50, value=25, step=1, label="Population Size")
@@ -378,8 +380,9 @@ with gr.Blocks() as demo:
             classifier_upload = gr.File(label="Upload .jit TorchScript Classifier",type="filepath",file_types=[".jit"],visible=False)
  
         with gr.Row():
-            run_btn_imagenet = gr.Button("Run ImageNet (class-Pizza) TIG")
             prompt_imagenet = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
+            run_btn_imagenet = gr.Button("Run ImageNet (class-Pizza) TIG")
+            stop_btn_imagenet = gr.Button("Stop")   # simple stop button
 
         with gr.Row():
 
@@ -400,9 +403,10 @@ with gr.Blocks() as demo:
                     perturb_imagenet, initial_perturb_imagenet, imgs_to_samp_imagenet, classifier_dropdown, prompt_imagenet, truncation_imagenet,classifier_upload],
             outputs=[status_imagenet, gallery_imagenet,download_pizza, status_table]
         )
+        stop_btn_imagenet.click(fn=stop_generation, outputs=status_imagenet)
 
     with gr.Tab("ImageNet (class-teddy)"):
-        model_imagenet = gr.Radio(["VAE (teddy)", "GAN (teddy)", "DM (teddy)"], label="Model Type", value="VAE")
+        model_imagenet = gr.Radio(["VAE (teddy)", "GAN (teddy)", "DM (teddy)"], label="Model Type", value="VAE(teddy)")
         with gr.Row():
             gen_num_imagenet = gr.Slider(100, 500, value=250, step=1, label="Generations")
             pop_size_imagenet = gr.Slider(10, 50, value=25, step=1, label="Population Size")
@@ -416,8 +420,9 @@ with gr.Blocks() as demo:
            # prompt_imagenet = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
             classifier_upload = gr.File(label="Upload .jit TorchScript Classifier",type="filepath",file_types=[".jit"],visible=False)
         with gr.Row():
-            run_btn_imagenet = gr.Button("Run ImageNet (class-teddy) TIG", elem_classes="orange-btn")
             prompt_imagenet = gr.Dropdown(choices=[], label="Prompt (only for DM)", visible=False)
+            run_btn_imagenet = gr.Button("Run ImageNet (class-teddy) TIG", elem_classes="orange-btn")
+            stop_btn_imagenet = gr.Button("Stop")   # simple stop button
 
         with gr.Row():
             status_imagenet = gr.Textbox(label="Status")
@@ -439,6 +444,7 @@ with gr.Blocks() as demo:
                     perturb_imagenet, initial_perturb_imagenet, imgs_to_samp_imagenet, classifier_dropdown, prompt_imagenet, truncation_imagenet,classifier_upload],
             outputs=[status_imagenet, gallery_imagenet,download_teddy, status_table]
         )
+        stop_btn_imagenet.click(fn=stop_generation, outputs=status_imagenet)
 
 demo.launch(server_name="0.0.0.0", server_port=7860, share=True, prevent_thread_lock=False)
 

@@ -9,6 +9,7 @@ from torchvision.transforms.functional import to_pil_image, resize
 #import gradio as gr
 from pytorch_pretrained_biggan import (BigGAN, truncated_noise_sample)
 import zipfile
+from control import stop_flag, stop_generation
 def denormalize_vgg_tensor(tensor):
     mean = torch.tensor([0.485, 0.456, 0.406]).view(3, 1, 1).to(tensor.device)
     std = torch.tensor([0.229, 0.224, 0.225]).view(3, 1, 1).to(tensor.device)
@@ -71,6 +72,7 @@ def calculate_fitness(logit, label):
     return fitness
 
 def run_biggan_tig_pizza(imgs_to_samp, gen_num, pop_size, best_left, perturb_size, initial_perturb_size,classifier_choice, truncation,classifier_file):
+    stop_flag.clear()
     if classifier_choice == "VGG19bn":
         classifier = torch.hub.load("pytorch/vision:v0.10.0", "vgg19_bn", pretrained=True).to(device)
         classifier.eval()
@@ -112,6 +114,9 @@ def run_biggan_tig_pizza(imgs_to_samp, gen_num, pop_size, best_left, perturb_siz
 
     expected_label = 963 
     for img_idx in trange(imgs_to_samp):
+        if stop_flag.is_set():
+            print("[STOPPED] User interrupted generation")
+            break
         seed = torch.randint(0, 10000, (1,)).item()
         torch.manual_seed(seed)
         noise_vector = truncated_noise_sample(batch_size=1, dim_z=128, truncation=truncation, seed=seed)
@@ -151,6 +156,9 @@ def run_biggan_tig_pizza(imgs_to_samp, gen_num, pop_size, best_left, perturb_siz
         best_image_tensor = None
 
         for g_idx in range(gen_num):
+            if stop_flag.is_set():
+                print("[STOPPED] User interrupted generation")
+                break
             indivs_lv = torch.cat(now_pop, dim=0).view(pop_size, -1)
             indivs_labels = pop_class_vectors.view(pop_size, -1)
             with torch.no_grad():

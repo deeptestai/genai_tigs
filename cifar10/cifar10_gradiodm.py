@@ -14,6 +14,7 @@ from sa.cifar10_classifier.model import VGGNet
 import cv2
 import random
 import zipfile
+from control import stop_flag, stop_generation
 def process_image(image):
     """
     Resize a 3-channel RGB PIL Image to 32x32 pixels and convert it to a PyTorch tensor.
@@ -92,6 +93,7 @@ predicted_labels = []
 all_img_lst = []
 def run_diffusion_tig2(gen_num, pop_size, best_left, perturbation_size, initial_perturbation_size,
                       imgs_to_samp, classifier_choice, prompt,classifier_file):
+    stop_flag.clear()
     if classifier_choice == "VGGNET":
         classifier = VGGNet().to(device)
         classifier.load_state_dict(
@@ -128,6 +130,9 @@ def run_diffusion_tig2(gen_num, pop_size, best_left, perturbation_size, initial_
     torch_generator = torch.Generator(device=device)
 
     for n in range(imgs_to_samp):
+        if stop_flag.is_set():
+            print("[STOPPED] User interrupted generation")
+            break
         seedSelect = seed + n
         generator = torch_generator.manual_seed(seedSelect)
 
@@ -164,6 +169,9 @@ def run_diffusion_tig2(gen_num, pop_size, best_left, perturbation_size, initial_
         prev_best = np.inf
 
         for g_idx in range(gen_num):  # Start from 1 for genetic algorithm steps
+            if stop_flag.is_set():
+                print("[STOPPED] User interrupted generation")
+                break
             indivs_lv = torch.cat(now_pop, dim=0).view(-1, 4, height // 8, width // 8).to(torch.float16)
             print(indivs_lv.shape)
             with torch.inference_mode():
