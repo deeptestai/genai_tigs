@@ -22,12 +22,7 @@ from ImageNet.imagenet_gradiodm_pizza import run_diffusion_tig_pizza as run_imag
 from ImageNet.imagenet_gradiovae_teddy import run_vae_tig_teddy as run_imagenet_vae1
 from ImageNet.imagenet_gradiobiggan_teddy import run_biggan_tig_teddy as run_imagenet_biggan1
 from ImageNet.imagenet_gradiodm_teddy import run_diffusion_tig_teddy as run_imagenet_dm1
-from threading import Event
-stop_flag = Event()
 
-def stop_generation():
-    stop_flag.set()
-    return "🛑 Generation stopped by user."
 # Prompts
 mnist_prompts = [
     "A photo of Z0ero Number0", "A photo of one1 Number1", "A photo of two2 Number2",
