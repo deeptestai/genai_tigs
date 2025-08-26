@@ -22,7 +22,12 @@ from ImageNet.imagenet_gradiodm_pizza import run_diffusion_tig_pizza as run_imag
 from ImageNet.imagenet_gradiovae_teddy import run_vae_tig_teddy as run_imagenet_vae1
 from ImageNet.imagenet_gradiobiggan_teddy import run_biggan_tig_teddy as run_imagenet_biggan1
 from ImageNet.imagenet_gradiodm_teddy import run_diffusion_tig_teddy as run_imagenet_dm1
+from threading import Event
+stop_flag = Event()
 
+def stop_generation():
+    stop_flag.set()
+    return "🛑 Generation stopped by user."
 # Prompts
 mnist_prompts = [
     "A photo of Z0ero Number0", "A photo of one1 Number1", "A photo of two2 Number2",
@@ -242,6 +247,11 @@ def run_imagenet2(model_choice, gen_num, pop_size, best_left, perturb_size, init
 
 with gr.Blocks() as demo:
     gr.Markdown("## TEST INPUT GENERATORS – (VAE / GAN / Diffusion)")
+    with gr.Row():
+        global_stop_btn = gr.Button(" Stop All Running Tasks", variant="stop")
+        global_status = gr.Textbox(label="Global Status", interactive=False)
+
+    global_stop_btn.click(fn=stop_generation, outputs=global_status)
  
  #with gr.Blocks(css=".orange-btn button {background-color: orange !important; color: white !important;}") as demo:
     with gr.Tab("MNIST"):
