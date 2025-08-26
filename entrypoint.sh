@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Cleaning old model folders and zips..."
-rm -rf vae sa sd cdcgan vae.zip sd.zip sa.zip cdcgan.zip
+#rm -rf vae sa sd cdcgan vae.zip sd.zip sa.zip cdcgan.zip
 
 echo " Downloading model ZIPs..."
 
