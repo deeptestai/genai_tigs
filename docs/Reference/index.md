@@ -10,7 +10,7 @@ permalink: /reference/
 If you use this tool in your research, please cite the following papers:
 ```bibtex
  @software{maryam_giftbench_2025,
-  author       = {Maryam and Riccio, Vincenzo and Stocco, Andrea and Biagiola, Matteo},
+  author       = {Maryam and Matteo Biagiola and Andrea Stocco and Vincenzo Riccio},
   title        = {GIFTbench: Generative Image Fuzz Testing Benchmark},
   year         = {2025},
   publisher    = {Zenodo},
