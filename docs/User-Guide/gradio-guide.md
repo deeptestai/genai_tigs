@@ -14,6 +14,7 @@ The screenshot below shows the **ImageNet (class-pizza)** configuration tab in G
   <img src="docs/images/gui.png" alt="GIFTbench Gradio Interface Example" width="600"/>
 </p>
 
+
 Below is an explanation of each option and control (screenshot example: **ImageNet – class pizza**).
 
 ---
