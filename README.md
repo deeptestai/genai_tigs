@@ -113,5 +113,20 @@ This will:
 
 This project is licensed under the [MIT License](LICENSE).
 
+## REFERENCE
+
+```bibtex
+ @software{maryam_giftbench_2025,
+  author       = {Maryam and Matteo Biagiola and Andrea Stocco and Vincenzo Riccio},
+  title        = {GIFTbench: Generative Image Fuzz Testing Benchmark},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.16966422},
+  url          = {https://doi.org/10.5281/zenodo.16966422}
+}
+```
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
+
 
 
