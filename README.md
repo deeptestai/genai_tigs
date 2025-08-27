@@ -27,7 +27,7 @@ This tool provides a Gradio-based interface with three generative models — **V
 
 ---
 
-##  Prerequisites
+# Prerequisites
 
 - Docker (GPU-enabled)
 - NVIDIA driver + CUDA installed (host machine)
