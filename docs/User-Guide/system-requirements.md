@@ -1,7 +1,7 @@
 ---
 title: Hardware & Network Requirements
 parent: User Guide
-nav_order: 2
+nav_order: 4
 ---
 
 # Hardware & Network Requirements
