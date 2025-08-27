@@ -12,9 +12,8 @@ This tool provides a Gradio-based interface with three generative models — **V
 
 **For Documentation Click Here** <p align="center">
   <a href="https://deeptestai.github.io/genai_tigs/">
-    <img src="https://img.shields.io/badge/📖%20Documentation-Click%20Here-brightgreen?style=for-the-badge&logo=readthedocs&logoColor=white"
+    <img src="https://img.shields.io/badge/📖%20Documentation-Click%20Here-blue?style=for-the-badge&logo=readthedocs&logoColor=white"
          alt="Documentation"
-         style="zoom: 250%;"
          width="800"/>
   </a>
 </p>
