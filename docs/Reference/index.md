@@ -22,13 +22,12 @@ If you use this tool in your research, please cite the following papers:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
 
 ```bibtex
- @misc{maryam2024benchmarkinggenerativeaimodels,
-      title={Benchmarking Generative AI Models for Deep Learning Test Input Generation}, 
-      author={Maryam and Matteo Biagiola and Andrea Stocco and Vincenzo Riccio},
-      year={2024},
-      eprint={2412.17652},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2412.17652}, 
+ @inproceedings{maryam2025benchmarking,
+  title={Benchmarking Generative AI Models for Deep Learning Test Input Generation},
+  author={Maryam, Maryam and Biagiola, Matteo and Stocco, Andrea and Riccio, Vincenzo},
+  booktitle={2025 IEEE Conference on Software Testing, Verification and Validation (ICST)},
+  pages={174--185},
+  year={2025},
+  organization={IEEE}
 }
 ```
