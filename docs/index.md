@@ -1,6 +1,6 @@
 # Welcome to GIFTbench 
 
-  ![Gradio Web-App for Testing]<img src="images/gradio.png" alt="Gradio UI Demo" width="400"/>
+<img src="images/gradio.png" alt="Gradio UI Demo" width="400"/>
 
 ## Why Gradio?
 
