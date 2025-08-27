@@ -15,12 +15,8 @@ This tool provides a Gradio-based interface with three generative models — **V
     <img src="https://img.shields.io/badge/📖%20Documentation-Click%20Here-brightgreen?style=for-the-badge&logo=readthedocs&logoColor=white"
          alt="Documentation"
          style="zoom: 250%;"
-         width="400"/>
+         width="800"/>
   </a>
-</p>
-
-
-**APP**[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
 </p>
 
 ##  Repository Structure:
