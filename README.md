@@ -10,10 +10,10 @@ This tool provides a Gradio-based interface with three generative models — **V
 
 ##  Documentation
 
-[![Documentation](https://img.shields.io/badge/📖%20Documentation-Click%20Here-brightgreen?style=for-the-badge)](https://deeptestai.github.io/genai_tigs/)
+**GenAI Tigs Documentation** [![Documentation](https://img.shields.io/badge/📖%20Documentation-Click%20Here-brightgreen?style=for-the-badge)](https://deeptestai.github.io/genai_tigs/)
 
 
-👉 Click the icon above to open the full **GenAI Tigs Documentation**. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
 </p>
 
 ##  Repository Structure:
