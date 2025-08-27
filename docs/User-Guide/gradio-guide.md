@@ -1,7 +1,7 @@
 ---
 title: Using the Gradio UI
 parent: User Guide
-nav_order: 4
+nav_order: 1
 ---
 
 # Gradio Interface Guide
