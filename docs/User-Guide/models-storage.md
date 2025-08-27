@@ -22,7 +22,6 @@ nav_order: 2
 - **Outbound:** needed once to pull the image.
 - **Inbound (optional, if accessed remotely):**
   - **7860/tcp** → Gradio UI
-  - **8000/9000/tcp** → docs/dev server (optional)
 - If inbound must stay closed, use an **SSH tunnel** instead.
 
 ## Quick Checks
