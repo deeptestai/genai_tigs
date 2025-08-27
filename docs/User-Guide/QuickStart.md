@@ -1,12 +1,51 @@
 ---
 title: Quick Start
 parent: User Guide
-nav_order: 1
+nav_order: 2
 ---
 
 # Quick Start
+
+GIFTbench supports three convenient ways to get started: a launcher script, a prebuilt Docker image, or direct CLI usage via Python.
+
+---
+
+## Option 1: Run with `./run.sh` (Downloads Weights Automatically)
+
+This script runs the app using Docker and **automatically downloads all required model weights** from Google Drive on the first run.
+
+```bash
+./run.sh
+
+```
+## Option 2: Use Prebuilt Docker Image (Includes Weights)
+
+Use this command to run a self-contained Docker image that has all model weights pre-installed:
 
 ```bash
 docker pull yourname/giftbench:v1.2.1
 docker run --gpus all -p 7860:7860 yourname/giftbench:v1.2.1
 ```
+## Option 3: Run via Python CLI
+Developers can launch GIFTbench using the Python CLI for finer control:
+```bash
+   python GIFTbench.py
+```
+### 📥 Download Required Weights for CLI-based RUN
+
+Before running **GIFTbench**, you must manually download the required weights from Google Drive and place them inside the cloned project directory. Keep the **same filenames** as downloaded to ensure compatibility.
+
+- **Classifier Weights(folder name sa.zip)**: [Download Here](https://drive.google.com/file/d/1dKywynVg2SRHZBFrt101EwRzlKNuiVu-/view?usp=sharing)
+- **Stable Diffusion Weights (folder name sd.zip)**: [Download Here](https://drive.google.com/file/d/1q6nCAOxaQ1Dd69Kh0m_iMU6126kDh6pL/view?usp=drive_link)
+- **VAE Weights(folder name vae.zip**: [Download Here](https://drive.google.com/file/d/1q6nCAOxaQ1Dd69Kh0m_iMU6126kDh6pL/view?usp=drive_link)
+- **GAN Weights(folder name cdcgan.zip)**: [Download Here](https://drive.google.com/file/d/1MnXSukCHhtajVxtJxWpXCtXE8SFSCNKh/view?usp=drive_link)
+
+- Note: Unzip the folder and then run the GIFTbench.py command.
+  
+The prebuilt Docker image automatically executes the CLI command inside dockerfile setup.
+
+---
+
+
+
+
