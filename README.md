@@ -11,7 +11,7 @@ This tool provides a Gradio-based interface with three generative models — **V
 ##  Documentation
 
 <p align="center">
-  <a href="https://deeptestai.github.io/genai_tigs/fit">
+  <a href="https://deeptestai.github.io/genai_tigs/">
     <img src="https://cdn-icons-png.flaticon.com/512/14018/14018827.png"
          alt="Click Here for Documentation"
          width="200"/>
