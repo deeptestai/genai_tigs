@@ -8,6 +8,23 @@ This tool provides a Gradio-based interface with three generative models — **V
 
 ---
 
+##  Documentation
+
+<p align="center">
+  <a href="https://deeptestai.github.io/genai_tigs/fit">
+    <img src="https://cdn-icons-png.flaticon.com/512/14018/14018827.png"
+         alt="Click Here for Documentation"
+         width="200"/>
+  </a>
+</p>
+
+<p align="center">
+  👉 Click the icon above to open the full **GenAI Tigs Documentation**.
+</p>
+
+*Icon by [Freepik – Flaticon](https://www.flaticon.com/free-icon/click-here_14018827)*
+
+
 ##  Repository Structure:
 
 - `GIFTbench.py`: Main Gradio app script
