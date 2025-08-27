@@ -1,6 +1,6 @@
 # Welcome to GIFTbench 
 
-  ![Gradio Web-App for Testing]<img src="images/gradio.png" alt="Gradio UI Demo" width="600"/>
+  ![Gradio Web-App for Testing]<img src="images/gradio.png" alt="Gradio UI Demo" width="400"/>
 
 ## Why Gradio?
 
@@ -13,13 +13,12 @@ The GIFTbench framework integrates a Gradio-powered graphical interface to bridg
 
 By lowering the technical barrier, Gradio ensures that robustness testing is accessible to non-experts, supports reproducibility, and facilitates hands-on exploration of generative test pipelines.
 
-**GIFTbench** is a modular framework for testing deep learning image classifiers using **Generative AI** and **Genetic Algorithms**. It automates robustness testing by generating and perturbing test inputs in the latent space of generative models such as **VAE**, **GAN**, and **Diffusion Models**.
-
 ---
 
 ##  What is GIFTbench?
 
-GIFTbench stands for **Generative Image Fuzz Testing Benchmark**. It combines:
+GIFTbench stands for **Generative Image Fuzz Testing Benchmark**. **GIFTbench** is a modular framework for testing deep learning image classifiers using **Generative AI** and **Genetic Algorithms**. It automates robustness testing by generating and perturbing test inputs in the latent space of generative models such as **VAE**, **GAN**, and **Diffusion Models**.
+It combines:
 
 - Pre-trained generative models (VAE, GAN, Diffusion)
 - Genetic algorithms to evolve latent vectors
