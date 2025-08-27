@@ -19,7 +19,7 @@ This tool provides a Gradio-based interface with three generative models — **V
   </a>
 </p>
 
-##  Repository Structure:
+# Repository Structure:
 
 - `GIFTbench.py`: Main Gradio app script
 - `entrypoint.sh`: Downloads all models (`vae`, `sa`, `sd`, `cdcgan`) from Google Drive and flattens folders
