@@ -17,5 +17,6 @@ If you use this tool in your research, please cite the following papers:
   doi          = {10.5281/zenodo.16966422},
   url          = {https://doi.org/10.5281/zenodo.16966422}
 }
+```
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
