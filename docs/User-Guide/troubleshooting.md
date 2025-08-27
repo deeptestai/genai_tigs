@@ -24,12 +24,13 @@ Also, the host firewall or cloud security group may block incoming connections o
      ```bash
      sudo ufw status
      ```
- -Allow the port if blocked:
+   -Allow the port if blocked:
+
    ```bash
-   sudo ufw allow 7860/tcp
-   sudo ufw reload
-   ```
-3. **Verify port is listening:**
+     sudo ufw allow 7860/tcp
+     sudo ufw reload
+    ```
+4. **Verify port is listening:**
     ```bash
      sudo lsof -i:7860
          # or
@@ -38,7 +39,7 @@ Also, the host firewall or cloud security group may block incoming connections o
 ## Port opens locally but not from another machine
  
 -Ensure container binds to 0.0.0.0 (GIFTbench already sets this).
- -Verify firewall/security group allows inbound connections on port 7860.
+-Verify firewall/security group allows inbound connections on port 7860.
 -If you cannot open the port, use an SSH tunnel:
 - Use SSH tunnel:
 
