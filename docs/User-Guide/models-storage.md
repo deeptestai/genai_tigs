@@ -1,4 +1,3 @@
-
 ---
 title: Hardware & Network Requirements
 parent: User Guide
