@@ -6,7 +6,7 @@ title: Run with Docker
 parent: User Guide
 nav_order: 3
 ---
-
+```
 # Run with Docker
 
 ## Pull & run
