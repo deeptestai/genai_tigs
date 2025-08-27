@@ -1,12 +1,9 @@
-
-### docs/user-guide/run-with-docker.md
-```markdown
 ---
 title: Run with Docker
 parent: User Guide
 nav_order: 3
 ---
-```
+
 # Run with Docker
 
 ## Pull & run
