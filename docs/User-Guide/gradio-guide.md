@@ -11,7 +11,7 @@ The GIFTbench Gradio UI provides an interactive way to configure and run Test In
 The screenshot below shows the **ImageNet (class-pizza)** configuration tab in GIFTbench.
 
 <p align="center">
-  <img src="docs/images/gui.png" alt="GIFTbench Gradio Interface Example" width="800"/>
+  <img src="docs/images/gui.png" alt="GIFTbench Gradio Interface Example" width="600"/>
 </p>
 
 Below is an explanation of each option and control (screenshot example: **ImageNet – class pizza**).
