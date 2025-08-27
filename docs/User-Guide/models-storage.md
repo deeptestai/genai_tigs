@@ -1,10 +1,10 @@
-```markdown
+
 ---
 title: Hardware & Network Requirements
 parent: User Guide
 nav_order: 2
 ---
-```
+
 # Hardware & Network Requirements
 
 ## Hardware
