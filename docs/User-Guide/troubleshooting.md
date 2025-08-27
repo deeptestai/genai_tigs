@@ -47,7 +47,6 @@ ssh -L 7860:127.0.0.1:7860 user@server
 ```
 Then access in your local browser:
 http://localhost:7860
-## 🛠️ Troubleshooting
 
 ### Public Gradio link not working
 - Public links (`*.gradio.live`) require `share=True` in `GIFTbench.py`.  
