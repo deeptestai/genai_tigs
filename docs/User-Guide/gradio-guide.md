@@ -77,6 +77,10 @@ Below is an explanation of each option and control (screenshot example: **ImageN
 
 ### Outputs
 
+<p align="center">
+  <img src="../images/gui2.png" alt="GIFTbench Gradio Interface Example" width=""/>
+</p>
+
 - **Status:** Live updates on progress (e.g., loading weights, generation step, classifier predictions).  
 - **Results Table:** Displays:
   - Image ID
