@@ -1,19 +1,26 @@
-# GIFTbench Gradio App (GPU-enabled)
+# GIFTbench: Generative Image Fuzz Testing Benchmark
+GIFTbench is a modular framework for testing Deep Learning image classifiers that combines Generative AI with genetic algorithms. Its architecture integrates pretrained generative models with a user-friendly Gradio interface, enabling automated, reproducible, and interpretable robustness testing.
 
-This tool provides a Gradio-based interface with three generative models — **VAE**, **CDCGAN**, and **Diffusion** — on four benchmark datasets — **Mnist**, **SVHN**,**Cifar10**, and **Imagenet** — using GPU-accelerated PyTorch.
+This tool provides a Gradio-based interface with three generative models — **VAE**, **GAN**, and **Diffusion** — on four benchmark datasets — **Mnist**, **SVHN**,**Cifar10**, and **Imagenet** — using GPU-accelerated PyTorch.
 
 > It integrates **Test Input Generators (TIGs)** to evaluate classifier robustness through synthetic image generation.
 
 > GPU-accelerated docker | Auto-downloads pretrained weights | One-command Gradio launch
 
----
+--------
+# Documentation
 
-##  Documentation
+**For Documentation Click Here** <p align="center">
+  <a href="https://deeptestai.github.io/genai_tigs/">
+    <img src="https://img.shields.io/badge/📖%20Documentation-Click%20Here-brightgreen?style=for-the-badge&logo=readthedocs&logoColor=white"
+         alt="Documentation"
+         style="zoom: 250%;"
+         width="400"/>
+  </a>
+</p>
 
-**GenAI Tigs Documentation** [![Documentation](https://img.shields.io/badge/📖%20Documentation-Click%20Here-brightgreen?style=for-the-badge)](https://deeptestai.github.io/genai_tigs/)
 
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
+**APP**[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
 </p>
 
 ##  Repository Structure:
