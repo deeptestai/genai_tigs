@@ -1,0 +1,8 @@
+site_name: GIFTbench Docs
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - User Guide: user-guide.md
+  - Reference: reference.md
