@@ -1,6 +1,32 @@
-[![Documentation](https://img.shields.io/badge/Documentation-Visit-blue.svg)](https://deeptestai.github.io/genai_tigs/)
-[![DockerHub](https://img.shields.io/badge/DockerHub-maryam483%2Fgiftbench-blue.svg?logo=docker)](https://hub.docker.com/r/maryam483/giftbench)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg)](https://doi.org/10.5281/zenodo.16966422)
+<p align="center">
+
+  <!-- Docs (orange) -->
+  <a href="https://deeptestai.github.io/genai_tigs/">
+    <img src="https://img.shields.io/badge/Docs-Click%20Here-orange.svg" alt="Documentation">
+  </a>
+
+  <!-- DockerHub (Docker blue) -->
+  <a href="https://hub.docker.com/r/maryam483/giftbench">
+    <img src="https://img.shields.io/badge/DockerHub-maryam483%2Fgiftbench-2496ED.svg?logo=docker&logoColor=white" alt="DockerHub">
+  </a>
+
+  <!-- Zenodo DOI (official tab) -->
+  <a href="https://doi.org/10.5281/zenodo.16966422">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.16966422.svg" alt="DOI: 10.5281/zenodo.16966422">
+  </a>
+
+  <!-- License (green) -->
+  <a href="https://github.com/deeptestai/genai_tigs/blob/tool/LICENSE">
+    <img src="https://img.shields.io/github/license/deeptestai/genai_tigs.svg?color=2ecc71" alt="License">
+  </a>
+
+  <!-- GitHub Stars (social style) -->
+  <a href="https://github.com/deeptestai/genai_tigs/stargazers">
+    <img src="https://img.shields.io/github/stars/deeptestai/genai_tigs?style=social" alt="GitHub stars">
+  </a>
+
+</p>
+
 
 # GIFTbench: Generative Image Fuzz Testing Benchmark
 
