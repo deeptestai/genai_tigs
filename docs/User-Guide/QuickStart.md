@@ -1,7 +1,7 @@
 ---
 title: Quick Start
 parent: User Guide
-nav_order: 2
+nav_order: 3
 ---
 
 # Quick Start
