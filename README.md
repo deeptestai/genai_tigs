@@ -17,7 +17,7 @@
 
   <!-- License (green) -->
   <a href="https://github.com/deeptestai/genai_tigs/blob/tool/LICENSE">
-    <img src="https://img.shields.io/github/license/deeptestai/genai_tigs.svg?color=2ecc71" alt="License">
+    <img src="https://img.shields.io/github/license/deeptestai/genai_tigs.svg?color=2ecc71" alt="MIT">
   </a>
 
   <!-- GitHub Stars (social style) -->
