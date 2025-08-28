@@ -24,8 +24,9 @@ make sure the required model folders are placed **inside the cloned repository**
    git clone https://github.com/deeptestai/genai_tigs.git
    cd genai_tigs
    git checkout tool
-```
-2. Download the required model zip files (VAE, SD, SSA, CDCGAN) from the provided links of drive.
+
+   ```
+2. Download the required model zip files (VAE, SD, SSA, CDCGAN) from the provided links under QuickStart guideline.
    Unzip them and place the folders directly inside the cloned repo, e.g.:
 
 
