@@ -29,12 +29,11 @@ make sure the required model folders are placed **inside the cloned repository**
 2. Download the required model zip files (VAE, SD, SSA, CDCGAN) from the provided links under QuickStart guideline.
    Unzip them and place the folders directly inside the cloned repo, e.g.:
 
-
-genai_tigs/
-├── vae/
-├── sd/
-├── ssa/
-├── cdcgan/
-├── GIFTbench.py
-└── ...
+    genai_tigs/
+├── vae/ # VAE model files
+├── sd/ # Stable Diffusion model files
+├── sa/ # SA model files of classifiers
+├── cdcgan/ # CDCGAN model files
+├── GIFTbench.py # Main Gradio-based CLI entry point
+└── ... # Other source files and docs
 
