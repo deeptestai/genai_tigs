@@ -35,7 +35,7 @@ This tool provides a Gradio-based interface with three generative models — **V
 
 ---
 
-## How to Run?
+# How to Run?
  GIFTbench can be run in two ways:
 ## Option A: Run from Docker Hub (Recommended)
 Use this method if you want to **quickly run the tool without installing or configuring anything**.  
