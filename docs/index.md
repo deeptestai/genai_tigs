@@ -1,3 +1,9 @@
+---
+title: "Welcome to GIFTbench"
+nav_order: 1
+permalink: /
+---
+
 # Welcome to GIFTbench 
 
 <img src="images/gradio.png" alt="Gradio UI Demo" width="400"/>
