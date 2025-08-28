@@ -32,4 +32,4 @@ At the end of the log output, you will see two types of URLs:
 ###  Summary
 - Use the **Local URL** for development or testing on the same machine.  
 - Use the **Public URL** if you enabled sharing and need to test on another device or share access quickly.  
-- For permanent external access, expose port **7860** and access via:
+- For permanent external access, expose port **7860** and access via provided links.
