@@ -15,7 +15,7 @@ nav_order: 5
 docker run --gpus all -p 7860:7860 -v /home/USER/giftbench_out:/app/output yourname/giftbench:v1.2.1
 ```
 
-## RUN from CLI
+## RUN from CLI (storage Structure)
 If you want to run GIFTbench directly from the command line (without Docker),  
 make sure the required model folders are placed **inside the cloned repository**.
 1. Clone the repository:
@@ -25,7 +25,7 @@ make sure the required model folders are placed **inside the cloned repository**
    git checkout tool
 
    ```
-2. Download the required model zip files (VAE, SD, SSA, CDCGAN) from the provided links under QuickStart guideline.
+2. Download the required model zip files (vae, sd,sa, cdcgan) from the provided links under QuickStart guideline.
    Unzip them and place the folders directly inside the cloned repo, e.g.:
 
 
@@ -33,8 +33,12 @@ make sure the required model folders are placed **inside the cloned repository**
 genai_tigs/
 ├── vae/          # VAE model files
 ├── sd/           # Stable Diffusion model files
-├── ssa/          # SSA model files
+├── sa/          # SA model files contain classifier under test
 ├── cdcgan/       # CDCGAN model files
 ├── GIFTbench.py  # Main Gradio-based CLI entry point
-└── ...           # Other source files and docs
+└── ..           # Other source files and docs
+```
+RUN code
+```bash
+python GIFTbench.py
 ```
