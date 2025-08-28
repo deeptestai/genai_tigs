@@ -6,7 +6,7 @@ plugins:
   - jekyll-remote-theme
 
 logo: "/assets/images/logo.png"
-color_scheme: custom
+color_scheme: custom.scss
 search_enabled: true
 
 aux_links:
