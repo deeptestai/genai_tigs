@@ -5,8 +5,9 @@ permalink: /
 ---
 
 # Welcome to GIFTbench 
-
-<img src="images/gradio.png" alt="Gradio UI Demo" width="400"/>
+<p align="center">
+  <img src="images/gradio.png" alt="Gradio UI Demo" width="500"/>
+</p>
 
 ## Why Gradio?
 
