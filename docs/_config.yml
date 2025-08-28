@@ -5,17 +5,13 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
 
-# If your logo file is at docs/images/logo.png:
-logo: ""
-
-# Use 'custom' only if docs/_sass/color_schemes/custom.scss exists.
-# Otherwise switch to 'dark' or 'light'.
+logo: "/images/logo.png"
 color_scheme: custom
-
 search_enabled: true
 
 aux_links:
   "View on GitHub": https://github.com/deeptestai/genai_tigs
 aux_links_new_tab: true
+
 
 
