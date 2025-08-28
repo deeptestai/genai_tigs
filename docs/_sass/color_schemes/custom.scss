@@ -1,19 +1,26 @@
-/* Custom dark-blue scheme for GIFTbench */
+/* Professional, clean color scheme for GIFTbench Docs */
 
-$body-background-color: #0d1b2a;   // dark navy
-$body-text-color: #ffffff;         // white text
-$heading-color: #ffffff;           // white headings
-$sidebar-color: #0f2437;
-$sidebar-text-color: #ffffff;
-$nav-child-link-color: #cfe8ff;
+/* Background and text */
+$body-background-color: #ffffff;     // white background
+$body-text-color: #222222;           // near-black text for readability
 
-$link-color: #4da6ff;
-$link-hover-color: #82c0ff;
-
-$btn-primary-color: #1e3d59;
-$btn-primary-color-dark: #16324f;
-
-/* Make headings bold */
+/* Headings */
+$heading-color: #111111;             // darker headings
 $h1-font-weight: 700;
-$h2-font-weight: 700;
-$h3-font-weight: 700;
+$h2-font-weight: 600;
+$h3-font-weight: 600;
+
+/* Links */
+$link-color: #1a73e8;                // Google Docs-style blue
+$link-hover-color: #0c4fb3;          // darker hover state
+
+/* Sidebar */
+$sidebar-color: #f8f9fa;             // light gray sidebar
+$sidebar-text-color: #202124;
+$nav-child-link-color: #5f6368;
+$nav-child-link-color-active: #1a73e8;
+
+/* Buttons */
+$btn-primary-color: #1a73e8;         // strong blue
+$btn-primary-color-dark: #0c4fb3;
+
