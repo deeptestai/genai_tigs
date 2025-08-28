@@ -144,7 +144,7 @@ This will:
 
 This project is licensed under the [MIT License](LICENSE).
 
-##  REFERENCE
+##  Reference
 
 ```bibtex
  @software{maryam_giftbench_2025,
