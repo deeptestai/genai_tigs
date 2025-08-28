@@ -18,7 +18,6 @@ docker run --gpus all -p 7860:7860 -v /home/USER/giftbench_out:/app/output yourn
 ## RUN from CLI
 If you want to run GIFTbench directly from the command line (without Docker),  
 make sure the required model folders are placed **inside the cloned repository**.
-
 1. Clone the repository:
    ```bash
    git clone https://github.com/deeptestai/genai_tigs.git
@@ -29,11 +28,13 @@ make sure the required model folders are placed **inside the cloned repository**
 2. Download the required model zip files (VAE, SD, SSA, CDCGAN) from the provided links under QuickStart guideline.
    Unzip them and place the folders directly inside the cloned repo, e.g.:
 
-    genai_tigs/
-├── vae/ # VAE model files
-├── sd/ # Stable Diffusion model files
-├── sa/ # SA model files of classifiers
-├── cdcgan/ # CDCGAN model files
-├── GIFTbench.py # Main Gradio-based CLI entry point
-└── ... # Other source files and docs
 
+```text
+genai_tigs/
+├── vae/          # VAE model files
+├── sd/           # Stable Diffusion model files
+├── ssa/          # SSA model files
+├── cdcgan/       # CDCGAN model files
+├── GIFTbench.py  # Main Gradio-based CLI entry point
+└── ...           # Other source files and docs
+```
