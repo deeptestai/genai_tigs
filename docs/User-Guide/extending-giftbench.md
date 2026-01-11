@@ -44,9 +44,9 @@ Depending on the generator type:
 
 ### Training the Classifier from Scratch or Modifying Hyperparameters
 To evaluate robustness, GIFTbench requires a reference classifier trained on the same dataset. This classifier serves as the system under test and is used to assess misclassification induced by the test generators. These scripts can be adapted to new datasets by adjusting:
--input resolution and channels,
--number of output classes,
--dataset-specific preprocessing.
+- input resolution and channels,
+- number of output classes,
+- dataset-specific preprocessing.
   Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
  
   -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
