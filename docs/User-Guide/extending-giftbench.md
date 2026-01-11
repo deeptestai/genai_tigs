@@ -35,9 +35,29 @@ Depending on the generator type:
 - **Variational Autoencoders (VAEs)** and **Generative Adversarial Networks (GANs)** must be trained from scratch on the target dataset.
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
 
-Training and fine-tuning scripts, along with example configurations, are provided in the repository and documented in:
-- `models-storage.md`
-- `QuickStart.md`
+ Classifier training and fine-tuning scripts, along with example configurations, are provided in the repository and mentioned below:
+# Pretrained Classifier Checkpoints & Script File :
+ To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
+ 
+  -Mnist_classifier_ckpt: [Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
+  
+  -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
+  
+  -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
+  
+  -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
+### Training the Classifier from Scratch or Modifying Hyperparameters
+  Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
+ 
+  -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
+  
+    python3 train_mnist.py    (for mnist, similar for other datasets)
+---
+# Stable Diffusion Setup and Script Execution
+#### How to Fine-tune Stable Diffusion? 
+Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
+#### Download SD weights
+Download the fine-tuned model weights from [this link](https://drive.google.com/file/d/1FauJR7XbPt_g0W4r-LPIbv7si79JHh4V/view?usp=sharing). 
 
 ---
 
