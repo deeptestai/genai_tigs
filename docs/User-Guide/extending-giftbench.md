@@ -36,7 +36,7 @@ Depending on the generator type:
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
 
  Classifier training and fine-tuning scripts, along with example configurations, are provided in the repository and mentioned below:
-# Pretrained Classifier Checkpoints & Script File :
+## Pretrained Classifier Checkpoints & Script File :
  To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
  
   -Mnist_classifier_ckpt: [Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
@@ -53,7 +53,7 @@ Depending on the generator type:
   
     python3 train_mnist.py    (for mnist, similar for other datasets)
 ---
-# Stable Diffusion Setup and Script Execution
+## Stable Diffusion Setup and Script Execution
 #### How to Fine-tune Stable Diffusion? 
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
 #### Download SD weights
@@ -69,12 +69,49 @@ After training, generative models can be integrated into GIFTbench in one of two
    Users may replace the underlying checkpoint or configuration used by an existing VAE, GAN, or diffusion generator while reusing the same generator logic and search-based testing pipeline.
 
 2. **Generator Wrapper**  
-   If a generative model uses different input–output conventions or generation behavior, users may implement a lightweight wrapper that exposes the standard interface expected by GIFTbench.
+   If a generative model uses different input–output conventions (e.g., different latent formats, generation calls, or output representations) or generation behavior, users may implement a lightweight wrapper that exposes the standard interface expected by GIFTbench.
 
 In both cases, integration occurs at the module level and does not require changes to the core genetic search, evaluation, or validation components.
 
 ---
+**Generator Wrapper**
+### When Do I Need a Wrapper?
 
+In GIFTbench, wrappers are required **only when a new dataset or generative model does not follow the existing input–output conventions**.
+
+### New Dataset
+A dataset wrapper is needed when adding a dataset with different:
+- image resolution or channels,
+- preprocessing steps,
+- label format.
+
+The wrapper ensures the dataset exposes the same interface used by existing datasets so it can reuse the same testing pipeline.
+
+### New Generative Model
+A generator wrapper is needed only if the model:
+- uses a different latent format,
+- exposes a non-standard generation API,
+- returns outputs in a non-image format.
+
+If the model already supports `generate(latents, **kwargs)`, no wrapper is required.
+
+Wrappers adapt datasets or models to GIFTbench’s standard interface without changing the core search, evaluation, or visualization components.
+
+### Example: Simple Wrapper Class
+
+A wrapper is a small class that adapts a dataset or generative model to the interface expected by GIFTbench.
+
+```python
+class SimpleWrapper:
+    def __init__(self, model):
+        self.model = model
+
+    def generate(self, latents, **kwargs):
+        return self.model.sample(latents)
+```
+This wrapper translates GIFTbench’s latent inputs into the model’s native generation call and returns images in the expected format. Only the wrapper changes; the rest of the framework remains unchanged.
+
+---
 ## Model-Specific Configuration Options
 
 GIFTbench exposes configuration options selectively through the interface to prevent invalid settings. For example:
