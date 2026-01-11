@@ -77,6 +77,7 @@ This tool provides a Gradio-based interface with three generative models — **V
   -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
 ### Training the Classifier from Scratch or Modifying Hyperparameters
   Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
+ 
   -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
   
     python3 train_mnist.py    (for mnist, similar for other datasets)
