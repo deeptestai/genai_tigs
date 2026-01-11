@@ -51,8 +51,7 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
   ```
    python3 train_mnist.py    (for mnist, similar for other datasets)
   ```
-
- ### Pretrained Checkpoints
+### Pretrained Checkpoints
  
   To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
  
@@ -82,7 +81,7 @@ python train_master.py --dataset mnist
 ```
 Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
 
-### Pretrained checkpoints
+### Pretrained Checkpoints
  We have trained the Variational Autoencoder (VAE) on all four datasets: MNIST, SVHN, CIFAR-10, and ImageNet. You can download the pretrained weights for all four models from the following link.
 
 - Mnist_vae_ckpt:already uploaded mnist/mnist-vae/weights under repository structure
