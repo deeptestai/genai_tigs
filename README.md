@@ -66,9 +66,9 @@ This tool provides a Gradio-based interface with three generative models — **V
 
 ---
 # Pretrained Classifier Checkpoints & Script File :
- To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
+ To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
  
-  -Mnist_classifier_ckpt: already uploaded mnist/mnist-classifier/weights under repository structure
+  -Mnist_classifier_ckpt: [Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
   
   -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
   
