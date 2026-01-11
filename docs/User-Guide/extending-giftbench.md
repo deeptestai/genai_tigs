@@ -53,7 +53,50 @@ Depending on the generator type:
   
     python3 train_mnist.py    (for mnist, similar for other datasets)
 ---
-## Stable Diffusion Setup and Script Execution
+## Generative AI pretrained checkpoints & Script File :
+ ### 1. VAE:
+ 
+ We have trained the Variational Autoencoder (VAE) on all four datasets: MNIST, SVHN, CIFAR-10, and ImageNet. You can download the pretrained weights for all four models from the following link.
+
+- Mnist_vae_ckpt:already uploaded mnist/mnist-vae/weights under repository structure
+- SVHN_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/13D8DXRQ41pNv29jZDuWKjjUXMaXlpeG1/view?usp=sharing)
+- Cifar10_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1dLYUewBnDfOh6qsy8REWFbb57pktKg6k/view?usp=sharing)
+- Imagenet_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1iM9Sp7l7zc5o_B5ZukQ4RP8fmkScdFBw/view?usp=sharing)
+
+Navigate to the `vae/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
+  
+ Run the script by using a command.
+ 
+ To train the VAE from scratch, run the following command:
+
+```
+python train_master.py --dataset mnist 
+```
+
+Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
+
+### 2. GAN:
+
+We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under Repository structure. 
+
+-For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
+
+ We utilize the 256x256 size Deep-BigGAN model with the specified pretrained weights by executing the following command:
+ 
+ ```
+ G = make_gan(gan_type='biggan', model_name='biggan-deep-256')
+```
+ We set the truncation value to 1.0 to produce images with greater variation.
+
+ Navigate to the `cdcgan/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
+ To train the CDCGAN for a specific dataset from scratch, use the following command:
+
+```
+python gan_master.py --dataset mnist
+```
+Replace mnist with svhn or cifar10 to run the GAN for the other datasets.
+
+### 3. Stable Diffusion Setup and Script Execution
 #### How to Fine-tune Stable Diffusion? 
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
 #### Download SD weights
