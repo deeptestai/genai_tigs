@@ -34,7 +34,7 @@ Extending GIFTbench to a new dataset requires training **dataset-specific genera
 Depending on the generator type:
 - **Variational Autoencoders (VAEs)** and **Generative Adversarial Networks (GANs)** must be trained from scratch on the target dataset.
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
-  
+
 ---
 
 ## Classifier and GenAI Training Scripts
