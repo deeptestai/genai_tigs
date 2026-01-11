@@ -84,7 +84,7 @@ Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
 ### Pretrained Checkpoints
  We have trained the Variational Autoencoder (VAE) on all four datasets: MNIST, SVHN, CIFAR-10, and ImageNet. You can download the pretrained weights for all four models from the following link.
 
-- Mnist_vae_ckpt:already uploaded mnist/mnist-vae/weights under repository structure
+- Mnist_vae_ckpt: already uploaded mnist/mnist-vae/weights under repository structure
 - SVHN_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/13D8DXRQ41pNv29jZDuWKjjUXMaXlpeG1/view?usp=sharing)
 - Cifar10_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1dLYUewBnDfOh6qsy8REWFbb57pktKg6k/view?usp=sharing)
 - Imagenet_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1iM9Sp7l7zc5o_B5ZukQ4RP8fmkScdFBw/view?usp=sharing)
@@ -116,9 +116,11 @@ Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other da
 
 ### 3. Stable Diffusion Setup and Script Execution
 
-####  How to Fine-tune Stable Diffusion? 
+#### How to Fine-tune Stable Diffusion?
+
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
-####  Download SD weights
+
+#### Download SD weights
 Download the fine-tuned model weights from [this link](https://drive.google.com/file/d/1FauJR7XbPt_g0W4r-LPIbv7si79JHh4V/view?usp=sharing). 
 
 ---
