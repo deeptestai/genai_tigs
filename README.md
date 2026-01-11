@@ -52,7 +52,7 @@ This tool provides a Gradio-based interface with three generative models — **V
 # Repository Structure:
 
 - `GIFTbench.py`: Main Gradio app script
-- `entrypoint.sh`: Downloads all models (`vae`, `sa`, `sd`, `cdcgan`) from Google Drive and flattens folders
+- `entrypoint.sh`: Downloads all models (`vae`, `sa`, `sd`, `cdcgan`) from Google Drive and flattens folders.(The sa folder contains all the classifier scripts)
 - `Dockerfile`: GPU-ready Docker image with CUDA + PyTorch (PyTorch 2.2 + CUDA 12.1)
 - `run.sh`: One-command runner that shows the Gradio public link
 
