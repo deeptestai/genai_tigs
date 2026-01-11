@@ -35,7 +35,7 @@ Depending on the generator type:
 - **Variational Autoencoders (VAEs)** and **Generative Adversarial Networks (GANs)** must be trained from scratch on the target dataset.
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
 
- ## Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below:
+## Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below:
 
 ### Pretrained Classifier Checkpoints & Script File :
 
@@ -68,7 +68,8 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
 
 ## Generative AI pretrained checkpoints & Script File :
 GIFTbench does not rely on dataset-agnostic generators. Instead, each supported dataset uses generative models trained or fine-tuned on that dataset’s distribution.
- ### 1. VAE:
+
+### 1. VAE:
 
 Navigate to the `vae/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
   
