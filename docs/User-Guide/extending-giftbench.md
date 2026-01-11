@@ -34,7 +34,9 @@ Extending GIFTbench to a new dataset requires training **dataset-specific genera
 Depending on the generator type:
 - **Variational Autoencoders (VAEs)** and **Generative Adversarial Networks (GANs)** must be trained from scratch on the target dataset.
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
+  
 ---
+
 ## Classifier and GenAI Training Scripts
    Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below.
 
@@ -117,11 +119,11 @@ Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other da
 
 ### 3. Stable Diffusion Setup and Script Execution
 
-#### How to Fine-tune Stable Diffusion?
+####  How to Fine-tune Stable Diffusion?
 
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
 
-#### Download SD weights
+####  Download SD weights
 Download the fine-tuned model weights from [this link](https://drive.google.com/file/d/1FauJR7XbPt_g0W4r-LPIbv7si79JHh4V/view?usp=sharing). 
 
 ---
