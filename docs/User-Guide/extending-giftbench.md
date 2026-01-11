@@ -50,6 +50,7 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
   ```
     python3 train_mnist.py    (for mnist, similar for other datasets)
   ```
+
  ### Pretrained Checkpoints
  
   To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
@@ -65,6 +66,8 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
 ---
 ## Generative AI pretrained checkpoints & Script File :
 GIFTbench does not rely on dataset-agnostic generators. Instead, each supported dataset uses generative models trained or fine-tuned on that dataset’s distribution.
+
+
  ### 1. VAE:
 
 Navigate to the `vae/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
