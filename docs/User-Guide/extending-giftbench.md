@@ -35,9 +35,9 @@ Depending on the generator type:
 - **Variational Autoencoders (VAEs)** and **Generative Adversarial Networks (GANs)** must be trained from scratch on the target dataset.
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
 
-** Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below:**
+ ## Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below:
 
-## Pretrained Classifier Checkpoints & Script File :
+### Pretrained Classifier Checkpoints & Script File :
 
 ### Training the Classifier from Scratch or Modifying Hyperparameters
 To evaluate robustness, GIFTbench requires a reference classifier trained on the same dataset. This classifier serves as the system under test and is used to assess misclassification induced by the test generators.These scripts can be adapted to new datasets by adjusting:
@@ -47,6 +47,7 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
   Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
  
   -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
+  
   ```
     python3 train_mnist.py    (for mnist, similar for other datasets)
   ```
@@ -64,10 +65,9 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
   -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
   
 ---
+
 ## Generative AI pretrained checkpoints & Script File :
 GIFTbench does not rely on dataset-agnostic generators. Instead, each supported dataset uses generative models trained or fine-tuned on that dataset’s distribution.
-
-
  ### 1. VAE:
 
 Navigate to the `vae/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
@@ -79,8 +79,8 @@ Navigate to the `vae/` directory, which contains subfolders for each dataset. Ea
 ```
 python train_master.py --dataset mnist 
 ```
-
 Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
+
  ### Pretrained checkpoints
  We have trained the Variational Autoencoder (VAE) on all four datasets: MNIST, SVHN, CIFAR-10, and ImageNet. You can download the pretrained weights for all four models from the following link.
 
