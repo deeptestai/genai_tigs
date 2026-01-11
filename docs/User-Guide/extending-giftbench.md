@@ -51,7 +51,8 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
     python3 train_mnist.py    (for mnist, similar for other datasets)
   ```
  ### Pretrained Checkpoints
- To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
+ 
+  To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
  
   -Mnist_classifier_ckpt: [Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
   
