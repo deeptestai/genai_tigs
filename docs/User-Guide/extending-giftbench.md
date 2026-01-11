@@ -27,20 +27,21 @@ Once implemented, the new dataset module can directly reuse the existing genetic
 
 ---
 
-## 2.Training Generative Models for a New Dataset
+## 2. Training Generative Models for a New Dataset
 
 Extending GIFTbench to a new dataset requires training **dataset-specific generative models**. GIFTbench does not provide dataset-agnostic generators by design, as such models would compromise the validity of robustness assessments.
 
 Depending on the generator type:
 - **Variational Autoencoders (VAEs)** and **Generative Adversarial Networks (GANs)** must be trained from scratch on the target dataset.
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
+## Classifier and GenAI Training Scripts
 
-## Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below:
+Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below.
 
 ### Pretrained Classifier Checkpoints & Script File :
 
 ### Training the Classifier from Scratch or Modifying Hyperparameters
-To evaluate robustness, GIFTbench requires a reference classifier trained on the same dataset. This classifier serves as the system under test and is used to assess misclassification induced by the test generators.These scripts can be adapted to new datasets by adjusting:
+To evaluate robustness, GIFTbench requires a reference classifier trained on the same dataset. This classifier serves as the system under test and is used to assess misclassification induced by the test generators. These scripts can be adapted to new datasets by adjusting:
 -input resolution and channels,
 -number of output classes,
 -dataset-specific preprocessing.
@@ -49,14 +50,14 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
   -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
   
   ```
-    python3 train_mnist.py    (for mnist, similar for other datasets)
+   python3 train_mnist.py    (for mnist, similar for other datasets)
   ```
 
  ### Pretrained Checkpoints
  
   To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
  
-  -Mnist_classifier_ckpt: [Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
+  -Mnist_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
   
   -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
   
@@ -100,7 +101,7 @@ python cdcgan_dataset-name.py
 Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other datasets.
 ### Pretrained Checkpoints
     We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under the Repository structure.
-weights are available[Click here](https://drive.google.com/file/d/1MnXSukCHhtajVxtJxWpXCtXE8SFSCNKh/view?usp=sharing)
+-weights are available[Click here](https://drive.google.com/file/d/1MnXSukCHhtajVxtJxWpXCtXE8SFSCNKh/view?usp=sharing)
 
 -For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
 
