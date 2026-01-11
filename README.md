@@ -87,7 +87,9 @@ This tool provides a Gradio-based interface with three generative models — **V
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
 #### Download SD weights
 Download the fine-tuned model weights from [this link](https://drive.google.com/file/d/1FauJR7XbPt_g0W4r-LPIbv7si79JHh4V/view?usp=sharing). 
-# How to Run?
+
+---
+# How to Run GIFTbench?
  GIFTbench can be run in two ways:
 ## Option A: Run from Docker Hub (Recommended)
 Use this method if you want to **quickly run the tool without installing or configuring anything**.  
