@@ -11,7 +11,7 @@ This document describes how users can extend GIFTbench by (i) adding a new datas
 
 ---
 
-## Adding a New Dataset
+## 1. Adding a New Dataset
 
 Each dataset in GIFTbench is implemented as a **self-contained module** (e.g., `mnist/`, `svhn/`, `cifar10/`, `imagenet/`). To add support for a new dataset, users should create a new dataset directory following the structure of existing modules.
 
@@ -27,7 +27,7 @@ Once implemented, the new dataset module can directly reuse the existing genetic
 
 ---
 
-## Training Generative Models for a New Dataset
+## 2.Training Generative Models for a New Dataset
 
 Extending GIFTbench to a new dataset requires training **dataset-specific generative models**. GIFTbench does not provide dataset-agnostic generators by design, as such models would compromise the validity of robustness assessments.
 
@@ -47,6 +47,10 @@ Depending on the generator type:
   
   -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
 ### Training the Classifier from Scratch or Modifying Hyperparameters
+To evaluate robustness, GIFTbench requires a reference classifier trained on the same dataset. This classifier serves as the system under test and is used to assess misclassification induced by the test generators.These scripts can be adapted to new datasets by adjusting:
+-input resolution and channels,
+-number of output classes,
+-dataset-specific preprocessing.
   Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
  
   -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
@@ -54,6 +58,7 @@ Depending on the generator type:
     python3 train_mnist.py    (for mnist, similar for other datasets)
 ---
 ## Generative AI pretrained checkpoints & Script File :
+GIFTbench does not rely on dataset-agnostic generators. Instead, each supported dataset uses generative models trained or fine-tuned on that dataset’s distribution.
  ### 1. VAE:
  
  We have trained the Variational Autoencoder (VAE) on all four datasets: MNIST, SVHN, CIFAR-10, and ImageNet. You can download the pretrained weights for all four models from the following link.
@@ -77,7 +82,8 @@ Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
 
 ### 2. GAN:
 
-We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under Repository structure. 
+We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under the Repository structure.
+weights are available[Click here](https://drive.google.com/file/d/1MnXSukCHhtajVxtJxWpXCtXE8SFSCNKh/view?usp=sharing)
 
 -For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
 
@@ -92,9 +98,9 @@ We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. 
  To train the CDCGAN for a specific dataset from scratch, use the following command:
 
 ```
-python gan_master.py --dataset mnist
+python cdcgan_dataset-name.py 
 ```
-Replace mnist with svhn or cifar10 to run the GAN for the other datasets.
+Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other datasets.
 
 ### 3. Stable Diffusion Setup and Script Execution
 #### How to Fine-tune Stable Diffusion? 
