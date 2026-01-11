@@ -65,7 +65,22 @@ This tool provides a Gradio-based interface with three generative models — **V
 - Internet access (for downloading models from Google Drive)
 
 ---
-
+# Pretrained Classifier Checkpoints & Script File :
+ To evaluate the performance of the classifier under the test generator, you can obtain the pretrained weight checkpoints from the provided link.
+ 
+  -Mnist_classifier_ckpt: already uploaded mnist/mnist-classifier/weights under repository structure
+  
+  -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
+  
+  -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
+  
+  -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
+### Training the Classifier from Scratch or Modifying Hyperparameters
+   Navigate to the sa/ directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (*_train.py) along with a model.py file that defines the    classifier architecture.
+  -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
+  
+    python3 train_mnist.py    (for mnist, similar for other datasets)
+---
 # How to Run?
  GIFTbench can be run in two ways:
 ## Option A: Run from Docker Hub (Recommended)
