@@ -99,6 +99,7 @@ python cdcgan_dataset-name.py
 Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other datasets.
 
 ### Pretrained Checkpoints
+
    We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under the repository structure.
 
     
