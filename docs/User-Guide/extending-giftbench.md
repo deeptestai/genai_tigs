@@ -35,8 +35,22 @@ Depending on the generator type:
 - **Variational Autoencoders (VAEs)** and **Generative Adversarial Networks (GANs)** must be trained from scratch on the target dataset.
 - **Diffusion models** must be fine-tuned to the dataset distribution (e.g., using LoRA-based fine-tuning).
 
- Classifier training and fine-tuning scripts, along with example configurations, are provided in the repository and mentioned below:
+** Classifier and GenAI training or fine-tuning scripts, along with example configurations, are provided in the repository and detailed below:**
+
 ## Pretrained Classifier Checkpoints & Script File :
+
+### Training the Classifier from Scratch or Modifying Hyperparameters
+To evaluate robustness, GIFTbench requires a reference classifier trained on the same dataset. This classifier serves as the system under test and is used to assess misclassification induced by the test generators.These scripts can be adapted to new datasets by adjusting:
+-input resolution and channels,
+-number of output classes,
+-dataset-specific preprocessing.
+  Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
+ 
+  -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
+  ```
+    python3 train_mnist.py    (for mnist, similar for other datasets)
+  ```
+ ### Pretrained Checkpoints
  To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
  
   -Mnist_classifier_ckpt: [Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
@@ -46,27 +60,11 @@ Depending on the generator type:
   -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
   
   -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
-### Training the Classifier from Scratch or Modifying Hyperparameters
-To evaluate robustness, GIFTbench requires a reference classifier trained on the same dataset. This classifier serves as the system under test and is used to assess misclassification induced by the test generators.These scripts can be adapted to new datasets by adjusting:
--input resolution and channels,
--number of output classes,
--dataset-specific preprocessing.
-  Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
- 
-  -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
   
-    python3 train_mnist.py    (for mnist, similar for other datasets)
 ---
 ## Generative AI pretrained checkpoints & Script File :
 GIFTbench does not rely on dataset-agnostic generators. Instead, each supported dataset uses generative models trained or fine-tuned on that dataset’s distribution.
  ### 1. VAE:
- 
- We have trained the Variational Autoencoder (VAE) on all four datasets: MNIST, SVHN, CIFAR-10, and ImageNet. You can download the pretrained weights for all four models from the following link.
-
-- Mnist_vae_ckpt:already uploaded mnist/mnist-vae/weights under repository structure
-- SVHN_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/13D8DXRQ41pNv29jZDuWKjjUXMaXlpeG1/view?usp=sharing)
-- Cifar10_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1dLYUewBnDfOh6qsy8REWFbb57pktKg6k/view?usp=sharing)
-- Imagenet_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1iM9Sp7l7zc5o_B5ZukQ4RP8fmkScdFBw/view?usp=sharing)
 
 Navigate to the `vae/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
   
@@ -79,10 +77,24 @@ python train_master.py --dataset mnist
 ```
 
 Replace mnist with svhn, cifar10, or imagenet to train on a different dataset.
+ ### Pretrained checkpoints
+ We have trained the Variational Autoencoder (VAE) on all four datasets: MNIST, SVHN, CIFAR-10, and ImageNet. You can download the pretrained weights for all four models from the following link.
+
+- Mnist_vae_ckpt:already uploaded mnist/mnist-vae/weights under repository structure
+- SVHN_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/13D8DXRQ41pNv29jZDuWKjjUXMaXlpeG1/view?usp=sharing)
+- Cifar10_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1dLYUewBnDfOh6qsy8REWFbb57pktKg6k/view?usp=sharing)
+- Imagenet_vae_ckpt:[Download ckpt here](https://drive.google.com/file/d/1iM9Sp7l7zc5o_B5ZukQ4RP8fmkScdFBw/view?usp=sharing)
 
 ### 2. GAN:
+ Navigate to the `cdcgan/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
+ To train the CDCGAN for a specific dataset from scratch, use the following command:
 
-We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under the Repository structure.
+```
+python cdcgan_dataset-name.py 
+```
+Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other datasets.
+### Pretrained Checkpoints
+    We have trained Conditional GANs for three datasets: MNIST, SVHN, and CIFAR-10. The pretrained weights for these models are available in their respective dataset directories under the Repository structure.
 weights are available[Click here](https://drive.google.com/file/d/1MnXSukCHhtajVxtJxWpXCtXE8SFSCNKh/view?usp=sharing)
 
 -For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
@@ -94,15 +106,8 @@ weights are available[Click here](https://drive.google.com/file/d/1MnXSukCHhtajV
 ```
  We set the truncation value to 1.0 to produce images with greater variation.
 
- Navigate to the `cdcgan/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script
- To train the CDCGAN for a specific dataset from scratch, use the following command:
-
-```
-python cdcgan_dataset-name.py 
-```
-Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other datasets.
-
 ### 3. Stable Diffusion Setup and Script Execution
+
 #### How to Fine-tune Stable Diffusion? 
 Fine-tune stable diffusion using the khoya-ss platform on four different datasets. For a detailed description, please [click here](https://github.com/Maryammaryam877/genai_tigs/blob/main/documentation/fine-tune%20stable%20diffusion.md).
 #### Download SD weights
