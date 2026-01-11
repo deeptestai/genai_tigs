@@ -47,9 +47,10 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
 - input resolution and channels,
 - number of output classes,
 - dataset-specific preprocessing.
+
   Navigate to the `sa/` directory, which contains subfolders for each dataset. Each dataset-specific folder includes its corresponding training script (`*_train.py`) along with a `model.py` file that defines the classifier architecture.
  
-  -To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
+  - To make changes to hyperparameters or to train the classifier from scratch, execute the following command:
   
   ```
    python3 train_mnist.py    (for mnist, similar for other datasets)
@@ -58,13 +59,13 @@ To evaluate robustness, GIFTbench requires a reference classifier trained on the
  
   To evaluate the classifier's performance under the test generator, you can obtain the pre-trained weight checkpoints from the provided link.
  
-  -Mnist_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
+  - Mnist_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1IzkDC9Ql3B1XB9vLuFfXjttkZyoOiHg3/view?usp=sharing)
   
-  -SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
+  - SVHN_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1vLS_9TT4ncrAfP3LVAOQzw-zdKUgoPBb/view?usp=sharing)
   
-  -Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
+  - Cifar10_classifier_ckpt:[Download ckpt here](https://drive.google.com/file/d/1sxG5En1Vc1pEFhedebO8fRcvbb1NNE_y/view?usp=sharing)
   
-  -Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
+  - Imagenet_classifir_ckpt:For Imagenet, we used pretrained classifier weights vgg-19-bn  directly from the PyTorch repository [see pytorch Link](https://drive.google.com/uc?export=download&id=YOUR_DIRECT_DOWNLOAD_LINK_ID)
   
 ---
 
@@ -108,7 +109,7 @@ Replace dataset-name with mnist, svhn or cifar10 to run the GAN for the other da
     
 - weights are available [Click here](https://drive.google.com/file/d/1MnXSukCHhtajVxtJxWpXCtXE8SFSCNKh/view?usp=sharing)
 
--For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
+- For ImageNet, we have chosen pytorch BigGAN as the Conditional GAN model and are utilizing its pretrained weights.A detail about configuration and environment settings [here](https://github.com/lukemelas/pytorch-pretrained-gans/tree/main)
 
  We utilize the 256x256 size Deep-BigGAN model with the specified pretrained weights by executing the following command:
  
