@@ -6,6 +6,22 @@ nav_order: 7
 # Extending GIFTbench
 
 GIFTbench is designed to be extensible at the **module level**, allowing users to add new datasets or integrate custom generative models without modifying the core search, evaluation, or visualization pipeline. This design ensures that extensions preserve correctness, reproducibility, and comparability across experiments.
+## Configuration and Extensibility Overview
+
+The table below summarizes how users configure GIFTbench and how the framework can be extended.
+The scope indicates whether an option applies to all runs (global), at the dataset level, or across a model family.
+
+| Aspect | User Action | Access | Scope |
+|------|------------|--------|-------|
+| Dataset selection | Select dataset tab | UI | All runs |
+| Add new dataset | Implement dataset-specific module | Code | Dataset level |
+| Default classifier | Select pretrained model | UI | Dataset level |
+| Custom classifier | Upload TorchScript (`.jit`) model | UI | Dataset level |
+| Default GenAI model | Select VAE / GAN / Diffusion | UI | Model family |
+| Custom GenAI model | Replace generator or add wrapper | Code | Model family |
+| Prompt | Provide text prompt | UI | Diffusion only |
+| Truncation | Set truncation value | UI | BigGAN only |
+| Search setup | Tune GA parameters | UI | All runs |
 
 This document describes how users can extend GIFTbench by (i) adding a new dataset and (ii) training and integrating dataset-specific generative models.
 
