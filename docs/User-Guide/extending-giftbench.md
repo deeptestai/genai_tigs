@@ -2,6 +2,7 @@
 title: Extending GIFTbench
 parent: User Guide
 nav_order: 7
+layout: default
 ---
 # Extending GIFTbench
 
