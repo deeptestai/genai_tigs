@@ -11,8 +11,7 @@ GIFTbench is designed to be extensible at the **module level**, allowing users t
 
 ## Configuration and Extensibility Overview
 
-The table below summarizes how users configure GIFTbench and how the framework can be extended.
-The scope indicates whether an option applies to all runs (global), at the dataset level, or across a model family.
+The table below summarizes how users configure GIFTbench and how the framework can be extended. The “Applies At” column indicates whether each option affects the entire experiment, a specific dataset, or a generative model family (VAE, GAN, or Diffusion).
 
 
 | Aspect | User Action | Interaction Level | Applies At |
