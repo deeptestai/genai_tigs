@@ -14,17 +14,18 @@ GIFTbench is designed to be extensible at the **module level**, allowing users t
 The table below summarizes how users configure GIFTbench and how the framework can be extended.
 The scope indicates whether an option applies to all runs (global), at the dataset level, or across a model family.
 
-| Aspect | User Action | Access | Scope |
-|------|------------|--------|-------|
-| Dataset selection | Select dataset tab | UI | All runs |
-| Add new dataset | Implement dataset-specific module | Code | Dataset level |
-| Default classifier | Select pretrained model | UI | Dataset level |
-| Custom classifier | Upload TorchScript (`.jit`) model | UI | Dataset level |
+| Aspect | User Action | Interaction Level | Applies At |
+|------|------------|------------------|-----------|
+| Dataset selection | Select dataset tab | UI | Entire experiment |
+| Add new dataset | Implement dataset-specific module (loader, preprocessing, labels) | Code | Per dataset |
+| Default classifier | Select pretrained classifier | UI | Per dataset |
+| Custom classifier | Upload TorchScript (`.jit`) model | UI | Per dataset |
 | Default GenAI model | Select VAE / GAN / Diffusion | UI | Model family |
-| Custom GenAI model | Replace generator or add wrapper | Code | Model family |
-| Prompt | Provide text prompt | UI | Diffusion only |
-| Truncation | Set truncation value | UI | BigGAN only |
-| Search setup | Tune GA parameters | UI | All runs |
+| Custom GenAI model | Replace generator checkpoint or add wrapper class | Code | Model family |
+| Prompt | Provide text prompt | UI | Diffusion models only |
+| Truncation | Set truncation value | UI | BigGAN models only |
+| Search setup | Tune genetic search parameters | UI | Entire experiment |
+
 
 This document describes how users can extend GIFTbench by (i) adding a new dataset and (ii) training and integrating dataset-specific generative models.
 
