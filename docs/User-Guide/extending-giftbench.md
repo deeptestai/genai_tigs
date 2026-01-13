@@ -1,5 +1,6 @@
 ---
 title: Extending GIFTbench
+layout: default
 parent: User Guide
 nav_order: 7
 ---
@@ -28,7 +29,6 @@ The scope indicates whether an option applies to all runs (global), at the datas
 This document describes how users can extend GIFTbench by (i) adding a new dataset and (ii) training and integrating dataset-specific generative models.
 
 ---
-
 ## 1. Adding a New Dataset
 
 Each dataset in GIFTbench is implemented as a **self-contained module** (e.g., `mnist/`, `svhn/`, `cifar10/`, `imagenet/`). To add support for a new dataset, users should create a new dataset directory following the structure of existing modules.
