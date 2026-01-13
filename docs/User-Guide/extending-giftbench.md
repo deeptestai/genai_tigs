@@ -14,6 +14,7 @@ GIFTbench is designed to be extensible at the **module level**, allowing users t
 The table below summarizes how users configure GIFTbench and how the framework can be extended. The “Applies At” column indicates whether each option affects the entire experiment, a specific dataset, or a generative model family (VAE, GAN, or Diffusion).
 
 
+
 | Aspect | User Action | Interaction Level | Applies At |
 |------|------------|------------------|-----------|
 | Dataset selection | Select dataset tab | UI | Entire experiment |
