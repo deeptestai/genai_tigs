@@ -3,6 +3,7 @@ title: Extending GIFTbench
 parent: User Guide
 nav_order: 7
 ---
+
 # Extending GIFTbench
 
 GIFTbench is designed to be extensible at the **module level**, allowing users to add new datasets or integrate custom generative models without modifying the core search, evaluation, or visualization pipeline. This design ensures that extensions preserve correctness, reproducibility, and comparability across experiments.
