@@ -297,7 +297,7 @@ def run_diffusion_tig2(gen_num, pop_size, best_left, perturbation_size, initial_
 
         # Yield progress to Gradio
         yield (
-          f"Processing image {n + 1} / {imgs_to_samp}| Misclassified seeds {num_misclassified}|% Misclassification: {misclassification_rate}|Avg Iterations{Avg_iterations}",
+          f"Processing image {n + 1} / {imgs_to_samp}| Misclassified Seeds {num_misclassified}|% Misclassification: {misclassification_rate:.2f}|Avg Iterations:{Avg_iterations:.2f}",
 
           all_gallery_items, None, status_rows
         )
@@ -309,7 +309,7 @@ def run_diffusion_tig2(gen_num, pop_size, best_left, perturbation_size, initial_
         # Final yield
         # Final yield
         yield (
-          f"Finished! Total saved images: {saved_images} | Misclassified seeds {num_misclassified}| % Misclassification: {misclassification_rate}|Avg Iterations{Avg_iterations}",
+          f"Finished! Total saved images: {saved_images} | Misclassified Seeds: {num_misclassified}| % Misclassification: {misclassification_rate:.2f}|Avg Iterations:{Avg_iterations:.2f}",
           all_gallery_items,
           zip_path, status_rows
         )

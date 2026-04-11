@@ -233,7 +233,7 @@ def run_gan_tig2(gen_num, pop_size, best_left,perturbation_size,initial_perturba
 
         # Yield progress to Gradio
         yield (
-          f"Processing image {img_idx + 1} / {imgs_to_samp}| Misclassified seeds {num_misclassified}|% Misclassification: {misclassification_rate}|Avg Iteratins{Avg_iterations}",
+          f"Processing image {img_idx + 1} / {imgs_to_samp}| Misclassified Seeds: {num_misclassified}|% Misclassification: {misclassification_rate:.2f}|Avg Iterations:{Avg_iterations}",
           all_gallery_items, None, status_rows
         )
         zip_path = os.path.join(result_dir, "generated_pairs.zip")
@@ -243,7 +243,7 @@ def run_gan_tig2(gen_num, pop_size, best_left,perturbation_size,initial_perturba
                 zipf.write(file_path, arcname=arcname)
         # Final yield
         yield (
-          f"Finished! Total saved images: {saved_images} | Misclassified seeds {num_misclassified}| % Misclassification: {misclassification_rate}|Avg Iteratins{Avg_iterations}",
+          f"Finished! Total saved images: {saved_images} | Misclassified Seeds: {num_misclassified}| % Misclassification: {misclassification_rate:.2f}|Avg Iterations:{Avg_iterations:.2f}",
 
           all_gallery_items,
           zip_path, status_rows

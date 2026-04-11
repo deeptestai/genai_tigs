@@ -23,7 +23,125 @@ from ImageNet.imagenet_gradiovae_teddy import run_vae_tig_teddy as run_imagenet_
 from ImageNet.imagenet_gradiobiggan_teddy import run_biggan_tig_teddy as run_imagenet_biggan1
 from ImageNet.imagenet_gradiodm_teddy import run_diffusion_tig_teddy as run_imagenet_dm1
 from control import stop_flag, stop_generation
+import warnings
+warnings.filterwarnings("ignore")
 
+import logging
+logging.getLogger("gradio").setLevel(logging.ERROR)
+import warnings
+import os
+
+#  suppress warnings
+warnings.filterwarnings("ignore")
+
+#  suppress logging
+logging.getLogger().setLevel(logging.ERROR)
+
+# specific libraries
+#logging.getLogger("transformers").setLevel(logging.ERROR)
+#logging.getLogger("diffusers").setLevel(logging.ERROR)
+#logging.getLogger("torch").setLevel(logging.ERROR)
+
+# optional env control
+#os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+import time
+import traceback
+
+def empty_result(msg):
+    return msg, None, None, None
+
+def safe_stream_run(generator_func, args, model_choice, prompt=None):
+    import time
+    import traceback
+
+    try:
+        yield empty_result(f" Starting {model_choice}...")
+
+        generator = generator_func(*args)
+        start_time = time.time()
+
+        last_gallery = None
+        last_file = None
+        last_table = None
+
+        for i, step in enumerate(generator):
+
+            #  Stop check FIRST (fast response)
+            if stop_flag.is_set():
+                elapsed = int(time.time() - start_time)
+                yield (
+                    f"Stopped by user | Time: {elapsed}s",
+                    last_gallery if last_gallery is not None else [],
+                    last_file,
+                    last_table if last_table is not None else []
+                )
+                return
+
+            #  Validate generator output
+            if not isinstance(step, (tuple, list)) or len(step) != 4:
+                raise ValueError(f"Invalid generator output: {step}")
+
+            status, gallery, file, table = step
+
+            #  Store last valid outputs
+            last_gallery = gallery
+            last_file = file
+            last_table = table
+
+            #  Elapsed time
+            elapsed = int(time.time() - start_time)
+
+            #  UPDATED STATUS (step + time)
+            yield (
+                f"{status} | Elapsed Time: {elapsed}s",
+                gallery,
+                file,
+                table
+            )
+
+        #  Final output (preserve results)
+        yield (
+            f" Final Result: {status}| Total Time: {elapsed}s",
+            last_gallery,
+            last_file,
+            last_table
+        )
+
+    except Exception as e:
+        print(traceback.format_exc())
+        yield empty_result(f"Error: {str(e)}")
+
+# RUNNER
+
+MNIST_RUNNERS = {
+    "VAE": run_mnist_vae,
+    "GAN": run_mnist_gan,
+    "DM": run_mnist_dm,
+}
+
+SVHN_RUNNERS = {
+    "VAE": run_svhn_vae,
+    "GAN": run_svhn_gan,
+    "DM": run_svhn_dm,
+}
+
+CIFAR10_RUNNERS = {
+    "VAE": run_cifar10_vae,
+    "GAN": run_cifar10_gan,
+    "DM": run_cifar10_dm,
+}
+
+IMAGENET_PIZZA_RUNNERS = {
+    "VAE (pizza)": run_imagenet_vae,
+    "GAN (pizza)": run_imagenet_biggan,
+    "DM (pizza)": run_imagenet_dm,
+}
+
+IMAGENET_TEDDY_RUNNERS = {
+    "VAE (teddy)": run_imagenet_vae1,
+    "GAN (teddy)": run_imagenet_biggan1,
+    "DM (teddy)": run_imagenet_dm1,
+}
 # Prompts
 mnist_prompts = [
     "A photo of Z0ero Number0", "A photo of one1 Number1", "A photo of two2 Number2",
@@ -200,45 +318,140 @@ def update_params_imagenet2(model_choice):
 
 # Routing functions
 def run_mnist(model_choice, gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file):
-    if model_choice == "VAE":
-        yield from run_mnist_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
-    elif model_choice == "GAN":
-        yield from run_mnist_gan(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
-    elif model_choice == "DM":
-        yield from run_mnist_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
+    runner = MNIST_RUNNERS.get(model_choice)
+    if runner is None:
+        yield empty_result("Required  model selection.")
+        return
+    if model_choice == "DM":
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, prompt, classifier_file
+        )
+    else:
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, classifier_file
+        )
+
+    yield from safe_stream_run(runner, args, model_choice, prompt)
+   # if model_choice == "VAE":
+   #     yield from run_mnist_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+   # elif model_choice == "GAN":
+   #     yield from run_mnist_gan(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+   # elif model_choice == "DM":
+   #     yield from run_mnist_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
 
 def run_svhn(model_choice, gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file):
-    if model_choice == "VAE":
-        yield from run_svhn_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
-    elif model_choice == "GAN":
-        yield from run_svhn_gan(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
-    elif model_choice == "DM":
-        yield from run_svhn_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
+
+    runner = SVHN_RUNNERS.get(model_choice)
+    if runner is None:
+        yield empty_result("Invalid SVHN model selection.")
+        return
+
+    if model_choice == "DM":
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, prompt, classifier_file
+        )
+    else:
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, classifier_file
+        )
+
+    yield from safe_stream_run(runner, args, model_choice, prompt)
+    #if model_choice == "VAE":
+     #   yield from run_svhn_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+    #elif model_choice == "GAN":
+     #   yield from run_svhn_gan(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+   # elif model_choice == "DM":
+    #    yield from run_svhn_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
 
 def run_cifar10(model_choice, gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file):
-    if model_choice == "VAE":
-        yield from run_cifar10_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
-    elif model_choice == "GAN":
-        yield from run_cifar10_gan(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
-    elif model_choice == "DM":
-        yield from run_cifar10_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
+    runner = CIFAR10_RUNNERS.get(model_choice)
+    if runner is None:
+        yield empty_result("Invalid CIFAR-10 model selection.")
+        return
+
+    if model_choice == "DM":
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, prompt, classifier_file
+        )
+    else:
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, classifier_file
+        )
+
+    yield from safe_stream_run(runner, args, model_choice, prompt) 
+    #if model_choice == "VAE":
+     #   yield from run_cifar10_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+   # elif model_choice == "GAN":
+    #    yield from run_cifar10_gan(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+   # elif model_choice == "DM":
+    #    yield from run_cifar10_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
 
 def run_imagenet(model_choice, gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt, truncation,classifier_file):
+    runner = IMAGENET_PIZZA_RUNNERS.get(model_choice)
+    if runner is None:
+        yield empty_result("Invalid ImageNet pizza model selection.")
+        return
+
     if model_choice == "VAE (pizza)":
-        yield from run_imagenet_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, classifier_file
+        )
     elif model_choice == "GAN (pizza)":
-        yield from run_imagenet_biggan(imgs_to_samp,gen_num, pop_size, best_left, perturb_size, initial_perturb_size, classifier, truncation,classifier_file)
+        args = (
+            imgs_to_samp, gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, classifier, truncation, classifier_file
+        )
     elif model_choice == "DM (pizza)":
-        yield from run_imagenet_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, prompt, classifier_file
+        )
+
+    yield from safe_stream_run(runner, args, model_choice, prompt)
+   # if model_choice == "VAE (pizza)":
+   #     yield from run_imagenet_vae(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+   # elif model_choice == "GAN (pizza)":
+   #     yield from run_imagenet_biggan(imgs_to_samp,gen_num, pop_size, best_left, perturb_size, initial_perturb_size, classifier, truncation,classifier_file)
+   # elif model_choice == "DM (pizza)":
+   #     yield from run_imagenet_dm(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
 
 
 def run_imagenet2(model_choice, gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt, truncation,classifier_file):
+    runner = IMAGENET_TEDDY_RUNNERS.get(model_choice)
+    if runner is None:
+        yield empty_result("Invalid ImageNet teddy model selection.")
+        return
+
     if model_choice == "VAE (teddy)":
-        yield from run_imagenet_vae1(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, classifier_file
+        )
     elif model_choice == "GAN (teddy)":
-        yield from run_imagenet_biggan1(imgs_to_samp, gen_num, pop_size, best_left, perturb_size, initial_perturb_size, classifier, truncation,classifier_file)
+        args = (
+            imgs_to_samp, gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, classifier, truncation, classifier_file
+        )
     elif model_choice == "DM (teddy)":
-        yield from run_imagenet_dm1(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
+        args = (
+            gen_num, pop_size, best_left, perturb_size,
+            initial_perturb_size, imgs_to_samp, classifier, prompt, classifier_file
+        )
+
+    yield from safe_stream_run(runner, args, model_choice, prompt)
+    #if model_choice == "VAE (teddy)":
+     #   yield from run_imagenet_vae1(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier,classifier_file)
+   # elif model_choice == "GAN (teddy)":
+    #    yield from run_imagenet_biggan1(imgs_to_samp, gen_num, pop_size, best_left, perturb_size, initial_perturb_size, classifier, truncation,classifier_file)
+   # elif model_choice == "DM (teddy)":
+       # yield from run_imagenet_dm1(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier, prompt,classifier_file)
 # --- Interface ---
 
 with gr.Blocks() as demo:
@@ -365,7 +578,7 @@ with gr.Blocks() as demo:
         )
         stop_btn_cifar10.click(fn=stop_generation, outputs=status_cifar10)
     with gr.Tab("ImageNet (class-pizza)"):
-        model_imagenet = gr.Radio(["VAE (pizza)", "GAN (pizza)", "DM (pizza)"], label="Model Type", value="VAE(pizza)")
+        model_imagenet = gr.Radio(["VAE (pizza)", "GAN (pizza)", "DM (pizza)"], label="Model Type")
         with gr.Row():
             gen_num_imagenet = gr.Slider(100, 500, value=250, step=1, label="Generations")
             pop_size_imagenet = gr.Slider(10, 50, value=25, step=1, label="Population Size")
@@ -406,7 +619,7 @@ with gr.Blocks() as demo:
         stop_btn_imagenet.click(fn=stop_generation, outputs=status_imagenet)
 
     with gr.Tab("ImageNet (class-teddy)"):
-        model_imagenet = gr.Radio(["VAE (teddy)", "GAN (teddy)", "DM (teddy)"], label="Model Type", value="VAE(teddy)")
+        model_imagenet = gr.Radio(["VAE (teddy)", "GAN (teddy)", "DM (teddy)"], label="Model Type")
         with gr.Row():
             gen_num_imagenet = gr.Slider(100, 500, value=250, step=1, label="Generations")
             pop_size_imagenet = gr.Slider(10, 50, value=25, step=1, label="Population Size")

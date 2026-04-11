@@ -192,7 +192,7 @@ def run_vae_tig2(gen_num, pop_size, best_left, perturbation_size, initial_pertur
 
         # Yield progress to Gradio
         yield (
-          f"Processing image {img_idx + 1} / {imgs_to_samp}|Misclassified seeds {num_misclassified}|% Misclassification: {misclassification_rate} |# total Iterations{Avg_iterations:.2f}",
+          f"Processing image {img_idx + 1} / {imgs_to_samp}|Misclassified Seeds: {num_misclassified}|% Misclassification: {misclassification_rate:.2f} |# total Iterations:{Avg_iterations:.2f}",
           all_gallery_items, None , status_rows
         )
        
@@ -203,7 +203,7 @@ def run_vae_tig2(gen_num, pop_size, best_left, perturbation_size, initial_pertur
                 zipf.write(file_path, arcname=arcname)
         # Final yield
         yield (
-          f"Finished! Total saved images: {saved_images} | Misclassified seeds {num_misclassified}| % Misclassification: {misclassification_rate} |# total Iterations{Avg_iterations:.2f}",
+          f"Finished! Total saved images: {saved_images} | Misclassified Seeds: {num_misclassified}| % Misclassification: {misclassification_rate:.2f} |# total Iterations:{Avg_iterations:.2f}",
           all_gallery_items,
           zip_path, status_rows
         )
