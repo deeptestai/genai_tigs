@@ -75,7 +75,7 @@ def calculate_fitness(logit, label):
     return fitness
 
 def run_vae_tig_teddy(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier_choice,classifier_file):
-    yield ("Initializing VAE pizza...", [], None, [])
+    yield ("Initializing VAE teddy...", [], None, [])
     stop_flag.clear()
     if classifier_choice == "VGG19bn":
         classifier = torch.hub.load("pytorch/vision:v0.10.0", "vgg19_bn", pretrained=True).to(device)
