@@ -75,6 +75,7 @@ def calculate_fitness(logit, label):
     return fitness
 
 def run_vae_tig_teddy(gen_num, pop_size, best_left, perturb_size, initial_perturb_size, imgs_to_samp, classifier_choice,classifier_file):
+    yield ("Initializing VAE pizza...", [], None, [])
     stop_flag.clear()
     if classifier_choice == "VGG19bn":
         classifier = torch.hub.load("pytorch/vision:v0.10.0", "vgg19_bn", pretrained=True).to(device)
@@ -100,6 +101,7 @@ def run_vae_tig_teddy(gen_num, pop_size, best_left, perturb_size, initial_pertur
     final_iterations = []
     num_misclassified = 0
     num1_misclassified = 0
+    Avg_iterations = 0
     total_images = 0
     all_gallery_items = []
     saved_image_paths = []
@@ -136,6 +138,12 @@ def run_vae_tig_teddy(gen_num, pop_size, best_left, perturb_size, initial_pertur
 
         if original_label != expected_label:
             num1_misclassified += 1
+            yield (
+                f"Skipping image {img_idx + 1}: label mismatch",
+                all_gallery_items,
+                None,
+                status_rows
+            )
             continue  # Skip mismatches
         #total_images += 1
 
