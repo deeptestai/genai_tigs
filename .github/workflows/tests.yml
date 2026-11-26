@@ -1,0 +1,33 @@
+name: tests
+
+# Runs the pytest suite on every push and pull request. GitHub's runners have no GPU and no
+# Google Drive weights, so the SVHN/CIFAR-10 golden tests skip; MNIST weights are in the repo.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies (CPU-only PyTorch)
+        run: |
+          python -m pip install --upgrade pip
+          # Pinned to the version the golden files were generated with, so a new torch release
+          # can't change the results without a visible commit here.
+          pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+          # Imported by the legacy ImageNet VAE script that test_imagenet compares against.
+          pip install accelerate transformers
+
+      - name: Run tests
+        run: python -m pytest -q -rs
