@@ -116,3 +116,10 @@ The original generators are kept in `legacy/<dataset>/<model>/tig_*.py`. They ar
 
 ### REFERENCE:
 Maryam, M., Biagiola, M., Stocco, A., & Riccio, V. (2024). Benchmarking Generative AI Models for Deep Learning Test Input Generation. In Proceedings of the 18th IEEE International Conference on Software Testing, Verification and Validation (ICST 2025)
+
+### TEAM:
+* Maryam M.
+* Daffara L.
+* Biagiola M.
+* Stocco A.
+* Riccio V.
