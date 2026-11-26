@@ -1,3 +1,7 @@
+# Legacy environment of the original scripts in legacy/ (Stable Diffusion with T-GATE), kept
+# as published. The unified generator (python -m tig) uses requirements.txt instead.
+# diffuser and xformer look like typos of diffusers and xformers (both also listed), and
+# pytorch-triton is a nightly build: install it only to rerun the legacy scripts.
 accelerate==0.21.0
 certifi==2023.11.17
 dataset==1.6.2

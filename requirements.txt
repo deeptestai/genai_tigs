@@ -1,0 +1,28 @@
+# Dependencies of the unified generator (tig/) and its tests. Python 3.9 or newer.
+# For an NVIDIA GPU, install torch and torchvision from https://pytorch.org first
+# (e.g. --index-url https://download.pytorch.org/whl/cu126), then this file.
+# Tested on:
+#   - Windows, NVIDIA GTX 1650 (CUDA 12.6): Python 3.11, torch 2.14.1, numpy 2.4
+#   - macOS (CPU): Python 3.9, torch 2.8, numpy 2.0
+#   - GitHub Actions, Ubuntu (CPU): Python 3.11, torch 2.14.1 (pinned in .github/workflows/tests.yml)
+# requirements-sd.txt is the old environment of the legacy scripts; tig doesn't need it.
+torch>=2.0
+torchvision>=0.15
+numpy>=1.24
+pillow>=9.0
+pytest>=7
+
+# ImageNet: BigGAN-deep-256 and its truncated-noise prior
+pytorch-pretrained-biggan>=0.1.1
+scipy>=1.10
+
+# Stable Diffusion 1.5 + LoRA (tested with diffusers 0.42, transformers 5.22, peft 0.21)
+diffusers>=0.30
+transformers>=4.40
+accelerate>=0.21
+peft>=0.10
+safetensors>=0.4
+opencv-python-headless>=4.8
+
+# Only imported by the legacy training scripts that the equivalence tests load
+matplotlib>=3.7
